@@ -10,7 +10,6 @@ getcontext().prec = 5
 
 # --- CONFIGURAÇÃO ---
 MANIFEST_FILE = 'manifest.json'
-# Assume que as pastas de configuração estão na raiz. Mude se estiverem em outro lugar.
 CONFIG_ROOT_DIR = '.' 
 
 def get_existing_manifest():
@@ -60,11 +59,21 @@ def generate_manifest():
 
             ini_file_path = os.path.join(folder_path, ini_files[0])
             
+            # <<< MUDANÇA PRINCIPAL AQUI >>>
+            # Corrigido para lidar com arquivos .ini que têm valores antes da primeira seção.
             config = configparser.ConfigParser()
             try:
-                config.read(ini_file_path, encoding='utf-8')
-                # Busca a assinatura EXATAMENTE no local correto.
+                # Lemos o conteúdo do arquivo para uma string
+                with open(ini_file_path, 'r', encoding='utf-8') as f:
+                    ini_content = f.read()
+                
+                # Adicionamos uma seção "dummy" no início para o parser aceitar o arquivo.
+                # Isso resolve o erro "MissingSectionHeaderError".
+                config.read_string("[DUMMY_SECTION]\n" + ini_content)
+
+                # Agora, a busca pela assinatura na seção correta funciona normalmente
                 assinatura = config.get('TunerStudio', 'signature')
+
             except (configparser.NoSectionError, configparser.NoOptionError) as e:
                 print(f"AVISO: Não foi possível encontrar '[TunerStudio] -> signature' em '{ini_file_path}'. Pulando. Erro: {e}")
                 continue
