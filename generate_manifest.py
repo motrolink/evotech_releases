@@ -12,7 +12,6 @@ getcontext().prec = 5
 MANIFEST_FILE = 'manifest.json'
 CONFIG_ROOT_DIR = '.'
 # Número de linhas a serem lidas do início de cada arquivo .ini
-# Suficiente para pegar o cabeçalho com a assinatura, mas evitar erros no final do arquivo.
 LINES_TO_READ = 200
 
 def get_existing_manifest():
@@ -22,11 +21,17 @@ def get_existing_manifest():
         return {"versoes": [], "assinaturas": {}}
     
     try:
-        with open(MANIFEST_FILE, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-            if "versoes" not in data: data["versoes"] = []
-            if "assinaturas" not in data: data["assinaturas"] = {}
-            return data
+        # Tenta ler como UTF-8 (padrão para JSON), mas se falhar, tenta latin-1 por retrocompatibilidade.
+        try:
+            with open(MANIFEST_FILE, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+        except UnicodeDecodeError:
+            with open(MANIFEST_FILE, 'r', encoding='latin-1') as f:
+                data = json.load(f)
+
+        if "versoes" not in data: data["versoes"] = []
+        if "assinaturas" not in data: data["assinaturas"] = {}
+        return data
     except (json.JSONDecodeError, FileNotFoundError):
         print("AVISO: Manifesto existente não encontrado ou corrompido. Criando um novo.")
         return {"versoes": [], "assinaturas": {}}
@@ -62,33 +67,53 @@ def generate_manifest():
 
             ini_file_path = os.path.join(folder_path, ini_files[0])
             
-            config = configparser.ConfigParser(strict=False) # Usar strict=False como segurança adicional
+            config = configparser.ConfigParser(strict=False)
             try:
-                # <<< MUDANÇA PRINCIPAL AQUI (SUA IDEIA!) >>>
-                # Lemos apenas as primeiras N linhas do arquivo para evitar erros de parsing.
                 with open(ini_file_path, 'r', encoding='latin-1') as f:
                     head_lines = [next(f) for _ in range(LINES_TO_READ)]
                 ini_content = "".join(head_lines)
                 
                 config.read_string("[DUMMY_SECTION]\n" + ini_content)
-                assinatura = config.get('TunerStudio', 'signature')
+                
+                # --- LÓGICA DE LIMPEZA DA ASSINATURA ---
+                assinatura_raw = config.get('TunerStudio', 'signature')
+                # 1. Remove comentários (tudo após ';')
+                assinatura_limpa = assinatura_raw.split(';')[0]
+                # 2. Remove aspas e espaços em branco das bordas
+                assinatura_limpa = assinatura_limpa.strip().strip('"')
+                # 3. Remove o prefixo conhecido "rusEFI "
+                if assinatura_limpa.startswith("rusEFI "):
+                    assinatura_limpa = assinatura_limpa.replace("rusEFI ", "", 1)
+                
+                assinatura = assinatura_limpa.strip()
 
-            except StopIteration: # Arquivo tem menos de LINES_TO_READ linhas, o que é ok.
+            except StopIteration:
                 ini_content = "".join(head_lines)
                 config.read_string("[DUMMY_SECTION]\n" + ini_content)
-                assinatura = config.get('TunerStudio', 'signature')
-            except (configparser.NoSectionError, configparser.NoOptionError) as e:
-                print(f"AVISO: Não foi possível encontrar '[TunerStudio] -> signature' em '{ini_file_path}'. Pulando. Erro: {e}")
-                continue
+                assinatura_raw = config.get('TunerStudio', 'signature')
+                assinatura_limpa = assinatura_raw.split(';')[0].strip().strip('"')
+                if assinatura_limpa.startswith("rusEFI "):
+                    assinatura_limpa = assinatura_limpa.replace("rusEFI ", "", 1)
+                assinatura = assinatura_limpa.strip()
             except Exception as e:
-                print(f"AVISO: Erro genérico ao ler o arquivo '{ini_file_path}'. Pulando. Erro: {e}")
+                print(f"AVISO: Erro ao processar o arquivo '{ini_file_path}'. Pulando. Erro: {e}")
                 continue
 
-            if assinatura in existing_signatures:
+            if not assinatura or assinatura in existing_signatures:
                 continue
 
             print(f"Nova configuração encontrada! Assinatura: {assinatura}")
 
+            # --- LÓGICA DE LEITURA DO CHANGELOG ---
+            changelog_path = os.path.join(folder_path, 'changelog.txt')
+            changelog_content = ""
+            if os.path.exists(changelog_path):
+                try:
+                    with open(changelog_path, 'r', encoding='utf-8') as f:
+                        changelog_content = f.read().strip()
+                except Exception as e:
+                    print(f"  - AVISO: Não foi possível ler o changelog.txt em '{folder_path}'. Erro: {e}")
+            
             ambiente = 'dev' if 'dev' in folder_name.lower() else 'prod'
             force_release_match = re.search(r'_v(\d+)_', folder_name)
             force_major_version = int(force_release_match.group(1)) if force_release_match else None
@@ -100,7 +125,8 @@ def generate_manifest():
                 "versao": current_highest_version,
                 "ambiente": ambiente,
                 "caminho_arquivo": ini_file_path.replace('\\', '/'),
-                "data_adicao": datetime.now(timezone.utc).isoformat()
+                "data_adicao": datetime.now(timezone.utc).isoformat(),
+                "changelog": changelog_content # Adiciona o changelog ao registro
             }
             new_entries.append(new_entry)
             existing_signatures.add(assinatura)
