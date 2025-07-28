@@ -18,7 +18,8 @@ def get_existing_manifest():
         print(f"Arquivo '{MANIFEST_FILE}' não encontrado. Criando um novo.")
         return {"versoes": [], "assinaturas": {}}
     
-    with open(MANIFEST_FILE, 'r', encoding='utf-8') as f:
+    # Usamos 'latin-1' para evitar erros de decodificação em manifestos antigos
+    with open(MANIFEST_FILE, 'r', encoding='latin-1') as f:
         try:
             data = json.load(f)
             if "versoes" not in data: data["versoes"] = []
@@ -59,19 +60,16 @@ def generate_manifest():
 
             ini_file_path = os.path.join(folder_path, ini_files[0])
             
-            # <<< MUDANÇA PRINCIPAL AQUI >>>
-            # Corrigido para lidar com arquivos .ini que têm valores antes da primeira seção.
             config = configparser.ConfigParser()
             try:
-                # Lemos o conteúdo do arquivo para uma string
-                with open(ini_file_path, 'r', encoding='utf-8') as f:
+                # <<< MUDANÇA PRINCIPAL AQUI >>>
+                # Lemos o conteúdo do arquivo usando 'latin-1' para evitar erros de codec.
+                with open(ini_file_path, 'r', encoding='latin-1') as f:
                     ini_content = f.read()
                 
-                # Adicionamos uma seção "dummy" no início para o parser aceitar o arquivo.
-                # Isso resolve o erro "MissingSectionHeaderError".
+                # Adicionamos uma seção "dummy" para lidar com arquivos sem cabeçalho inicial.
                 config.read_string("[DUMMY_SECTION]\n" + ini_content)
 
-                # Agora, a busca pela assinatura na seção correta funciona normalmente
                 assinatura = config.get('TunerStudio', 'signature')
 
             except (configparser.NoSectionError, configparser.NoOptionError) as e:
@@ -116,6 +114,7 @@ def generate_manifest():
         "assinaturas": assinaturas_map
     }
 
+    # Escrevemos o manifesto final em UTF-8, que é o padrão correto para JSON.
     with open(MANIFEST_FILE, 'w', encoding='utf-8') as f:
         json.dump(final_manifest, f, indent=2, ensure_ascii=False)
     
