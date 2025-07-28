@@ -1,0 +1,44 @@
+name: Gerar Manifesto de Configurações
+
+# Gatilho: A action roda toda vez que um push é feito na branch 'main'
+on:
+  push:
+    branches:
+      - main # Mude para 'master' se for o nome da sua branch principal
+
+jobs:
+  build-manifest:
+    runs-on: ubuntu-latest
+    # Permissões para que a action possa fazer commit de volta no repositório
+    permissions:
+      contents: write
+
+    steps:
+      # 1. Faz o checkout do código do seu repositório
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      # 2. Configura o ambiente Python
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      # 3. Executa o script Python para gerar o manifesto
+      - name: Gerar o arquivo manifest.json
+        run: python generate_manifest.py
+
+      # 4. Faz o commit e push do manifest.json atualizado de volta para o repositório
+      - name: Fazer commit dos arquivos
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          # Adiciona o manifesto à área de staging
+          git add manifest.json
+          # Verifica se houve mudanças. Se houver, faz o commit e push.
+          if ! git diff --staged --quiet; then
+            git commit -m "ci: Atualiza manifest.json automaticamente"
+            git push
+          else
+            echo "Nenhuma mudança no manifesto para commitar."
+          fi
