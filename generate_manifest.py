@@ -10,7 +10,10 @@ getcontext().prec = 5
 
 # --- CONFIGURAÇÃO ---
 MANIFEST_FILE = 'manifest.json'
-CONFIG_ROOT_DIR = '.' 
+CONFIG_ROOT_DIR = '.'
+# Número de linhas a serem lidas do início de cada arquivo .ini
+# Suficiente para pegar o cabeçalho com a assinatura, mas evitar erros no final do arquivo.
+LINES_TO_READ = 200
 
 def get_existing_manifest():
     """Carrega o manifesto existente ou cria um novo se não existir."""
@@ -18,16 +21,15 @@ def get_existing_manifest():
         print(f"Arquivo '{MANIFEST_FILE}' não encontrado. Criando um novo.")
         return {"versoes": [], "assinaturas": {}}
     
-    # Usamos 'latin-1' para evitar erros de decodificação em manifestos antigos
-    with open(MANIFEST_FILE, 'r', encoding='latin-1') as f:
-        try:
+    try:
+        with open(MANIFEST_FILE, 'r', encoding='utf-8') as f:
             data = json.load(f)
             if "versoes" not in data: data["versoes"] = []
             if "assinaturas" not in data: data["assinaturas"] = {}
             return data
-        except json.JSONDecodeError:
-            print("ERRO: Manifesto existente está corrompido. Criando um novo.")
-            return {"versoes": [], "assinaturas": {}}
+    except (json.JSONDecodeError, FileNotFoundError):
+        print("AVISO: Manifesto existente não encontrado ou corrompido. Criando um novo.")
+        return {"versoes": [], "assinaturas": {}}
 
 def get_next_version(current_highest_version, force_major_version=None):
     """Calcula a próxima versão."""
@@ -60,18 +62,21 @@ def generate_manifest():
 
             ini_file_path = os.path.join(folder_path, ini_files[0])
             
-            config = configparser.ConfigParser()
+            config = configparser.ConfigParser(strict=False) # Usar strict=False como segurança adicional
             try:
-                # <<< MUDANÇA PRINCIPAL AQUI >>>
-                # Lemos o conteúdo do arquivo usando 'latin-1' para evitar erros de codec.
+                # <<< MUDANÇA PRINCIPAL AQUI (SUA IDEIA!) >>>
+                # Lemos apenas as primeiras N linhas do arquivo para evitar erros de parsing.
                 with open(ini_file_path, 'r', encoding='latin-1') as f:
-                    ini_content = f.read()
+                    head_lines = [next(f) for _ in range(LINES_TO_READ)]
+                ini_content = "".join(head_lines)
                 
-                # Adicionamos uma seção "dummy" para lidar com arquivos sem cabeçalho inicial.
                 config.read_string("[DUMMY_SECTION]\n" + ini_content)
-
                 assinatura = config.get('TunerStudio', 'signature')
 
+            except StopIteration: # Arquivo tem menos de LINES_TO_READ linhas, o que é ok.
+                ini_content = "".join(head_lines)
+                config.read_string("[DUMMY_SECTION]\n" + ini_content)
+                assinatura = config.get('TunerStudio', 'signature')
             except (configparser.NoSectionError, configparser.NoOptionError) as e:
                 print(f"AVISO: Não foi possível encontrar '[TunerStudio] -> signature' em '{ini_file_path}'. Pulando. Erro: {e}")
                 continue
@@ -114,7 +119,6 @@ def generate_manifest():
         "assinaturas": assinaturas_map
     }
 
-    # Escrevemos o manifesto final em UTF-8, que é o padrão correto para JSON.
     with open(MANIFEST_FILE, 'w', encoding='utf-8') as f:
         json.dump(final_manifest, f, indent=2, ensure_ascii=False)
     
