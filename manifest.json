@@ -1,33 +1,6 @@
 {
   "versoes": [
-    {
-      "assinatura": "motrolink_dev.2025.08.30.evotech12.1121145969",
-      "versao": "1.2",
-      "ambiente": "prod",
-      "caminho_arquivo": "./motrolink_prod.2025.08.30.evotech12.1121145969/evotech_evotech12.ini",
-      "data_adicao": "2025-09-03T13:14:36.542811+00:00",
-      "changelog": ""
-    },
-    {
-      "assinatura": "motrolink_dev.2025.08.30.evotech12.3679800073",
-      "versao": "1.1",
-      "ambiente": "dev",
-      "caminho_arquivo": "./motrolink_dev.2025.08.30.evotech12.3679800073/evotech_evotech12.ini",
-      "data_adicao": "2025-09-02T17:26:00.771511+00:00",
-      "changelog": ""
-    },
-    {
-      "assinatura": "motrolink_dev.2025.07.13.evotech12.3858044272",
-      "versao": "1.0",
-      "ambiente": "dev",
-      "caminho_arquivo": "./motrolink_dev.2025.07.13.evotech12.3858044272/evotech_evotech12.ini",
-      "data_adicao": "2025-07-28T15:27:22.044554+00:00",
-      "changelog": "- Versão inicial"
-    }
   ],
   "assinaturas": {
-    "motrolink_dev.2025.08.30.evotech12.1121145969": "./motrolink_prod.2025.08.30.evotech12.1121145969/evotech_evotech12.ini",
-    "motrolink_dev.2025.08.30.evotech12.3679800073": "./motrolink_dev.2025.08.30.evotech12.3679800073/evotech_evotech12.ini",
-    "motrolink_dev.2025.07.13.evotech12.3858044272": "./motrolink_dev.2025.07.13.evotech12.3858044272/evotech_evotech12.ini"
   }
 }
