@@ -1,6 +1,15 @@
 {
   "versoes": [
+    {
+      "assinatura": "dev-traducao.2025.09.05.evotech12.641873271",
+      "versao": "1.0",
+      "ambiente": "prod",
+      "caminho_arquivo": "./prod-traducao.2025.09.05.evotech12.641873271/evotech_evotech12.ini",
+      "data_adicao": "2025-09-05T15:41:26.119530+00:00",
+      "changelog": ""
+    }
   ],
   "assinaturas": {
+    "dev-traducao.2025.09.05.evotech12.641873271": "./prod-traducao.2025.09.05.evotech12.641873271/evotech_evotech12.ini"
   }
 }
