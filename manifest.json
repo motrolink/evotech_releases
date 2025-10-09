@@ -1,6 +1,14 @@
 {
   "versoes": [
     {
+      "assinatura": "motrolink_dev.2025.09.28.evotech12.2421910608",
+      "versao": "1.2",
+      "ambiente": "prod",
+      "caminho_arquivo": "./motrolink_prod.2025.09.28.evotech12.2421910608/rusefi_proteus_f4.ini",
+      "data_adicao": "2025-10-09T14:01:45.927406+00:00",
+      "changelog": ""
+    },
+    {
       "assinatura": "dev-traducao.2025.09.05.evotech12.2251296683",
       "versao": "1.1",
       "ambiente": "prod",
@@ -18,6 +26,7 @@
     }
   ],
   "assinaturas": {
+    "motrolink_dev.2025.09.28.evotech12.2421910608": "./motrolink_prod.2025.09.28.evotech12.2421910608/rusefi_proteus_f4.ini",
     "dev-traducao.2025.09.05.evotech12.2251296683": "./prod-traducao.2025.09.05.evotech12.2251296683/evotech_evotech12.ini",
     "dev-traducao.2025.09.05.evotech12.3371204103": "./prod-traducao.2025.09.05.evotech12.3371204103/evotech_evotech12.ini"
   }
