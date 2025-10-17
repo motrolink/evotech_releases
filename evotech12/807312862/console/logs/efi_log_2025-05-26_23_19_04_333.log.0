@@ -1,0 +1,276 @@
+I 250526 231904.341 [main] Launcher - rusEFI UI console 20250221
+I 250526 231904.356 [main] Launcher - Compiled Wed Dec 31 21:00:00 BRT 1969
+I 250526 231904.356 [main] Launcher - 
+
+
+I 250526 231904.388 [main] ConsoleUI - OS name: Windows 11
+I 250526 231904.388 [main] ConsoleUI - OS version: 10.0
+I 250526 231904.388 [Thread-1] LazyFileImpl - logs/README.html does not exist considering empty current content
+I 250526 231904.438 [main] PersistentConfiguration - Console configuration from C:\Users\libni\.rusEFI\console_properties.xml
+I 250526 231904.498 [AWT-EventQueue-0] JustOneInstance - No other instances seem to be running
+I 250526 231904.498 [JustOneInstance] JustOneInstance - server socket 29213
+I 250526 231904.514 [AWT-EventQueue-0] MessagesCentral - postMessage Launcher: Available port: COM10
+I 250526 231904.514 [AWT-EventQueue-0] MessagesCentral - postMessage Launcher: Available port: COM3
+I 250526 231904.612 [AWT-EventQueue-0] Launcher - rusefi console 20250221
+I 250526 231904.898 [AWT-EventQueue-0] FindFileHelper - Scanning C:\Users\libni\OneDrive\羠ea de Trabalho\evotech12_tests\v5\console\.. for /srec
+I 250526 231904.898 [AWT-EventQueue-0] FindFileHelper - Searching for *srec in C:\Users\libni\OneDrive\羠ea de Trabalho\evotech12_tests\v5\console\..
+I 250526 231904.914 [AWT-EventQueue-0] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 3ms
+I 250526 231904.918 [SerialPortScanner inspectPort COM10] SerialPortScanner - Determining type of serial port: COM10
+I 250526 231904.918 [SerialPortScanner inspectPort COM3] SerialPortScanner - Determining type of serial port: COM3
+I 250526 231904.929 [SerialPortScanner inspectPort COM10] SerialIoStream - Using com.fazecast.jSerialComm 2.11.0
+I 250526 231904.929 [SerialPortScanner inspectPort COM10] BufferedSerialIoStream - [BufferedSerialIoStream] openPort COM10
+I 250526 231904.929 [SerialPortScanner inspectPort COM3] BufferedSerialIoStream - [BufferedSerialIoStream] openPort COM3
+I 250526 231904.968 [AWT-EventQueue-0] Launcher - setVisible
+I 250526 231905.202 [SerialPortScanner inspectPort COM10] IncomingDataBuffer - BufferedSerialIoStreamreadByte: timeout 250ms. Got only 0 byte(s) while expecting 1
+I 250526 231905.202 [SerialPortScanner inspectPort COM10] SerialIoStream - COM10: Closing port...
+I 250526 231905.202 [SerialPortScanner inspectPort COM10] SerialIoStream - COM10: Closed port.
+I 250526 231905.202 [SerialPortScanner inspectPort COM10] SerialPortScanner - Port COM10 does not look like an OpenBLT bootloader
+I 250526 231905.202 [SerialPortScanner inspectPort COM10] BufferedSerialIoStream - [BufferedSerialIoStream] openPort COM10
+I 250526 231905.217 [SerialPortScanner inspectPort COM3] IncomingDataBuffer - BufferedSerialIoStreamreadByte: timeout 250ms. Got only 0 byte(s) while expecting 1
+I 250526 231905.217 [SerialPortScanner inspectPort COM3] SerialIoStream - COM3: Closing port...
+I 250526 231905.217 [SerialPortScanner inspectPort COM10] SerialIoStream - COM10: Closing port...
+I 250526 231905.233 [SerialPortScanner inspectPort COM10] SerialIoStream - COM10: Closed port.
+I 250526 231905.233 [SerialPortScanner inspectPort COM10] SerialPortScanner - Port COM10 does not look like an ECU
+I 250526 231905.266 [SerialPortScanner inspectPort COM3] SerialIoStream - COM3: Closed port.
+I 250526 231905.266 [SerialPortScanner inspectPort COM3] SerialPortScanner - Port COM3 does not look like an OpenBLT bootloader
+I 250526 231905.266 [SerialPortScanner inspectPort COM3] BufferedSerialIoStream - [BufferedSerialIoStream] openPort COM3
+I 250526 231909.926 [Ports Scanner] SerialPortScanner - Port COM3 timed out, adding as Unknown.
+I 250526 231909.926 [SerialPortScanner inspectPort COM3] SerialIoStream - COM3: Closing port...
+I 250526 231909.928 [Ports Scanner] SerialPortScanner - Port COM10 detected as: Unknown
+I 250526 231909.929 [Ports Scanner] SerialPortScanner - Port COM3 detected as: Unknown
+I 250526 231909.929 [AWT-EventQueue-0] FindFileHelper - Scanning C:\Users\libni\OneDrive\羠ea de Trabalho\evotech12_tests\v5\console\.. for /srec
+I 250526 231909.929 [AWT-EventQueue-0] FindFileHelper - Searching for *srec in C:\Users\libni\OneDrive\羠ea de Trabalho\evotech12_tests\v5\console\..
+I 250526 231909.929 [AWT-EventQueue-0] Launcher - Rendering available ports: [COM10 (Unknown), COM3 (Unknown)]
+I 250526 231909.977 [SerialPortScanner inspectPort COM3] SerialIoStream - COM3: Closed port.
+I 250526 231909.977 [SerialPortScanner inspectPort COM3] SerialPortScanner - Port COM3 does not look like an ECU
+E 250526 231909.977 [Ports Scanner] RecurringStep - sleep interrupted
+java.lang.InterruptedException: sleep interrupted
+	at java.base/java.lang.Thread.sleep(Native Method)
+	at com.rusefi.RecurringStep.lambda$start$0(RecurringStep.java:36)
+	at java.base/java.lang.Thread.run(Unknown Source)
+I 250526 231909.977 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 0ms
+I 250526 231909.993 [AWT-EventQueue-0] FindFileHelper - Scanning C:\Users\libni\OneDrive\羠ea de Trabalho\evotech12_tests\v5\console\.. for /srec
+I 250526 231909.993 [AWT-EventQueue-0] FindFileHelper - Searching for *srec in C:\Users\libni\OneDrive\羠ea de Trabalho\evotech12_tests\v5\console\..
+I 250526 231909.993 [AWT-EventQueue-0] Launcher - Rendering available ports: [COM10 (Unknown), COM3 (Unknown), PCAN (CAN)]
+I 250526 231910.299 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 0ms
+I 250526 231910.634 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 2ms
+I 250526 231910.947 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 0ms
+I 250526 231911.279 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 0ms
+I 250526 231911.598 [Ports Scanner] SerialPortCache - 1 disappeared ports are removed
+I 250526 231911.602 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 4ms
+I 250526 231911.619 [AWT-EventQueue-0] FindFileHelper - Scanning C:\Users\libni\OneDrive\羠ea de Trabalho\evotech12_tests\v5\console\.. for /srec
+I 250526 231911.619 [AWT-EventQueue-0] FindFileHelper - Searching for *srec in C:\Users\libni\OneDrive\羠ea de Trabalho\evotech12_tests\v5\console\..
+I 250526 231911.619 [AWT-EventQueue-0] Launcher - Rendering available ports: [COM3 (Unknown), PCAN (CAN)]
+I 250526 231911.934 [Ports Scanner] SerialPortCache - Expired port is removed: COM3
+I 250526 231911.934 [SerialPortScanner inspectPort COM3] SerialPortScanner - Determining type of serial port: COM3
+I 250526 231911.934 [SerialPortScanner inspectPort COM3] BufferedSerialIoStream - [BufferedSerialIoStream] openPort COM3
+I 250526 231912.220 [SerialPortScanner inspectPort COM3] IncomingDataBuffer - BufferedSerialIoStreamreadByte: timeout 250ms. Got only 0 byte(s) while expecting 1
+I 250526 231912.220 [SerialPortScanner inspectPort COM3] SerialIoStream - COM3: Closing port...
+I 250526 231912.268 [SerialPortScanner inspectPort COM3] SerialIoStream - COM3: Closed port.
+I 250526 231912.268 [SerialPortScanner inspectPort COM3] SerialPortScanner - Port COM3 does not look like an OpenBLT bootloader
+I 250526 231912.268 [SerialPortScanner inspectPort COM3] BufferedSerialIoStream - [BufferedSerialIoStream] openPort COM3
+I 250526 231916.948 [Ports Scanner] SerialPortScanner - Port COM3 timed out, adding as Unknown.
+I 250526 231916.948 [SerialPortScanner inspectPort COM3] SerialIoStream - COM3: Closing port...
+I 250526 231916.949 [Ports Scanner] SerialPortScanner - Port COM3 detected as: Unknown
+I 250526 231916.949 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 0ms
+I 250526 231916.997 [SerialPortScanner inspectPort COM3] SerialIoStream - COM3: Closed port.
+I 250526 231916.997 [SerialPortScanner inspectPort COM3] SerialPortScanner - Port COM3 does not look like an ECU
+E 250526 231916.997 [Ports Scanner] RecurringStep - sleep interrupted
+java.lang.InterruptedException: sleep interrupted
+	at java.base/java.lang.Thread.sleep(Native Method)
+	at com.rusefi.RecurringStep.lambda$start$0(RecurringStep.java:36)
+	at java.base/java.lang.Thread.run(Unknown Source)
+I 250526 231916.997 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 0ms
+I 250526 231917.332 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 2ms
+I 250526 231917.653 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 0ms
+I 250526 231917.970 [AWT-EventQueue-0] ProgramSelector - ProgramSelector Manual DFU Update COM3 (Unknown)
+I 250526 231917.983 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 0ms
+I 250526 231918.039 [AWT-EventQueue-0] StatusWindow - Console version 20250221
+I 250526 231918.039 [AWT-EventQueue-0] StatusWindow - Windows 11 10.0
+I 250526 231918.039 [AWT-EventQueue-0] StatusWindow - Bundle BundleInfo{branchName='development', target='evoTech12'}
+I 250526 231918.074 [AWT-EventQueue-0] StatusWindow - Console version 20250221
+I 250526 231918.074 [AWT-EventQueue-0] StatusWindow - Windows 11 10.0
+I 250526 231918.076 [AWT-EventQueue-0] StatusWindow - Bundle BundleInfo{branchName='development', target='evoTech12'}
+I 250526 231918.076 [AWT-EventQueue-0] StatusWindow - Executing command=wmic path win32_pnpentity where "Caption like '%STM32%' and Caption like '%Bootloader%'" get Caption,ConfigManagerErrorCode /format:list
+I 250526 231918.082 [AWT-EventQueue-0] StatusWindow - IOError: com.rusefi.maintenance.ErrorExecutingCommand
+I 250526 231918.083 [AWT-EventQueue-0] StatusWindow - Executing command=.\STM32_Programmer_CLI/bin/STM32_Programmer_CLI.exe -c port=usb1 -w "C:\Users\libni\OneDrive\羠ea de Trabalho\evotech12_tests\v5\console\..\rusefi.bin" 0x08000000 -v -s
+I 250526 231918.094 [AWT-EventQueue-0] StatusWindow -       -------------------------------------------------------------------
+I 250526 231918.096 [AWT-EventQueue-0] StatusWindow -                        STM32CubeProgrammer v2.18.0                  
+I 250526 231918.097 [AWT-EventQueue-0] StatusWindow -       -------------------------------------------------------------------
+I 250526 231918.098 [AWT-EventQueue-0] StatusWindow - 
+I 250526 231918.120 [AWT-EventQueue-0] StatusWindow - 
+I 250526 231918.120 [AWT-EventQueue-0] StatusWindow - 
+I 250526 231918.154 [AWT-EventQueue-0] StatusWindow - USB speed   : Full Speed (12MBit/s)
+I 250526 231918.155 [AWT-EventQueue-0] StatusWindow - Manuf. ID   : STMicroelectronics
+I 250526 231918.156 [AWT-EventQueue-0] StatusWindow - Product ID  : STM32  BOOTLOADER
+I 250526 231918.157 [AWT-EventQueue-0] StatusWindow - SN          : 386634563133
+I 250526 231918.159 [AWT-EventQueue-0] StatusWindow - DFU protocol: 1.1
+I 250526 231918.159 [AWT-EventQueue-0] StatusWindow - Board       : --
+I 250526 231918.160 [AWT-EventQueue-0] StatusWindow - Device ID   : 0x0419
+I 250526 231918.161 [AWT-EventQueue-0] StatusWindow - Device name : STM32F42xxx/F43xxx
+I 250526 231918.161 [AWT-EventQueue-0] StatusWindow - Flash size  : 2 MBytes (default)
+I 250526 231918.162 [AWT-EventQueue-0] StatusWindow - Device type : MCU
+I 250526 231918.163 [AWT-EventQueue-0] StatusWindow - Revision ID : --  
+I 250526 231918.163 [AWT-EventQueue-0] StatusWindow - Device CPU  : Cortex-M4
+I 250526 231918.163 [AWT-EventQueue-0] StatusWindow - Opening and parsing file: rusefi.bin
+I 250526 231918.164 [AWT-EventQueue-0] StatusWindow - 
+I 250526 231918.164 [AWT-EventQueue-0] StatusWindow - 
+I 250526 231918.164 [AWT-EventQueue-0] StatusWindow - Memory Programming ...
+I 250526 231918.165 [AWT-EventQueue-0] StatusWindow -   File          : rusefi.bin
+I 250526 231918.165 [AWT-EventQueue-0] StatusWindow -   Size          : 664.87 KB 
+I 250526 231918.166 [AWT-EventQueue-0] StatusWindow -   Address       : 0x08000000 
+I 250526 231918.166 [AWT-EventQueue-0] StatusWindow - 
+I 250526 231918.167 [AWT-EventQueue-0] StatusWindow - 
+I 250526 231918.167 [AWT-EventQueue-0] StatusWindow - Erasing memory corresponding to segment 0:
+I 250526 231918.168 [AWT-EventQueue-0] StatusWindow - Erasing internal memory sectors [0 9]
+I 250526 231918.331 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 1ms
+I 250526 231918.658 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 1ms
+I 250526 231918.983 [Ports Scanner] SerialPortCache - Expired port is removed: COM3
+I 250526 231918.984 [SerialPortScanner inspectPort COM3] SerialPortScanner - Determining type of serial port: COM3
+I 250526 231918.984 [SerialPortScanner inspectPort COM3] BufferedSerialIoStream - [BufferedSerialIoStream] openPort COM3
+I 250526 231919.289 [SerialPortScanner inspectPort COM3] IncomingDataBuffer - BufferedSerialIoStreamreadByte: timeout 250ms. Got only 0 byte(s) while expecting 1
+I 250526 231919.290 [SerialPortScanner inspectPort COM3] SerialIoStream - COM3: Closing port...
+I 250526 231919.336 [SerialPortScanner inspectPort COM3] SerialIoStream - COM3: Closed port.
+I 250526 231919.337 [SerialPortScanner inspectPort COM3] SerialPortScanner - Port COM3 does not look like an OpenBLT bootloader
+I 250526 231919.337 [SerialPortScanner inspectPort COM3] BufferedSerialIoStream - [BufferedSerialIoStream] openPort COM3
+I 250526 231923.989 [Ports Scanner] SerialPortScanner - Port COM3 timed out, adding as Unknown.
+I 250526 231923.989 [SerialPortScanner inspectPort COM3] SerialIoStream - COM3: Closing port...
+I 250526 231923.991 [Ports Scanner] SerialPortScanner - Port COM3 detected as: Unknown
+I 250526 231923.993 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 1ms
+I 250526 231924.036 [SerialPortScanner inspectPort COM3] SerialIoStream - COM3: Closed port.
+I 250526 231924.037 [SerialPortScanner inspectPort COM3] SerialPortScanner - Port COM3 does not look like an ECU
+E 250526 231924.037 [Ports Scanner] RecurringStep - sleep interrupted
+java.lang.InterruptedException: sleep interrupted
+	at java.base/java.lang.Thread.sleep(Native Method)
+	at com.rusefi.RecurringStep.lambda$start$0(RecurringStep.java:36)
+	at java.base/java.lang.Thread.run(Unknown Source)
+I 250526 231924.048 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 1ms
+I 250526 231924.391 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 1ms
+I 250526 231924.739 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 0ms
+I 250526 231925.083 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 0ms
+I 250526 231925.414 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 1ms
+I 250526 231925.746 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 1ms
+I 250526 231926.074 [Ports Scanner] SerialPortCache - Expired port is removed: COM3
+I 250526 231926.074 [SerialPortScanner inspectPort COM3] SerialPortScanner - Determining type of serial port: COM3
+I 250526 231926.075 [SerialPortScanner inspectPort COM3] BufferedSerialIoStream - [BufferedSerialIoStream] openPort COM3
+I 250526 231926.371 [SerialPortScanner inspectPort COM3] IncomingDataBuffer - BufferedSerialIoStreamreadByte: timeout 250ms. Got only 0 byte(s) while expecting 1
+I 250526 231926.371 [SerialPortScanner inspectPort COM3] SerialIoStream - COM3: Closing port...
+I 250526 231926.418 [SerialPortScanner inspectPort COM3] SerialIoStream - COM3: Closed port.
+I 250526 231926.418 [SerialPortScanner inspectPort COM3] SerialPortScanner - Port COM3 does not look like an OpenBLT bootloader
+I 250526 231926.418 [SerialPortScanner inspectPort COM3] BufferedSerialIoStream - [BufferedSerialIoStream] openPort COM3
+I 250526 231930.190 [AWT-EventQueue-0] StatusWindow - Download in Progress:
+I 250526 231930.493 [AWT-EventQueue-0] StatusWindow - 北北北北北北北北北北北北北北北北北北北北北北北北北 0%
+I 250526 231931.076 [Ports Scanner] SerialPortScanner - Port COM3 timed out, adding as Unknown.
+I 250526 231931.076 [SerialPortScanner inspectPort COM3] SerialIoStream - COM3: Closing port...
+I 250526 231931.077 [Ports Scanner] SerialPortScanner - Port COM3 detected as: Unknown
+I 250526 231931.078 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 1ms
+I 250526 231931.124 [SerialPortScanner inspectPort COM3] SerialIoStream - COM3: Closed port.
+I 250526 231931.124 [SerialPortScanner inspectPort COM3] SerialPortScanner - Port COM3 does not look like an ECU
+E 250526 231931.125 [Ports Scanner] RecurringStep - sleep interrupted
+java.lang.InterruptedException: sleep interrupted
+	at java.base/java.lang.Thread.sleep(Native Method)
+	at com.rusefi.RecurringStep.lambda$start$0(RecurringStep.java:36)
+	at java.base/java.lang.Thread.run(Unknown Source)
+I 250526 231931.136 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 0ms
+I 250526 231931.465 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 1ms
+I 250526 231931.794 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 1ms
+I 250526 231932.139 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 0ms
+I 250526 231932.463 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 1ms
+I 250526 231932.784 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 1ms
+I 250526 231933.114 [Ports Scanner] SerialPortCache - Expired port is removed: COM3
+I 250526 231933.115 [SerialPortScanner inspectPort COM3] SerialPortScanner - Determining type of serial port: COM3
+I 250526 231933.115 [SerialPortScanner inspectPort COM3] BufferedSerialIoStream - [BufferedSerialIoStream] openPort COM3
+I 250526 231933.408 [SerialPortScanner inspectPort COM3] IncomingDataBuffer - BufferedSerialIoStreamreadByte: timeout 250ms. Got only 0 byte(s) while expecting 1
+I 250526 231933.408 [SerialPortScanner inspectPort COM3] SerialIoStream - COM3: Closing port...
+I 250526 231933.456 [SerialPortScanner inspectPort COM3] SerialIoStream - COM3: Closed port.
+I 250526 231933.456 [SerialPortScanner inspectPort COM3] SerialPortScanner - Port COM3 does not look like an OpenBLT bootloader
+I 250526 231933.456 [SerialPortScanner inspectPort COM3] BufferedSerialIoStream - [BufferedSerialIoStream] openPort COM3
+I 250526 231938.122 [Ports Scanner] SerialPortScanner - Port COM3 timed out, adding as Unknown.
+I 250526 231938.122 [SerialPortScanner inspectPort COM3] SerialIoStream - COM3: Closing port...
+I 250526 231938.122 [Ports Scanner] SerialPortScanner - Port COM3 detected as: Unknown
+I 250526 231938.125 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 2ms
+I 250526 231938.169 [SerialPortScanner inspectPort COM3] SerialIoStream - COM3: Closed port.
+I 250526 231938.170 [SerialPortScanner inspectPort COM3] SerialPortScanner - Port COM3 does not look like an ECU
+E 250526 231938.170 [Ports Scanner] RecurringStep - sleep interrupted
+java.lang.InterruptedException: sleep interrupted
+	at java.base/java.lang.Thread.sleep(Native Method)
+	at com.rusefi.RecurringStep.lambda$start$0(RecurringStep.java:36)
+	at java.base/java.lang.Thread.run(Unknown Source)
+I 250526 231938.180 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 0ms
+I 250526 231938.508 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 0ms
+I 250526 231938.855 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 1ms
+I 250526 231939.187 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 1ms
+I 250526 231939.517 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 1ms
+I 250526 231939.858 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 0ms
+I 250526 231940.189 [Ports Scanner] SerialPortCache - Expired port is removed: COM3
+I 250526 231940.190 [SerialPortScanner inspectPort COM3] SerialPortScanner - Determining type of serial port: COM3
+I 250526 231940.190 [SerialPortScanner inspectPort COM3] BufferedSerialIoStream - [BufferedSerialIoStream] openPort COM3
+I 250526 231940.480 [SerialPortScanner inspectPort COM3] IncomingDataBuffer - BufferedSerialIoStreamreadByte: timeout 250ms. Got only 0 byte(s) while expecting 1
+I 250526 231940.481 [SerialPortScanner inspectPort COM3] SerialIoStream - COM3: Closing port...
+I 250526 231940.526 [SerialPortScanner inspectPort COM3] SerialIoStream - COM3: Closed port.
+I 250526 231940.526 [SerialPortScanner inspectPort COM3] SerialPortScanner - Port COM3 does not look like an OpenBLT bootloader
+I 250526 231940.526 [SerialPortScanner inspectPort COM3] BufferedSerialIoStream - [BufferedSerialIoStream] openPort COM3
+I 250526 231944.257 [AWT-EventQueue-0] StatusWindow -   2%  4%  6%  8% 10% 12% 14% 16% 18% 20% 22% 24% 26% 28% 30% 32% 34% 36% 38% 40% 42% 44% 46% 48% 50% 52% 54% 56% 58% 60% 62% 64% 66% 68% 70% 72% 74% 76% 78% 80% 82% 84% 86% 88% 90% 92% 94% 96% 98% 100%
+I 250526 231944.260 [AWT-EventQueue-0] StatusWindow - 
+I 250526 231944.261 [AWT-EventQueue-0] StatusWindow - File download complete
+I 250526 231944.263 [AWT-EventQueue-0] StatusWindow - Time elapsed during download operation: 00:00:26.102
+I 250526 231944.264 [AWT-EventQueue-0] StatusWindow - 
+I 250526 231944.265 [AWT-EventQueue-0] StatusWindow - 
+I 250526 231944.266 [AWT-EventQueue-0] StatusWindow - 
+I 250526 231944.267 [AWT-EventQueue-0] StatusWindow - Verifying ...
+I 250526 231944.269 [AWT-EventQueue-0] StatusWindow - 
+I 250526 231944.270 [AWT-EventQueue-0] StatusWindow - 
+I 250526 231944.272 [AWT-EventQueue-0] StatusWindow - Read progress:
+I 250526 231944.296 [AWT-EventQueue-0] StatusWindow - 北北北北北北北北北北北北北北北北北北北北北北北北北 50%
+I 250526 231945.200 [Ports Scanner] SerialPortScanner - Port COM3 timed out, adding as Unknown.
+I 250526 231945.200 [SerialPortScanner inspectPort COM3] SerialIoStream - COM3: Closing port...
+I 250526 231945.200 [Ports Scanner] SerialPortScanner - Port COM3 detected as: Unknown
+I 250526 231945.202 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 1ms
+I 250526 231945.246 [SerialPortScanner inspectPort COM3] SerialIoStream - COM3: Closed port.
+I 250526 231945.246 [SerialPortScanner inspectPort COM3] SerialPortScanner - Port COM3 does not look like an ECU
+E 250526 231945.247 [Ports Scanner] RecurringStep - sleep interrupted
+java.lang.InterruptedException: sleep interrupted
+	at java.base/java.lang.Thread.sleep(Native Method)
+	at com.rusefi.RecurringStep.lambda$start$0(RecurringStep.java:36)
+	at java.base/java.lang.Thread.run(Unknown Source)
+I 250526 231945.255 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 0ms
+I 250526 231945.589 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 1ms
+I 250526 231945.920 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 1ms
+I 250526 231945.922 [AWT-EventQueue-0] StatusWindow -   2%  4%  6%  8% 10% 12% 14% 16% 18% 20% 22% 24% 26% 28% 30% 32% 34% 36% 38% 40% 42% 44% 46% 48% 50% 52% 54% 56% 58% 60% 62% 64% 66% 68% 70% 72% 74% 76% 78% 80% 82% 84% 86% 88% 90% 92% 94% 96% 98% 100%
+I 250526 231945.923 [AWT-EventQueue-0] StatusWindow - 
+I 250526 231945.924 [AWT-EventQueue-0] StatusWindow - Download verified successfully 
+I 250526 231945.926 [AWT-EventQueue-0] StatusWindow - 
+I 250526 231945.927 [AWT-EventQueue-0] StatusWindow - 
+I 250526 231945.947 [AWT-EventQueue-0] StatusWindow - 
+I 250526 231945.962 [AWT-EventQueue-0] StatusWindow - RUNNING Program ... 
+I 250526 231945.962 [AWT-EventQueue-0] StatusWindow -   Address:      : 0x8000000
+I 250526 231945.962 [AWT-EventQueue-0] StatusWindow - Start operation achieved successfully
+I 250526 231945.962 [AWT-EventQueue-0] StatusWindow - SUCCESS!
+I 250526 231945.962 [AWT-EventQueue-0] StatusWindow - Please power cycle device to exit DFU mode
+I 250526 231946.253 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 0ms
+I 250526 231946.596 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 3ms
+I 250526 231946.928 [Ports Scanner] TcpConnector - Connection refused in getAvailablePorts(): simulator not running in 0ms
+I 250526 231947.279 [Ports Scanner] SerialPortCache - Expired port is removed: COM3
+I 250526 231947.280 [SerialPortScanner inspectPort COM10] SerialPortScanner - Determining type of serial port: COM10
+I 250526 231947.280 [SerialPortScanner inspectPort COM3] SerialPortScanner - Determining type of serial port: COM3
+I 250526 231947.283 [SerialPortScanner inspectPort COM10] BufferedSerialIoStream - [BufferedSerialIoStream] openPort COM10
+I 250526 231947.285 [SerialPortScanner inspectPort COM3] BufferedSerialIoStream - [BufferedSerialIoStream] openPort COM3
+I 250526 231947.309 [AWT-EventQueue-0] FrameHelper - Non-daemon thread: Thread[JustOneInstance,6,main]
+I 250526 231947.309 [AWT-EventQueue-0] FrameHelper - Non-daemon thread: Thread[ECU SerialIoStream jSerialComm15,5,main]
+I 250526 231947.309 [AWT-EventQueue-0] FrameHelper - Non-daemon thread: Thread[DestroyJavaVM,5,main]
+I 250526 231947.309 [AWT-EventQueue-0] FrameHelper - Non-daemon thread: Thread[AWT-Shutdown,5,system]
+I 250526 231947.309 [AWT-EventQueue-0] FrameHelper - Non-daemon thread: Thread[AWT-EventQueue-0,6,main]
+I 250526 231947.339 [AWT-EventQueue-0] FrameHelper - [javax.swing.JFrame[frame0,691,337,651x472,invalid,layout=java.awt.BorderLayout,title=rusefi console 20250221 evoTech12.development,resizable,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,635x433,invalid,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true], javax.swing.JFrame[frame1,752,320,416x439,invalid,hidden,layout=java.awt.BorderLayout,title=DFU update 20250221 evoTech12.development,resizable,normal,defaultCloseOperation=DISPOSE_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,400x400,invalid,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]]
+I 250526 231947.554 [SerialPortScanner inspectPort COM10] IncomingDataBuffer - BufferedSerialIoStreamreadByte: timeout 250ms. Got only 0 byte(s) while expecting 1
+I 250526 231947.554 [SerialPortScanner inspectPort COM10] SerialIoStream - COM10: Closing port...
+I 250526 231947.559 [SerialPortScanner inspectPort COM10] SerialIoStream - COM10: Closed port.
+I 250526 231947.559 [SerialPortScanner inspectPort COM10] SerialPortScanner - Port COM10 does not look like an OpenBLT bootloader
+I 250526 231947.559 [SerialPortScanner inspectPort COM10] BufferedSerialIoStream - [BufferedSerialIoStream] openPort COM10
+I 250526 231947.571 [SerialPortScanner inspectPort COM3] IncomingDataBuffer - BufferedSerialIoStreamreadByte: timeout 250ms. Got only 0 byte(s) while expecting 1
+I 250526 231947.571 [SerialPortScanner inspectPort COM3] SerialIoStream - COM3: Closing port...
+I 250526 231947.571 [SerialPortScanner inspectPort COM10] SerialIoStream - COM10: Closing port...
+I 250526 231947.579 [SerialPortScanner inspectPort COM10] SerialIoStream - COM10: Closed port.
+I 250526 231947.579 [SerialPortScanner inspectPort COM10] SerialPortScanner - Port COM10 does not look like an ECU
+I 250526 231947.618 [SerialPortScanner inspectPort COM3] SerialIoStream - COM3: Closed port.
+I 250526 231947.618 [SerialPortScanner inspectPort COM3] SerialPortScanner - Port COM3 does not look like an OpenBLT bootloader
+I 250526 231947.618 [SerialPortScanner inspectPort COM3] BufferedSerialIoStream - [BufferedSerialIoStream] openPort COM3
