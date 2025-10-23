@@ -92,26 +92,45 @@ class ReleaseProcessor:
 
     def _parse_signature(self, full_signature: str) -> Optional[Dict[str, str]]:
         """
-        Extrai hardware e assinatura da signature completa.
+        Extrai hardware, data e assinatura da signature completa.
         Exemplo: "rusEFI dev-traducao.2025.09.05.evotech12.3371204103"
-        Retorna: {"hardware": "evotech12", "signature": "3371204103"}
+        Retorna: {"hardware": "evotech12", "signature": "3371204103", "date": "2025.09.05"}
         """
-        # Remove "rusEFI " do início se existir
-        signature = full_signature.replace("rusEFI ", "").strip()
+        # Remove "rusEFI " ou "evoTech " do início se existir
+        signature = full_signature.replace("rusEFI ", "").replace("evoTech ", "").strip()
 
-        # Split por pontos e pega os últimos 2 valores
+        # Split por pontos
         parts = signature.split(".")
 
-        if len(parts) < 2:
+        if len(parts) < 5:
             print(f"[!] Formato invalido de signature: {full_signature}")
             return None
 
-        hardware = parts[-2]  # Penúltimo valor
+        # Extrai os componentes da signature
+        # Formato: <prefix>.<YYYY>.<MM>.<DD>.<hardware>.<signature>
+        # Exemplo: motrolink_release.2025.05.28.evotech12.415604078
+        hardware = parts[-2]    # Penúltimo valor
         sig_number = parts[-1]  # Último valor
+
+        # Extrai data (YYYY.MM.DD) - posições -5, -4, -3 a partir do fim
+        if len(parts) >= 6:
+            year = parts[-5]
+            month = parts[-4]
+            day = parts[-3]
+            date = f"{year}.{month}.{day}"
+
+            # Valida se é uma data válida (formato básico)
+            if not (year.isdigit() and month.isdigit() and day.isdigit() and len(year) == 4):
+                print(f"[!] Data invalida na signature: {full_signature}")
+                return None
+        else:
+            print(f"[!] Formato invalido de signature (data nao encontrada): {full_signature}")
+            return None
 
         return {
             "hardware": hardware,
             "signature": sig_number,
+            "date": date,
             "full_signature": full_signature
         }
 
@@ -152,10 +171,12 @@ class ReleaseProcessor:
 
         return candidates
 
-    def _release_exists(self, hardware: str, signature: str) -> bool:
+    def _release_exists(self, hardware: str, date: str, signature: str) -> bool:
         """Verifica se o release já existe no manifest."""
         return any(
-            r["hardware"] == hardware and r["signature"] == signature
+            r["hardware"] == hardware and
+            r.get("date") == date and
+            r["signature"] == signature
             for r in self.manifest["releases"]
         )
 
@@ -189,18 +210,20 @@ class ReleaseProcessor:
 
         hardware = parsed["hardware"]
         signature = parsed["signature"]
+        date = parsed["date"]
 
         print(f"[OK] Hardware: {hardware}")
+        print(f"[OK] Data: {date}")
         print(f"[OK] Assinatura: {signature}")
 
         # 4. Verifica duplicatas
-        if self._release_exists(hardware, signature):
-            print(f"[!] Release ja existe: {hardware}/{signature}")
+        if self._release_exists(hardware, date, signature):
+            print(f"[!] Release ja existe: {hardware}/{date}_{signature}")
             print(f"  Ignorando diretorio: {source_dir.name}")
             return False
 
         # 5. Cria estrutura de destino
-        dest_dir = self.root_dir / hardware / signature
+        dest_dir = self.root_dir / hardware / f"{date}_{signature}"
 
         if dest_dir.exists():
             print(f"[!] Diretorio destino ja existe: {dest_dir.relative_to(self.root_dir)}")
@@ -209,16 +232,25 @@ class ReleaseProcessor:
 
         dest_dir.mkdir(parents=True, exist_ok=True)
 
-        # 6. Move os arquivos
+        # 6. Move apenas os arquivos necessários (.ini e rusefi.bin)
         print(f"[->] Movendo arquivos para: {dest_dir.relative_to(self.root_dir)}")
 
+        files_moved = 0
         for item in source_dir.iterdir():
-            dest_item = dest_dir / item.name
-            shutil.move(str(item), str(dest_item))
+            if item.is_file():
+                # Mantém apenas arquivos .ini e rusefi.bin
+                if item.suffix.lower() == '.ini' or item.name.lower() == 'rusefi.bin':
+                    dest_item = dest_dir / item.name
+                    shutil.move(str(item), str(dest_item))
+                    print(f"  [OK] Movido: {item.name}")
+                    files_moved += 1
+                else:
+                    print(f"  [X] Ignorado: {item.name}")
 
-        # 7. Remove diretório original
-        source_dir.rmdir()
+        # 7. Remove diretório original (incluindo arquivos não movidos)
+        shutil.rmtree(source_dir)
         print(f"[OK] Diretorio original removido: {source_dir.name}")
+        print(f"[OK] Arquivos mantidos: {files_moved}")
 
         # 8. Atualiza manifest
         # Caminho relativo do .ini a partir da raiz
@@ -228,6 +260,7 @@ class ReleaseProcessor:
             "timestamp": datetime.now(timezone.utc).isoformat(),
             "signature": signature,
             "hardware": hardware,
+            "date": date,
             "environment": self._determine_environment(full_signature),
             "ini_path": str(ini_relative_path).replace("\\", "/"),  # Normaliza para formato Unix
             "full_signature": full_signature

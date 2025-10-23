@@ -1,3 +1,0 @@
-nextRelease=
-platform=evoTech12
-release=development
