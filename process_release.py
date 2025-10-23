@@ -208,7 +208,7 @@ class ReleaseProcessor:
         if not parsed:
             return False
 
-        hardware = parsed["hardware"]
+        hardware = parsed["hardware"].lower()  # Normaliza para minúsculas
         signature = parsed["signature"]
         date = parsed["date"]
 
