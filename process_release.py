@@ -58,6 +58,11 @@ class ReleaseProcessor:
 
         return ini_files[0]
 
+    def _find_translation_files(self, directory: Path) -> List[Path]:
+        """Encontra arquivos de tradução (ini_strings_*.json) na pasta."""
+        translation_files = list(directory.rglob("ini_strings_*.json"))
+        return translation_files
+
     def _extract_signature_from_ini(self, ini_path: Path) -> Optional[str]:
         """Extrai a signature completa da seção [TunerStudio] do arquivo .ini."""
         try:
@@ -180,6 +185,35 @@ class ReleaseProcessor:
             for r in self.manifest["releases"]
         )
 
+    def _is_translation_file(self, filename: str) -> bool:
+        """Verifica se o arquivo é um arquivo de tradução."""
+        return filename.startswith("ini_strings_") and filename.endswith(".json")
+
+    def _should_keep_file(self, item: Path) -> bool:
+        """Verifica se o arquivo deve ser mantido no release."""
+        if not item.is_file():
+            return False
+
+        filename = item.name.lower()
+
+        # Mantém arquivos .ini
+        if item.suffix.lower() == '.ini':
+            return True
+
+        # Mantém rusefi.bin
+        if filename == 'rusefi.bin':
+            return True
+
+        # Mantém arquivos de tradução (ini_strings_*.json)
+        if self._is_translation_file(item.name):
+            return True
+
+        # Mantém changelog
+        if filename in ('changelog.md', 'changelog.txt'):
+            return True
+
+        return False
+
     def process_release(self, source_dir: Path) -> bool:
         """
         Processa um diretório de release.
@@ -196,14 +230,21 @@ class ReleaseProcessor:
 
         print(f"[OK] Arquivo .ini encontrado: {ini_file.name}")
 
-        # 2. Extrai a signature
+        # 2. Encontra arquivos de tradução
+        translation_files = self._find_translation_files(source_dir)
+        if translation_files:
+            print(f"[OK] Arquivos de traducao encontrados: {[f.name for f in translation_files]}")
+        else:
+            print(f"[!] Nenhum arquivo de traducao encontrado")
+
+        # 3. Extrai a signature
         full_signature = self._extract_signature_from_ini(ini_file)
         if not full_signature:
             return False
 
         print(f"[OK] Signature extraida: {full_signature}")
 
-        # 3. Parse da signature
+        # 4. Parse da signature
         parsed = self._parse_signature(full_signature)
         if not parsed:
             return False
@@ -216,13 +257,13 @@ class ReleaseProcessor:
         print(f"[OK] Data: {date}")
         print(f"[OK] Assinatura: {signature}")
 
-        # 4. Verifica duplicatas
+        # 5. Verifica duplicatas
         if self._release_exists(hardware, date, signature):
             print(f"[!] Release ja existe: {hardware}/{date}_{signature}")
             print(f"  Ignorando diretorio: {source_dir.name}")
             return False
 
-        # 5. Cria estrutura de destino
+        # 6. Cria estrutura de destino
         dest_dir = self.root_dir / hardware / f"{date}_{signature}"
 
         if dest_dir.exists():
@@ -232,27 +273,31 @@ class ReleaseProcessor:
 
         dest_dir.mkdir(parents=True, exist_ok=True)
 
-        # 6. Move apenas os arquivos necessários (.ini e rusefi.bin)
+        # 7. Move apenas os arquivos necessários
         print(f"[->] Movendo arquivos para: {dest_dir.relative_to(self.root_dir)}")
 
         files_moved = 0
-        for item in source_dir.iterdir():
-            if item.is_file():
-                # Mantém apenas arquivos .ini e rusefi.bin
-                if item.suffix.lower() == '.ini' or item.name.lower() == 'rusefi.bin':
-                    dest_item = dest_dir / item.name
-                    shutil.move(str(item), str(dest_item))
-                    print(f"  [OK] Movido: {item.name}")
-                    files_moved += 1
-                else:
-                    print(f"  [X] Ignorado: {item.name}")
+        translation_file_moved = None
 
-        # 7. Remove diretório original (incluindo arquivos não movidos)
+        for item in source_dir.iterdir():
+            if self._should_keep_file(item):
+                dest_item = dest_dir / item.name
+                shutil.move(str(item), str(dest_item))
+                print(f"  [OK] Movido: {item.name}")
+                files_moved += 1
+
+                # Rastreia arquivo de tradução movido
+                if self._is_translation_file(item.name):
+                    translation_file_moved = item.name
+            elif item.is_file():
+                print(f"  [X] Ignorado: {item.name}")
+
+        # 8. Remove diretório original (incluindo arquivos não movidos)
         shutil.rmtree(source_dir)
         print(f"[OK] Diretorio original removido: {source_dir.name}")
         print(f"[OK] Arquivos mantidos: {files_moved}")
 
-        # 8. Atualiza manifest
+        # 9. Atualiza manifest
         # Caminho relativo do .ini a partir da raiz
         ini_relative_path = (dest_dir / ini_file.name).relative_to(self.root_dir)
 
@@ -266,11 +311,18 @@ class ReleaseProcessor:
             "full_signature": full_signature
         }
 
+        # Adiciona caminho do arquivo de tradução se existir
+        if translation_file_moved:
+            translation_relative_path = (dest_dir / translation_file_moved).relative_to(self.root_dir)
+            release_entry["translation_path"] = str(translation_relative_path).replace("\\", "/")
+
         self.manifest["releases"].append(release_entry)
 
         print(f"[OK] Release processado com sucesso!")
         print(f"  Ambiente: {release_entry['environment']}")
-        print(f"  Caminho: {release_entry['ini_path']}")
+        print(f"  Caminho INI: {release_entry['ini_path']}")
+        if translation_file_moved:
+            print(f"  Caminho Traducao: {release_entry['translation_path']}")
 
         return True
 
