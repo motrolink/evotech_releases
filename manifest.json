@@ -1,6 +1,36 @@
 {
   "releases": [
     {
+      "timestamp": "2025-12-18T15:24:28.586773+00:00",
+      "signature": "178142015",
+      "hardware": "evotech8",
+      "date": "2025.12.18",
+      "environment": "prod",
+      "ini_path": "evotech8/2025.12.18_178142015/evotech_evotech8.ini",
+      "full_signature": "rusEFI motrolink_prod.2025.12.18.evotech8.178142015",
+      "translation_path": "evotech8/2025.12.18_178142015/ini_strings_pt-BR.json"
+    },
+    {
+      "timestamp": "2025-12-18T15:24:28.581239+00:00",
+      "signature": "1726194786",
+      "hardware": "evotech12",
+      "date": "2025.12.18",
+      "environment": "prod",
+      "ini_path": "evotech12/2025.12.18_1726194786/evotech_evotech12.ini",
+      "full_signature": "rusEFI motrolink_prod.2025.12.18.evotech12.1726194786",
+      "translation_path": "evotech12/2025.12.18_1726194786/ini_strings_pt-BR.json"
+    },
+    {
+      "timestamp": "2025-12-18T15:24:28.581239+00:00",
+      "signature": "3821064020",
+      "hardware": "evotech4",
+      "date": "2025.12.18",
+      "environment": "prod",
+      "ini_path": "evotech4/2025.12.18_3821064020/evotech_evotech4.ini",
+      "full_signature": "rusEFI motrolink_prod.2025.12.18.evotech4.3821064020",
+      "translation_path": "evotech4/2025.12.18_3821064020/ini_strings_pt-BR.json"
+    },
+    {
       "timestamp": "2025-12-16T00:28:26.115255+00:00",
       "signature": "1726194786",
       "hardware": "evotech12",
