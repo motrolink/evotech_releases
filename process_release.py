@@ -145,16 +145,22 @@ class ReleaseProcessor:
 
     def _is_hardware_directory(self, dir_path: Path) -> bool:
         """Verifica se o diretório é uma pasta de hardware já organizada."""
-        # Uma pasta de hardware contém subpastas que são apenas números (signatures)
+        # Uma pasta de hardware contém subpastas no formato date_signature
         if not dir_path.is_dir():
+            return False
+
+        # Verifica se o nome da pasta é um hardware conhecido
+        if dir_path.name not in ("evotech4", "evotech8", "evotech12"):
             return False
 
         subdirs = [d for d in dir_path.iterdir() if d.is_dir()]
         if not subdirs:
             return False
 
-        # Verifica se pelo menos uma subpasta é um número (signature)
-        return any(d.name.isdigit() for d in subdirs)
+        # Verifica se pelo menos uma subpasta segue o formato YYYY.MM.DD_signature
+        import re
+        date_sig_pattern = re.compile(r'^\d{4}\.\d{2}\.\d{2}_\d+$')
+        return any(date_sig_pattern.match(d.name) for d in subdirs)
 
     def _get_candidate_directories(self) -> List[Path]:
         """Retorna lista de diretórios candidatos a serem processados."""
@@ -257,11 +263,11 @@ class ReleaseProcessor:
         print(f"[OK] Data: {date}")
         print(f"[OK] Assinatura: {signature}")
 
-        # 5. Verifica duplicatas
-        if self._release_exists(hardware, date, signature):
+        # 5. Verifica se release já existe (será atualizado)
+        updating = self._release_exists(hardware, date, signature)
+        if updating:
             print(f"[!] Release ja existe: {hardware}/{date}_{signature}")
-            print(f"  Ignorando diretorio: {source_dir.name}")
-            return False
+            print(f"  Atualizando arquivos...")
 
         # 6. Cria estrutura de destino
         dest_dir = self.root_dir / hardware / f"{date}_{signature}"
@@ -298,6 +304,13 @@ class ReleaseProcessor:
         print(f"[OK] Arquivos mantidos: {files_moved}")
 
         # 9. Atualiza manifest
+        # Remove entrada antiga se estiver atualizando
+        if updating:
+            self.manifest["releases"] = [
+                r for r in self.manifest["releases"]
+                if not (r["hardware"] == hardware and r.get("date") == date and r["signature"] == signature)
+            ]
+
         # Caminho relativo do .ini a partir da raiz
         ini_relative_path = (dest_dir / ini_file.name).relative_to(self.root_dir)
 
@@ -318,7 +331,8 @@ class ReleaseProcessor:
 
         self.manifest["releases"].append(release_entry)
 
-        print(f"[OK] Release processado com sucesso!")
+        action = "atualizado" if updating else "processado"
+        print(f"[OK] Release {action} com sucesso!")
         print(f"  Ambiente: {release_entry['environment']}")
         print(f"  Caminho INI: {release_entry['ini_path']}")
         if translation_file_moved:
