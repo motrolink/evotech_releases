@@ -1,7 +1,7 @@
 {
   "releases": [
     {
-      "timestamp": "2026-03-03T19:05:45.005591+00:00",
+      "timestamp": "2026-03-03T23:14:51.820717+00:00",
       "signature": "2367777089",
       "hardware": "evotech12",
       "date": "2026.03.03",
@@ -9,6 +9,26 @@
       "ini_path": "evotech12/2026.03.03_2367777089/evotech_evotech12.ini",
       "full_signature": "rusEFI motrolink_dev.2026.03.03.evotech12.2367777089",
       "translation_path": "evotech12/2026.03.03_2367777089/ini_strings_pt-BR.json"
+    },
+    {
+      "timestamp": "2026-03-03T23:14:51.816612+00:00",
+      "signature": "134349431",
+      "hardware": "evotech4",
+      "date": "2026.03.03",
+      "environment": "dev",
+      "ini_path": "evotech4/2026.03.03_134349431/evotech_evotech4.ini",
+      "full_signature": "rusEFI motrolink_dev.2026.03.03.evotech4.134349431",
+      "translation_path": "evotech4/2026.03.03_134349431/ini_strings_pt-BR.json"
+    },
+    {
+      "timestamp": "2026-03-03T23:14:51.814917+00:00",
+      "signature": "3780965916",
+      "hardware": "evotech8",
+      "date": "2026.03.03",
+      "environment": "dev",
+      "ini_path": "evotech8/2026.03.03_3780965916/evotech_evotech8.ini",
+      "full_signature": "rusEFI motrolink_dev.2026.03.03.evotech8.3780965916",
+      "translation_path": "evotech8/2026.03.03_3780965916/ini_strings_pt-BR.json"
     },
     {
       "timestamp": "2026-03-01T14:25:40.827558+00:00",
