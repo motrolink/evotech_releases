@@ -3564,7 +3564,7 @@
   "Two Stroke": "2 Tempos",
   "Two-wire mode": "Two-wire Modo",
   "Type": "Tipo",
-  "Typical values: in Pulso Fixo mode the table rarely exceeds 10ms for most engines — values up to 100ms are valid but uncommon. In Proporcional mode values are normally well below 1. The ECU automatically applies the table value as a fuel reduction when the movement is a tip-out, so a single map handles both enrichment on tip-in and enleanment on tip-out.": "Valores típicos: no modo Pulso Fixo a tabela raramente ultrapassa 10ms para a maioria dos motores — valores de até 100ms são válidos mas incomuns. No modo Proporcional os valores normalmente ficam abaixo de 1. A ECU automaticamente aplica o valor da tabela como redução de combustível quando o movimento é um tip-out, portanto um único mapa controla tanto o enriquecimento no tip-in quanto o empobrecimento no tip-out.",
+  "Typical values: in Pulso Fixo mode the table rarely exceeds 10ms for most engines — values up to 100ms are valid but uncommon. In Proporcional mode values are normally below 1. The ECU automatically applies the table value as a fuel reduction when the movement is a tip-out, so a single map handles both enrichment on tip-in and enleanment on tip-out.": "Valores típicos: no modo Pulso Fixo a tabela raramente ultrapassa 10ms para a maioria dos motores — valores de até 100ms são válidos mas incomuns. No modo Proporcional os valores normalmente ficam abaixo de 1. A ECU automaticamente aplica o valor da tabela como redução de combustível quando o movimento é um tip-out, portanto um único mapa controla tanto o enriquecimento no tip-in quanto o empobrecimento no tip-out.",
   "Tyre height": "Altura pneu",
   "Tyre width": "Largura pneu",
   "UEGO type": "UEGO Tipo",
