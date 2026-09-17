@@ -3116,6 +3116,8 @@
   "Oil pressure formation: no critical event": "Formação de pressão de óleo: sem evento crítico",
   "Oil pressure is used for monitoring and protection strategies. If pressure drops below a threshold, a warning or engine protection action can be triggered.": "A pressão do óleo é usada para monitoramento e estratégias de proteção. Se a pressão cair abaixo de um limite, um aviso ou ação de proteção do motor pode ser acionado.",
   "Oil pressure kPa": "Pressão Óleo kPa",
+  "Oil pressure: last incident": "Pressão de óleo: presente no último incidente",
+  "Oil pressure: not in last incident": "Pressão de óleo: ausente no último incidente",
   "Oil temp C": "Temp. Óleo C",
   "Oil temperature": "Temperatura do óleo",
   "Oil temperature (C)": "Temperatura do óleo (C)",
