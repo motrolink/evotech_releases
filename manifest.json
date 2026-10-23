@@ -1,7 +1,7 @@
 {
   "releases": [
     {
-      "timestamp": "2026-10-22T23:15:06.565524+00:00",
+      "timestamp": "2026-10-23T10:00:18.202537+00:00",
       "signature": "2194404158",
       "hardware": "evotech12",
       "date": "2026.10.23",
@@ -11,7 +11,7 @@
       "translation_path": "evotech12/2026.10.23_2194404158/ini_strings_pt-BR.json"
     },
     {
-      "timestamp": "2026-10-22T23:15:06.564364+00:00",
+      "timestamp": "2026-10-23T10:00:18.201236+00:00",
       "signature": "2827665254",
       "hardware": "evotech8",
       "date": "2026.10.23",
@@ -21,7 +21,7 @@
       "translation_path": "evotech8/2026.10.23_2827665254/ini_strings_pt-BR.json"
     },
     {
-      "timestamp": "2026-10-22T23:15:06.562941+00:00",
+      "timestamp": "2026-10-23T10:00:18.199870+00:00",
       "signature": "1432758078",
       "hardware": "evotech4",
       "date": "2026.10.23",
