@@ -1,6 +1,16 @@
 {
   "releases": [
     {
+      "timestamp": "2026-10-24T23:16:47.003728+00:00",
+      "signature": "1216761978",
+      "hardware": "evotech12",
+      "date": "2026.10.25",
+      "environment": "dev",
+      "ini_path": "evotech12/2026.10.25_1216761978/evotech_evotech12.ini",
+      "full_signature": "rusEFI motrolink_dev.2026.10.25.evotech12.1216761978",
+      "translation_path": "evotech12/2026.10.25_1216761978/ini_strings_pt-BR.json"
+    },
+    {
       "timestamp": "2026-10-24T15:35:23.664755+00:00",
       "signature": "571970524",
       "hardware": "evotech12",
