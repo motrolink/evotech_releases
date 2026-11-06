@@ -1,0 +1,53 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2025.07.13_3858044272",
+  "board": "evotech12",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2025.07.13.evotech12.3858044272",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2025-10-23T17:40:27.383253+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "5f7b61a20776d3b1ec5843975c05fcceabbb660d07bf00781e61dc8d87d7da44",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2025.06.17_1685449808",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": true,
+    "page_size": {
+      "from": 21732,
+      "to": 21736
+    },
+    "added": [
+      {
+        "name": "ltftAgressiveMode",
+        "kind": "bits",
+        "units": ""
+      }
+    ],
+    "removed": [
+      {
+        "name": "ltftEmaAlpha",
+        "kind": "scalar"
+      },
+      {
+        "name": "ltftIgnitionOffSaveDelay",
+        "kind": "scalar"
+      },
+      {
+        "name": "ltftIgnitionOnDelay",
+        "kind": "scalar"
+      }
+    ],
+    "rescaled": [],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": false
+  }
+}

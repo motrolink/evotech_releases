@@ -1,0 +1,306 @@
+{
+  "schema": 1,
+  "release_id": "evotech8/2026.06.02_3662511051",
+  "board": "evotech8",
+  "channel": "prod",
+  "full_signature": "rusEFI motrolink_prod.2026.06.02.evotech8.3662511051",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2026-06-02T20:41:26.167302+00:00",
+  "flash_data_version": 251031,
+  "bin_sha256": "85d4b01b97ae9b6e6da0aa49a93d3f21f12bc79626c980f1ba19d4a8b424fbbb",
+  "notes_kind": "backfill",
+  "title": "Menus reorganizados no TunerStudio",
+  "summary": "Reestruturação das telas de configuração (combustível, ignição, marcha lenta, sensores, CAN, controlador e atuadores) para facilitar a calibração. Sem mudanças de lógica documentadas.",
+  "base": {
+    "release_id": "evotech8/2026.05.08_2307628169",
+    "flash_data_version": null
+  },
+  "entries": [
+    {
+      "id": "backfill-20260602-menus",
+      "tipo": "melhoria",
+      "publico": "usuario",
+      "titulo": "Menus de configuração reorganizados",
+      "descricao": "As telas de combustível, ignição, marcha lenta, avançado, sensores, CAN, scripts, atuadores e controlador foram reestruturadas, com textos revisados em português. Procure os campos pela nova organização do menu; a lógica da ECU não foi alterada por esta mudança.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    }
+  ],
+  "map_diff": {
+    "config_reset": false,
+    "page_size": {
+      "from": 27796,
+      "to": 27796
+    },
+    "added": [
+      {
+        "name": "stft_maxLambda",
+        "kind": "scalar",
+        "units": "lambda"
+      },
+      {
+        "name": "stft_minLambda",
+        "kind": "scalar",
+        "units": "lambda"
+      }
+    ],
+    "removed": [
+      {
+        "name": "stft_maxAfr",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_minAfr",
+        "kind": "scalar"
+      }
+    ],
+    "rescaled": [
+      {
+        "name": "boostClosedLoopBlends1_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "boostClosedLoopBlends2_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "boostOpenLoopBlends1_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "boostOpenLoopBlends2_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "ignBlends1_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "ignBlends2_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "ignBlends3_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "ignBlends4_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "targetAfrBlends1_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "targetAfrBlends2_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "veBlends1_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "veBlends2_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "veBlends3_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "veBlends4_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      }
+    ],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": false
+  }
+}

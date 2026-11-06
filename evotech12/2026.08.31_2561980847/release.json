@@ -1,0 +1,273 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2026.08.31_2561980847",
+  "board": "evotech12",
+  "channel": "prod",
+  "full_signature": "rusEFI motrolink_prod.2026.08.31.evotech12.2561980847",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2026-08-31T20:11:01.108415+00:00",
+  "flash_data_version": 260821,
+  "bin_sha256": "cd6588a7b69e33761765f59a095dd32f2497c163df9051a4b697078ea4d05ecd",
+  "notes_kind": "backfill",
+  "title": "Dashboard unificado, correção da oscilação do STFT e nova versão do layout",
+  "summary": "A configuração é apagada na atualização (layout 260821). Os campos de retardo do DFCO saem, o painel do TunerStudio fica mais claro e a ECU ganha recuperação automática após falha de boot.",
+  "base": {
+    "release_id": "evotech12/2026.08.19_2032360943",
+    "flash_data_version": 260815
+  },
+  "entries": [
+    {
+      "id": "backfill-20260831-iac-filtro",
+      "tipo": "novo",
+      "publico": "usuario",
+      "titulo": "Constante de tempo do filtro da saída da marcha lenta (IAC)",
+      "descricao": "O campo `iacFilterTimeConstant` agora aparece em Marcha lenta; o filtro já atuava na ECU, mas não era ajustável.",
+      "mapa": {
+        "impacto": "campos_novos",
+        "campos": [
+          "iacFilterTimeConstant"
+        ],
+        "acao": ""
+      }
+    },
+    {
+      "id": "backfill-20260831-reset-config",
+      "tipo": "novo",
+      "publico": "usuario",
+      "titulo": "Atenção: a configuração é apagada na primeira partida",
+      "descricao": "O layout da configuração mudou (260815 para 260821).",
+      "mapa": {
+        "impacto": "reset",
+        "campos": [],
+        "acao": "Exporte o mapa (.msq) antes de atualizar e importe de novo depois, revisando os valores. A ECU apaga a configuração salva na primeira partida com esta versão."
+      }
+    },
+    {
+      "id": "backfill-20260831-painel",
+      "tipo": "melhoria",
+      "publico": "usuario",
+      "titulo": "Indicadores do painel unificados",
+      "descricao": "Indicadores redundantes de embreagem, marcha lenta/desaceleração e TPS 1/2 viraram um só, que mostra o lado ativo. O indicador Thermal OK diz que é a proteção de CLT do ventilador, o indicador Tuning não fica mais sem rótulo, e os indicadores de falha do WBO2 e de limite de rotação da ETB foram removidos.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "backfill-20260831-stft-oscilacao",
+      "tipo": "correcao",
+      "publico": "usuario",
+      "titulo": "STFT: oscilação em marcha lenta corrigida",
+      "descricao": "A margem de estabilidade da correção rápida era consumida pelo filtro de saída, o que causava oscilação em marcha lenta que só se resolvia subindo a constante de tempo base (e deixava a correção lenta em todo lugar). A margem foi corrigida.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "backfill-20260831-telemetria-saidas",
+      "tipo": "correcao",
+      "publico": "usuario",
+      "titulo": "Canais de telemetria sumiam da build",
+      "descricao": "Canais como odômetro, economia, estado da marcha lenta e telemetria da ETB podiam sumir do projeto do TunerStudio dependendo do cache de compilação; a geração agora é determinística.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "backfill-20260831-traducoes",
+      "tipo": "correcao",
+      "publico": "usuario",
+      "titulo": "Traduções pt-BR e menu Controller",
+      "descricao": "Traduções do TunerStudio corrigidas e o menu Controller limpo de entradas repetidas.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "backfill-20260831-vfs-timer",
+      "tipo": "correcao",
+      "publico": "usuario",
+      "titulo": "Sensor de flex virtual travava cedo",
+      "descricao": "Um estouro de 32 bits no temporizador de microssegundos fazia o sensor de flex virtual travar antes da hora.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "backfill-20260831-recuperacao-boot",
+      "tipo": "seguranca",
+      "publico": "usuario",
+      "titulo": "Recuperação automática após falha de boot",
+      "descricao": "Se a ECU cair em ciclos de reinício sem explicação (inclusive falhas internas capturadas) após uma atualização, ela volta para o bootloader após 5 tentativas. O bootloader residente passa sozinho para o DFU da ST se ninguém o assumir em 5 segundos, permitindo regravar com qualquer ferramenta DFU USB.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "backfill-20260831-dfco-retardo-removido",
+      "tipo": "removido",
+      "publico": "usuario",
+      "titulo": "Retardo próprio do DFCO removido",
+      "descricao": "Os campos `dfcoRetardDeg` e `dfcoRetardRampInTime` deixaram de existir: a suavização da entrada do DFCO pelo retardo de ignição passou a ser do módulo Suavização de torque, que só é visível em builds de desenvolvimento (em builds estáveis ele roda no padrão seguro).",
+      "mapa": {
+        "impacto": "revisar",
+        "campos": [
+          "dfcoRetardDeg",
+          "dfcoRetardRampInTime"
+        ],
+        "acao": "Se você usava o retardo do DFCO, recalibre a suavização da entrada em Desempenho > Suavização de torque (build de desenvolvimento)."
+      }
+    }
+  ],
+  "map_diff": {
+    "config_reset": true,
+    "page_size": {
+      "from": 28536,
+      "to": 28736
+    },
+    "added": [
+      {
+        "name": "advanceAddRampDegPerSec",
+        "kind": "scalar",
+        "units": "deg/s"
+      },
+      {
+        "name": "clutchCeilingRampRpmPerSec",
+        "kind": "scalar",
+        "units": "rpm/s"
+      },
+      {
+        "name": "clutchGuardFallbackDRpmLimit",
+        "kind": "scalar",
+        "units": "rpm/s"
+      },
+      {
+        "name": "clutchGuardMode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "clutchGuardRatioMismatchPct",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "clutchOverspeedCorrectionCurve",
+        "kind": "array",
+        "units": "ratio"
+      },
+      {
+        "name": "clutchOverspeedErrorBins",
+        "kind": "array",
+        "units": "rpm"
+      },
+      {
+        "name": "dfcoEntryMaxWaitMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "dfcoEntryTargetTorqueNm",
+        "kind": "scalar",
+        "units": "Nm"
+      },
+      {
+        "name": "engineBrakingTorqueBinsRpm",
+        "kind": "array",
+        "units": "rpm"
+      },
+      {
+        "name": "engineBrakingTorqueCurveNm",
+        "kind": "array",
+        "units": "Nm"
+      },
+      {
+        "name": "engineRotationalInertiaKgM2",
+        "kind": "scalar",
+        "units": "kg.m^2"
+      },
+      {
+        "name": "maxInstantRetardStepDeg",
+        "kind": "scalar",
+        "units": "deg"
+      },
+      {
+        "name": "maxTorqueRateNmPerSec",
+        "kind": "scalar",
+        "units": "Nm/s"
+      },
+      {
+        "name": "smoothingClutchGuardEnabled",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "smoothingClutchMinTps",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "smoothingClutchWindowMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "torqueAddEnabled",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "torqueSmoothingDeadbandNm",
+        "kind": "scalar",
+        "units": "Nm"
+      },
+      {
+        "name": "torqueSmoothingEnabled",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "torqueSmoothingTauSec",
+        "kind": "scalar",
+        "units": "s"
+      },
+      {
+        "name": "torqueSparkEfficiencyBins",
+        "kind": "array",
+        "units": "deg"
+      },
+      {
+        "name": "torqueSparkEfficiencyCurve",
+        "kind": "array",
+        "units": "ratio"
+      }
+    ],
+    "removed": [
+      {
+        "name": "dfcoRetardDeg",
+        "kind": "scalar"
+      },
+      {
+        "name": "dfcoRetardRampInTime",
+        "kind": "scalar"
+      }
+    ],
+    "rescaled": [],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": true
+  }
+}

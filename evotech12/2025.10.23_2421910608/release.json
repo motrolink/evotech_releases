@@ -1,0 +1,34 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2025.10.23_2421910608",
+  "board": "evotech12",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2025.10.23.evotech12.2421910608",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2025-10-23T17:40:28.504447+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "c5b32bbaa089e5935d8613d67b0e221f612880807df98f1f61a5d34eed535220",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2025.10.19_2421910608",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": false,
+    "page_size": {
+      "from": 21932,
+      "to": 21932
+    },
+    "added": [],
+    "removed": [],
+    "rescaled": [],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": false
+  }
+}

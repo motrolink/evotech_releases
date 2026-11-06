@@ -1,0 +1,65 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2026.08.14_3355084704",
+  "board": "evotech12",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2026.08.14.evotech12.3355084704",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2026-08-14T15:49:37.945226+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "b149fae5e60f3dcb09db387aa270f4184c1883fdade6e3086f6c92f48b42fb3b",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2026.08.14_2057241143",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": true,
+    "page_size": {
+      "from": 27836,
+      "to": 28052
+    },
+    "added": [
+      {
+        "name": "flexAeMult",
+        "kind": "array",
+        "units": "mult"
+      },
+      {
+        "name": "flexFuelTransientComp",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "flexTransientCltBins",
+        "kind": "array",
+        "units": "C"
+      },
+      {
+        "name": "flexTransientEthanolBins",
+        "kind": "array",
+        "units": "%"
+      },
+      {
+        "name": "flexWwBetaMult",
+        "kind": "array",
+        "units": "mult"
+      },
+      {
+        "name": "flexWwTauMult",
+        "kind": "array",
+        "units": "mult"
+      }
+    ],
+    "removed": [],
+    "rescaled": [],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": true
+  }
+}

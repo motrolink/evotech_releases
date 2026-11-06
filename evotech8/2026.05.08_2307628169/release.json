@@ -1,0 +1,290 @@
+{
+  "schema": 1,
+  "release_id": "evotech8/2026.05.08_2307628169",
+  "board": "evotech8",
+  "channel": "prod",
+  "full_signature": "rusEFI motrolink_prod.2026.05.08.evotech8.2307628169",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2026-05-08T18:13:43.967067+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "093ee5cf28514e9d133784b22f4846f99a37d364a166a10f361c0c609c1da42e",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech8/2025.12.18_178142015",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": true,
+    "page_size": {
+      "from": 27664,
+      "to": 27796
+    },
+    "added": [
+      {
+        "name": "cruiseControl_canTimeoutMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "cruiseControl_ccAntiwindupFreq",
+        "kind": "scalar",
+        "units": "Hz"
+      },
+      {
+        "name": "cruiseControl_ccAntiwindupMax",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "cruiseControl_ccAntiwindupMin",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "cruiseControl_ccDerivativeFilter",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "cruiseControl_ccFeedforwardSpeedBins",
+        "kind": "array",
+        "units": "km/h"
+      },
+      {
+        "name": "cruiseControl_ccFeedforwardThrottle",
+        "kind": "array",
+        "units": "%"
+      },
+      {
+        "name": "cruiseControl_ccOutputFilterAlpha",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "cruiseControl_ccPidD",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "cruiseControl_ccPidI",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "cruiseControl_ccPidMaxValue",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "cruiseControl_ccPidMinValue",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "cruiseControl_ccPidP",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "cruiseControl_ccSetpointWeightD",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "cruiseControl_ccSetpointWeightP",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "cruiseControl_ccSpeedDeadzone",
+        "kind": "scalar",
+        "units": "km/h"
+      },
+      {
+        "name": "cruiseControl_coastGain",
+        "kind": "scalar",
+        "units": "%/km/h"
+      },
+      {
+        "name": "cruiseControl_enabled",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "cruiseControl_maxCruiseSpeed",
+        "kind": "scalar",
+        "units": "km/h"
+      },
+      {
+        "name": "cruiseControl_maxThrottlePosition",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "cruiseControl_minActivationSpeed",
+        "kind": "scalar",
+        "units": "km/h"
+      },
+      {
+        "name": "cruiseControl_minResumeSpeed",
+        "kind": "scalar",
+        "units": "km/h"
+      },
+      {
+        "name": "cruiseControl_speedIncrement",
+        "kind": "scalar",
+        "units": "km/h"
+      },
+      {
+        "name": "cruiseControl_throttleRampRate",
+        "kind": "scalar",
+        "units": "%/s"
+      },
+      {
+        "name": "iacCoastingTable",
+        "kind": "array",
+        "units": "%"
+      },
+      {
+        "name": "thermalProtectionEnable",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "thermalProtectionTemp",
+        "kind": "scalar",
+        "units": "C"
+      },
+      {
+        "name": "unused_fan1ThermalProtectionDuty",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "unused_fan2ThermalProtectionDuty",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "unused_fan2ThermalProtectionEnable",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "unused_fan2ThermalProtectionTemp",
+        "kind": "scalar",
+        "units": "C"
+      },
+      {
+        "name": "vfs_conditionsHoldTime",
+        "kind": "scalar",
+        "units": "sec"
+      },
+      {
+        "name": "vfs_defaultEthanol",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "vfs_dfcoSettleTime",
+        "kind": "scalar",
+        "units": "sec"
+      },
+      {
+        "name": "vfs_enabled",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "vfs_gasolineCorrection",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "vfs_integratorSpeed",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "vfs_maxLoad",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "vfs_maxRpm",
+        "kind": "scalar",
+        "units": "rpm"
+      },
+      {
+        "name": "vfs_minClt",
+        "kind": "scalar",
+        "units": "C"
+      },
+      {
+        "name": "vfs_minLoad",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "vfs_minRpm",
+        "kind": "scalar",
+        "units": "rpm"
+      },
+      {
+        "name": "vfs_timeoutSeconds",
+        "kind": "scalar",
+        "units": "sec"
+      },
+      {
+        "name": "vfs_transientSettleTime",
+        "kind": "scalar",
+        "units": "sec"
+      }
+    ],
+    "removed": [
+      {
+        "name": "fan1ThermalProtectionDuty",
+        "kind": "scalar"
+      },
+      {
+        "name": "fan1ThermalProtectionEnable",
+        "kind": "bits"
+      },
+      {
+        "name": "fan1ThermalProtectionTemp",
+        "kind": "scalar"
+      },
+      {
+        "name": "fan2ThermalProtectionDuty",
+        "kind": "scalar"
+      },
+      {
+        "name": "fan2ThermalProtectionEnable",
+        "kind": "bits"
+      },
+      {
+        "name": "fan2ThermalProtectionTemp",
+        "kind": "scalar"
+      },
+      {
+        "name": "iacCoasting",
+        "kind": "array"
+      }
+    ],
+    "rescaled": [],
+    "retyped": [],
+    "reshaped": [
+      {
+        "name": "iacCoastingRpmBins",
+        "from": "[16]",
+        "to": "[8]"
+      }
+    ],
+    "output_channels_moved": true
+  }
+}

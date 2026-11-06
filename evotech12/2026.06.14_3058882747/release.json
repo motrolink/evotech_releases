@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2026.06.14_3058882747",
+  "board": "evotech12",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2026.06.14.evotech12.3058882747",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2026-06-14T22:55:32.557985+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "b57ddd03682c9860f359049ea44dc40d398bbac352e35503044ca2db08894351",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2026.06.02_2686765620",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": false,
+    "page_size": {
+      "from": 27796,
+      "to": 27796
+    },
+    "added": [
+      {
+        "name": "acTargetHoldTime",
+        "kind": "scalar",
+        "units": "sec"
+      }
+    ],
+    "removed": [
+      {
+        "name": "unused_fan1ThermalProtectionDuty",
+        "kind": "scalar"
+      }
+    ],
+    "rescaled": [],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": false
+  }
+}

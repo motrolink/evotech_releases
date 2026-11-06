@@ -1,0 +1,154 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2026.08.20_736244644",
+  "board": "evotech12",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2026.08.20.evotech12.736244644",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2026-08-20T20:18:04.735399+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "d597661043d09961150ddb5d4c65a3520533b1d490a856fbd5973886da62033d",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2026.08.18_2032360943",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": true,
+    "page_size": {
+      "from": 28536,
+      "to": 28732
+    },
+    "added": [
+      {
+        "name": "advanceAddRampDegPerSec",
+        "kind": "scalar",
+        "units": "deg/s"
+      },
+      {
+        "name": "clutchCeilingRampRpmPerSec",
+        "kind": "scalar",
+        "units": "rpm/s"
+      },
+      {
+        "name": "clutchGuardFallbackDRpmLimit",
+        "kind": "scalar",
+        "units": "rpm/s"
+      },
+      {
+        "name": "clutchGuardMode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "clutchGuardRatioMismatchPct",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "clutchOverspeedCorrectionCurve",
+        "kind": "array",
+        "units": "ratio"
+      },
+      {
+        "name": "clutchOverspeedErrorBins",
+        "kind": "array",
+        "units": "rpm"
+      },
+      {
+        "name": "dfcoEntryMaxWaitMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "dfcoEntryTargetTorqueNm",
+        "kind": "scalar",
+        "units": "Nm"
+      },
+      {
+        "name": "engineBrakingTorqueBinsRpm",
+        "kind": "array",
+        "units": "rpm"
+      },
+      {
+        "name": "engineBrakingTorqueCurveNm",
+        "kind": "array",
+        "units": "Nm"
+      },
+      {
+        "name": "engineRotationalInertiaKgM2",
+        "kind": "scalar",
+        "units": "kg.m^2"
+      },
+      {
+        "name": "maxInstantRetardStepDeg",
+        "kind": "scalar",
+        "units": "deg"
+      },
+      {
+        "name": "maxTorqueRateNmPerSec",
+        "kind": "scalar",
+        "units": "Nm/s"
+      },
+      {
+        "name": "smoothingClutchGuardEnabled",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "smoothingClutchMinTps",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "smoothingClutchWindowMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "torqueAddEnabled",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "torqueSmoothingEnabled",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "torqueSmoothingTauSec",
+        "kind": "scalar",
+        "units": "s"
+      },
+      {
+        "name": "torqueSparkEfficiencyBins",
+        "kind": "array",
+        "units": "deg"
+      },
+      {
+        "name": "torqueSparkEfficiencyCurve",
+        "kind": "array",
+        "units": "ratio"
+      }
+    ],
+    "removed": [
+      {
+        "name": "dfcoRetardDeg",
+        "kind": "scalar"
+      },
+      {
+        "name": "dfcoRetardRampInTime",
+        "kind": "scalar"
+      }
+    ],
+    "rescaled": [],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": false
+  }
+}

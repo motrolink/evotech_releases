@@ -1,0 +1,87 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2026.08.13_3075497495",
+  "board": "evotech12",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2026.08.13.evotech12.3075497495",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2026-08-13T19:14:22.483008+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "0d846d45ec001aeba83b7feef9acb54c4ef8add6d2bd2c35a6b08e28c59fe76e",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2026.07.15_544204708",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": true,
+    "page_size": {
+      "from": 27852,
+      "to": 27796
+    },
+    "added": [],
+    "removed": [
+      {
+        "name": "coldStartAuxAeDuty",
+        "kind": "scalar"
+      },
+      {
+        "name": "coldStartAuxAeEnable",
+        "kind": "bits"
+      },
+      {
+        "name": "coldStartAuxAeHoldTime",
+        "kind": "scalar"
+      },
+      {
+        "name": "coldStartAuxCrankingCltBins",
+        "kind": "array"
+      },
+      {
+        "name": "coldStartAuxCrankingDuty",
+        "kind": "array"
+      },
+      {
+        "name": "coldStartAuxEnable",
+        "kind": "bits"
+      },
+      {
+        "name": "coldStartAuxMaxClt",
+        "kind": "scalar"
+      },
+      {
+        "name": "coldStartAuxPin",
+        "kind": "bits"
+      },
+      {
+        "name": "coldStartAuxPinMode",
+        "kind": "bits"
+      },
+      {
+        "name": "coldStartAuxPrimingCltBins",
+        "kind": "array"
+      },
+      {
+        "name": "coldStartAuxPrimingDuration",
+        "kind": "array"
+      },
+      {
+        "name": "coldStartAuxPrimingRepeatDelay",
+        "kind": "scalar"
+      },
+      {
+        "name": "coldStartAuxPwmFrequency",
+        "kind": "scalar"
+      }
+    ],
+    "rescaled": [],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": true
+  }
+}

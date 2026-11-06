@@ -7,7 +7,7 @@ on:
     paths-ignore:
       - '.github/**'
       - 'manifest.json'
-      - '**.md'
+      - 'README.md'   # CHANGELOG.md e release.json de uma release precisam ser processados
 
 permissions:
   contents: write

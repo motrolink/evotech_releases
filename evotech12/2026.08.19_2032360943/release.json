@@ -1,0 +1,688 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2026.08.19_2032360943",
+  "board": "evotech12",
+  "channel": "prod",
+  "full_signature": "rusEFI motrolink_prod.2026.08.19.evotech12.2032360943",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2026-08-19T14:03:32.402656+00:00",
+  "flash_data_version": 260815,
+  "bin_sha256": "850cdddc20df7bf09d123b085242d5e2f5dbea3ec0997a69bbb32585d59b50fd",
+  "notes_kind": "backfill",
+  "title": "Armazenamento em journal, STFT/LTFT unificados e novo controle de tração",
+  "summary": "Grande atualização interna: a configuração passa a ser gravada em journal (nada do aprendido se perde ao desligar), o controle de combustível em malha fechada foi unificado, o controle de tração foi refeito só como detecção e a configuração da ECU é apagada na atualização.",
+  "base": {
+    "release_id": "evotech12/2026.08.06_1736805456",
+    "flash_data_version": 251031
+  },
+  "entries": [
+    {
+      "id": "backfill-20260819-flex-transiente",
+      "tipo": "novo",
+      "publico": "usuario",
+      "titulo": "Compensação transiente para flex fuel",
+      "descricao": "O enriquecimento de aceleração e o filme de parede (tau e beta) ganham um multiplicador em tabela 8x8 por temperatura e percentual de etanol, para corrigir a hesitação em tip-in com etanol. Fica neutro sem sensor de etanol, com a função desligada ou com a tabela zerada.",
+      "mapa": {
+        "impacto": "campos_novos",
+        "campos": [
+          "flexFuelTransientComp"
+        ],
+        "acao": ""
+      }
+    },
+    {
+      "id": "backfill-20260819-journal",
+      "tipo": "novo",
+      "publico": "usuario",
+      "titulo": "Gravação em tempo real: o aprendido e os ajustes não se perdem",
+      "descricao": "As correções aprendidas (LTFT, etanol do sensor virtual) e as edições feitas com o motor ligado agora são gravadas em um journal na flash, e sobrevivem a desligar o carro antes de um Burn. Burn com o motor ligado grava só as diferenças; com o motor parado continua gravando tudo. A verificação de gravação, as tentativas e a redundância foram reforçadas.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "backfill-20260819-odometro-combustivel",
+      "tipo": "novo",
+      "publico": "usuario",
+      "titulo": "Combustível total consumido na vida do carro",
+      "descricao": "Novo mostrador do total de combustível consumido (litros) ao lado da distância total, sem zerar com o reset do trip.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "backfill-20260819-partida-fria-aux",
+      "tipo": "novo",
+      "publico": "usuario",
+      "titulo": "Válvula auxiliar de partida a frio com pulso por etanol e temperatura",
+      "descricao": "Nova válvula auxiliar de partida a frio que dá um pulso único ao iniciar a partida, com duração dada por uma tabela de etanol x temperatura do líquido, limitada por um tempo máximo de segurança.",
+      "mapa": {
+        "impacto": "campos_novos",
+        "campos": [
+          "coldStartAuxEnable",
+          "coldStartAuxValvePin",
+          "coldStartAuxDurationTable",
+          "coldStartAuxMaxTimeout"
+        ],
+        "acao": ""
+      }
+    },
+    {
+      "id": "backfill-20260819-reset-config",
+      "tipo": "novo",
+      "publico": "usuario",
+      "titulo": "Atenção: a configuração é apagada na primeira partida",
+      "descricao": "O layout da configuração mudou (versão 251031 para 260815). Todo o mapa salvo na ECU é descartado ao iniciar com esta versão.",
+      "mapa": {
+        "impacto": "reset",
+        "campos": [],
+        "acao": "Exporte o mapa (.msq) antes de atualizar e importe de novo depois, revisando os valores. A ECU apaga a configuração salva na primeira partida com esta versão."
+      }
+    },
+    {
+      "id": "backfill-20260819-teste-boost",
+      "tipo": "novo",
+      "publico": "usuario",
+      "titulo": "Botão de teste da solenoide de boost",
+      "descricao": "Na tela de boost, com o pino configurado, há um botão de teste de bancada da solenoide, como nos demais atuadores.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "backfill-20260819-malha-fechada-v3",
+      "tipo": "melhoria",
+      "publico": "usuario",
+      "titulo": "STFT e LTFT unificados em um modelo único",
+      "descricao": "A correção de combustível em malha fechada usa uma grade de mistura (rotação x carga) em lugar das antigas regiões, com um modelo de transporte do escape para aplicar o lambda lido ao evento de combustão correto. A saída do DFCO passou a ser suave: o combustível não zera na entrada (piso de 10%) e volta em rampa, e há retardo de ignição padrão na saída.",
+      "mapa": {
+        "impacto": "revisar",
+        "campos": [
+          "dfcoRetardDeg",
+          "dfcoRetardRampInTime"
+        ],
+        "acao": "Revise a calibração de STFT, LTFT e do retardo/rampa do DFCO: o comportamento da correção mudou."
+      }
+    },
+    {
+      "id": "backfill-20260819-persistencia-unificada",
+      "tipo": "melhoria",
+      "publico": "usuario",
+      "titulo": "LTFT, etanol aprendido e odômetro viraram parte da configuração",
+      "descricao": "Os trims do LTFT, o etanol estimado e o odômetro passaram a ser campos normais da configuração, no mesmo Burn e CRC dos demais. A página extra de LTFT do TunerStudio foi removida.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "backfill-20260819-tracao",
+      "tipo": "melhoria",
+      "publico": "usuario",
+      "titulo": "Controle de tração refeito: detecção por três modos",
+      "descricao": "O controle de tração antigo (tabelas de corte, retardo e borboleta) foi removido. O novo módulo detecta patinação por aceleração da rotação (sem sensor de roda), por relação rotação/cardã ou por dois sensores de velocidade. Nesta versão ele só detecta, sem cortar ignição ou borboleta.",
+      "mapa": {
+        "impacto": "revisar",
+        "campos": [],
+        "acao": "Reconfigure o controle de tração nos novos modos; as tabelas antigas deixaram de existir."
+      }
+    },
+    {
+      "id": "backfill-20260819-vvt-zero",
+      "tipo": "melhoria",
+      "publico": "usuario",
+      "titulo": "VVT: controle desligado quando o alvo é perto de zero",
+      "descricao": "O controle do comando variável é desativado com o alvo abaixo de 1 grau (liga acima de 3 graus), evitando acúmulo do integrador e travamento do pino de trava em alguns hardwares.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "backfill-20260819-correcoes-combustivel",
+      "tipo": "correcao",
+      "publico": "usuario",
+      "titulo": "Correções no enriquecimento de aceleração e no combustível em malha fechada",
+      "descricao": "O enriquecimento de aceleração do TPS não zera mais a desaceleração durante toda a cauda (um toque rápido no pedal ficava rico). Os limiares e filtros de aceleração/desaceleração do TPS agora são lidos da configuração, antes eram constantes fixas. O duplo uso do multiplicador no modo percentual foi corrigido, o canal da correção STFT passou a ler 100% no neutro (lia 99%) e o lambda suavizado passou a ser guardado em unidades de lambda.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "backfill-20260819-correcoes-gerais",
+      "tipo": "correcao",
+      "publico": "usuario",
+      "titulo": "Correções de ignição, partida e comunicação",
+      "descricao": "RPM instantâneo parado em zero em gatilho de um dente, rotação mínima de partida zerada entre tentativas, contador próprio por faísca no multispark, estouro de buffer do TunerStudio em leitura com mapa bloqueado, fallback correto do lambda quando o WBO falha, preenchimento ISO-TP com 0xAA e suavização de saídas de boost, corte de DFCO e retardo de detonação.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "backfill-20260819-wideband-aem",
+      "tipo": "removido",
+      "publico": "usuario",
+      "titulo": "Controlador wideband da rusEFI por CAN removido",
+      "descricao": "Só o protocolo CAN dos sensores AEM X-Series permanece. O protocolo próprio da rusEFI (com atualização remota e diagnóstico estendido) foi retirado da ECU e do TunerStudio.",
+      "mapa": {
+        "impacto": "revisar",
+        "campos": [],
+        "acao": "Se usava um controlador wideband rusEFI por CAN, troque por um sensor AEM ou use a entrada analógica."
+      }
+    }
+  ],
+  "map_diff": {
+    "config_reset": true,
+    "page_size": {
+      "from": 27796,
+      "to": 28536
+    },
+    "added": [
+      {
+        "name": "clFuelCommon_exhaustVolumeToSensor",
+        "kind": "scalar",
+        "units": "mL"
+      },
+      {
+        "name": "clFuelCommon_maxLambda",
+        "kind": "scalar",
+        "units": "lambda"
+      },
+      {
+        "name": "clFuelCommon_minClt",
+        "kind": "scalar",
+        "units": "C"
+      },
+      {
+        "name": "clFuelCommon_minLambda",
+        "kind": "scalar",
+        "units": "lambda"
+      },
+      {
+        "name": "clFuelCommon_noFuelTrimAfterAccelTime",
+        "kind": "scalar",
+        "units": "sec"
+      },
+      {
+        "name": "clFuelCommon_noFuelTrimAfterDfcoTime",
+        "kind": "scalar",
+        "units": "sec"
+      },
+      {
+        "name": "clFuelCommon_startupDelay",
+        "kind": "scalar",
+        "units": "seconds"
+      },
+      {
+        "name": "coldStartAuxCltBins",
+        "kind": "array",
+        "units": "C"
+      },
+      {
+        "name": "coldStartAuxDurationTable",
+        "kind": "array",
+        "units": "sec"
+      },
+      {
+        "name": "coldStartAuxEnable",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "coldStartAuxEthanolBins",
+        "kind": "array",
+        "units": "%"
+      },
+      {
+        "name": "coldStartAuxMaxTimeout",
+        "kind": "scalar",
+        "units": "sec"
+      },
+      {
+        "name": "coldStartAuxValvePin",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "coldStartAuxValvePinMode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "dRpmLimitPerGear1",
+        "kind": "scalar",
+        "units": "rpm/s"
+      },
+      {
+        "name": "dRpmLimitPerGear10",
+        "kind": "scalar",
+        "units": "rpm/s"
+      },
+      {
+        "name": "dRpmLimitPerGear2",
+        "kind": "scalar",
+        "units": "rpm/s"
+      },
+      {
+        "name": "dRpmLimitPerGear3",
+        "kind": "scalar",
+        "units": "rpm/s"
+      },
+      {
+        "name": "dRpmLimitPerGear4",
+        "kind": "scalar",
+        "units": "rpm/s"
+      },
+      {
+        "name": "dRpmLimitPerGear5",
+        "kind": "scalar",
+        "units": "rpm/s"
+      },
+      {
+        "name": "dRpmLimitPerGear6",
+        "kind": "scalar",
+        "units": "rpm/s"
+      },
+      {
+        "name": "dRpmLimitPerGear7",
+        "kind": "scalar",
+        "units": "rpm/s"
+      },
+      {
+        "name": "dRpmLimitPerGear8",
+        "kind": "scalar",
+        "units": "rpm/s"
+      },
+      {
+        "name": "dRpmLimitPerGear9",
+        "kind": "scalar",
+        "units": "rpm/s"
+      },
+      {
+        "name": "flexAeMult",
+        "kind": "array",
+        "units": "mult"
+      },
+      {
+        "name": "flexFuelTransientComp",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "flexTransientCltBins",
+        "kind": "array",
+        "units": "C"
+      },
+      {
+        "name": "flexTransientEthanolBins",
+        "kind": "array",
+        "units": "%"
+      },
+      {
+        "name": "flexWwBetaMult",
+        "kind": "array",
+        "units": "mult"
+      },
+      {
+        "name": "flexWwTauMult",
+        "kind": "array",
+        "units": "mult"
+      },
+      {
+        "name": "ltft_ltftSlowdownFactor",
+        "kind": "scalar",
+        "units": "x"
+      },
+      {
+        "name": "ltft_minCltForLearning",
+        "kind": "scalar",
+        "units": "C"
+      },
+      {
+        "name": "ltft_trimsBank1",
+        "kind": "array",
+        "units": ""
+      },
+      {
+        "name": "ltft_trimsBank2",
+        "kind": "array",
+        "units": ""
+      },
+      {
+        "name": "odometer_totalDistanceKm",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "odometer_totalFuelConsumedL",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "odometer_tripDistanceZeroKm",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "odometer_tripFuelZeroL",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "stft_maxAdd",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "stft_maxRemove",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "stft_stftLoadBins",
+        "kind": "array",
+        "units": "load"
+      },
+      {
+        "name": "stft_stftRpmBins",
+        "kind": "array",
+        "units": "RPM"
+      },
+      {
+        "name": "stft_tauBase",
+        "kind": "scalar",
+        "units": "sec"
+      },
+      {
+        "name": "tcClutchSettleTimeMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "tcCutRampRatePctPerSec",
+        "kind": "scalar",
+        "units": "%/s"
+      },
+      {
+        "name": "tcEnabled",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "tcFilterTimeConstantMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "tcIgnitionRetardBins",
+        "kind": "array",
+        "units": "%"
+      },
+      {
+        "name": "tcIgnitionRetardCurve",
+        "kind": "array",
+        "units": "deg"
+      },
+      {
+        "name": "tcMinMap",
+        "kind": "scalar",
+        "units": "kPa"
+      },
+      {
+        "name": "tcMinTps",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "tcMode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "tcRetardRampRateDegPerSec",
+        "kind": "scalar",
+        "units": "deg/s"
+      },
+      {
+        "name": "tcSparkCutBins",
+        "kind": "array",
+        "units": "%"
+      },
+      {
+        "name": "tcSparkCutCurve",
+        "kind": "array",
+        "units": "%"
+      },
+      {
+        "name": "tpsAccelLookbackMax",
+        "kind": "scalar",
+        "units": "sec"
+      },
+      {
+        "name": "tpsDecelLookbackMax",
+        "kind": "scalar",
+        "units": "sec"
+      },
+      {
+        "name": "vfs_persistedEthanol",
+        "kind": "scalar",
+        "units": ""
+      }
+    ],
+    "removed": [
+      {
+        "name": "canWbo1_enableRemap",
+        "kind": "bits"
+      },
+      {
+        "name": "canWbo1_reHwidx",
+        "kind": "bits"
+      },
+      {
+        "name": "canWbo1_reId",
+        "kind": "bits"
+      },
+      {
+        "name": "canWbo2_enableRemap",
+        "kind": "bits"
+      },
+      {
+        "name": "canWbo2_reHwidx",
+        "kind": "bits"
+      },
+      {
+        "name": "canWbo2_reId",
+        "kind": "bits"
+      },
+      {
+        "name": "ltft_table_bank1",
+        "kind": "array"
+      },
+      {
+        "name": "ltft_table_bank2",
+        "kind": "array"
+      },
+      {
+        "name": "ltft_timeConstant1",
+        "kind": "scalar"
+      },
+      {
+        "name": "ltft_timeConstant2",
+        "kind": "scalar"
+      },
+      {
+        "name": "ltft_timeConstant3",
+        "kind": "scalar"
+      },
+      {
+        "name": "ltft_timeConstant4",
+        "kind": "scalar"
+      },
+      {
+        "name": "noFuelTrimAfterAccelTime",
+        "kind": "scalar"
+      },
+      {
+        "name": "noFuelTrimAfterDfcoTime",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_cellCfgs1_maxAdd",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_cellCfgs1_maxRemove",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_cellCfgs1_timeConstant",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_cellCfgs2_maxAdd",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_cellCfgs2_maxRemove",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_cellCfgs2_timeConstant",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_cellCfgs3_maxAdd",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_cellCfgs3_maxRemove",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_cellCfgs3_timeConstant",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_cellCfgs4_maxAdd",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_cellCfgs4_maxRemove",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_cellCfgs4_timeConstant",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_maxIdleRegionRpm",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_maxLambda",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_maxOverrunLoad",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_minClt",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_minLambda",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_minPowerLoad",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_startupDelay",
+        "kind": "scalar"
+      },
+      {
+        "name": "tractionControlEtbDrop",
+        "kind": "array"
+      },
+      {
+        "name": "tractionControlIgnitionSkip",
+        "kind": "array"
+      },
+      {
+        "name": "tractionControlSlipBins",
+        "kind": "array"
+      },
+      {
+        "name": "tractionControlSpeedBins",
+        "kind": "array"
+      },
+      {
+        "name": "tractionControlTimingDrop",
+        "kind": "array"
+      },
+      {
+        "name": "useAuxSpeedForSlipRatio",
+        "kind": "bits"
+      },
+      {
+        "name": "useHardSkipInTraction",
+        "kind": "bits"
+      }
+    ],
+    "rescaled": [
+      {
+        "name": "tpsAccelLookback",
+        "from": {
+          "scale": 0.05,
+          "offset": 0,
+          "units": "sec",
+          "min": 0,
+          "max": 5
+        },
+        "to": {
+          "scale": 0.01,
+          "offset": 0,
+          "units": "sec",
+          "min": 0,
+          "max": 1
+        }
+      },
+      {
+        "name": "tpsDecelLookback",
+        "from": {
+          "scale": 0.05,
+          "offset": 0,
+          "units": "sec",
+          "min": 0,
+          "max": 5
+        },
+        "to": {
+          "scale": 0.01,
+          "offset": 0,
+          "units": "sec",
+          "min": 0,
+          "max": 1
+        }
+      }
+    ],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": true
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "release_id": "evotech4/2026.10.23_735030503",
+  "board": "evotech4",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2026.10.23.evotech4.735030503",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2026-10-23T21:57:24.587834+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "0844f43add783b0763353ea4ac4ed3ff90a43f97072eee9bbd7cc7b0116c6b4c",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech4/2026.10.23_1432758078",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": false,
+    "page_size": {
+      "from": 29804,
+      "to": 29804
+    },
+    "added": [
+      {
+        "name": "stftScheduledPi",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "stftSmithPredictor",
+        "kind": "bits",
+        "units": ""
+      }
+    ],
+    "removed": [
+      {
+        "name": "unusedFancy26",
+        "kind": "bits"
+      },
+      {
+        "name": "unusedFancy27",
+        "kind": "bits"
+      }
+    ],
+    "rescaled": [],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": false
+  }
+}

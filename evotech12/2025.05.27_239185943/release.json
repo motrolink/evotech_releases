@@ -1,0 +1,272 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2025.05.27_239185943",
+  "board": "evotech12",
+  "channel": "prod",
+  "full_signature": "evoTech motrolink_release.2025.05.27.evotech12.239185943",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2025-10-23T17:40:27.187350+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "b2b22624c46afada5e21c36aa7f3779dbaf7605d34b55a892c8109d503116d8a",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2025.06.03_3017395922",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": true,
+    "page_size": {
+      "from": 21776,
+      "to": 22248
+    },
+    "added": [
+      {
+        "name": "ltftHoleThreshold",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "ltftRegionalIntensity",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "ltftRegionalWindow",
+        "kind": "scalar",
+        "units": "células"
+      },
+      {
+        "name": "ltftSmoothingIntensity",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "ltitAcTrim",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "ltitFan1Trim",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "ltitFan2Trim",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "wwBetaLearningRate",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "wwDirectionalCorrections",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "wwEnableTransientFiltering",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "wwMapThreshold",
+        "kind": "scalar",
+        "units": "kPa/s"
+      },
+      {
+        "name": "wwMapThresholdHeavy",
+        "kind": "scalar",
+        "units": "kPa/s"
+      },
+      {
+        "name": "wwMapThresholdLight",
+        "kind": "scalar",
+        "units": "kPa/s"
+      },
+      {
+        "name": "wwMaxCoolantTemp",
+        "kind": "scalar",
+        "units": "°C"
+      },
+      {
+        "name": "wwMinMapForLearning",
+        "kind": "scalar",
+        "units": "kPa"
+      },
+      {
+        "name": "wwMinTransientDuration",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "wwTauLearningRate",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "wwTpsThreshold",
+        "kind": "scalar",
+        "units": "%%/s"
+      },
+      {
+        "name": "wwTpsThresholdHeavy",
+        "kind": "scalar",
+        "units": "%%/s"
+      },
+      {
+        "name": "wwTpsThresholdLight",
+        "kind": "scalar",
+        "units": "%%/s"
+      },
+      {
+        "name": "wwTransientDetectionWindowMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "wwTransientFilterSamples",
+        "kind": "scalar",
+        "units": "samples"
+      },
+      {
+        "name": "wwTransientTimeoutMs",
+        "kind": "scalar",
+        "units": "ms"
+      }
+    ],
+    "removed": [
+      {
+        "name": "ltitIntegratorThreshold",
+        "kind": "scalar"
+      },
+      {
+        "name": "wwAquinoAccelThresh",
+        "kind": "scalar"
+      },
+      {
+        "name": "wwAquinoAnalysisMaxDuration",
+        "kind": "scalar"
+      },
+      {
+        "name": "wwAquinoBetaAccelGain",
+        "kind": "scalar"
+      },
+      {
+        "name": "wwAquinoBetaDecelGain",
+        "kind": "scalar"
+      },
+      {
+        "name": "wwAquinoBetaLeanThresh",
+        "kind": "scalar"
+      },
+      {
+        "name": "wwAquinoBetaRichThresh",
+        "kind": "scalar"
+      },
+      {
+        "name": "wwAquinoDecelThresh",
+        "kind": "scalar"
+      },
+      {
+        "name": "wwAquinoMapAccelThresh",
+        "kind": "scalar"
+      },
+      {
+        "name": "wwAquinoMapDecelThresh",
+        "kind": "scalar"
+      },
+      {
+        "name": "wwAquinoMinLambdaErr",
+        "kind": "scalar"
+      },
+      {
+        "name": "wwAquinoTauFastGain",
+        "kind": "scalar"
+      },
+      {
+        "name": "wwAquinoTauIdealFactor",
+        "kind": "scalar"
+      },
+      {
+        "name": "wwAquinoTauOvershootGain",
+        "kind": "scalar"
+      },
+      {
+        "name": "wwAquinoTauOvershootMinDur",
+        "kind": "scalar"
+      },
+      {
+        "name": "wwAquinoTauOvershootMinMag",
+        "kind": "scalar"
+      },
+      {
+        "name": "wwAquinoTauSettleThresh",
+        "kind": "scalar"
+      },
+      {
+        "name": "wwAquinoTauSlowGain",
+        "kind": "scalar"
+      },
+      {
+        "name": "wwAquinoTauToleranceFactor",
+        "kind": "scalar"
+      },
+      {
+        "name": "wwAquinoTransMinDuration",
+        "kind": "scalar"
+      }
+    ],
+    "rescaled": [
+      {
+        "name": "wwBetaCorrection",
+        "from": {
+          "scale": 0.01,
+          "offset": 0,
+          "units": "Beta correction multiplier",
+          "min": 0,
+          "max": 2.5
+        },
+        "to": {
+          "scale": 0.01,
+          "offset": 0,
+          "units": "Beta correction multiplier",
+          "min": 0.5,
+          "max": 2
+        }
+      },
+      {
+        "name": "wwTauCorrection",
+        "from": {
+          "scale": 0.01,
+          "offset": 0,
+          "units": "Tau correction multiplier",
+          "min": 0,
+          "max": 2.5
+        },
+        "to": {
+          "scale": 0.01,
+          "offset": 0,
+          "units": "Tau correction multiplier",
+          "min": 0.5,
+          "max": 2
+        }
+      }
+    ],
+    "retyped": [],
+    "reshaped": [
+      {
+        "name": "ltitTable",
+        "from": "[16]",
+        "to": "[16x16]"
+      }
+    ],
+    "output_channels_moved": true
+  }
+}

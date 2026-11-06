@@ -1,0 +1,90 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2026.05.08_3858105300",
+  "board": "evotech12",
+  "channel": "prod",
+  "full_signature": "rusEFI motrolink_prod.2026.05.08.evotech12.3858105300",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2026-05-08T18:13:43.970984+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "dca0b63a173193bb6e92a8da8316e401a8e82e387bcbc9c60843dc23961e48e2",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2026.01.02_1598849697",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": false,
+    "page_size": {
+      "from": 27796,
+      "to": 27796
+    },
+    "added": [
+      {
+        "name": "thermalProtectionEnable",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "thermalProtectionTemp",
+        "kind": "scalar",
+        "units": "C"
+      },
+      {
+        "name": "unused_fan1ThermalProtectionDuty",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "unused_fan2ThermalProtectionDuty",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "unused_fan2ThermalProtectionEnable",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "unused_fan2ThermalProtectionTemp",
+        "kind": "scalar",
+        "units": "C"
+      }
+    ],
+    "removed": [
+      {
+        "name": "fan1ThermalProtectionDuty",
+        "kind": "scalar"
+      },
+      {
+        "name": "fan1ThermalProtectionEnable",
+        "kind": "bits"
+      },
+      {
+        "name": "fan1ThermalProtectionTemp",
+        "kind": "scalar"
+      },
+      {
+        "name": "fan2ThermalProtectionDuty",
+        "kind": "scalar"
+      },
+      {
+        "name": "fan2ThermalProtectionEnable",
+        "kind": "bits"
+      },
+      {
+        "name": "fan2ThermalProtectionTemp",
+        "kind": "scalar"
+      }
+    ],
+    "rescaled": [],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": false
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "schema": 1,
+  "release_id": "evotech8/2026.10.27_370823354",
+  "board": "evotech8",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2026.10.27.evotech8.370823354",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2026-10-27T10:07:04.834661+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "6694d22b9fc28dcf3ef3083698a4366155a4b050403e6b33e5aed49e76205e43",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech8/2026.10.26_769577318",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": false,
+    "page_size": {
+      "from": 29836,
+      "to": 29836
+    },
+    "added": [
+      {
+        "name": "disableStftSmithPredictor",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "unusedStftIgnoreErrorMagnitude",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "unusedStftScheduledPi",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "unusedStftSmithPredictor",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "unusedTcGearHoldMs",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "unusedTcIndependentVss",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "unusedTcRecoveryHoldMs",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "unusedTcReleaseCutRate",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "unusedTcReleaseRetardRate",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "unusedTcRpmSlipTargetPct",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "unusedTcRpmSupervisor",
+        "kind": "bits",
+        "units": ""
+      }
+    ],
+    "removed": [
+      {
+        "name": "stftIgnoreErrorMagnitude",
+        "kind": "bits"
+      },
+      {
+        "name": "stftScheduledPi",
+        "kind": "bits"
+      },
+      {
+        "name": "stftSmithPredictor",
+        "kind": "bits"
+      },
+      {
+        "name": "tcGearHoldMs",
+        "kind": "scalar"
+      },
+      {
+        "name": "tcIndependentVss",
+        "kind": "bits"
+      },
+      {
+        "name": "tcRecoveryHoldMs",
+        "kind": "scalar"
+      },
+      {
+        "name": "tcReleaseCutRate",
+        "kind": "scalar"
+      },
+      {
+        "name": "tcReleaseRetardRate",
+        "kind": "scalar"
+      },
+      {
+        "name": "tcRpmSlipTargetPct",
+        "kind": "scalar"
+      },
+      {
+        "name": "tcRpmSupervisor",
+        "kind": "bits"
+      },
+      {
+        "name": "unusedFancy28",
+        "kind": "bits"
+      }
+    ],
+    "rescaled": [
+      {
+        "name": "idle_solenoidFrequency",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "Hz",
+          "min": 0,
+          "max": 3000
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "Hz",
+          "min": 1,
+          "max": 3000
+        }
+      }
+    ],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": false
+  }
+}

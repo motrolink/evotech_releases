@@ -1,0 +1,247 @@
+{
+  "schema": 1,
+  "release_id": "evotech8/2026.11.03_3886383880",
+  "board": "evotech8",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2026.11.03.evotech8.3886383880",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2026-11-03T16:17:04.815870+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "8db21577b824a9093ca2c60d8b2e8298f6f884fb57cc0dc62de70363739cddf0",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech8/2026.11.03_3764209861",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": false,
+    "page_size": {
+      "from": 29844,
+      "to": 29844
+    },
+    "added": [
+      {
+        "name": "airPredMapNoiseKpa",
+        "kind": "scalar",
+        "units": "kPa"
+      },
+      {
+        "name": "filmFuelTauExpCold",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "filmFuelTauExpHot",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "filmGtau0",
+        "kind": "scalar",
+        "units": "x"
+      },
+      {
+        "name": "filmGtau1",
+        "kind": "scalar",
+        "units": "x"
+      },
+      {
+        "name": "filmGtau2",
+        "kind": "scalar",
+        "units": "x"
+      },
+      {
+        "name": "filmGtau3",
+        "kind": "scalar",
+        "units": "x"
+      },
+      {
+        "name": "filmGtau4",
+        "kind": "scalar",
+        "units": "x"
+      },
+      {
+        "name": "filmGx0",
+        "kind": "scalar",
+        "units": "x"
+      },
+      {
+        "name": "filmGx1",
+        "kind": "scalar",
+        "units": "x"
+      },
+      {
+        "name": "filmGx2",
+        "kind": "scalar",
+        "units": "x"
+      },
+      {
+        "name": "filmGx3",
+        "kind": "scalar",
+        "units": "x"
+      },
+      {
+        "name": "filmGx4",
+        "kind": "scalar",
+        "units": "x"
+      },
+      {
+        "name": "filmLearnKtau0",
+        "kind": "scalar",
+        "units": "x"
+      },
+      {
+        "name": "filmLearnKtau1",
+        "kind": "scalar",
+        "units": "x"
+      },
+      {
+        "name": "filmLearnKtau2",
+        "kind": "scalar",
+        "units": "x"
+      },
+      {
+        "name": "filmLearnKx0",
+        "kind": "scalar",
+        "units": "x"
+      },
+      {
+        "name": "filmLearnKx1",
+        "kind": "scalar",
+        "units": "x"
+      },
+      {
+        "name": "filmLearnKx2",
+        "kind": "scalar",
+        "units": "x"
+      },
+      {
+        "name": "filmProbeDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "filmTauRefS",
+        "kind": "scalar",
+        "units": "s"
+      },
+      {
+        "name": "filmTempKtau",
+        "kind": "scalar",
+        "units": "1/C"
+      },
+      {
+        "name": "filmTempKx",
+        "kind": "scalar",
+        "units": "1/C"
+      },
+      {
+        "name": "filmXClosed",
+        "kind": "scalar",
+        "units": "fraction"
+      },
+      {
+        "name": "filmXOpen",
+        "kind": "scalar",
+        "units": "fraction"
+      },
+      {
+        "name": "regimeTpsRateFull",
+        "kind": "scalar",
+        "units": "%/s"
+      },
+      {
+        "name": "regimeTpsRateMin",
+        "kind": "scalar",
+        "units": "%/s"
+      },
+      {
+        "name": "regimeWeightMax",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "transientAeResidual",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "transientKtau",
+        "kind": "scalar",
+        "units": "x"
+      },
+      {
+        "name": "transientKx",
+        "kind": "scalar",
+        "units": "x"
+      },
+      {
+        "name": "transientLearnFilm",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "transientLearnRegime",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "transientModelMagic",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "transientModelMode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "unusedTpsTimingCorrectionEnable",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "unusedTransientPad",
+        "kind": "array",
+        "units": ""
+      },
+      {
+        "name": "valveIvcDeg",
+        "kind": "scalar",
+        "units": "deg"
+      },
+      {
+        "name": "valveIvoDeg",
+        "kind": "scalar",
+        "units": "deg"
+      }
+    ],
+    "removed": [
+      {
+        "name": "tpsTpsTimingCorrFromRpmBins",
+        "kind": "array"
+      },
+      {
+        "name": "tpsTpsTimingCorrToRpmBins",
+        "kind": "array"
+      },
+      {
+        "name": "tpsTpsTimingCorrectionEnable",
+        "kind": "bits"
+      },
+      {
+        "name": "tpsTpsTimingCorrectionTable",
+        "kind": "array"
+      }
+    ],
+    "rescaled": [],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": false
+  }
+}

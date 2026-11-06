@@ -1,0 +1,273 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2026.06.02_536173516",
+  "board": "evotech12",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2026.06.02.evotech12.536173516",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2026-06-02T00:24:57.186831+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "167f5b2218b144ddcdf207ab2325db508fc26c1127374f4662170e8c41541a74",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2026.06.02_953712551",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": false,
+    "page_size": {
+      "from": 27796,
+      "to": 27796
+    },
+    "added": [],
+    "removed": [],
+    "rescaled": [
+      {
+        "name": "boostClosedLoopBlends1_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "boostClosedLoopBlends2_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "boostOpenLoopBlends1_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "boostOpenLoopBlends2_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "ignBlends1_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "ignBlends2_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "ignBlends3_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "ignBlends4_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "targetAfrBlends1_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "targetAfrBlends2_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "veBlends1_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "veBlends2_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "veBlends3_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "veBlends4_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      }
+    ],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": false
+  }
+}

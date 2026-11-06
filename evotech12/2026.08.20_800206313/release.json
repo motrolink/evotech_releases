@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2026.08.20_800206313",
+  "board": "evotech12",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2026.08.20.evotech12.800206313",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2026-08-20T21:58:51.152770+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "f73073d1774d46b3d5a489e1d08eaf531bd202a93d8adca8df0192166faa2a0d",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2026.08.20_736244644",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": true,
+    "page_size": {
+      "from": 28732,
+      "to": 28736
+    },
+    "added": [
+      {
+        "name": "torqueSmoothingDeadbandNm",
+        "kind": "scalar",
+        "units": "Nm"
+      }
+    ],
+    "removed": [],
+    "rescaled": [],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": true
+  }
+}

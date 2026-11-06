@@ -1,0 +1,52 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2026.09.04_2751015660",
+  "board": "evotech12",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2026.09.04.evotech12.2751015660",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2026-09-04T14:08:33.802060+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "1dc08fb5d5c5c3129739052db3b3a1ccfe254fc2eeb49edd1b9405ed7802e5ca",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2026.09.03_2751015660",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": false,
+    "page_size": {
+      "from": 28736,
+      "to": 28736
+    },
+    "added": [],
+    "removed": [],
+    "rescaled": [
+      {
+        "name": "ALSTimingRetardTable",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "deg",
+          "min": -60,
+          "max": 0
+        },
+        "to": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "deg",
+          "min": -90,
+          "max": 0
+        }
+      }
+    ],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": false
+  }
+}

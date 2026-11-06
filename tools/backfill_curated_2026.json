@@ -1,0 +1,547 @@
+{
+  "2026.06.02": {
+    "flash_data_version": 251031,
+    "title": "Menus reorganizados no TunerStudio",
+    "summary": "Reestruturação das telas de configuração (combustível, ignição, marcha lenta, sensores, CAN, controlador e atuadores) para facilitar a calibração. Sem mudanças de lógica documentadas.",
+    "entries": [
+      {
+        "id": "backfill-20260602-menus",
+        "tipo": "melhoria",
+        "publico": "usuario",
+        "titulo": "Menus de configuração reorganizados",
+        "descricao": "As telas de combustível, ignição, marcha lenta, avançado, sensores, CAN, scripts, atuadores e controlador foram reestruturadas, com textos revisados em português. Procure os campos pela nova organização do menu; a lógica da ECU não foi alterada por esta mudança.",
+        "mapa": {
+          "impacto": "nenhum",
+          "campos": [],
+          "acao": ""
+        }
+      }
+    ]
+  },
+  "2026.06.14": {
+    "flash_data_version": 251031,
+    "title": "Marcha lenta com o ar-condicionado mais estável",
+    "summary": "O alvo de rotação do ar-condicionado passa a ser separado do avanço da válvula de marcha lenta, evitando oscilação quando o pressostato liga e desliga. Disponível só na evoTech 12 nesta versão.",
+    "entries": [
+      {
+        "id": "backfill-20260614-ac-marcha-lenta",
+        "tipo": "novo",
+        "publico": "usuario",
+        "titulo": "A/C: rotação de marcha lenta mantida por um tempo configurável",
+        "descricao": "O alvo de rotação do compressor usa o estado do compressor e um tempo de manutenção (`acTargetHoldTime`), o que evita a rotação oscilar quando o pressostato cicla. O adicional da válvula de marcha lenta só vale com o compressor realmente ligado. Os adicionais de marcha lenta em aberto foram separados em painéis do A/C e do ventilador, e a marcha lenta por motor de passo voltou a aparecer na evoTech 8 e 12.",
+        "mapa": {
+          "impacto": "campos_novos",
+          "campos": [
+            "acTargetHoldTime"
+          ],
+          "acao": ""
+        },
+        "placas": [
+          "evotech12"
+        ]
+      }
+    ]
+  },
+  "2026.06.24": {
+    "flash_data_version": 251031,
+    "title": "Comandos da WideLink por CAN, potência estimada e melhorias gerais",
+    "summary": "A ECU passa a ler os comandos de launch, anti-lag e modo manobrista enviados pela WideLink, calcula potência e torque estimados e ganha ajustes de robustez da USB.",
+    "entries": [
+      {
+        "id": "backfill-20260624-widelink-comandos",
+        "tipo": "novo",
+        "publico": "usuario",
+        "titulo": "Launch, anti-lag e modo manobrista pela WideLink",
+        "descricao": "A ECU interpreta o pacote CAN 0x181 da WideLink: o primeiro byte pode desligar o launch control, o segundo o anti-lag e o quinto liga o modo manobrista, que limita a rotação ao valor de `valetModeRpmLimit` (campo na tela de limites de rotação). O comando de cruise passou a usar no máximo 4 bytes para não conflitar.",
+        "mapa": {
+          "impacto": "campos_novos",
+          "campos": [
+            "valetModeRpmLimit"
+          ],
+          "acao": ""
+        }
+      },
+      {
+        "id": "backfill-20260624-potencia-estimada",
+        "tipo": "novo",
+        "publico": "usuario",
+        "titulo": "Potência e torque estimados na tela",
+        "descricao": "Novos canais e mostradores de potência (cv) e torque (Nm) estimados a partir da vazão de combustível, do poder calorífico da gasolina e de uma eficiência térmica configurável (`estimatedThermalEfficiency`, padrão 30%). São estimativas, não substituem dinamômetro.",
+        "mapa": {
+          "impacto": "campos_novos",
+          "campos": [
+            "estimatedThermalEfficiency"
+          ],
+          "acao": ""
+        }
+      },
+      {
+        "id": "backfill-20260624-antilag-corte",
+        "tipo": "correcao",
+        "publico": "usuario",
+        "titulo": "Anti-lag desabilita o corte de combustível na desaceleração",
+        "descricao": "Com o anti-lag ativo, o corte de combustível (DFCO) deixa de atuar, para o anti-lag não ser anulado ao tirar o pé.",
+        "mapa": {
+          "impacto": "nenhum",
+          "campos": [],
+          "acao": ""
+        }
+      },
+      {
+        "id": "backfill-20260624-usb",
+        "tipo": "correcao",
+        "publico": "usuario",
+        "titulo": "USB mais resistente a interferência",
+        "descricao": "Atualização da camada USB da placa para reduzir quedas de conexão causadas por interferência eletromagnética.",
+        "mapa": {
+          "impacto": "nenhum",
+          "campos": [],
+          "acao": ""
+        }
+      }
+    ]
+  },
+  "2026.08.06": {
+    "flash_data_version": 251031,
+    "title": "Saídas genéricas na ponte H (TLE9201)",
+    "summary": "Cada canal da ponte H da evoTech 8 e 12 pode ser usado como saída genérica quando não é necessário para a borboleta eletrônica. A evoTech 4 não teve mudança funcional.",
+    "entries": [
+      {
+        "id": "backfill-20260806-ponte-h-generica",
+        "tipo": "novo",
+        "publico": "usuario",
+        "titulo": "Ponte H como saída genérica (evoTech 8 e 12)",
+        "descricao": "Os canais da ponte H TLE9201 podem trabalhar como saída de lado alto ou baixo e aparecem nas listas de pinos como ETB1+ e ETB2+, para ventilador, bomba de combustível, PWM geral e outros usos.",
+        "mapa": {
+          "impacto": "campos_novos",
+          "campos": [],
+          "acao": ""
+        },
+        "placas": [
+          "evotech12",
+          "evotech8"
+        ]
+      }
+    ]
+  },
+  "2026.08.19": {
+    "flash_data_version": 260815,
+    "title": "Armazenamento em journal, STFT/LTFT unificados e novo controle de tração",
+    "summary": "Grande atualização interna: a configuração passa a ser gravada em journal (nada do aprendido se perde ao desligar), o controle de combustível em malha fechada foi unificado, o controle de tração foi refeito só como detecção e a configuração da ECU é apagada na atualização.",
+    "entries": [
+      {
+        "id": "backfill-20260819-reset-config",
+        "tipo": "novo",
+        "publico": "usuario",
+        "titulo": "Atenção: a configuração é apagada na primeira partida",
+        "descricao": "O layout da configuração mudou (versão 251031 para 260815). Todo o mapa salvo na ECU é descartado ao iniciar com esta versão.",
+        "mapa": {
+          "impacto": "reset",
+          "campos": [],
+          "acao": "Exporte o mapa (.msq) antes de atualizar e importe de novo depois, revisando os valores. A ECU apaga a configuração salva na primeira partida com esta versão."
+        }
+      },
+      {
+        "id": "backfill-20260819-journal",
+        "tipo": "novo",
+        "publico": "usuario",
+        "titulo": "Gravação em tempo real: o aprendido e os ajustes não se perdem",
+        "descricao": "As correções aprendidas (LTFT, etanol do sensor virtual) e as edições feitas com o motor ligado agora são gravadas em um journal na flash, e sobrevivem a desligar o carro antes de um Burn. Burn com o motor ligado grava só as diferenças; com o motor parado continua gravando tudo. A verificação de gravação, as tentativas e a redundância foram reforçadas.",
+        "mapa": {
+          "impacto": "nenhum",
+          "campos": [],
+          "acao": ""
+        }
+      },
+      {
+        "id": "backfill-20260819-persistencia-unificada",
+        "tipo": "melhoria",
+        "publico": "usuario",
+        "titulo": "LTFT, etanol aprendido e odômetro viraram parte da configuração",
+        "descricao": "Os trims do LTFT, o etanol estimado e o odômetro passaram a ser campos normais da configuração, no mesmo Burn e CRC dos demais. A página extra de LTFT do TunerStudio foi removida.",
+        "mapa": {
+          "impacto": "nenhum",
+          "campos": [],
+          "acao": ""
+        }
+      },
+      {
+        "id": "backfill-20260819-malha-fechada-v3",
+        "tipo": "melhoria",
+        "publico": "usuario",
+        "titulo": "STFT e LTFT unificados em um modelo único",
+        "descricao": "A correção de combustível em malha fechada usa uma grade de mistura (rotação x carga) em lugar das antigas regiões, com um modelo de transporte do escape para aplicar o lambda lido ao evento de combustão correto. A saída do DFCO passou a ser suave: o combustível não zera na entrada (piso de 10%) e volta em rampa, e há retardo de ignição padrão na saída.",
+        "mapa": {
+          "impacto": "revisar",
+          "campos": [
+            "dfcoRetardDeg",
+            "dfcoRetardRampInTime"
+          ],
+          "acao": "Revise a calibração de STFT, LTFT e do retardo/rampa do DFCO: o comportamento da correção mudou."
+        }
+      },
+      {
+        "id": "backfill-20260819-tracao",
+        "tipo": "melhoria",
+        "publico": "usuario",
+        "titulo": "Controle de tração refeito: detecção por três modos",
+        "descricao": "O controle de tração antigo (tabelas de corte, retardo e borboleta) foi removido. O novo módulo detecta patinação por aceleração da rotação (sem sensor de roda), por relação rotação/cardã ou por dois sensores de velocidade. Nesta versão ele só detecta, sem cortar ignição ou borboleta.",
+        "mapa": {
+          "impacto": "revisar",
+          "campos": [],
+          "acao": "Reconfigure o controle de tração nos novos modos; as tabelas antigas deixaram de existir."
+        }
+      },
+      {
+        "id": "backfill-20260819-wideband-aem",
+        "tipo": "removido",
+        "publico": "usuario",
+        "titulo": "Controlador wideband da rusEFI por CAN removido",
+        "descricao": "Só o protocolo CAN dos sensores AEM X-Series permanece. O protocolo próprio da rusEFI (com atualização remota e diagnóstico estendido) foi retirado da ECU e do TunerStudio.",
+        "mapa": {
+          "impacto": "revisar",
+          "campos": [],
+          "acao": "Se usava um controlador wideband rusEFI por CAN, troque por um sensor AEM ou use a entrada analógica."
+        }
+      },
+      {
+        "id": "backfill-20260819-flex-transiente",
+        "tipo": "novo",
+        "publico": "usuario",
+        "titulo": "Compensação transiente para flex fuel",
+        "descricao": "O enriquecimento de aceleração e o filme de parede (tau e beta) ganham um multiplicador em tabela 8x8 por temperatura e percentual de etanol, para corrigir a hesitação em tip-in com etanol. Fica neutro sem sensor de etanol, com a função desligada ou com a tabela zerada.",
+        "mapa": {
+          "impacto": "campos_novos",
+          "campos": [
+            "flexFuelTransientComp"
+          ],
+          "acao": ""
+        }
+      },
+      {
+        "id": "backfill-20260819-partida-fria-aux",
+        "tipo": "novo",
+        "publico": "usuario",
+        "titulo": "Válvula auxiliar de partida a frio com pulso por etanol e temperatura",
+        "descricao": "Nova válvula auxiliar de partida a frio que dá um pulso único ao iniciar a partida, com duração dada por uma tabela de etanol x temperatura do líquido, limitada por um tempo máximo de segurança.",
+        "mapa": {
+          "impacto": "campos_novos",
+          "campos": [
+            "coldStartAuxEnable",
+            "coldStartAuxValvePin",
+            "coldStartAuxDurationTable",
+            "coldStartAuxMaxTimeout"
+          ],
+          "acao": ""
+        }
+      },
+      {
+        "id": "backfill-20260819-teste-boost",
+        "tipo": "novo",
+        "publico": "usuario",
+        "titulo": "Botão de teste da solenoide de boost",
+        "descricao": "Na tela de boost, com o pino configurado, há um botão de teste de bancada da solenoide, como nos demais atuadores.",
+        "mapa": {
+          "impacto": "nenhum",
+          "campos": [],
+          "acao": ""
+        }
+      },
+      {
+        "id": "backfill-20260819-vvt-zero",
+        "tipo": "melhoria",
+        "publico": "usuario",
+        "titulo": "VVT: controle desligado quando o alvo é perto de zero",
+        "descricao": "O controle do comando variável é desativado com o alvo abaixo de 1 grau (liga acima de 3 graus), evitando acúmulo do integrador e travamento do pino de trava em alguns hardwares.",
+        "mapa": {
+          "impacto": "nenhum",
+          "campos": [],
+          "acao": ""
+        }
+      },
+      {
+        "id": "backfill-20260819-odometro-combustivel",
+        "tipo": "novo",
+        "publico": "usuario",
+        "titulo": "Combustível total consumido na vida do carro",
+        "descricao": "Novo mostrador do total de combustível consumido (litros) ao lado da distância total, sem zerar com o reset do trip.",
+        "mapa": {
+          "impacto": "nenhum",
+          "campos": [],
+          "acao": ""
+        }
+      },
+      {
+        "id": "backfill-20260819-correcoes-combustivel",
+        "tipo": "correcao",
+        "publico": "usuario",
+        "titulo": "Correções no enriquecimento de aceleração e no combustível em malha fechada",
+        "descricao": "O enriquecimento de aceleração do TPS não zera mais a desaceleração durante toda a cauda (um toque rápido no pedal ficava rico). Os limiares e filtros de aceleração/desaceleração do TPS agora são lidos da configuração, antes eram constantes fixas. O duplo uso do multiplicador no modo percentual foi corrigido, o canal da correção STFT passou a ler 100% no neutro (lia 99%) e o lambda suavizado passou a ser guardado em unidades de lambda.",
+        "mapa": {
+          "impacto": "nenhum",
+          "campos": [],
+          "acao": ""
+        }
+      },
+      {
+        "id": "backfill-20260819-correcoes-gerais",
+        "tipo": "correcao",
+        "publico": "usuario",
+        "titulo": "Correções de ignição, partida e comunicação",
+        "descricao": "RPM instantâneo parado em zero em gatilho de um dente, rotação mínima de partida zerada entre tentativas, contador próprio por faísca no multispark, estouro de buffer do TunerStudio em leitura com mapa bloqueado, fallback correto do lambda quando o WBO falha, preenchimento ISO-TP com 0xAA e suavização de saídas de boost, corte de DFCO e retardo de detonação.",
+        "mapa": {
+          "impacto": "nenhum",
+          "campos": [],
+          "acao": ""
+        }
+      }
+    ]
+  },
+  "2026.08.31": {
+    "flash_data_version": 260821,
+    "title": "Dashboard unificado, correção da oscilação do STFT e nova versão do layout",
+    "summary": "A configuração é apagada na atualização (layout 260821). Os campos de retardo do DFCO saem, o painel do TunerStudio fica mais claro e a ECU ganha recuperação automática após falha de boot.",
+    "entries": [
+      {
+        "id": "backfill-20260831-reset-config",
+        "tipo": "novo",
+        "publico": "usuario",
+        "titulo": "Atenção: a configuração é apagada na primeira partida",
+        "descricao": "O layout da configuração mudou (260815 para 260821).",
+        "mapa": {
+          "impacto": "reset",
+          "campos": [],
+          "acao": "Exporte o mapa (.msq) antes de atualizar e importe de novo depois, revisando os valores. A ECU apaga a configuração salva na primeira partida com esta versão."
+        }
+      },
+      {
+        "id": "backfill-20260831-dfco-retardo-removido",
+        "tipo": "removido",
+        "publico": "usuario",
+        "titulo": "Retardo próprio do DFCO removido",
+        "descricao": "Os campos `dfcoRetardDeg` e `dfcoRetardRampInTime` deixaram de existir: a suavização da entrada do DFCO pelo retardo de ignição passou a ser do módulo Suavização de torque, que só é visível em builds de desenvolvimento (em builds estáveis ele roda no padrão seguro).",
+        "mapa": {
+          "impacto": "revisar",
+          "campos": [
+            "dfcoRetardDeg",
+            "dfcoRetardRampInTime"
+          ],
+          "acao": "Se você usava o retardo do DFCO, recalibre a suavização da entrada em Desempenho > Suavização de torque (build de desenvolvimento)."
+        }
+      },
+      {
+        "id": "backfill-20260831-stft-oscilacao",
+        "tipo": "correcao",
+        "publico": "usuario",
+        "titulo": "STFT: oscilação em marcha lenta corrigida",
+        "descricao": "A margem de estabilidade da correção rápida era consumida pelo filtro de saída, o que causava oscilação em marcha lenta que só se resolvia subindo a constante de tempo base (e deixava a correção lenta em todo lugar). A margem foi corrigida.",
+        "mapa": {
+          "impacto": "nenhum",
+          "campos": [],
+          "acao": ""
+        }
+      },
+      {
+        "id": "backfill-20260831-recuperacao-boot",
+        "tipo": "seguranca",
+        "publico": "usuario",
+        "titulo": "Recuperação automática após falha de boot",
+        "descricao": "Se a ECU cair em ciclos de reinício sem explicação (inclusive falhas internas capturadas) após uma atualização, ela volta para o bootloader após 5 tentativas. O bootloader residente passa sozinho para o DFU da ST se ninguém o assumir em 5 segundos, permitindo regravar com qualquer ferramenta DFU USB.",
+        "mapa": {
+          "impacto": "nenhum",
+          "campos": [],
+          "acao": ""
+        }
+      },
+      {
+        "id": "backfill-20260831-painel",
+        "tipo": "melhoria",
+        "publico": "usuario",
+        "titulo": "Indicadores do painel unificados",
+        "descricao": "Indicadores redundantes de embreagem, marcha lenta/desaceleração e TPS 1/2 viraram um só, que mostra o lado ativo. O indicador Thermal OK diz que é a proteção de CLT do ventilador, o indicador Tuning não fica mais sem rótulo, e os indicadores de falha do WBO2 e de limite de rotação da ETB foram removidos.",
+        "mapa": {
+          "impacto": "nenhum",
+          "campos": [],
+          "acao": ""
+        }
+      },
+      {
+        "id": "backfill-20260831-iac-filtro",
+        "tipo": "novo",
+        "publico": "usuario",
+        "titulo": "Constante de tempo do filtro da saída da marcha lenta (IAC)",
+        "descricao": "O campo `iacFilterTimeConstant` agora aparece em Marcha lenta; o filtro já atuava na ECU, mas não era ajustável.",
+        "mapa": {
+          "impacto": "campos_novos",
+          "campos": [
+            "iacFilterTimeConstant"
+          ],
+          "acao": ""
+        }
+      },
+      {
+        "id": "backfill-20260831-vfs-timer",
+        "tipo": "correcao",
+        "publico": "usuario",
+        "titulo": "Sensor de flex virtual travava cedo",
+        "descricao": "Um estouro de 32 bits no temporizador de microssegundos fazia o sensor de flex virtual travar antes da hora.",
+        "mapa": {
+          "impacto": "nenhum",
+          "campos": [],
+          "acao": ""
+        }
+      },
+      {
+        "id": "backfill-20260831-telemetria-saidas",
+        "tipo": "correcao",
+        "publico": "usuario",
+        "titulo": "Canais de telemetria sumiam da build",
+        "descricao": "Canais como odômetro, economia, estado da marcha lenta e telemetria da ETB podiam sumir do projeto do TunerStudio dependendo do cache de compilação; a geração agora é determinística.",
+        "mapa": {
+          "impacto": "nenhum",
+          "campos": [],
+          "acao": ""
+        }
+      },
+      {
+        "id": "backfill-20260831-traducoes",
+        "tipo": "correcao",
+        "publico": "usuario",
+        "titulo": "Traduções pt-BR e menu Controller",
+        "descricao": "Traduções do TunerStudio corrigidas e o menu Controller limpo de entradas repetidas.",
+        "mapa": {
+          "impacto": "nenhum",
+          "campos": [],
+          "acao": ""
+        }
+      }
+    ]
+  },
+  "2026.09.07": {
+    "flash_data_version": 260821,
+    "title": "evoNet, proteções de boot e conformidade OBD-II",
+    "summary": "Protocolo evoNet entre ECU e display (descoberta de canais, falhas e ações remotas, tudo desligado por padrão), correções de watchdog no boot, do OBD-II e do anti-lag, e Burn sem pulso nas saídas.",
+    "entries": [
+      {
+        "id": "backfill-20260907-evonet",
+        "tipo": "novo",
+        "publico": "usuario",
+        "titulo": "evoNet: ECU e display se descrevem por CAN",
+        "descricao": "A ECU descreve seus canais por CAN (nome, unidade, escala, faixa e se o sensor existe), em CAN Bus > Habilitar descoberta de canais do evoNet (desligado por padrão, 2 quadros por segundo). Relatório de falhas com severidade, contagem, pior código, motivo de limp e quadro congelado, e ações remotas (reset de trip, launch, anti-lag, modo manobrista, partir e parar o motor). Ações de risco (partida, manobrista) ficam atrás de chave própria, desligada por padrão, exigem desafio-resposta e as precondições da ECU. O broadcast CAN clássico continua igual.",
+        "mapa": {
+          "impacto": "campos_novos",
+          "campos": [],
+          "acao": ""
+        }
+      },
+      {
+        "id": "backfill-20260907-evonet-subscricao",
+        "tipo": "correcao",
+        "publico": "usuario",
+        "titulo": "evoNet: assinatura vazia não derruba mais o fluxo padrão",
+        "descricao": "Um display que confirmava uma assinatura sem canais deixava de receber dados; agora volta ao perfil padrão.",
+        "mapa": {
+          "impacto": "nenhum",
+          "campos": [],
+          "acao": ""
+        }
+      },
+      {
+        "id": "backfill-20260907-widelink-comando",
+        "tipo": "correcao",
+        "publico": "usuario",
+        "titulo": "Comando da WideLink não prende mais",
+        "descricao": "Se o quadro de comando da WideLink (manobrista, launch, anti-lag) some por 500 ms, a ECU libera os três para o que o mapa diz. Antes, uma WideLink desconectada com o manobrista ligado deixava a rotação limitada até desligar a ECU.",
+        "mapa": {
+          "impacto": "nenhum",
+          "campos": [],
+          "acao": ""
+        }
+      },
+      {
+        "id": "backfill-20260907-obd2",
+        "tipo": "correcao",
+        "publico": "usuario",
+        "titulo": "OBD-II: conexão rápida e leitura de códigos",
+        "descricao": "PIDs não suportados agora recebem resposta negativa em vez de silêncio (descoberta cai de cerca de 25 s para menos de 1 s), lambda, tensão, etanol, temperatura do óleo e MAF são anunciados, a carga do motor não mostra mais 100% em speed density, o endereçamento 11 bits alternativo e o de 29 bits são aceitos, e leitura e limpeza de códigos (modos 03, 07, 0A e 04) funcionam.",
+        "mapa": {
+          "impacto": "nenhum",
+          "campos": [],
+          "acao": ""
+        }
+      },
+      {
+        "id": "backfill-20260907-watchdog-boot",
+        "tipo": "correcao",
+        "publico": "usuario",
+        "titulo": "Reset do watchdog durante o boot",
+        "descricao": "O boot ganhou orçamento próprio de 7 s no watchdog (antes herdava os 500 ms do funcionamento normal) e a telemetria do journal passou a ser lida só da thread de armazenamento, o que removia uma rajada de avisos internos logo após ligar.",
+        "mapa": {
+          "impacto": "nenhum",
+          "campos": [],
+          "acao": ""
+        }
+      },
+      {
+        "id": "backfill-20260907-antilag",
+        "tipo": "correcao",
+        "publico": "usuario",
+        "titulo": "Anti-lag: retardo aplicado com a tabela de marcha lenta e faixa até -90 graus",
+        "descricao": "O retardo do anti-lag era descartado quando se usava tabela de ignição separada para marcha lenta e o motor estava em marcha lenta com a borboleta fechada. Agora sempre vale sobre a tabela ativa, e a tabela aceita até -90 graus (antes -60).",
+        "mapa": {
+          "impacto": "nenhum",
+          "campos": [],
+          "acao": ""
+        }
+      },
+      {
+        "id": "backfill-20260907-burn-suave",
+        "tipo": "correcao",
+        "publico": "usuario",
+        "titulo": "Burn sem pulso nas saídas ao mudar só um ganho",
+        "descricao": "Mudar só um ganho de PID de ETB, VVT, boost, marcha lenta ou alternador não zera mais o integrador e o derivativo. A reconfiguração do decodificador de gatilho agora só ocorre com o motor parado e repete no próximo Burn.",
+        "mapa": {
+          "impacto": "nenhum",
+          "campos": [],
+          "acao": ""
+        }
+      },
+      {
+        "id": "backfill-20260907-dfco-ativo",
+        "tipo": "correcao",
+        "publico": "usuario",
+        "titulo": "Canal dfcoActive reflete o corte real",
+        "descricao": "O canal `dfcoActive` ficava sempre falso durante o corte; agora lê o estado do próprio DFCO.",
+        "mapa": {
+          "impacto": "nenhum",
+          "campos": [],
+          "acao": ""
+        }
+      },
+      {
+        "id": "backfill-20260907-protecoes-dev",
+        "tipo": "seguranca",
+        "publico": "usuario",
+        "titulo": "Suavização de torque e sensor de flex virtual desligados em builds estáveis",
+        "descricao": "Mesmo que um mapa salvo de uma build de desenvolvimento os tenha ligado, a ECU os volta ao padrão seguro a cada partida e a cada Burn em builds estáveis, e os diálogos ficam escondidos.",
+        "mapa": {
+          "impacto": "nenhum",
+          "campos": [],
+          "acao": ""
+        }
+      },
+      {
+        "id": "backfill-20260907-diversos",
+        "tipo": "melhoria",
+        "publico": "usuario",
+        "titulo": "Mostrador de alerta com código e atualização do FatFS",
+        "descricao": "O indicador de aviso do painel mostra o código do último aviso, e o FatFS foi atualizado para R0.16.",
+        "mapa": {
+          "impacto": "nenhum",
+          "campos": [],
+          "acao": ""
+        }
+      }
+    ]
+  }
+}

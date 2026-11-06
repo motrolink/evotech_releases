@@ -1,0 +1,78 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2026.08.16_1588471027",
+  "board": "evotech12",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2026.08.16.evotech12.1588471027",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2026-08-16T14:51:14.687649+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "9930897ff911628cd7d43cbc95a57e72bcfdf61b9c0040621b243618b5d44ab0",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2026.08.16_2551197675",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": true,
+    "page_size": {
+      "from": 28532,
+      "to": 28524
+    },
+    "added": [],
+    "removed": [
+      {
+        "name": "downshiftWindowPct",
+        "kind": "scalar"
+      },
+      {
+        "name": "standstillSpeedThreshold",
+        "kind": "scalar"
+      }
+    ],
+    "rescaled": [
+      {
+        "name": "tpsAccelLookback",
+        "from": {
+          "scale": 0.05,
+          "offset": 0,
+          "units": "sec",
+          "min": 0,
+          "max": 5
+        },
+        "to": {
+          "scale": 0.01,
+          "offset": 0,
+          "units": "sec",
+          "min": 0,
+          "max": 1
+        }
+      },
+      {
+        "name": "tpsDecelLookback",
+        "from": {
+          "scale": 0.05,
+          "offset": 0,
+          "units": "sec",
+          "min": 0,
+          "max": 5
+        },
+        "to": {
+          "scale": 0.01,
+          "offset": 0,
+          "units": "sec",
+          "min": 0,
+          "max": 1
+        }
+      }
+    ],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": true
+  }
+}
