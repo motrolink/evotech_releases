@@ -1,0 +1,47 @@
+{
+  "schema": 1,
+  "release_id": "evotech8/2026.08.06_2331849718",
+  "board": "evotech8",
+  "channel": "prod",
+  "full_signature": "rusEFI motrolink_prod.2026.08.06.evotech8.2331849718",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2026-08-06T14:01:51.751555+00:00",
+  "flash_data_version": 251031,
+  "bin_sha256": "03a8ccc623b201c99046576261faee4c38004ae07ecb8790e4520b80915cfa24",
+  "notes_kind": "backfill",
+  "title": "Saídas genéricas na ponte H (TLE9201)",
+  "summary": "Cada canal da ponte H da evoTech 8 e 12 pode ser usado como saída genérica quando não é necessário para a borboleta eletrônica. A evoTech 4 não teve mudança funcional.",
+  "base": {
+    "release_id": "evotech8/2026.06.24_2331849718",
+    "flash_data_version": 251031
+  },
+  "entries": [
+    {
+      "id": "backfill-20260806-ponte-h-generica",
+      "tipo": "novo",
+      "publico": "usuario",
+      "titulo": "Ponte H como saída genérica (evoTech 8 e 12)",
+      "descricao": "Os canais da ponte H TLE9201 podem trabalhar como saída de lado alto ou baixo e aparecem nas listas de pinos como ETB1+ e ETB2+, para ventilador, bomba de combustível, PWM geral e outros usos.",
+      "mapa": {
+        "impacto": "campos_novos",
+        "campos": [],
+        "acao": ""
+      }
+    }
+  ],
+  "map_diff": {
+    "config_reset": false,
+    "page_size": {
+      "from": 27796,
+      "to": 27796
+    },
+    "added": [],
+    "removed": [],
+    "rescaled": [],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": false
+  }
+}

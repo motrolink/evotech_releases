@@ -1,0 +1,70 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2026.10.25_4036177652",
+  "board": "evotech12",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2026.10.25.evotech12.4036177652",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2026-10-25T17:27:50.326398+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "43e396546e911a9da6aa5c055cfbf8dd5d6aea6e87ac195d40ae81bb5b92d1d6",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2026.10.25_2074544573",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": true,
+    "page_size": {
+      "from": 29804,
+      "to": 29820
+    },
+    "added": [
+      {
+        "name": "tcGearHoldMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "tcIndependentVss",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "tcRecoveryHoldMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "tcReleaseCutRate",
+        "kind": "scalar",
+        "units": "%/s"
+      },
+      {
+        "name": "tcReleaseRetardRate",
+        "kind": "scalar",
+        "units": "deg/s"
+      },
+      {
+        "name": "tcRpmSlipTargetPct",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "tcRpmSupervisor",
+        "kind": "bits",
+        "units": ""
+      }
+    ],
+    "removed": [],
+    "rescaled": [],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": true
+  }
+}

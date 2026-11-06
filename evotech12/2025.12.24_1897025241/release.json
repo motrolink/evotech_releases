@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2025.12.24_1897025241",
+  "board": "evotech12",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2025.12.24.evotech12.1897025241",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2025-12-24T02:44:43.118650+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "4883af9c4ebd4426097759f4fb068416900c6213a0b7436a640e112befa4f457",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2025.12.23_1129381075",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": false,
+    "page_size": {
+      "from": 27724,
+      "to": 27724
+    },
+    "added": [
+      {
+        "name": "cruiseControl_ccLowThrottleSmoothing",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "cruiseControl_ccPidOutputFilterHz",
+        "kind": "scalar",
+        "units": "Hz"
+      },
+      {
+        "name": "cruiseControl_ccSmoothingTau",
+        "kind": "scalar",
+        "units": "s"
+      }
+    ],
+    "removed": [],
+    "rescaled": [],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": false
+  }
+}

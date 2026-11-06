@@ -1,0 +1,330 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2025.09.13_3418478405",
+  "board": "evotech12",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2025.09.13.evotech12.3418478405",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2025-10-23T17:40:28.059075+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "87ac51253629097d6813ae85dc603c8140a8b5c51bab76cf8c7f02e6498df26e",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2025.09.13_3482298109",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": false,
+    "page_size": {
+      "from": 21912,
+      "to": 21912
+    },
+    "added": [
+      {
+        "name": "sdCardCsPinMode",
+        "kind": "bits",
+        "units": ""
+      }
+    ],
+    "removed": [],
+    "rescaled": [
+      {
+        "name": "acDelay",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "s",
+          "min": 0,
+          "max": 10
+        },
+        "to": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "seg",
+          "min": 0,
+          "max": 10
+        }
+      },
+      {
+        "name": "dfcoDelay",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "s",
+          "min": 0,
+          "max": 10
+        },
+        "to": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "seg",
+          "min": 0,
+          "max": 10
+        }
+      },
+      {
+        "name": "dynoCarCarMassKg",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kg",
+          "min": 0,
+          "max": 5000
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "Kg",
+          "min": 0,
+          "max": 5000
+        }
+      },
+      {
+        "name": "dynoCarCargoMassKg",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kg",
+          "min": 0,
+          "max": 1000
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "Kg",
+          "min": 0,
+          "max": 1000
+        }
+      },
+      {
+        "name": "dynoCarFrontalAreaM2",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "m²",
+          "min": 0,
+          "max": 100
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "m2",
+          "min": 0,
+          "max": 100
+        }
+      },
+      {
+        "name": "fuelLevelUpdatePeriodSec",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "s",
+          "min": 0,
+          "max": 60000
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "seconds",
+          "min": 0,
+          "max": 60000
+        }
+      },
+      {
+        "name": "hpfpActivationAngle",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "deg",
+          "min": 0,
+          "max": 255
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "graus",
+          "min": 0,
+          "max": 255
+        }
+      },
+      {
+        "name": "hpfpCamLobes",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "lóbulos/comando",
+          "min": 0,
+          "max": 255
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "lóbulo/comando",
+          "min": 0,
+          "max": 255
+        }
+      },
+      {
+        "name": "hpfpMinAngle",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "deg",
+          "min": 0,
+          "max": 255
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "graus",
+          "min": 0,
+          "max": 255
+        }
+      },
+      {
+        "name": "idlePidActivationTime",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "s",
+          "min": 0,
+          "max": 60
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "segundos",
+          "min": 0,
+          "max": 60
+        }
+      },
+      {
+        "name": "ltftMinModTemp",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "°C",
+          "min": 0,
+          "max": 150
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "deg C",
+          "min": 0,
+          "max": 150
+        }
+      },
+      {
+        "name": "ltftMinTemp",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "°C",
+          "min": 0,
+          "max": 150
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "deg C",
+          "min": 0,
+          "max": 150
+        }
+      },
+      {
+        "name": "nitrousMinimumClt",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "°C",
+          "min": 0,
+          "max": 250
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "deg C",
+          "min": 0,
+          "max": 250
+        }
+      },
+      {
+        "name": "primingDelay",
+        "from": {
+          "scale": 0.01,
+          "offset": 0,
+          "units": "s",
+          "min": 0,
+          "max": 1
+        },
+        "to": {
+          "scale": 0.01,
+          "offset": 0,
+          "units": "seg",
+          "min": 0,
+          "max": 1
+        }
+      },
+      {
+        "name": "startButtonSuppressOnStartUpMs",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ms",
+          "min": 0,
+          "max": 30000
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "",
+          "min": 0,
+          "max": 32000
+        }
+      },
+      {
+        "name": "tpsTpsTimingCorrectionTable",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "deg",
+          "min": 0,
+          "max": 25
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "degrees",
+          "min": 0,
+          "max": 25
+        }
+      },
+      {
+        "name": "vssFilterReciprocal",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "",
+          "min": 3,
+          "max": 200
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "",
+          "min": 3,
+          "max": "200 0"
+        }
+      }
+    ],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": false
+  }
+}

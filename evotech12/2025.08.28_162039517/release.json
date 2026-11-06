@@ -1,0 +1,104 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2025.08.28_162039517",
+  "board": "evotech12",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2025.08.28.evotech12.162039517",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2025-10-23T17:40:27.712814+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "605870e4f14ad2c3fd04c9bd3e67c9267df1a54710ee8143d44e15547fa1bac8",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2025.08.24_1848562244",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": true,
+    "page_size": {
+      "from": 21736,
+      "to": 21888
+    },
+    "added": [
+      {
+        "name": "tpsTpsTimingCorrFromRpmBins",
+        "kind": "array",
+        "units": "from"
+      },
+      {
+        "name": "tpsTpsTimingCorrToRpmBins",
+        "kind": "array",
+        "units": "to"
+      },
+      {
+        "name": "tpsTpsTimingCorrectionEnable",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "tpsTpsTimingCorrectionTable",
+        "kind": "array",
+        "units": "degrees"
+      }
+    ],
+    "removed": [
+      {
+        "name": "wwBetaBuffer",
+        "kind": "scalar"
+      },
+      {
+        "name": "wwBetaCorrection",
+        "kind": "array"
+      },
+      {
+        "name": "wwBetaLearningRate",
+        "kind": "scalar"
+      },
+      {
+        "name": "wwEnableAdaptiveLearning",
+        "kind": "bits"
+      },
+      {
+        "name": "wwLambdaDelayFactor",
+        "kind": "scalar"
+      },
+      {
+        "name": "wwMapThreshold",
+        "kind": "scalar"
+      },
+      {
+        "name": "wwMaxCoolantTemp",
+        "kind": "scalar"
+      },
+      {
+        "name": "wwMinCoolantTemp",
+        "kind": "scalar"
+      },
+      {
+        "name": "wwMinMapForLearning",
+        "kind": "scalar"
+      },
+      {
+        "name": "wwTauCorrection",
+        "kind": "array"
+      },
+      {
+        "name": "wwTauLearningRate",
+        "kind": "scalar"
+      },
+      {
+        "name": "wwTpsThreshold",
+        "kind": "scalar"
+      }
+    ],
+    "rescaled": [],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": true
+  }
+}

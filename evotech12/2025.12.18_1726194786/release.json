@@ -1,0 +1,83 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2025.12.18_1726194786",
+  "board": "evotech12",
+  "channel": "prod",
+  "full_signature": "rusEFI motrolink_prod.2025.12.18.evotech12.1726194786",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2025-12-18T15:24:28.581239+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "07d4e42ef9deedbfa963d615ef3c44e6bf63026278ef893efe9864c5a20dfc4b",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2025.12.09_3212133752",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": true,
+    "page_size": {
+      "from": 27656,
+      "to": 27664
+    },
+    "added": [
+      {
+        "name": "fuelDensity",
+        "kind": "scalar",
+        "units": "g/cc"
+      },
+      {
+        "name": "vssAccelThreshold",
+        "kind": "scalar",
+        "units": "km/h/s"
+      },
+      {
+        "name": "vssMaxAccel",
+        "kind": "scalar",
+        "units": "km/h/s"
+      },
+      {
+        "name": "vssMaxAlpha",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "vssMaxDecel",
+        "kind": "scalar",
+        "units": "km/h/s"
+      },
+      {
+        "name": "vssMinAlpha",
+        "kind": "scalar",
+        "units": "%"
+      }
+    ],
+    "removed": [],
+    "rescaled": [
+      {
+        "name": "tachPulsePerRev",
+        "from": {
+          "scale": 0.001,
+          "offset": 0,
+          "units": "",
+          "min": 1,
+          "max": 15
+        },
+        "to": {
+          "scale": 0.001,
+          "offset": 0,
+          "units": "",
+          "min": 0,
+          "max": 15
+        }
+      }
+    ],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": true
+  }
+}

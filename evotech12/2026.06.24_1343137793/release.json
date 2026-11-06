@@ -1,0 +1,107 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2026.06.24_1343137793",
+  "board": "evotech12",
+  "channel": "prod",
+  "full_signature": "rusEFI motrolink_prod.2026.06.24.evotech12.1343137793",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2026-06-24T18:55:38.469589+00:00",
+  "flash_data_version": 251031,
+  "bin_sha256": "f85b63ffe107ec2fb9e18928f6c807df7e60264ef76230ac83a8b1b270c1d4b0",
+  "notes_kind": "backfill",
+  "title": "Comandos da WideLink por CAN, potência estimada e melhorias gerais",
+  "summary": "A ECU passa a ler os comandos de launch, anti-lag e modo manobrista enviados pela WideLink, calcula potência e torque estimados e ganha ajustes de robustez da USB.",
+  "base": {
+    "release_id": "evotech12/2026.06.14_224882571",
+    "flash_data_version": 251031
+  },
+  "entries": [
+    {
+      "id": "backfill-20260624-potencia-estimada",
+      "tipo": "novo",
+      "publico": "usuario",
+      "titulo": "Potência e torque estimados na tela",
+      "descricao": "Novos canais e mostradores de potência (cv) e torque (Nm) estimados a partir da vazão de combustível, do poder calorífico da gasolina e de uma eficiência térmica configurável (`estimatedThermalEfficiency`, padrão 30%). São estimativas, não substituem dinamômetro.",
+      "mapa": {
+        "impacto": "campos_novos",
+        "campos": [
+          "estimatedThermalEfficiency"
+        ],
+        "acao": ""
+      }
+    },
+    {
+      "id": "backfill-20260624-widelink-comandos",
+      "tipo": "novo",
+      "publico": "usuario",
+      "titulo": "Launch, anti-lag e modo manobrista pela WideLink",
+      "descricao": "A ECU interpreta o pacote CAN 0x181 da WideLink: o primeiro byte pode desligar o launch control, o segundo o anti-lag e o quinto liga o modo manobrista, que limita a rotação ao valor de `valetModeRpmLimit` (campo na tela de limites de rotação). O comando de cruise passou a usar no máximo 4 bytes para não conflitar.",
+      "mapa": {
+        "impacto": "campos_novos",
+        "campos": [
+          "valetModeRpmLimit"
+        ],
+        "acao": ""
+      }
+    },
+    {
+      "id": "backfill-20260624-antilag-corte",
+      "tipo": "correcao",
+      "publico": "usuario",
+      "titulo": "Anti-lag desabilita o corte de combustível na desaceleração",
+      "descricao": "Com o anti-lag ativo, o corte de combustível (DFCO) deixa de atuar, para o anti-lag não ser anulado ao tirar o pé.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "backfill-20260624-usb",
+      "tipo": "correcao",
+      "publico": "usuario",
+      "titulo": "USB mais resistente a interferência",
+      "descricao": "Atualização da camada USB da placa para reduzir quedas de conexão causadas por interferência eletromagnética.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    }
+  ],
+  "map_diff": {
+    "config_reset": false,
+    "page_size": {
+      "from": 27796,
+      "to": 27796
+    },
+    "added": [
+      {
+        "name": "estimatedThermalEfficiency",
+        "kind": "scalar",
+        "units": "ratio"
+      },
+      {
+        "name": "valetModeRpmLimit",
+        "kind": "scalar",
+        "units": "RPM"
+      }
+    ],
+    "removed": [
+      {
+        "name": "unused_fan2ThermalProtectionDuty",
+        "kind": "scalar"
+      },
+      {
+        "name": "unused_fan2ThermalProtectionTemp",
+        "kind": "scalar"
+      }
+    ],
+    "rescaled": [],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": true
+  }
+}

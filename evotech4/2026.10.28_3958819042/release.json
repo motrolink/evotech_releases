@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "release_id": "evotech4/2026.10.28_3958819042",
+  "board": "evotech4",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2026.10.28.evotech4.3958819042",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2026-10-28T10:08:03.792673+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "a751909efb9e8dd712c0c389b5fa6cbfb8678b4942210b1bdbb480c725e35248",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech4/2026.10.27_2329102481",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": true,
+    "page_size": {
+      "from": 29844,
+      "to": 29836
+    },
+    "added": [],
+    "removed": [
+      {
+        "name": "idleSolenoidSineAmplitude",
+        "kind": "scalar"
+      },
+      {
+        "name": "idleSolenoidSineEnable",
+        "kind": "bits"
+      }
+    ],
+    "rescaled": [],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": false
+  }
+}

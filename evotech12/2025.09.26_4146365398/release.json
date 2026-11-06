@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2025.09.26_4146365398",
+  "board": "evotech12",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2025.09.26.evotech12.4146365398",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2025-10-23T17:40:28.153990+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "731c01efe906a8367615da220f9b29d0a849a2516de1d35d3e98a1e36e34dbf0",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2025.09.26_658902403",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": true,
+    "page_size": {
+      "from": 21912,
+      "to": 21916
+    },
+    "added": [
+      {
+        "name": "tpsAccelFastAlpha",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "tpsAccelSlowAlpha",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "tpsAccelThreshold",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "tpsDecelThreshold",
+        "kind": "scalar",
+        "units": "%"
+      }
+    ],
+    "removed": [],
+    "rescaled": [],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": false
+  }
+}

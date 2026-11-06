@@ -1,0 +1,86 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2026.09.18_4147402808",
+  "board": "evotech12",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2026.09.18.evotech12.4147402808",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2026-09-18T19:50:58.467908+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "a44ecfe0410951f03ff71bb212995212370bdde690726ad72b9367de429ec8f8",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2026.09.17_3824537954",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": false,
+    "page_size": {
+      "from": 29544,
+      "to": 29544
+    },
+    "added": [
+      {
+        "name": "knockSpectrumFixedSize",
+        "kind": "bits",
+        "units": ""
+      }
+    ],
+    "removed": [
+      {
+        "name": "unusedFancy3",
+        "kind": "bits"
+      }
+    ],
+    "rescaled": [],
+    "retyped": [
+      {
+        "name": "batteryProtectionEnabled",
+        "from": "scalar:U08",
+        "to": "bits:U08"
+      },
+      {
+        "name": "cltTemperatureProtectionEnabled",
+        "from": "scalar:U08",
+        "to": "bits:U08"
+      },
+      {
+        "name": "egtProtectionEnabled",
+        "from": "scalar:U08",
+        "to": "bits:U08"
+      },
+      {
+        "name": "fuelTemperatureProtectionEnabled",
+        "from": "scalar:U08",
+        "to": "bits:U08"
+      },
+      {
+        "name": "gdiRailProtectionEnabled",
+        "from": "scalar:U08",
+        "to": "bits:U08"
+      },
+      {
+        "name": "iatTemperatureProtectionEnabled",
+        "from": "scalar:U08",
+        "to": "bits:U08"
+      },
+      {
+        "name": "oilTemperatureProtectionEnabled",
+        "from": "scalar:U08",
+        "to": "bits:U08"
+      },
+      {
+        "name": "pfiFuelPressureProtectionEnabled",
+        "from": "scalar:U08",
+        "to": "bits:U08"
+      }
+    ],
+    "reshaped": [],
+    "output_channels_moved": true
+  }
+}

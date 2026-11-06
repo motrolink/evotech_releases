@@ -1,0 +1,60 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2026.06.14_224882571",
+  "board": "evotech12",
+  "channel": "prod",
+  "full_signature": "rusEFI motrolink_prod.2026.06.14.evotech12.224882571",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2026-06-14T22:39:49.178291+00:00",
+  "flash_data_version": 251031,
+  "bin_sha256": "7fcfbb4182df3d6a07256aff447985d320e155231d396c473ee0c9aaa92b553a",
+  "notes_kind": "backfill",
+  "title": "Marcha lenta com o ar-condicionado mais estável",
+  "summary": "O alvo de rotação do ar-condicionado passa a ser separado do avanço da válvula de marcha lenta, evitando oscilação quando o pressostato liga e desliga. Disponível só na evoTech 12 nesta versão.",
+  "base": {
+    "release_id": "evotech12/2026.06.02_3056657558",
+    "flash_data_version": 251031
+  },
+  "entries": [
+    {
+      "id": "backfill-20260614-ac-marcha-lenta",
+      "tipo": "novo",
+      "publico": "usuario",
+      "titulo": "A/C: rotação de marcha lenta mantida por um tempo configurável",
+      "descricao": "O alvo de rotação do compressor usa o estado do compressor e um tempo de manutenção (`acTargetHoldTime`), o que evita a rotação oscilar quando o pressostato cicla. O adicional da válvula de marcha lenta só vale com o compressor realmente ligado. Os adicionais de marcha lenta em aberto foram separados em painéis do A/C e do ventilador, e a marcha lenta por motor de passo voltou a aparecer na evoTech 8 e 12.",
+      "mapa": {
+        "impacto": "campos_novos",
+        "campos": [
+          "acTargetHoldTime"
+        ],
+        "acao": ""
+      }
+    }
+  ],
+  "map_diff": {
+    "config_reset": false,
+    "page_size": {
+      "from": 27796,
+      "to": 27796
+    },
+    "added": [
+      {
+        "name": "acTargetHoldTime",
+        "kind": "scalar",
+        "units": "sec"
+      }
+    ],
+    "removed": [
+      {
+        "name": "unused_fan1ThermalProtectionDuty",
+        "kind": "scalar"
+      }
+    ],
+    "rescaled": [],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": false
+  }
+}

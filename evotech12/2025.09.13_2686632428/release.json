@@ -1,0 +1,97 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2025.09.13_2686632428",
+  "board": "evotech12",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2025.09.13.evotech12.2686632428",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2025-10-23T17:40:27.927859+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "9f62b8c870e461de27e83fd714596789c8216882e647a211df5d9dc04338ed5d",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2025.09.05_641873271",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": true,
+    "page_size": {
+      "from": 21912,
+      "to": 21928
+    },
+    "added": [],
+    "removed": [],
+    "rescaled": [
+      {
+        "name": "etbMaxSpeedClose",
+        "from": {
+          "scale": 10,
+          "offset": 0,
+          "units": "%/s",
+          "min": 0,
+          "max": 2500
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "%/s",
+          "min": 0,
+          "max": 2500
+        }
+      },
+      {
+        "name": "etbMaxSpeedOpen",
+        "from": {
+          "scale": 10,
+          "offset": 0,
+          "units": "%/s",
+          "min": 0,
+          "max": 2500
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "%/s",
+          "min": 0,
+          "max": 2500
+        }
+      },
+      {
+        "name": "veLoadBins",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "load",
+          "min": 0,
+          "max": 1000
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "{bitStringValue(fuelUnits, fuelAlgorithm) }",
+          "min": 0,
+          "max": 1000
+        }
+      }
+    ],
+    "retyped": [
+      {
+        "name": "etbMaxSpeedClose",
+        "from": "U08",
+        "to": "U16"
+      },
+      {
+        "name": "etbMaxSpeedOpen",
+        "from": "U08",
+        "to": "U16"
+      }
+    ],
+    "reshaped": [],
+    "output_channels_moved": true
+  }
+}

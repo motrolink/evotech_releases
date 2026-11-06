@@ -1,0 +1,155 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2026.10.13_333447960",
+  "board": "evotech12",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2026.10.13.evotech12.333447960",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2026-10-13T19:26:42.713656+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "375b2f6398506da0fcd5b571fab6e740f792709d1ac90f1856f95459587c5838",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2026.09.19_4147402808",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": true,
+    "page_size": {
+      "from": 29544,
+      "to": 29804
+    },
+    "added": [
+      {
+        "name": "ambientTempSharedMode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "ambientTempSharedTemps",
+        "kind": "array",
+        "units": "C"
+      },
+      {
+        "name": "ambientTempSharedVolts",
+        "kind": "array",
+        "units": "V"
+      },
+      {
+        "name": "auxTemp1SharedMode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "auxTemp1SharedTemps",
+        "kind": "array",
+        "units": "C"
+      },
+      {
+        "name": "auxTemp1SharedVolts",
+        "kind": "array",
+        "units": "V"
+      },
+      {
+        "name": "auxTemp2SharedMode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "auxTemp2SharedTemps",
+        "kind": "array",
+        "units": "C"
+      },
+      {
+        "name": "auxTemp2SharedVolts",
+        "kind": "array",
+        "units": "V"
+      },
+      {
+        "name": "cltSharedMode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "cltSharedTemps",
+        "kind": "array",
+        "units": "C"
+      },
+      {
+        "name": "cltSharedVolts",
+        "kind": "array",
+        "units": "V"
+      },
+      {
+        "name": "compressorDischargeTempSharedMode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "compressorDischargeTempSharedTemps",
+        "kind": "array",
+        "units": "C"
+      },
+      {
+        "name": "compressorDischargeTempSharedVolts",
+        "kind": "array",
+        "units": "V"
+      },
+      {
+        "name": "fuelTempSharedMode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "fuelTempSharedTemps",
+        "kind": "array",
+        "units": "C"
+      },
+      {
+        "name": "fuelTempSharedVolts",
+        "kind": "array",
+        "units": "V"
+      },
+      {
+        "name": "iatSharedMode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "iatSharedTemps",
+        "kind": "array",
+        "units": "C"
+      },
+      {
+        "name": "iatSharedVolts",
+        "kind": "array",
+        "units": "V"
+      },
+      {
+        "name": "oilTempSharedMode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "oilTempSharedTemps",
+        "kind": "array",
+        "units": "C"
+      },
+      {
+        "name": "oilTempSharedVolts",
+        "kind": "array",
+        "units": "V"
+      }
+    ],
+    "removed": [],
+    "rescaled": [],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": false
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2026.10.29_2840366753",
+  "board": "evotech12",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2026.10.29.evotech12.2840366753",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2026-10-29T16:51:02.607467+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "fda19daad11459e788945bcb015fc4008bfeb531003fd48ede53504e7f9b92f4",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2026.10.29_971970782",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": false,
+    "page_size": {
+      "from": 29844,
+      "to": 29844
+    },
+    "added": [
+      {
+        "name": "engineGeometryConfigured",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "tpsRateUnitCorrected",
+        "kind": "bits",
+        "units": ""
+      }
+    ],
+    "removed": [
+      {
+        "name": "unusedFancy4",
+        "kind": "bits"
+      },
+      {
+        "name": "unusedFancy5",
+        "kind": "bits"
+      }
+    ],
+    "rescaled": [
+      {
+        "name": "tpsAccelMinRate",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "%/s",
+          "min": 0,
+          "max": 1000
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "%/s",
+          "min": 0,
+          "max": 10000
+        }
+      },
+      {
+        "name": "tpsAccelRateBins",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "%/s",
+          "min": -5000,
+          "max": 5000
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "%/s",
+          "min": -50000,
+          "max": 50000
+        }
+      },
+      {
+        "name": "tpsTpsAccelTable",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "value",
+          "min": 0,
+          "max": 30000
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ms or fraction",
+          "min": 0,
+          "max": 100
+        }
+      },
+      {
+        "name": "wwCorrectionMapBins",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kPa",
+          "min": 0,
+          "max": 250
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "load",
+          "min": 0,
+          "max": 250
+        }
+      }
+    ],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": true
+  }
+}

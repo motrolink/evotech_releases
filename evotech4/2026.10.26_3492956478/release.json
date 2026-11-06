@@ -1,0 +1,95 @@
+{
+  "schema": 1,
+  "release_id": "evotech4/2026.10.26_3492956478",
+  "board": "evotech4",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2026.10.26.evotech4.3492956478",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2026-10-26T10:00:52.325630+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "d172a3b0930a410a7e51316370e84c96d08f5ec062933eb8a1d931bde8e60fe5",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech4/2026.10.23_735030503",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": true,
+    "page_size": {
+      "from": 29804,
+      "to": 29836
+    },
+    "added": [
+      {
+        "name": "mafManifoldEtaV",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "mafManifoldLeadMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "mafManifoldTauMaxMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "mafManifoldTauScale",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "mafManifoldVolumeL",
+        "kind": "scalar",
+        "units": "L"
+      },
+      {
+        "name": "tcGearHoldMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "tcIndependentVss",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "tcRecoveryHoldMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "tcReleaseCutRate",
+        "kind": "scalar",
+        "units": "%/s"
+      },
+      {
+        "name": "tcReleaseRetardRate",
+        "kind": "scalar",
+        "units": "deg/s"
+      },
+      {
+        "name": "tcRpmSlipTargetPct",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "tcRpmSupervisor",
+        "kind": "bits",
+        "units": ""
+      }
+    ],
+    "removed": [],
+    "rescaled": [],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": true
+  }
+}

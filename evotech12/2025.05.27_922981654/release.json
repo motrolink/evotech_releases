@@ -1,0 +1,168 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2025.05.27_922981654",
+  "board": "evotech12",
+  "channel": "prod",
+  "full_signature": "rusEFI motrolink_release.2025.05.27.evotech12.922981654",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2025-10-23T17:40:27.958198+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "7614cbf822c1dc35c5f4fa9284420436c4b9d7e5a27cf009fa3b2170b1f018ba",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2025.05.27_807312862",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": true,
+    "page_size": {
+      "from": 22248,
+      "to": 22204
+    },
+    "added": [],
+    "removed": [
+      {
+        "name": "ltftHoleThreshold",
+        "kind": "scalar"
+      },
+      {
+        "name": "ltftRegionalIntensity",
+        "kind": "scalar"
+      },
+      {
+        "name": "ltftRegionalWindow",
+        "kind": "scalar"
+      },
+      {
+        "name": "ltftSmoothingIntensity",
+        "kind": "scalar"
+      },
+      {
+        "name": "ltitAcTrim",
+        "kind": "scalar"
+      },
+      {
+        "name": "ltitFan1Trim",
+        "kind": "scalar"
+      },
+      {
+        "name": "ltitFan2Trim",
+        "kind": "scalar"
+      },
+      {
+        "name": "wwEnableTransientFiltering",
+        "kind": "bits"
+      },
+      {
+        "name": "wwMapThresholdHeavy",
+        "kind": "scalar"
+      },
+      {
+        "name": "wwMapThresholdLight",
+        "kind": "scalar"
+      },
+      {
+        "name": "wwMinTransientDuration",
+        "kind": "scalar"
+      },
+      {
+        "name": "wwTpsThresholdHeavy",
+        "kind": "scalar"
+      },
+      {
+        "name": "wwTpsThresholdLight",
+        "kind": "scalar"
+      },
+      {
+        "name": "wwTransientDetectionWindowMs",
+        "kind": "scalar"
+      },
+      {
+        "name": "wwTransientFilterSamples",
+        "kind": "scalar"
+      },
+      {
+        "name": "wwTransientTimeoutMs",
+        "kind": "scalar"
+      }
+    ],
+    "rescaled": [
+      {
+        "name": "wwBetaLearningRate",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "",
+          "min": 0,
+          "max": 100
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "wwMapThreshold",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kPa/s",
+          "min": 5,
+          "max": 100
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kPa",
+          "min": 0.5,
+          "max": 10
+        }
+      },
+      {
+        "name": "wwTauLearningRate",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "",
+          "min": 0,
+          "max": 100
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "wwTpsThreshold",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "%%/s",
+          "min": 0.5,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "%%",
+          "min": 0.1,
+          "max": 5
+        }
+      }
+    ],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": true
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2025.09.13_3482298109",
+  "board": "evotech12",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2025.09.13.evotech12.3482298109",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2025-10-23T17:40:28.026954+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "10fd1fcd1782e4342e1ab718dca3f6ea21f4dc759615a193828bd1900375b1f5",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2025.09.13_2686632428",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": true,
+    "page_size": {
+      "from": 21928,
+      "to": 21912
+    },
+    "added": [],
+    "removed": [],
+    "rescaled": [
+      {
+        "name": "cranking_rpm",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "tipicamente isso é cerca de 350-450rpm.\\nset cranking_rpm X",
+          "min": 0,
+          "max": 0
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "RPM",
+          "min": 0,
+          "max": 12000
+        }
+      },
+      {
+        "name": "etbMaxSpeedClose",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "%/s",
+          "min": 0,
+          "max": 2500
+        },
+        "to": {
+          "scale": 10,
+          "offset": 0,
+          "units": "%/s",
+          "min": 0,
+          "max": 2500
+        }
+      },
+      {
+        "name": "etbMaxSpeedOpen",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "%/s",
+          "min": 0,
+          "max": 2500
+        },
+        "to": {
+          "scale": 10,
+          "offset": 0,
+          "units": "%/s",
+          "min": 0,
+          "max": 2500
+        }
+      }
+    ],
+    "retyped": [
+      {
+        "name": "etbMaxSpeedClose",
+        "from": "U16",
+        "to": "U08"
+      },
+      {
+        "name": "etbMaxSpeedOpen",
+        "from": "U16",
+        "to": "U08"
+      }
+    ],
+    "reshaped": [],
+    "output_channels_moved": true
+  }
+}

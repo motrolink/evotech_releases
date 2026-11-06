@@ -1,0 +1,1145 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2026.09.17_1201607402",
+  "board": "evotech12",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2026.09.17.evotech12.1201607402",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2026-09-17T17:56:52.334544+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "48b176c418c1209a976bb6ec6a6acdcd07981428449cfdae376495db8dfcefd7",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2026.09.04_3071257208",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": true,
+    "page_size": {
+      "from": 28736,
+      "to": 29348
+    },
+    "added": [
+      {
+        "name": "batteryProtectionEnabled",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "batteryVoltageHysteresis",
+        "kind": "scalar",
+        "units": "V"
+      },
+      {
+        "name": "batteryVoltageMaximum",
+        "kind": "scalar",
+        "units": "V"
+      },
+      {
+        "name": "batteryVoltageMinimum",
+        "kind": "scalar",
+        "units": "V"
+      },
+      {
+        "name": "batteryVoltageTimeoutMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "cltTemperatureCritical",
+        "kind": "scalar",
+        "units": "C"
+      },
+      {
+        "name": "cltTemperatureHysteresis",
+        "kind": "scalar",
+        "units": "C"
+      },
+      {
+        "name": "cltTemperatureProtectionEnabled",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "cltTemperatureTimeoutMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "egtCritical",
+        "kind": "scalar",
+        "units": "C"
+      },
+      {
+        "name": "egtHysteresis",
+        "kind": "scalar",
+        "units": "C"
+      },
+      {
+        "name": "egtProtectionEnabled",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "egtTimeoutMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epBattery_action",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epBattery_criticalHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epBattery_liftOffTps",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "epBattery_mode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epBattery_rearm",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epBattery_recoveryTimeMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epBattery_rpmLimit",
+        "kind": "scalar",
+        "units": "RPM"
+      },
+      {
+        "name": "epBattery_sensorAction",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epBattery_sensorDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epBattery_warningDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epBattery_warningHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epBattery_warningMaximum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epBattery_warningMinimum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epBoost_action",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epBoost_criticalHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epBoost_liftOffTps",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "epBoost_mode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epBoost_rearm",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epBoost_recoveryTimeMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epBoost_rpmLimit",
+        "kind": "scalar",
+        "units": "RPM"
+      },
+      {
+        "name": "epBoost_sensorAction",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epBoost_sensorDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epBoost_warningDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epBoost_warningHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epBoost_warningMaximum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epBoost_warningMinimum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epClt_action",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epClt_criticalHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epClt_liftOffTps",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "epClt_mode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epClt_rearm",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epClt_recoveryTimeMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epClt_rpmLimit",
+        "kind": "scalar",
+        "units": "RPM"
+      },
+      {
+        "name": "epClt_sensorAction",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epClt_sensorDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epClt_warningDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epClt_warningHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epClt_warningMaximum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epClt_warningMinimum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epDuty_action",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epDuty_criticalHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epDuty_liftOffTps",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "epDuty_mode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epDuty_rearm",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epDuty_recoveryTimeMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epDuty_rpmLimit",
+        "kind": "scalar",
+        "units": "RPM"
+      },
+      {
+        "name": "epDuty_sensorAction",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epDuty_sensorDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epDuty_warningDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epDuty_warningHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epDuty_warningMaximum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epDuty_warningMinimum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epEgt_action",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epEgt_criticalHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epEgt_liftOffTps",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "epEgt_mode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epEgt_rearm",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epEgt_recoveryTimeMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epEgt_rpmLimit",
+        "kind": "scalar",
+        "units": "RPM"
+      },
+      {
+        "name": "epEgt_sensorAction",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epEgt_sensorDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epEgt_warningDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epEgt_warningHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epEgt_warningMaximum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epEgt_warningMinimum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epFuelTemperature_action",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epFuelTemperature_criticalHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epFuelTemperature_liftOffTps",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "epFuelTemperature_mode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epFuelTemperature_rearm",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epFuelTemperature_recoveryTimeMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epFuelTemperature_rpmLimit",
+        "kind": "scalar",
+        "units": "RPM"
+      },
+      {
+        "name": "epFuelTemperature_sensorAction",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epFuelTemperature_sensorDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epFuelTemperature_warningDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epFuelTemperature_warningHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epFuelTemperature_warningMaximum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epFuelTemperature_warningMinimum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epGdi_action",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epGdi_criticalHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epGdi_liftOffTps",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "epGdi_mode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epGdi_rearm",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epGdi_recoveryTimeMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epGdi_rpmLimit",
+        "kind": "scalar",
+        "units": "RPM"
+      },
+      {
+        "name": "epGdi_sensorAction",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epGdi_sensorDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epGdi_warningDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epGdi_warningHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epGdi_warningMaximum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epGdi_warningMinimum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epIat_action",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epIat_criticalHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epIat_liftOffTps",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "epIat_mode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epIat_rearm",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epIat_recoveryTimeMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epIat_rpmLimit",
+        "kind": "scalar",
+        "units": "RPM"
+      },
+      {
+        "name": "epIat_sensorAction",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epIat_sensorDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epIat_warningDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epIat_warningHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epIat_warningMaximum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epIat_warningMinimum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epLambda_action",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epLambda_criticalHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epLambda_liftOffTps",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "epLambda_mode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epLambda_rearm",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epLambda_recoveryTimeMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epLambda_rpmLimit",
+        "kind": "scalar",
+        "units": "RPM"
+      },
+      {
+        "name": "epLambda_sensorAction",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epLambda_sensorDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epLambda_warningDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epLambda_warningHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epLambda_warningMaximum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epLambda_warningMinimum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epOilHighWarningValues",
+        "kind": "array",
+        "units": "kPa"
+      },
+      {
+        "name": "epOilHigh_action",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epOilHigh_criticalHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epOilHigh_liftOffTps",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "epOilHigh_mode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epOilHigh_rearm",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epOilHigh_recoveryTimeMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epOilHigh_rpmLimit",
+        "kind": "scalar",
+        "units": "RPM"
+      },
+      {
+        "name": "epOilHigh_sensorAction",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epOilHigh_sensorDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epOilHigh_warningDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epOilHigh_warningHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epOilHigh_warningMaximum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epOilHigh_warningMinimum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epOilLowWarningValues",
+        "kind": "array",
+        "units": "kPa"
+      },
+      {
+        "name": "epOilLow_action",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epOilLow_criticalHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epOilLow_liftOffTps",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "epOilLow_mode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epOilLow_rearm",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epOilLow_recoveryTimeMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epOilLow_rpmLimit",
+        "kind": "scalar",
+        "units": "RPM"
+      },
+      {
+        "name": "epOilLow_sensorAction",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epOilLow_sensorDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epOilLow_warningDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epOilLow_warningHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epOilLow_warningMaximum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epOilLow_warningMinimum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epOilStartupCriticalMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epOilStartupWarningMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epOilStartup_action",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epOilStartup_criticalHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epOilStartup_liftOffTps",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "epOilStartup_mode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epOilStartup_rearm",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epOilStartup_recoveryTimeMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epOilStartup_rpmLimit",
+        "kind": "scalar",
+        "units": "RPM"
+      },
+      {
+        "name": "epOilStartup_sensorAction",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epOilStartup_sensorDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epOilStartup_warningDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epOilStartup_warningHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epOilStartup_warningMaximum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epOilStartup_warningMinimum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epOilTemperature_action",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epOilTemperature_criticalHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epOilTemperature_liftOffTps",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "epOilTemperature_mode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epOilTemperature_rearm",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epOilTemperature_recoveryTimeMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epOilTemperature_rpmLimit",
+        "kind": "scalar",
+        "units": "RPM"
+      },
+      {
+        "name": "epOilTemperature_sensorAction",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epOilTemperature_sensorDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epOilTemperature_warningDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epOilTemperature_warningHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epOilTemperature_warningMaximum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epOilTemperature_warningMinimum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epPfi_action",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epPfi_criticalHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epPfi_liftOffTps",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "epPfi_mode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epPfi_rearm",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epPfi_recoveryTimeMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epPfi_rpmLimit",
+        "kind": "scalar",
+        "units": "RPM"
+      },
+      {
+        "name": "epPfi_sensorAction",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epPfi_sensorDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epPfi_warningDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epPfi_warningHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epPfi_warningMaximum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epPfi_warningMinimum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "fuelTemperatureCritical",
+        "kind": "scalar",
+        "units": "C"
+      },
+      {
+        "name": "fuelTemperatureHysteresis",
+        "kind": "scalar",
+        "units": "C"
+      },
+      {
+        "name": "fuelTemperatureProtectionEnabled",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "fuelTemperatureTimeoutMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "gdiRailPressureHysteresis",
+        "kind": "scalar",
+        "units": "kPa"
+      },
+      {
+        "name": "gdiRailPressureMaximum",
+        "kind": "scalar",
+        "units": "kPa"
+      },
+      {
+        "name": "gdiRailPressureMinimum",
+        "kind": "scalar",
+        "units": "kPa"
+      },
+      {
+        "name": "gdiRailPressureTimeoutMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "gdiRailProtectionEnabled",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "iatTemperatureCritical",
+        "kind": "scalar",
+        "units": "C"
+      },
+      {
+        "name": "iatTemperatureHysteresis",
+        "kind": "scalar",
+        "units": "C"
+      },
+      {
+        "name": "iatTemperatureProtectionEnabled",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "iatTemperatureTimeoutMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "maxDwellMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "oilTemperatureCritical",
+        "kind": "scalar",
+        "units": "C"
+      },
+      {
+        "name": "oilTemperatureHysteresis",
+        "kind": "scalar",
+        "units": "C"
+      },
+      {
+        "name": "oilTemperatureProtectionEnabled",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "oilTemperatureTimeoutMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "pfiFuelPressureMaximum",
+        "kind": "scalar",
+        "units": "kPa"
+      },
+      {
+        "name": "pfiFuelPressureMinimum",
+        "kind": "scalar",
+        "units": "kPa"
+      },
+      {
+        "name": "pfiFuelPressureProtectionEnabled",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "pfiFuelPressureTimeoutMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "protectionConfigVersion",
+        "kind": "bits",
+        "units": ""
+      }
+    ],
+    "removed": [],
+    "rescaled": [],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": false
+  }
+}

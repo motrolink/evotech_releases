@@ -1,0 +1,73 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2025.12.27_3864281676",
+  "board": "evotech12",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2025.12.27.evotech12.3864281676",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2025-12-27T17:01:49.809996+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "a6759b3584b1b56bfc8e9affc9d1921f79a96b13bbc6294ec439206f5cdde519",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2025.12.26_325508269",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": true,
+    "page_size": {
+      "from": 27724,
+      "to": 27732
+    },
+    "added": [
+      {
+        "name": "cruiseControl_ccAntiwindupFreq",
+        "kind": "scalar",
+        "units": "Hz"
+      },
+      {
+        "name": "cruiseControl_ccDerivativeFilter",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "cruiseControl_ccOutputFilterAlpha",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "cruiseControl_ccSetpointWeightD",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "cruiseControl_ccSetpointWeightP",
+        "kind": "scalar",
+        "units": ""
+      }
+    ],
+    "removed": [
+      {
+        "name": "cruiseControl_ccLowThrottleSmoothing",
+        "kind": "scalar"
+      },
+      {
+        "name": "cruiseControl_ccPidOutputFilterHz",
+        "kind": "scalar"
+      },
+      {
+        "name": "cruiseControl_ccSmoothingTau",
+        "kind": "scalar"
+      }
+    ],
+    "rescaled": [],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": true
+  }
+}

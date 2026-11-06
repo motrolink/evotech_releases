@@ -1,0 +1,94 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2025.12.16_1726194786",
+  "board": "evotech12",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2025.12.16.evotech12.1726194786",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2025-12-16T00:28:26.115255+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "b3f33fe9ad6f3a9bd8201a154d975c157b459c25404fce0630054658ec7ce993",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2025.12.07_1089069306",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": true,
+    "page_size": {
+      "from": 27588,
+      "to": 27664
+    },
+    "added": [
+      {
+        "name": "fuelDensity",
+        "kind": "scalar",
+        "units": "g/cc"
+      },
+      {
+        "name": "vssAccelThreshold",
+        "kind": "scalar",
+        "units": "km/h/s"
+      },
+      {
+        "name": "vssMaxAccel",
+        "kind": "scalar",
+        "units": "km/h/s"
+      },
+      {
+        "name": "vssMaxAlpha",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "vssMaxDecel",
+        "kind": "scalar",
+        "units": "km/h/s"
+      },
+      {
+        "name": "vssMinAlpha",
+        "kind": "scalar",
+        "units": "%"
+      }
+    ],
+    "removed": [],
+    "rescaled": [
+      {
+        "name": "tachPulsePerRev",
+        "from": {
+          "scale": 0.001,
+          "offset": 0,
+          "units": "",
+          "min": 1,
+          "max": 15
+        },
+        "to": {
+          "scale": 0.001,
+          "offset": 0,
+          "units": "",
+          "min": 0,
+          "max": 15
+        }
+      }
+    ],
+    "retyped": [],
+    "reshaped": [
+      {
+        "name": "ignitionIatCorrTable",
+        "from": "[4x8]",
+        "to": "[8x8]"
+      },
+      {
+        "name": "ignitionIatCorrTempBins",
+        "from": "[4]",
+        "to": "[8]"
+      }
+    ],
+    "output_channels_moved": true
+  }
+}

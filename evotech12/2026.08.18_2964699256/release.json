@@ -1,0 +1,210 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2026.08.18_2964699256",
+  "board": "evotech12",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2026.08.18.evotech12.2964699256",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2026-08-18T19:50:09.400982+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "ae4a3e1d20c27d852ea9c781d8f32ec9eb5a11ae323e103605f978632780ef5b",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2026.08.18_1887339574",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": true,
+    "page_size": {
+      "from": 28524,
+      "to": 28532
+    },
+    "added": [
+      {
+        "name": "clFuelCommon_exhaustVolumeToSensor",
+        "kind": "scalar",
+        "units": "mL"
+      },
+      {
+        "name": "clFuelCommon_maxLambda",
+        "kind": "scalar",
+        "units": "lambda"
+      },
+      {
+        "name": "clFuelCommon_minClt",
+        "kind": "scalar",
+        "units": "C"
+      },
+      {
+        "name": "clFuelCommon_minLambda",
+        "kind": "scalar",
+        "units": "lambda"
+      },
+      {
+        "name": "clFuelCommon_noFuelTrimAfterAccelTime",
+        "kind": "scalar",
+        "units": "sec"
+      },
+      {
+        "name": "clFuelCommon_noFuelTrimAfterDfcoTime",
+        "kind": "scalar",
+        "units": "sec"
+      },
+      {
+        "name": "clFuelCommon_startupDelay",
+        "kind": "scalar",
+        "units": "seconds"
+      },
+      {
+        "name": "ltft_ltftSlowdownFactor",
+        "kind": "scalar",
+        "units": "x"
+      },
+      {
+        "name": "ltft_minCltForLearning",
+        "kind": "scalar",
+        "units": "C"
+      },
+      {
+        "name": "stft_maxAdd",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "stft_maxRemove",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "stft_stftLoadBins",
+        "kind": "array",
+        "units": "load"
+      },
+      {
+        "name": "stft_stftRpmBins",
+        "kind": "array",
+        "units": "RPM"
+      },
+      {
+        "name": "stft_tauBase",
+        "kind": "scalar",
+        "units": "sec"
+      }
+    ],
+    "removed": [
+      {
+        "name": "ltft_exhaustVolumeToSensor",
+        "kind": "scalar"
+      },
+      {
+        "name": "ltft_timeConstant1",
+        "kind": "scalar"
+      },
+      {
+        "name": "ltft_timeConstant2",
+        "kind": "scalar"
+      },
+      {
+        "name": "ltft_timeConstant3",
+        "kind": "scalar"
+      },
+      {
+        "name": "ltft_timeConstant4",
+        "kind": "scalar"
+      },
+      {
+        "name": "noFuelTrimAfterAccelTime",
+        "kind": "scalar"
+      },
+      {
+        "name": "noFuelTrimAfterDfcoTime",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_cellCfgs1_maxAdd",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_cellCfgs1_maxRemove",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_cellCfgs1_timeConstant",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_cellCfgs2_maxAdd",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_cellCfgs2_maxRemove",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_cellCfgs2_timeConstant",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_cellCfgs3_maxAdd",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_cellCfgs3_maxRemove",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_cellCfgs3_timeConstant",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_cellCfgs4_maxAdd",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_cellCfgs4_maxRemove",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_cellCfgs4_timeConstant",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_maxIdleRegionRpm",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_maxLambda",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_maxOverrunLoad",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_minClt",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_minLambda",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_minPowerLoad",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_startupDelay",
+        "kind": "scalar"
+      }
+    ],
+    "rescaled": [],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": true
+  }
+}

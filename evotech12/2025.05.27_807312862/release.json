@@ -1,0 +1,34 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2025.05.27_807312862",
+  "board": "evotech12",
+  "channel": "prod",
+  "full_signature": "evoTech motrolink_release.2025.05.27.evotech12.807312862",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2025-10-23T17:40:27.634164+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "93dd16d841e05b419a6c7e885ccf2d578e90f381ee983aa8f1b3e2b29733b29e",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2025.05.27_566441989",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": false,
+    "page_size": {
+      "from": 22248,
+      "to": 22248
+    },
+    "added": [],
+    "removed": [],
+    "rescaled": [],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": false
+  }
+}

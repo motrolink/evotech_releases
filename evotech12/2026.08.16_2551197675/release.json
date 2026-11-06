@@ -1,0 +1,65 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2026.08.16_2551197675",
+  "board": "evotech12",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2026.08.16.evotech12.2551197675",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2026-08-16T00:47:32.616116+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "03334c1ecefc9d8d812e4633d2ac3e28795f1d4ce73cc8e4b402b3ecc328aebe",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2026.08.15_1908484184",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": true,
+    "page_size": {
+      "from": 28496,
+      "to": 28532
+    },
+    "added": [
+      {
+        "name": "tcCutRampRatePctPerSec",
+        "kind": "scalar",
+        "units": "%/s"
+      },
+      {
+        "name": "tcIgnitionRetardBins",
+        "kind": "array",
+        "units": "%"
+      },
+      {
+        "name": "tcIgnitionRetardCurve",
+        "kind": "array",
+        "units": "deg"
+      },
+      {
+        "name": "tcRetardRampRateDegPerSec",
+        "kind": "scalar",
+        "units": "deg/s"
+      },
+      {
+        "name": "tcSparkCutBins",
+        "kind": "array",
+        "units": "%"
+      },
+      {
+        "name": "tcSparkCutCurve",
+        "kind": "array",
+        "units": "%"
+      }
+    ],
+    "removed": [],
+    "rescaled": [],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": false
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2026.09.07_2751015660",
+  "board": "evotech12",
+  "channel": "prod",
+  "full_signature": "rusEFI motrolink_prod.2026.09.07.evotech12.2751015660",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2026-09-07T15:43:57.331671+00:00",
+  "flash_data_version": 260821,
+  "bin_sha256": "0d5a9416d9a7af8b630da88c29f0620a3202d456115c63eea14956b123b01eb3",
+  "notes_kind": "backfill",
+  "title": "evoNet, proteções de boot e conformidade OBD-II",
+  "summary": "Protocolo evoNet entre ECU e display (descoberta de canais, falhas e ações remotas, tudo desligado por padrão), correções de watchdog no boot, do OBD-II e do anti-lag, e Burn sem pulso nas saídas.",
+  "base": {
+    "release_id": "evotech12/2026.08.31_2561980847",
+    "flash_data_version": 260821
+  },
+  "entries": [
+    {
+      "id": "backfill-20260907-evonet",
+      "tipo": "novo",
+      "publico": "usuario",
+      "titulo": "evoNet: ECU e display se descrevem por CAN",
+      "descricao": "A ECU descreve seus canais por CAN (nome, unidade, escala, faixa e se o sensor existe), em CAN Bus > Habilitar descoberta de canais do evoNet (desligado por padrão, 2 quadros por segundo). Relatório de falhas com severidade, contagem, pior código, motivo de limp e quadro congelado, e ações remotas (reset de trip, launch, anti-lag, modo manobrista, partir e parar o motor). Ações de risco (partida, manobrista) ficam atrás de chave própria, desligada por padrão, exigem desafio-resposta e as precondições da ECU. O broadcast CAN clássico continua igual.",
+      "mapa": {
+        "impacto": "campos_novos",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "backfill-20260907-diversos",
+      "tipo": "melhoria",
+      "publico": "usuario",
+      "titulo": "Mostrador de alerta com código e atualização do FatFS",
+      "descricao": "O indicador de aviso do painel mostra o código do último aviso, e o FatFS foi atualizado para R0.16.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "backfill-20260907-antilag",
+      "tipo": "correcao",
+      "publico": "usuario",
+      "titulo": "Anti-lag: retardo aplicado com a tabela de marcha lenta e faixa até -90 graus",
+      "descricao": "O retardo do anti-lag era descartado quando se usava tabela de ignição separada para marcha lenta e o motor estava em marcha lenta com a borboleta fechada. Agora sempre vale sobre a tabela ativa, e a tabela aceita até -90 graus (antes -60).",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "backfill-20260907-burn-suave",
+      "tipo": "correcao",
+      "publico": "usuario",
+      "titulo": "Burn sem pulso nas saídas ao mudar só um ganho",
+      "descricao": "Mudar só um ganho de PID de ETB, VVT, boost, marcha lenta ou alternador não zera mais o integrador e o derivativo. A reconfiguração do decodificador de gatilho agora só ocorre com o motor parado e repete no próximo Burn.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "backfill-20260907-dfco-ativo",
+      "tipo": "correcao",
+      "publico": "usuario",
+      "titulo": "Canal dfcoActive reflete o corte real",
+      "descricao": "O canal `dfcoActive` ficava sempre falso durante o corte; agora lê o estado do próprio DFCO.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "backfill-20260907-evonet-subscricao",
+      "tipo": "correcao",
+      "publico": "usuario",
+      "titulo": "evoNet: assinatura vazia não derruba mais o fluxo padrão",
+      "descricao": "Um display que confirmava uma assinatura sem canais deixava de receber dados; agora volta ao perfil padrão.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "backfill-20260907-obd2",
+      "tipo": "correcao",
+      "publico": "usuario",
+      "titulo": "OBD-II: conexão rápida e leitura de códigos",
+      "descricao": "PIDs não suportados agora recebem resposta negativa em vez de silêncio (descoberta cai de cerca de 25 s para menos de 1 s), lambda, tensão, etanol, temperatura do óleo e MAF são anunciados, a carga do motor não mostra mais 100% em speed density, o endereçamento 11 bits alternativo e o de 29 bits são aceitos, e leitura e limpeza de códigos (modos 03, 07, 0A e 04) funcionam.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "backfill-20260907-watchdog-boot",
+      "tipo": "correcao",
+      "publico": "usuario",
+      "titulo": "Reset do watchdog durante o boot",
+      "descricao": "O boot ganhou orçamento próprio de 7 s no watchdog (antes herdava os 500 ms do funcionamento normal) e a telemetria do journal passou a ser lida só da thread de armazenamento, o que removia uma rajada de avisos internos logo após ligar.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "backfill-20260907-widelink-comando",
+      "tipo": "correcao",
+      "publico": "usuario",
+      "titulo": "Comando da WideLink não prende mais",
+      "descricao": "Se o quadro de comando da WideLink (manobrista, launch, anti-lag) some por 500 ms, a ECU libera os três para o que o mapa diz. Antes, uma WideLink desconectada com o manobrista ligado deixava a rotação limitada até desligar a ECU.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "backfill-20260907-protecoes-dev",
+      "tipo": "seguranca",
+      "publico": "usuario",
+      "titulo": "Suavização de torque e sensor de flex virtual desligados em builds estáveis",
+      "descricao": "Mesmo que um mapa salvo de uma build de desenvolvimento os tenha ligado, a ECU os volta ao padrão seguro a cada partida e a cada Burn em builds estáveis, e os diálogos ficam escondidos.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    }
+  ],
+  "map_diff": {
+    "config_reset": false,
+    "page_size": {
+      "from": 28736,
+      "to": 28736
+    },
+    "added": [
+      {
+        "name": "enableEvoNet",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "enableEvoNetHighRiskActions",
+        "kind": "bits",
+        "units": ""
+      }
+    ],
+    "removed": [
+      {
+        "name": "unusedFancy23",
+        "kind": "bits"
+      },
+      {
+        "name": "unusedFancy24",
+        "kind": "bits"
+      }
+    ],
+    "rescaled": [
+      {
+        "name": "ALSTimingRetardTable",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "deg",
+          "min": -60,
+          "max": 0
+        },
+        "to": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "deg",
+          "min": -90,
+          "max": 0
+        }
+      }
+    ],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": true
+  }
+}

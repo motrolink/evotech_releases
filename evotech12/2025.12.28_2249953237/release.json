@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2025.12.28_2249953237",
+  "board": "evotech12",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2025.12.28.evotech12.2249953237",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2025-12-28T02:33:31.926257+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "b814ee34f84137bcf28d42ed7ab60fa74cc93582024ef27f2f797eef3878450a",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2025.12.28_3864281676",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": true,
+    "page_size": {
+      "from": 27732,
+      "to": 27756
+    },
+    "added": [
+      {
+        "name": "cruiseControl_ccFeedforwardSpeedBins",
+        "kind": "array",
+        "units": "km/h"
+      },
+      {
+        "name": "cruiseControl_ccFeedforwardThrottle",
+        "kind": "array",
+        "units": "%"
+      }
+    ],
+    "removed": [],
+    "rescaled": [],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": false
+  }
+}

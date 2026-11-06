@@ -1,0 +1,154 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2026.08.15_1908484184",
+  "board": "evotech12",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2026.08.15.evotech12.1908484184",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2026-08-15T20:48:48.438347+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "b194ecaa56cdc0fb75c7eb39a72d159d276435fdd5adca6935933c8afa51a1f3",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2026.08.15_3716420755",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": true,
+    "page_size": {
+      "from": 28580,
+      "to": 28496
+    },
+    "added": [
+      {
+        "name": "dRpmLimitPerGear1",
+        "kind": "scalar",
+        "units": "rpm/s"
+      },
+      {
+        "name": "dRpmLimitPerGear10",
+        "kind": "scalar",
+        "units": "rpm/s"
+      },
+      {
+        "name": "dRpmLimitPerGear2",
+        "kind": "scalar",
+        "units": "rpm/s"
+      },
+      {
+        "name": "dRpmLimitPerGear3",
+        "kind": "scalar",
+        "units": "rpm/s"
+      },
+      {
+        "name": "dRpmLimitPerGear4",
+        "kind": "scalar",
+        "units": "rpm/s"
+      },
+      {
+        "name": "dRpmLimitPerGear5",
+        "kind": "scalar",
+        "units": "rpm/s"
+      },
+      {
+        "name": "dRpmLimitPerGear6",
+        "kind": "scalar",
+        "units": "rpm/s"
+      },
+      {
+        "name": "dRpmLimitPerGear7",
+        "kind": "scalar",
+        "units": "rpm/s"
+      },
+      {
+        "name": "dRpmLimitPerGear8",
+        "kind": "scalar",
+        "units": "rpm/s"
+      },
+      {
+        "name": "dRpmLimitPerGear9",
+        "kind": "scalar",
+        "units": "rpm/s"
+      },
+      {
+        "name": "downshiftWindowPct",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "standstillSpeedThreshold",
+        "kind": "scalar",
+        "units": "km/h"
+      },
+      {
+        "name": "tcClutchSettleTimeMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "tcEnabled",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "tcFilterTimeConstantMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "tcMinMap",
+        "kind": "scalar",
+        "units": "kPa"
+      },
+      {
+        "name": "tcMinTps",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "tcMode",
+        "kind": "bits",
+        "units": ""
+      }
+    ],
+    "removed": [
+      {
+        "name": "tractionControlEtbDrop",
+        "kind": "array"
+      },
+      {
+        "name": "tractionControlIgnitionSkip",
+        "kind": "array"
+      },
+      {
+        "name": "tractionControlSlipBins",
+        "kind": "array"
+      },
+      {
+        "name": "tractionControlSpeedBins",
+        "kind": "array"
+      },
+      {
+        "name": "tractionControlTimingDrop",
+        "kind": "array"
+      },
+      {
+        "name": "useAuxSpeedForSlipRatio",
+        "kind": "bits"
+      },
+      {
+        "name": "useHardSkipInTraction",
+        "kind": "bits"
+      }
+    ],
+    "rescaled": [],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": true
+  }
+}

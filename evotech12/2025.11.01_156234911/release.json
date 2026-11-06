@@ -1,0 +1,3327 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2025.11.01_156234911",
+  "board": "evotech12",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2025.11.01.evotech12.156234911",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2025-11-03T13:48:10.591281+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "97237675b9d6197560be873d38c8f34057337e43d4d70146a2571bdf2d3b8cf9",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2025.10.23_2421910608",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": true,
+    "page_size": {
+      "from": 21932,
+      "to": 27588
+    },
+    "added": [
+      {
+        "name": "accelEnrichmentMode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "afrExpAverageAlpha",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "afterCrankingIACtaperDurationBins",
+        "kind": "array",
+        "units": "C"
+      },
+      {
+        "name": "airmassToTimingBins",
+        "kind": "array",
+        "units": "mg"
+      },
+      {
+        "name": "airmassToTimingValues",
+        "kind": "array",
+        "units": "deg"
+      },
+      {
+        "name": "camSyncOnSecondCrankRevolution",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "canWbo1_aemId",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "canWbo1_enableRemap",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "canWbo1_reHwidx",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "canWbo1_reId",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "canWbo1_type",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "canWbo2_aemId",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "canWbo2_enableRemap",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "canWbo2_reHwidx",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "canWbo2_reId",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "canWbo2_type",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "crankingCondition",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "crankingCycleBaseFuel",
+        "kind": "array",
+        "units": "mg"
+      },
+      {
+        "name": "dcWastegateBiasBins",
+        "kind": "array",
+        "units": "target DC position"
+      },
+      {
+        "name": "dcWastegateBiasValues",
+        "kind": "array",
+        "units": "DC wastegate duty cycle bias"
+      },
+      {
+        "name": "fan1AcMinDutyByTemp",
+        "kind": "array",
+        "units": "%"
+      },
+      {
+        "name": "fan1AcMinDutyTempBins",
+        "kind": "array",
+        "units": "C"
+      },
+      {
+        "name": "fan1AcMinDutyUseIat",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "fan1DutyCycleSmoothingTau",
+        "kind": "scalar",
+        "units": "s"
+      },
+      {
+        "name": "fan1EnablePwmMode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "fan1IacAdderByDutyBins",
+        "kind": "array",
+        "units": "%"
+      },
+      {
+        "name": "fan1IacAdderByDutyValues",
+        "kind": "array",
+        "units": "%"
+      },
+      {
+        "name": "fan1LuaOverrideDuty",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "fan1LuaOverrideEnable",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "fan1PwmDutyByTemp",
+        "kind": "array",
+        "units": "%"
+      },
+      {
+        "name": "fan1PwmFrequency",
+        "kind": "scalar",
+        "units": "Hz"
+      },
+      {
+        "name": "fan1PwmTempBins",
+        "kind": "array",
+        "units": "C"
+      },
+      {
+        "name": "fan1ThermalProtectionDuty",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "fan1ThermalProtectionEnable",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "fan1ThermalProtectionTemp",
+        "kind": "scalar",
+        "units": "C"
+      },
+      {
+        "name": "fan2ThermalProtectionDuty",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "fan2ThermalProtectionEnable",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "fan2ThermalProtectionTemp",
+        "kind": "scalar",
+        "units": "C"
+      },
+      {
+        "name": "hpfpFuelMassCompensation",
+        "kind": "array",
+        "units": "%"
+      },
+      {
+        "name": "hpfpFuelMassCompensationFuelMass",
+        "kind": "array",
+        "units": "fuel mass/mg"
+      },
+      {
+        "name": "hpfpFuelMassCompensationFuelPressure",
+        "kind": "array",
+        "units": "bar"
+      },
+      {
+        "name": "hpfpPid_iTermMax",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "hpfpPid_iTermMin",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "iacCoasting",
+        "kind": "array",
+        "units": "%"
+      },
+      {
+        "name": "iacCoastingRpmBins",
+        "kind": "array",
+        "units": "RPM"
+      },
+      {
+        "name": "iacFilterTimeConstant",
+        "kind": "scalar",
+        "units": "s"
+      },
+      {
+        "name": "idleFlowEstimateFlow",
+        "kind": "array",
+        "units": "kg/h"
+      },
+      {
+        "name": "idleFlowEstimatePosition",
+        "kind": "array",
+        "units": "%"
+      },
+      {
+        "name": "idleReturnTargetRamp",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "idleReturnTargetRampDuration",
+        "kind": "scalar",
+        "units": "seconds"
+      },
+      {
+        "name": "ignBlends3_blendBins",
+        "kind": "array",
+        "units": ""
+      },
+      {
+        "name": "ignBlends3_blendParameter",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "ignBlends3_blendValues",
+        "kind": "array",
+        "units": "%"
+      },
+      {
+        "name": "ignBlends3_loadBins",
+        "kind": "array",
+        "units": "Load"
+      },
+      {
+        "name": "ignBlends3_rpmBins",
+        "kind": "array",
+        "units": "RPM"
+      },
+      {
+        "name": "ignBlends3_table",
+        "kind": "array",
+        "units": ""
+      },
+      {
+        "name": "ignBlends3_yAxisOverride",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "ignBlends4_blendBins",
+        "kind": "array",
+        "units": ""
+      },
+      {
+        "name": "ignBlends4_blendParameter",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "ignBlends4_blendValues",
+        "kind": "array",
+        "units": "%"
+      },
+      {
+        "name": "ignBlends4_loadBins",
+        "kind": "array",
+        "units": "Load"
+      },
+      {
+        "name": "ignBlends4_rpmBins",
+        "kind": "array",
+        "units": "RPM"
+      },
+      {
+        "name": "ignBlends4_table",
+        "kind": "array",
+        "units": ""
+      },
+      {
+        "name": "ignBlends4_yAxisOverride",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "ignKeyAdcDivider",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "injectorFlowLinearization",
+        "kind": "array",
+        "units": "ms"
+      },
+      {
+        "name": "injectorFlowLinearizationFuelMassBins",
+        "kind": "array",
+        "units": "fuel mass/mg"
+      },
+      {
+        "name": "injectorFlowLinearizationPressureBins",
+        "kind": "array",
+        "units": "bar"
+      },
+      {
+        "name": "isTuningDetectorEnabled",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "ltft_correctionEnabled",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "ltft_deadband",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "ltft_enabled",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "ltft_maxAdd",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "ltft_maxRemove",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "ltft_table_bank1",
+        "kind": "array",
+        "units": "%"
+      },
+      {
+        "name": "ltft_table_bank2",
+        "kind": "array",
+        "units": "%"
+      },
+      {
+        "name": "ltft_timeConstant1",
+        "kind": "scalar",
+        "units": "sec"
+      },
+      {
+        "name": "ltft_timeConstant2",
+        "kind": "scalar",
+        "units": "sec"
+      },
+      {
+        "name": "ltft_timeConstant3",
+        "kind": "scalar",
+        "units": "sec"
+      },
+      {
+        "name": "ltft_timeConstant4",
+        "kind": "scalar",
+        "units": "sec"
+      },
+      {
+        "name": "mafFilterParameter",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "maximumOilPressureBins",
+        "kind": "array",
+        "units": "RPM"
+      },
+      {
+        "name": "maximumOilPressureValues",
+        "kind": "array",
+        "units": "kPa"
+      },
+      {
+        "name": "ppsExpAverageAlpha",
+        "kind": "scalar",
+        "units": "percent"
+      },
+      {
+        "name": "predictiveMapBlendDurationBins",
+        "kind": "array",
+        "units": "RPM"
+      },
+      {
+        "name": "predictiveMapBlendDurationValues",
+        "kind": "array",
+        "units": "second"
+      },
+      {
+        "name": "tmfOpeningBins",
+        "kind": "array",
+        "units": ""
+      },
+      {
+        "name": "tmfRatioBins",
+        "kind": "array",
+        "units": ""
+      },
+      {
+        "name": "tmfTable",
+        "kind": "array",
+        "units": ""
+      },
+      {
+        "name": "torqueReductionActivationTemperature",
+        "kind": "scalar",
+        "units": "C"
+      },
+      {
+        "name": "torqueReductionCutGearBins",
+        "kind": "array",
+        "units": "gear N°"
+      },
+      {
+        "name": "torqueReductionCutXBins",
+        "kind": "array",
+        "units": ""
+      },
+      {
+        "name": "torqueReductionCutXaxis",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "torqueReductionIgnitionCutTable",
+        "kind": "array",
+        "units": "%"
+      },
+      {
+        "name": "torqueReductionIgnitionRetardGearBins",
+        "kind": "array",
+        "units": "gear N°"
+      },
+      {
+        "name": "torqueReductionIgnitionRetardTable",
+        "kind": "array",
+        "units": "deg"
+      },
+      {
+        "name": "torqueReductionIgnitionRetardXBins",
+        "kind": "array",
+        "units": ""
+      },
+      {
+        "name": "torqueReductionIgnitionRetardXaxis",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "torqueReductionTimeGearBins",
+        "kind": "array",
+        "units": "gear N°"
+      },
+      {
+        "name": "torqueReductionTimeTable",
+        "kind": "array",
+        "units": "ms"
+      },
+      {
+        "name": "torqueReductionTimeXBins",
+        "kind": "array",
+        "units": ""
+      },
+      {
+        "name": "torqueReductionTimeXaxis",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "unusedFlipWboChannels",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "useIacTableForCoasting",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "useInjectorFlowLinearizationTable",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "vvlControlEnabled",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "vvlController_activationRpm",
+        "kind": "scalar",
+        "units": "rpm"
+      },
+      {
+        "name": "vvlController_deactivationRpm",
+        "kind": "scalar",
+        "units": "rpm"
+      },
+      {
+        "name": "vvlController_deactivationRpmWindow",
+        "kind": "scalar",
+        "units": "rpm"
+      },
+      {
+        "name": "vvlController_fuelAdderPercent",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "vvlController_ignitionRetard",
+        "kind": "scalar",
+        "units": "deg"
+      },
+      {
+        "name": "vvlController_maximumAfr",
+        "kind": "scalar",
+        "units": "afr"
+      },
+      {
+        "name": "vvlController_maximumMap",
+        "kind": "scalar",
+        "units": "kPa"
+      },
+      {
+        "name": "vvlController_minimumClt",
+        "kind": "scalar",
+        "units": "C"
+      },
+      {
+        "name": "vvlController_minimumTps",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "vvlRelayPin",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "vvlRelayPinMode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "vvtControlMinClt",
+        "kind": "scalar",
+        "units": "C"
+      },
+      {
+        "name": "wastegatePositionClosedVoltage",
+        "kind": "scalar",
+        "units": "v"
+      },
+      {
+        "name": "wastegatePositionOpenedVoltage",
+        "kind": "scalar",
+        "units": "v"
+      },
+      {
+        "name": "wwBetaMapValues",
+        "kind": "array",
+        "units": ""
+      },
+      {
+        "name": "wwTauMapValues",
+        "kind": "array",
+        "units": ""
+      }
+    ],
+    "removed": [
+      {
+        "name": "antiLagRpmTreshold",
+        "kind": "scalar"
+      },
+      {
+        "name": "camInputsDebug1",
+        "kind": "bits"
+      },
+      {
+        "name": "camInputsDebug2",
+        "kind": "bits"
+      },
+      {
+        "name": "camInputsDebug3",
+        "kind": "bits"
+      },
+      {
+        "name": "camInputsDebug4",
+        "kind": "bits"
+      },
+      {
+        "name": "crankingCycleFuelCoef",
+        "kind": "array"
+      },
+      {
+        "name": "crankingIACposition",
+        "kind": "scalar"
+      },
+      {
+        "name": "cranking_baseFuel",
+        "kind": "scalar"
+      },
+      {
+        "name": "doNotFilterTriggerEdgeNoise",
+        "kind": "bits"
+      },
+      {
+        "name": "flipWboChannels",
+        "kind": "bits"
+      },
+      {
+        "name": "hip9011CsPin",
+        "kind": "bits"
+      },
+      {
+        "name": "hip9011CsPinMode",
+        "kind": "bits"
+      },
+      {
+        "name": "hip9011Gain",
+        "kind": "scalar"
+      },
+      {
+        "name": "hip9011IntHoldPin",
+        "kind": "bits"
+      },
+      {
+        "name": "hip9011IntHoldPinMode",
+        "kind": "bits"
+      },
+      {
+        "name": "hip9011Prescaler",
+        "kind": "scalar"
+      },
+      {
+        "name": "hip9011SpiDevice",
+        "kind": "bits"
+      },
+      {
+        "name": "hipOutputChannel",
+        "kind": "bits"
+      },
+      {
+        "name": "isHip9011Enabled",
+        "kind": "bits"
+      },
+      {
+        "name": "ltftAgressiveMode",
+        "kind": "bits"
+      },
+      {
+        "name": "ltftCRC",
+        "kind": "scalar"
+      },
+      {
+        "name": "ltftCorrectionRate",
+        "kind": "array"
+      },
+      {
+        "name": "ltftEnabled",
+        "kind": "bits"
+      },
+      {
+        "name": "ltftMaxCorrection",
+        "kind": "scalar"
+      },
+      {
+        "name": "ltftMinCorrection",
+        "kind": "scalar"
+      },
+      {
+        "name": "ltftMinModTemp",
+        "kind": "scalar"
+      },
+      {
+        "name": "ltftMinTemp",
+        "kind": "scalar"
+      },
+      {
+        "name": "ltftPermissivity",
+        "kind": "scalar"
+      },
+      {
+        "name": "ltftStftRejectThreshold",
+        "kind": "scalar"
+      },
+      {
+        "name": "ltftTable",
+        "kind": "array"
+      },
+      {
+        "name": "mafSensorType",
+        "kind": "bits"
+      },
+      {
+        "name": "mapExpAverageAfr",
+        "kind": "scalar"
+      },
+      {
+        "name": "maxOilPressure",
+        "kind": "scalar"
+      },
+      {
+        "name": "requireFootOnBrakeToCrank",
+        "kind": "bits"
+      },
+      {
+        "name": "sensorChartMode",
+        "kind": "bits"
+      },
+      {
+        "name": "sensorSnifferRpmThreshold",
+        "kind": "scalar"
+      },
+      {
+        "name": "standbyTimeout",
+        "kind": "scalar"
+      },
+      {
+        "name": "suppressWboWorkaround7048",
+        "kind": "bits"
+      },
+      {
+        "name": "torqueReductionIgnitionCut",
+        "kind": "scalar"
+      },
+      {
+        "name": "torqueReductionIgnitionRetard",
+        "kind": "scalar"
+      },
+      {
+        "name": "torqueReductionTime",
+        "kind": "scalar"
+      },
+      {
+        "name": "tpsTpsPercentMode",
+        "kind": "bits"
+      },
+      {
+        "name": "triggerInputDebugPins1",
+        "kind": "bits"
+      },
+      {
+        "name": "triggerInputDebugPins2",
+        "kind": "bits"
+      },
+      {
+        "name": "trimLoadBins",
+        "kind": "array"
+      },
+      {
+        "name": "trimRpmBins",
+        "kind": "array"
+      },
+      {
+        "name": "tuningDetector",
+        "kind": "scalar"
+      },
+      {
+        "name": "unused1308_20",
+        "kind": "bits"
+      },
+      {
+        "name": "unused1308_24",
+        "kind": "bits"
+      },
+      {
+        "name": "unused1320_28",
+        "kind": "bits"
+      },
+      {
+        "name": "unused920_0",
+        "kind": "bits"
+      },
+      {
+        "name": "unused920_1",
+        "kind": "bits"
+      },
+      {
+        "name": "unusedCutFuelInAcr",
+        "kind": "bits"
+      },
+      {
+        "name": "unusedFancy2",
+        "kind": "bits"
+      },
+      {
+        "name": "unusedHip0",
+        "kind": "scalar"
+      },
+      {
+        "name": "unusedHip1",
+        "kind": "scalar"
+      },
+      {
+        "name": "unusedOftenChangesDuringFirmwareUpdate",
+        "kind": "array"
+      },
+      {
+        "name": "unusedOverrideCrankingIacSetting",
+        "kind": "bits"
+      },
+      {
+        "name": "useTpicAdvancedMode",
+        "kind": "bits"
+      },
+      {
+        "name": "wastegatePositionMax",
+        "kind": "scalar"
+      },
+      {
+        "name": "wastegatePositionMin",
+        "kind": "scalar"
+      },
+      {
+        "name": "wwBufferSize",
+        "kind": "scalar"
+      }
+    ],
+    "rescaled": [
+      {
+        "name": "acDelay",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "seg",
+          "min": 0,
+          "max": 10
+        },
+        "to": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "sec",
+          "min": 0,
+          "max": 10
+        }
+      },
+      {
+        "name": "acPressureEnableHyst",
+        "from": {
+          "scale": 0.5,
+          "offset": 0,
+          "units": "kPa (absolute)",
+          "min": 0,
+          "max": 125
+        },
+        "to": {
+          "scale": 0.5,
+          "offset": 0,
+          "units": "kPa",
+          "min": 0,
+          "max": 125
+        }
+      },
+      {
+        "name": "alsEtbPosition",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "",
+          "min": 0,
+          "max": 20000
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "",
+          "min": 0,
+          "max": 250
+        }
+      },
+      {
+        "name": "alsMinTimeBetween",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "",
+          "min": 0,
+          "max": 20000
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "",
+          "min": 0,
+          "max": 250
+        }
+      },
+      {
+        "name": "alternatorVoltageTargetTable",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "Volts",
+          "min": 0,
+          "max": 30
+        },
+        "to": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "volts",
+          "min": 0,
+          "max": 30
+        }
+      },
+      {
+        "name": "baroSensor_highValue",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kpa",
+          "min": -400,
+          "max": 800
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kPa",
+          "min": -400,
+          "max": 800
+        }
+      },
+      {
+        "name": "baroSensor_lowValue",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kpa",
+          "min": -400,
+          "max": 800
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kPa",
+          "min": -400,
+          "max": 800
+        }
+      },
+      {
+        "name": "boostClosedLoopLoadBins",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "",
+          "min": 0,
+          "max": 1000
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "",
+          "min": 0,
+          "max": 650
+        }
+      },
+      {
+        "name": "boostControlMinMap",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "",
+          "min": 0,
+          "max": 1000
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "",
+          "min": 0,
+          "max": 650
+        }
+      },
+      {
+        "name": "boostCutPressure",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kPa (absoluto)",
+          "min": 0,
+          "max": 1000
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kPa",
+          "min": 0,
+          "max": 650
+        }
+      },
+      {
+        "name": "boostCutPressureHyst",
+        "from": {
+          "scale": 0.5,
+          "offset": 0,
+          "units": "kPa (absolute)",
+          "min": 0,
+          "max": 125
+        },
+        "to": {
+          "scale": 0.5,
+          "offset": 0,
+          "units": "kPa",
+          "min": 0,
+          "max": 125
+        }
+      },
+      {
+        "name": "boostOpenLoopLoadBins",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "",
+          "min": 0,
+          "max": 1000
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "",
+          "min": 0,
+          "max": 650
+        }
+      },
+      {
+        "name": "boostTableClosedLoop",
+        "from": {
+          "scale": 2,
+          "offset": 0,
+          "units": "",
+          "min": 0,
+          "max": 3000
+        },
+        "to": {
+          "scale": 2,
+          "offset": 0,
+          "units": "",
+          "min": 0,
+          "max": 510
+        }
+      },
+      {
+        "name": "camDecoder2jzPosition",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "",
+          "min": 0,
+          "max": 100
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "angle",
+          "min": 0,
+          "max": 360
+        }
+      },
+      {
+        "name": "cltCrankingCorr",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "%",
+          "min": 0,
+          "max": 500
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "percent",
+          "min": 0,
+          "max": 100
+        }
+      },
+      {
+        "name": "cltIdleRpmBins",
+        "from": {
+          "scale": 2,
+          "offset": 0,
+          "units": "C",
+          "min": -40,
+          "max": 250
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "C",
+          "min": -40,
+          "max": 250
+        }
+      },
+      {
+        "name": "cltRevLimitRpmBins",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "C",
+          "min": -40,
+          "max": 120
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "C",
+          "min": -40,
+          "max": 200
+        }
+      },
+      {
+        "name": "coastingFuelCutMap",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kPa",
+          "min": 0,
+          "max": 1000
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kPa",
+          "min": 0,
+          "max": 650
+        }
+      },
+      {
+        "name": "coastingFuelCutVssHigh",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kph",
+          "min": 0,
+          "max": 255
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kmh",
+          "min": 0,
+          "max": 255
+        }
+      },
+      {
+        "name": "coastingFuelCutVssLow",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kph",
+          "min": 0,
+          "max": 255
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kmh",
+          "min": 0,
+          "max": 255
+        }
+      },
+      {
+        "name": "dfcoDelay",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "seg",
+          "min": 0,
+          "max": 10
+        },
+        "to": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "sec",
+          "min": 0,
+          "max": 10
+        }
+      },
+      {
+        "name": "displacement",
+        "from": {
+          "scale": 0.001,
+          "offset": 0,
+          "units": "L",
+          "min": 0,
+          "max": 65
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "L",
+          "min": 0,
+          "max": 65
+        }
+      },
+      {
+        "name": "dynoRpmStep",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "Rpm",
+          "min": 1,
+          "max": 500
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "Rpm",
+          "min": 1,
+          "max": 250
+        }
+      },
+      {
+        "name": "etbIdleThrottleRange",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "%",
+          "min": 0,
+          "max": 15
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "%",
+          "min": 0,
+          "max": 45
+        }
+      },
+      {
+        "name": "fan2OffTemperature",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "deg C",
+          "min": 0,
+          "max": 150
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "C",
+          "min": -40,
+          "max": 250
+        }
+      },
+      {
+        "name": "fan2OnTemperature",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "deg C",
+          "min": 0,
+          "max": 150
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "C",
+          "min": -40,
+          "max": 250
+        }
+      },
+      {
+        "name": "fanOffTemperature",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "deg C",
+          "min": 0,
+          "max": 150
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "C",
+          "min": -40,
+          "max": 250
+        }
+      },
+      {
+        "name": "fanOnTemperature",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "deg C",
+          "min": 0,
+          "max": 150
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "C",
+          "min": -40,
+          "max": 250
+        }
+      },
+      {
+        "name": "hpfpActivationAngle",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "graus",
+          "min": 0,
+          "max": 255
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "deg",
+          "min": 0,
+          "max": 255
+        }
+      },
+      {
+        "name": "hpfpCamLobes",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "lóbulo/comando",
+          "min": 0,
+          "max": 255
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "lobes/cam",
+          "min": 0,
+          "max": 255
+        }
+      },
+      {
+        "name": "hpfpMinAngle",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "graus",
+          "min": 0,
+          "max": 255
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "deg",
+          "min": 0,
+          "max": 255
+        }
+      },
+      {
+        "name": "hpfpPidI",
+        "from": {
+          "scale": 1e-05,
+          "offset": 0,
+          "units": "%/kPa/lóbulo",
+          "min": 0,
+          "max": 0.65
+        },
+        "to": {
+          "scale": 1e-05,
+          "offset": 0,
+          "units": "%/kPa/lobe",
+          "min": 0,
+          "max": 0.65
+        }
+      },
+      {
+        "name": "iacPidMultLoadBins",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "Load",
+          "min": 0,
+          "max": 500
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "Load",
+          "min": 0,
+          "max": 250
+        }
+      },
+      {
+        "name": "idlePidActivationTime",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "segundos",
+          "min": 0,
+          "max": 60
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "seconds",
+          "min": 0,
+          "max": 60
+        }
+      },
+      {
+        "name": "ignitionLoadBins",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "Load",
+          "min": 0,
+          "max": 1000
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "Load",
+          "min": 0,
+          "max": 650
+        }
+      },
+      {
+        "name": "injectorSecondary_battLagCorrBattBins",
+        "from": {
+          "scale": 0.01,
+          "offset": 0,
+          "units": "volts",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 0.01,
+          "offset": 0,
+          "units": "volts",
+          "min": 0,
+          "max": 22
+        }
+      },
+      {
+        "name": "injector_battLagCorrBattBins",
+        "from": {
+          "scale": 0.01,
+          "offset": 0,
+          "units": "volts",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 0.01,
+          "offset": 0,
+          "units": "volts",
+          "min": 0,
+          "max": 22
+        }
+      },
+      {
+        "name": "knockBaseNoise",
+        "from": {
+          "scale": 0.5,
+          "offset": 0,
+          "units": "dB",
+          "min": -99,
+          "max": 10
+        },
+        "to": {
+          "scale": 0.5,
+          "offset": 0,
+          "units": "dB",
+          "min": -64,
+          "max": 10
+        }
+      },
+      {
+        "name": "lambdaProtectionMinLoad",
+        "from": {
+          "scale": 10,
+          "offset": 0,
+          "units": "%",
+          "min": 0,
+          "max": 1000
+        },
+        "to": {
+          "scale": 10,
+          "offset": 0,
+          "units": "%",
+          "min": 0,
+          "max": 650
+        }
+      },
+      {
+        "name": "lambdaProtectionRestoreLoad",
+        "from": {
+          "scale": 10,
+          "offset": 0,
+          "units": "%",
+          "min": 0,
+          "max": 1000
+        },
+        "to": {
+          "scale": 10,
+          "offset": 0,
+          "units": "%",
+          "min": 0,
+          "max": 650
+        }
+      },
+      {
+        "name": "launchFuelAdderPercent",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "%",
+          "min": 0,
+          "max": 100
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "%",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "launchSpeedThreshold",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "Kph",
+          "min": 0,
+          "max": 300
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kmh",
+          "min": 0,
+          "max": 300
+        }
+      },
+      {
+        "name": "ltitSmoothingIntensity",
+        "from": {
+          "scale": 0.01,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.01,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 2.5
+        }
+      },
+      {
+        "name": "map_sensor_highValue",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kpa",
+          "min": -400,
+          "max": 800
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kPa",
+          "min": -400,
+          "max": 800
+        }
+      },
+      {
+        "name": "map_sensor_lowValue",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kpa",
+          "min": -400,
+          "max": 800
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kPa",
+          "min": -400,
+          "max": 800
+        }
+      },
+      {
+        "name": "maxAcClt",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "deg C",
+          "min": 0,
+          "max": 250
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "C",
+          "min": 0,
+          "max": 250
+        }
+      },
+      {
+        "name": "maxIdleVss",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kph",
+          "min": 0,
+          "max": 100
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kmh",
+          "min": 0,
+          "max": 100
+        }
+      },
+      {
+        "name": "minimumBoostClosedLoopMap",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kPa",
+          "min": 0,
+          "max": 1000
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kPa",
+          "min": 0,
+          "max": 650
+        }
+      },
+      {
+        "name": "nitrousMaximumMap",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kPa",
+          "min": 0,
+          "max": 1000
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kPa",
+          "min": 0,
+          "max": 650
+        }
+      },
+      {
+        "name": "nitrousMinimumClt",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "deg C",
+          "min": 0,
+          "max": 250
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "C",
+          "min": 0,
+          "max": 250
+        }
+      },
+      {
+        "name": "nitrousMinimumVehicleSpeed",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "Kph",
+          "min": 0,
+          "max": 300
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kmh",
+          "min": 0,
+          "max": 300
+        }
+      },
+      {
+        "name": "primingDelay",
+        "from": {
+          "scale": 0.01,
+          "offset": 0,
+          "units": "seg",
+          "min": 0,
+          "max": 1
+        },
+        "to": {
+          "scale": 0.01,
+          "offset": 0,
+          "units": "sec",
+          "min": 0,
+          "max": 1
+        }
+      },
+      {
+        "name": "stft_cellCfgs1_maxAdd",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "%",
+          "min": 0,
+          "max": 25
+        },
+        "to": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "%",
+          "min": 0,
+          "max": 25
+        }
+      },
+      {
+        "name": "stft_cellCfgs1_maxRemove",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "%",
+          "min": -25,
+          "max": 0
+        },
+        "to": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "%",
+          "min": 0,
+          "max": 25
+        }
+      },
+      {
+        "name": "stft_cellCfgs2_maxAdd",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "%",
+          "min": 0,
+          "max": 25
+        },
+        "to": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "%",
+          "min": 0,
+          "max": 25
+        }
+      },
+      {
+        "name": "stft_cellCfgs2_maxRemove",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "%",
+          "min": -25,
+          "max": 0
+        },
+        "to": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "%",
+          "min": 0,
+          "max": 25
+        }
+      },
+      {
+        "name": "stft_cellCfgs3_maxAdd",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "%",
+          "min": 0,
+          "max": 25
+        },
+        "to": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "%",
+          "min": 0,
+          "max": 25
+        }
+      },
+      {
+        "name": "stft_cellCfgs3_maxRemove",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "%",
+          "min": -25,
+          "max": 0
+        },
+        "to": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "%",
+          "min": 0,
+          "max": 25
+        }
+      },
+      {
+        "name": "stft_cellCfgs4_maxAdd",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "%",
+          "min": 0,
+          "max": 25
+        },
+        "to": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "%",
+          "min": 0,
+          "max": 25
+        }
+      },
+      {
+        "name": "stft_cellCfgs4_maxRemove",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "%",
+          "min": -25,
+          "max": 0
+        },
+        "to": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "%",
+          "min": 0,
+          "max": 25
+        }
+      },
+      {
+        "name": "tcu_32SpeedBins",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "KPH",
+          "min": 0,
+          "max": 255
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kmh",
+          "min": 0,
+          "max": 255
+        }
+      },
+      {
+        "name": "tcu_shiftSpeed12",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "MPH",
+          "min": 0,
+          "max": 255
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kmh",
+          "min": 0,
+          "max": 255
+        }
+      },
+      {
+        "name": "tcu_shiftSpeed21",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "MPH",
+          "min": 0,
+          "max": 255
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kmh",
+          "min": 0,
+          "max": 255
+        }
+      },
+      {
+        "name": "tcu_shiftSpeed23",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "MPH",
+          "min": 0,
+          "max": 255
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kmh",
+          "min": 0,
+          "max": 255
+        }
+      },
+      {
+        "name": "tcu_shiftSpeed32",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "MPH",
+          "min": 0,
+          "max": 255
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kmh",
+          "min": 0,
+          "max": 255
+        }
+      },
+      {
+        "name": "tcu_shiftSpeed34",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "MPH",
+          "min": 0,
+          "max": 255
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kmh",
+          "min": 0,
+          "max": 255
+        }
+      },
+      {
+        "name": "tcu_shiftSpeed43",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "MPH",
+          "min": 0,
+          "max": 255
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kmh",
+          "min": 0,
+          "max": 255
+        }
+      },
+      {
+        "name": "tcu_tccLockSpeed",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "MPH",
+          "min": 0,
+          "max": 255
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kmh",
+          "min": 0,
+          "max": 255
+        }
+      },
+      {
+        "name": "tcu_tccUnlockSpeed",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "MPH",
+          "min": 0,
+          "max": 255
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "kmh",
+          "min": 0,
+          "max": 255
+        }
+      },
+      {
+        "name": "throttlePedalSecondaryUpVoltage",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "voltage",
+          "min": -6,
+          "max": 6
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "volts",
+          "min": -6,
+          "max": 6
+        }
+      },
+      {
+        "name": "throttlePedalSecondaryWOTVoltage",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "voltage",
+          "min": -6,
+          "max": 6
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "volts",
+          "min": -6,
+          "max": 6
+        }
+      },
+      {
+        "name": "throttlePedalUpVoltage",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "voltage",
+          "min": -6,
+          "max": 6
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "volts",
+          "min": -6,
+          "max": 6
+        }
+      },
+      {
+        "name": "throttlePedalWOTVoltage",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "voltage",
+          "min": -6,
+          "max": 6
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "volts",
+          "min": -6,
+          "max": 6
+        }
+      },
+      {
+        "name": "tps1SecondaryMax",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ADC",
+          "min": 0,
+          "max": 1000
+        },
+        "to": {
+          "scale": 0.0048828125,
+          "offset": 0,
+          "units": "V",
+          "min": 0,
+          "max": 5
+        }
+      },
+      {
+        "name": "tps1SecondaryMin",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ADC",
+          "min": 0,
+          "max": 1000
+        },
+        "to": {
+          "scale": 0.0048828125,
+          "offset": 0,
+          "units": "V",
+          "min": 0,
+          "max": 5
+        }
+      },
+      {
+        "name": "tpsAccelFractionPeriod",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ciclos",
+          "min": 0,
+          "max": 500
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "cycles",
+          "min": 0,
+          "max": 500
+        }
+      },
+      {
+        "name": "tpsAccelMinRate",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "%",
+          "min": 0,
+          "max": 1000
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "%/s",
+          "min": 0,
+          "max": 1000
+        }
+      },
+      {
+        "name": "tpsAcelEctBins",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "C",
+          "min": -40,
+          "max": 200
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "C",
+          "min": -40,
+          "max": 120
+        }
+      },
+      {
+        "name": "tpsMax",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ADC",
+          "min": 0,
+          "max": 1023
+        },
+        "to": {
+          "scale": 0.0048828125,
+          "offset": 0,
+          "units": "V",
+          "min": 0,
+          "max": 5
+        }
+      },
+      {
+        "name": "tpsMin",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ADC",
+          "min": 0,
+          "max": 1023
+        },
+        "to": {
+          "scale": 0.0048828125,
+          "offset": 0,
+          "units": "V",
+          "min": 0,
+          "max": 5
+        }
+      },
+      {
+        "name": "tpsTpsAccelFromRpmBins",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "from",
+          "min": 0,
+          "max": 30000
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "%",
+          "min": 0,
+          "max": 30000
+        }
+      },
+      {
+        "name": "tpsTpsAccelTable",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "value",
+          "min": -30000,
+          "max": 30000
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "value",
+          "min": 0,
+          "max": 30000
+        }
+      },
+      {
+        "name": "tpsTpsAccelToRpmBins",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "to",
+          "min": 0,
+          "max": 25500
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "%",
+          "min": 0,
+          "max": 25500
+        }
+      },
+      {
+        "name": "tpsTpsTimingCorrFromRpmBins",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "from",
+          "min": 0,
+          "max": 30000
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "%",
+          "min": 0,
+          "max": 30000
+        }
+      },
+      {
+        "name": "tpsTpsTimingCorrToRpmBins",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "to",
+          "min": 0,
+          "max": 25500
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "%",
+          "min": 0,
+          "max": 25500
+        }
+      },
+      {
+        "name": "tpsTspCorrValuesBins",
+        "from": {
+          "scale": 50,
+          "offset": 0,
+          "units": "RPM",
+          "min": 0,
+          "max": 17500
+        },
+        "to": {
+          "scale": 100,
+          "offset": 0,
+          "units": "RPM",
+          "min": 0,
+          "max": 17500
+        }
+      },
+      {
+        "name": "tractionControlSlipBins",
+        "from": {
+          "scale": 0.01,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 999
+        },
+        "to": {
+          "scale": 0.01,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 650
+        }
+      },
+      {
+        "name": "trailingSparkLoadBins",
+        "from": {
+          "scale": 5,
+          "offset": 0,
+          "units": "Load",
+          "min": 0,
+          "max": 1000
+        },
+        "to": {
+          "scale": 5,
+          "offset": 0,
+          "units": "Load",
+          "min": 0,
+          "max": 650
+        }
+      },
+      {
+        "name": "trailingSparkTable",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "deg",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "deg",
+          "min": 0,
+          "max": 12
+        }
+      },
+      {
+        "name": "triggerGapOverrideFrom1",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 20
+        }
+      },
+      {
+        "name": "triggerGapOverrideFrom10",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 20
+        }
+      },
+      {
+        "name": "triggerGapOverrideFrom11",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 20
+        }
+      },
+      {
+        "name": "triggerGapOverrideFrom12",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 20
+        }
+      },
+      {
+        "name": "triggerGapOverrideFrom13",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 20
+        }
+      },
+      {
+        "name": "triggerGapOverrideFrom14",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 20
+        }
+      },
+      {
+        "name": "triggerGapOverrideFrom15",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 20
+        }
+      },
+      {
+        "name": "triggerGapOverrideFrom16",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 20
+        }
+      },
+      {
+        "name": "triggerGapOverrideFrom17",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 20
+        }
+      },
+      {
+        "name": "triggerGapOverrideFrom18",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 20
+        }
+      },
+      {
+        "name": "triggerGapOverrideFrom2",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 20
+        }
+      },
+      {
+        "name": "triggerGapOverrideFrom3",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 20
+        }
+      },
+      {
+        "name": "triggerGapOverrideFrom4",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 20
+        }
+      },
+      {
+        "name": "triggerGapOverrideFrom5",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 20
+        }
+      },
+      {
+        "name": "triggerGapOverrideFrom6",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 20
+        }
+      },
+      {
+        "name": "triggerGapOverrideFrom7",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 20
+        }
+      },
+      {
+        "name": "triggerGapOverrideFrom8",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 20
+        }
+      },
+      {
+        "name": "triggerGapOverrideFrom9",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 20
+        }
+      },
+      {
+        "name": "triggerGapOverrideTo1",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 20
+        }
+      },
+      {
+        "name": "triggerGapOverrideTo10",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 20
+        }
+      },
+      {
+        "name": "triggerGapOverrideTo11",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 20
+        }
+      },
+      {
+        "name": "triggerGapOverrideTo12",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 20
+        }
+      },
+      {
+        "name": "triggerGapOverrideTo13",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 20
+        }
+      },
+      {
+        "name": "triggerGapOverrideTo14",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 20
+        }
+      },
+      {
+        "name": "triggerGapOverrideTo15",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 20
+        }
+      },
+      {
+        "name": "triggerGapOverrideTo16",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 20
+        }
+      },
+      {
+        "name": "triggerGapOverrideTo17",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 20
+        }
+      },
+      {
+        "name": "triggerGapOverrideTo18",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 20
+        }
+      },
+      {
+        "name": "triggerGapOverrideTo2",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 20
+        }
+      },
+      {
+        "name": "triggerGapOverrideTo3",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 20
+        }
+      },
+      {
+        "name": "triggerGapOverrideTo4",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 20
+        }
+      },
+      {
+        "name": "triggerGapOverrideTo5",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 20
+        }
+      },
+      {
+        "name": "triggerGapOverrideTo6",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 20
+        }
+      },
+      {
+        "name": "triggerGapOverrideTo7",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 20
+        }
+      },
+      {
+        "name": "triggerGapOverrideTo8",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 20
+        }
+      },
+      {
+        "name": "triggerGapOverrideTo9",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "razão",
+          "min": 0,
+          "max": 20
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ratio",
+          "min": 0,
+          "max": 20
+        }
+      },
+      {
+        "name": "veLoadBins",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "{bitStringValue(fuelUnits, fuelAlgorithm) }",
+          "min": 0,
+          "max": 1000
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "{bitStringValue(fuelUnits, fuelAlgorithm) }",
+          "min": 0,
+          "max": 650
+        }
+      },
+      {
+        "name": "vssFilterReciprocal",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "",
+          "min": 3,
+          "max": "200 0"
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "",
+          "min": 3,
+          "max": 200
+        }
+      },
+      {
+        "name": "vvtTable1LoadBins",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "L",
+          "min": 0,
+          "max": 1000
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "L",
+          "min": 0,
+          "max": 650
+        }
+      },
+      {
+        "name": "vvtTable2LoadBins",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "L",
+          "min": 0,
+          "max": 1000
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "L",
+          "min": 0,
+          "max": 650
+        }
+      },
+      {
+        "name": "wwCltBins",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "deg C",
+          "min": -40,
+          "max": 120
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "C",
+          "min": -40,
+          "max": 250
+        }
+      }
+    ],
+    "retyped": [
+      {
+        "name": "camDecoder2jzPosition",
+        "from": "U08",
+        "to": "U16"
+      },
+      {
+        "name": "cltIdleRpmBins",
+        "from": "S08",
+        "to": "S16"
+      },
+      {
+        "name": "cltRevLimitRpmBins",
+        "from": "S08",
+        "to": "S16"
+      },
+      {
+        "name": "displacement",
+        "from": "U16",
+        "to": "F32"
+      },
+      {
+        "name": "fan2OffTemperature",
+        "from": "U08",
+        "to": "S16"
+      },
+      {
+        "name": "fan2OnTemperature",
+        "from": "U08",
+        "to": "S16"
+      },
+      {
+        "name": "fanOffTemperature",
+        "from": "F32",
+        "to": "S16"
+      },
+      {
+        "name": "fanOnTemperature",
+        "from": "F32",
+        "to": "S16"
+      },
+      {
+        "name": "hpfpCompensationRpmBins",
+        "from": "U16",
+        "to": "U08"
+      },
+      {
+        "name": "hpfpTargetRpmBins",
+        "from": "U16",
+        "to": "U08"
+      },
+      {
+        "name": "maxAcClt",
+        "from": "U08",
+        "to": "S16"
+      },
+      {
+        "name": "nitrousMinimumClt",
+        "from": "U08",
+        "to": "S16"
+      },
+      {
+        "name": "primeBins",
+        "from": "S08",
+        "to": "S16"
+      },
+      {
+        "name": "stft_cellCfgs1_maxAdd",
+        "from": "S08",
+        "to": "U08"
+      },
+      {
+        "name": "stft_cellCfgs1_maxRemove",
+        "from": "S08",
+        "to": "U08"
+      },
+      {
+        "name": "stft_cellCfgs2_maxAdd",
+        "from": "S08",
+        "to": "U08"
+      },
+      {
+        "name": "stft_cellCfgs2_maxRemove",
+        "from": "S08",
+        "to": "U08"
+      },
+      {
+        "name": "stft_cellCfgs3_maxAdd",
+        "from": "S08",
+        "to": "U08"
+      },
+      {
+        "name": "stft_cellCfgs3_maxRemove",
+        "from": "S08",
+        "to": "U08"
+      },
+      {
+        "name": "stft_cellCfgs4_maxAdd",
+        "from": "S08",
+        "to": "U08"
+      },
+      {
+        "name": "stft_cellCfgs4_maxRemove",
+        "from": "S08",
+        "to": "U08"
+      },
+      {
+        "name": "tps1SecondaryMax",
+        "from": "U16",
+        "to": "S16"
+      },
+      {
+        "name": "tps1SecondaryMin",
+        "from": "U16",
+        "to": "S16"
+      },
+      {
+        "name": "tpsAcelEctBins",
+        "from": "U08",
+        "to": "S08"
+      },
+      {
+        "name": "wwCltBins",
+        "from": "S08",
+        "to": "S16"
+      },
+      {
+        "name": "wwMapBins",
+        "from": "S08",
+        "to": "U08"
+      }
+    ],
+    "reshaped": [
+      {
+        "name": "afterCrankingIACtaperDuration",
+        "from": "scalar",
+        "to": "[6]"
+      },
+      {
+        "name": "cltIdleCorrBins",
+        "from": "[16]",
+        "to": "[8]"
+      },
+      {
+        "name": "cltIdleCorrTable",
+        "from": "[16x16]",
+        "to": "[8x6]"
+      },
+      {
+        "name": "highSpeedOffsets",
+        "from": "[32]",
+        "to": "[128]"
+      },
+      {
+        "name": "ignitionCltCorrLoadBins",
+        "from": "[3]",
+        "to": "[5]"
+      },
+      {
+        "name": "ignitionCltCorrTable",
+        "from": "[3x3]",
+        "to": "[5x5]"
+      },
+      {
+        "name": "ignitionCltCorrTempBins",
+        "from": "[3]",
+        "to": "[5]"
+      },
+      {
+        "name": "ignitionIatCorrLoadBins",
+        "from": "[4]",
+        "to": "[8]"
+      },
+      {
+        "name": "ignitionIatCorrTable",
+        "from": "[4x4]",
+        "to": "[4x8]"
+      },
+      {
+        "name": "injPhaseLoadBins",
+        "from": "[16]",
+        "to": "[6]"
+      },
+      {
+        "name": "injPhaseRpmBins",
+        "from": "[16]",
+        "to": "[6]"
+      },
+      {
+        "name": "injectionPhase",
+        "from": "[16x16]",
+        "to": "[6x6]"
+      },
+      {
+        "name": "ltitTable",
+        "from": "[16]",
+        "to": "[8]"
+      },
+      {
+        "name": "luaScript",
+        "from": "5000",
+        "to": "12000"
+      },
+      {
+        "name": "mapEstimateRpmBins",
+        "from": "[16]",
+        "to": "[6]"
+      },
+      {
+        "name": "mapEstimateTable",
+        "from": "[16x16]",
+        "to": "[6x6]"
+      },
+      {
+        "name": "mapEstimateTpsBins",
+        "from": "[16]",
+        "to": "[6]"
+      },
+      {
+        "name": "rpmIdleCorrBins",
+        "from": "[16]",
+        "to": "[6]"
+      }
+    ],
+    "output_channels_moved": true
+  }
+}

@@ -1,0 +1,2202 @@
+{
+  "schema": 1,
+  "release_id": "evotech8/2026.10.22_2827665254",
+  "board": "evotech8",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2026.10.22.evotech8.2827665254",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2026-10-22T10:06:35.322866+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "28811fccfe4b1ec4d33b771bddd27b0d9bbb6725a5c0e063b3f97bdeb085cf5a",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech8/2026.04.28_1301804429",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": true,
+    "page_size": {
+      "from": 27796,
+      "to": 29804
+    },
+    "added": [
+      {
+        "name": "acTargetHoldTime",
+        "kind": "scalar",
+        "units": "sec"
+      },
+      {
+        "name": "advanceAddRampDegPerSec",
+        "kind": "scalar",
+        "units": "deg/s"
+      },
+      {
+        "name": "ambientTempSharedMode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "ambientTempSharedTemps",
+        "kind": "array",
+        "units": "C"
+      },
+      {
+        "name": "ambientTempSharedVolts",
+        "kind": "array",
+        "units": "V"
+      },
+      {
+        "name": "auxTemp1SharedMode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "auxTemp1SharedTemps",
+        "kind": "array",
+        "units": "C"
+      },
+      {
+        "name": "auxTemp1SharedVolts",
+        "kind": "array",
+        "units": "V"
+      },
+      {
+        "name": "auxTemp2SharedMode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "auxTemp2SharedTemps",
+        "kind": "array",
+        "units": "C"
+      },
+      {
+        "name": "auxTemp2SharedVolts",
+        "kind": "array",
+        "units": "V"
+      },
+      {
+        "name": "batteryProtectionEnabled",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "batteryVoltageHysteresis",
+        "kind": "scalar",
+        "units": "V"
+      },
+      {
+        "name": "batteryVoltageMaximum",
+        "kind": "scalar",
+        "units": "V"
+      },
+      {
+        "name": "batteryVoltageMinimum",
+        "kind": "scalar",
+        "units": "V"
+      },
+      {
+        "name": "batteryVoltageTimeoutMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "clFuelCommon_exhaustVolumeToSensor",
+        "kind": "scalar",
+        "units": "mL"
+      },
+      {
+        "name": "clFuelCommon_maxLambda",
+        "kind": "scalar",
+        "units": "lambda"
+      },
+      {
+        "name": "clFuelCommon_minClt",
+        "kind": "scalar",
+        "units": "C"
+      },
+      {
+        "name": "clFuelCommon_minLambda",
+        "kind": "scalar",
+        "units": "lambda"
+      },
+      {
+        "name": "clFuelCommon_noFuelTrimAfterAccelTime",
+        "kind": "scalar",
+        "units": "sec"
+      },
+      {
+        "name": "clFuelCommon_noFuelTrimAfterDfcoTime",
+        "kind": "scalar",
+        "units": "sec"
+      },
+      {
+        "name": "clFuelCommon_startupDelay",
+        "kind": "scalar",
+        "units": "seconds"
+      },
+      {
+        "name": "cltSharedMode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "cltSharedTemps",
+        "kind": "array",
+        "units": "C"
+      },
+      {
+        "name": "cltSharedVolts",
+        "kind": "array",
+        "units": "V"
+      },
+      {
+        "name": "cltTemperatureCritical",
+        "kind": "scalar",
+        "units": "C"
+      },
+      {
+        "name": "cltTemperatureHysteresis",
+        "kind": "scalar",
+        "units": "C"
+      },
+      {
+        "name": "cltTemperatureProtectionEnabled",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "cltTemperatureTimeoutMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "clutchCeilingRampRpmPerSec",
+        "kind": "scalar",
+        "units": "rpm/s"
+      },
+      {
+        "name": "clutchGuardFallbackDRpmLimit",
+        "kind": "scalar",
+        "units": "rpm/s"
+      },
+      {
+        "name": "clutchGuardMode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "clutchGuardRatioMismatchPct",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "clutchOverspeedCorrectionCurve",
+        "kind": "array",
+        "units": "ratio"
+      },
+      {
+        "name": "clutchOverspeedErrorBins",
+        "kind": "array",
+        "units": "rpm"
+      },
+      {
+        "name": "coldStartAuxCltBins",
+        "kind": "array",
+        "units": "C"
+      },
+      {
+        "name": "coldStartAuxDurationTable",
+        "kind": "array",
+        "units": "sec"
+      },
+      {
+        "name": "coldStartAuxEnable",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "coldStartAuxEthanolBins",
+        "kind": "array",
+        "units": "%"
+      },
+      {
+        "name": "coldStartAuxMaxTimeout",
+        "kind": "scalar",
+        "units": "sec"
+      },
+      {
+        "name": "coldStartAuxValvePin",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "coldStartAuxValvePinMode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "compressorDischargeTempSharedMode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "compressorDischargeTempSharedTemps",
+        "kind": "array",
+        "units": "C"
+      },
+      {
+        "name": "compressorDischargeTempSharedVolts",
+        "kind": "array",
+        "units": "V"
+      },
+      {
+        "name": "dRpmLimitPerGear1",
+        "kind": "scalar",
+        "units": "rpm/s"
+      },
+      {
+        "name": "dRpmLimitPerGear10",
+        "kind": "scalar",
+        "units": "rpm/s"
+      },
+      {
+        "name": "dRpmLimitPerGear2",
+        "kind": "scalar",
+        "units": "rpm/s"
+      },
+      {
+        "name": "dRpmLimitPerGear3",
+        "kind": "scalar",
+        "units": "rpm/s"
+      },
+      {
+        "name": "dRpmLimitPerGear4",
+        "kind": "scalar",
+        "units": "rpm/s"
+      },
+      {
+        "name": "dRpmLimitPerGear5",
+        "kind": "scalar",
+        "units": "rpm/s"
+      },
+      {
+        "name": "dRpmLimitPerGear6",
+        "kind": "scalar",
+        "units": "rpm/s"
+      },
+      {
+        "name": "dRpmLimitPerGear7",
+        "kind": "scalar",
+        "units": "rpm/s"
+      },
+      {
+        "name": "dRpmLimitPerGear8",
+        "kind": "scalar",
+        "units": "rpm/s"
+      },
+      {
+        "name": "dRpmLimitPerGear9",
+        "kind": "scalar",
+        "units": "rpm/s"
+      },
+      {
+        "name": "dfcoEntryMaxWaitMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "dfcoEntryTargetTorqueNm",
+        "kind": "scalar",
+        "units": "Nm"
+      },
+      {
+        "name": "egtCritical",
+        "kind": "scalar",
+        "units": "C"
+      },
+      {
+        "name": "egtHysteresis",
+        "kind": "scalar",
+        "units": "C"
+      },
+      {
+        "name": "egtProtectionEnabled",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "egtTimeoutMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "enableEvoNet",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "enableEvoNetHighRiskActions",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "engineBrakingTorqueBinsRpm",
+        "kind": "array",
+        "units": "rpm"
+      },
+      {
+        "name": "engineBrakingTorqueCurveNm",
+        "kind": "array",
+        "units": "Nm"
+      },
+      {
+        "name": "engineRotationalInertiaKgM2",
+        "kind": "scalar",
+        "units": "kg.m^2"
+      },
+      {
+        "name": "epBattery_action",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epBattery_criticalHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epBattery_liftOffTps",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "epBattery_mode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epBattery_rearm",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epBattery_recoveryTimeMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epBattery_rpmLimit",
+        "kind": "scalar",
+        "units": "RPM"
+      },
+      {
+        "name": "epBattery_sensorAction",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epBattery_sensorDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epBattery_warningDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epBattery_warningHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epBattery_warningMaximum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epBattery_warningMinimum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epBoost_action",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epBoost_criticalHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epBoost_liftOffTps",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "epBoost_mode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epBoost_rearm",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epBoost_recoveryTimeMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epBoost_rpmLimit",
+        "kind": "scalar",
+        "units": "RPM"
+      },
+      {
+        "name": "epBoost_sensorAction",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epBoost_sensorDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epBoost_warningDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epBoost_warningHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epBoost_warningMaximum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epBoost_warningMinimum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epClt_action",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epClt_criticalHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epClt_liftOffTps",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "epClt_mode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epClt_rearm",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epClt_recoveryTimeMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epClt_rpmLimit",
+        "kind": "scalar",
+        "units": "RPM"
+      },
+      {
+        "name": "epClt_sensorAction",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epClt_sensorDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epClt_warningDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epClt_warningHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epClt_warningMaximum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epClt_warningMinimum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epDutyRecoveryThreshold",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "epDuty_action",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epDuty_criticalHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epDuty_liftOffTps",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "epDuty_mode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epDuty_rearm",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epDuty_recoveryTimeMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epDuty_rpmLimit",
+        "kind": "scalar",
+        "units": "RPM"
+      },
+      {
+        "name": "epDuty_sensorAction",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epDuty_sensorDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epDuty_warningDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epDuty_warningHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epDuty_warningMaximum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epDuty_warningMinimum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epEgt_action",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epEgt_criticalHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epEgt_liftOffTps",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "epEgt_mode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epEgt_rearm",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epEgt_recoveryTimeMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epEgt_rpmLimit",
+        "kind": "scalar",
+        "units": "RPM"
+      },
+      {
+        "name": "epEgt_sensorAction",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epEgt_sensorDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epEgt_warningDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epEgt_warningHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epEgt_warningMaximum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epEgt_warningMinimum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epFuelTemperature_action",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epFuelTemperature_criticalHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epFuelTemperature_liftOffTps",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "epFuelTemperature_mode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epFuelTemperature_rearm",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epFuelTemperature_recoveryTimeMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epFuelTemperature_rpmLimit",
+        "kind": "scalar",
+        "units": "RPM"
+      },
+      {
+        "name": "epFuelTemperature_sensorAction",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epFuelTemperature_sensorDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epFuelTemperature_warningDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epFuelTemperature_warningHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epFuelTemperature_warningMaximum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epFuelTemperature_warningMinimum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epGdi_action",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epGdi_criticalHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epGdi_liftOffTps",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "epGdi_mode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epGdi_rearm",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epGdi_recoveryTimeMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epGdi_rpmLimit",
+        "kind": "scalar",
+        "units": "RPM"
+      },
+      {
+        "name": "epGdi_sensorAction",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epGdi_sensorDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epGdi_warningDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epGdi_warningHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epGdi_warningMaximum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epGdi_warningMinimum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epHistoryWords",
+        "kind": "array",
+        "units": ""
+      },
+      {
+        "name": "epIat_action",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epIat_criticalHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epIat_liftOffTps",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "epIat_mode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epIat_rearm",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epIat_recoveryTimeMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epIat_rpmLimit",
+        "kind": "scalar",
+        "units": "RPM"
+      },
+      {
+        "name": "epIat_sensorAction",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epIat_sensorDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epIat_warningDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epIat_warningHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epIat_warningMaximum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epIat_warningMinimum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epLambda_action",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epLambda_criticalHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epLambda_liftOffTps",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "epLambda_mode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epLambda_rearm",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epLambda_recoveryTimeMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epLambda_rpmLimit",
+        "kind": "scalar",
+        "units": "RPM"
+      },
+      {
+        "name": "epLambda_sensorAction",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epLambda_sensorDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epLambda_warningDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epLambda_warningHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epLambda_warningMaximum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epLambda_warningMinimum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epOilHighWarningValues",
+        "kind": "array",
+        "units": "kPa"
+      },
+      {
+        "name": "epOilHigh_action",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epOilHigh_criticalHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epOilHigh_liftOffTps",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "epOilHigh_mode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epOilHigh_rearm",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epOilHigh_recoveryTimeMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epOilHigh_rpmLimit",
+        "kind": "scalar",
+        "units": "RPM"
+      },
+      {
+        "name": "epOilHigh_sensorAction",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epOilHigh_sensorDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epOilHigh_warningDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epOilHigh_warningHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epOilHigh_warningMaximum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epOilHigh_warningMinimum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epOilLowWarningValues",
+        "kind": "array",
+        "units": "kPa"
+      },
+      {
+        "name": "epOilLow_action",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epOilLow_criticalHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epOilLow_liftOffTps",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "epOilLow_mode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epOilLow_rearm",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epOilLow_recoveryTimeMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epOilLow_rpmLimit",
+        "kind": "scalar",
+        "units": "RPM"
+      },
+      {
+        "name": "epOilLow_sensorAction",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epOilLow_sensorDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epOilLow_warningDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epOilLow_warningHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epOilLow_warningMaximum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epOilLow_warningMinimum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epOilStartupCriticalMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epOilStartupWarningMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epOilStartup_action",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epOilStartup_criticalHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epOilStartup_liftOffTps",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "epOilStartup_mode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epOilStartup_rearm",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epOilStartup_recoveryTimeMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epOilStartup_rpmLimit",
+        "kind": "scalar",
+        "units": "RPM"
+      },
+      {
+        "name": "epOilStartup_sensorAction",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epOilStartup_sensorDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epOilStartup_warningDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epOilStartup_warningHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epOilStartup_warningMaximum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epOilStartup_warningMinimum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epOilTemperature_action",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epOilTemperature_criticalHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epOilTemperature_liftOffTps",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "epOilTemperature_mode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epOilTemperature_rearm",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epOilTemperature_recoveryTimeMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epOilTemperature_rpmLimit",
+        "kind": "scalar",
+        "units": "RPM"
+      },
+      {
+        "name": "epOilTemperature_sensorAction",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epOilTemperature_sensorDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epOilTemperature_warningDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epOilTemperature_warningHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epOilTemperature_warningMaximum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epOilTemperature_warningMinimum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epPfi_action",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epPfi_criticalHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epPfi_liftOffTps",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "epPfi_mode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epPfi_rearm",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epPfi_recoveryTimeMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epPfi_rpmLimit",
+        "kind": "scalar",
+        "units": "RPM"
+      },
+      {
+        "name": "epPfi_sensorAction",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "epPfi_sensorDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epPfi_warningDelayMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "epPfi_warningHysteresis",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epPfi_warningMaximum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "epPfi_warningMinimum",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "estimatedThermalEfficiency",
+        "kind": "scalar",
+        "units": "ratio"
+      },
+      {
+        "name": "flexAeMult",
+        "kind": "array",
+        "units": "mult"
+      },
+      {
+        "name": "flexFuelTransientComp",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "flexTransientCltBins",
+        "kind": "array",
+        "units": "C"
+      },
+      {
+        "name": "flexTransientEthanolBins",
+        "kind": "array",
+        "units": "%"
+      },
+      {
+        "name": "flexWwBetaMult",
+        "kind": "array",
+        "units": "mult"
+      },
+      {
+        "name": "flexWwTauMult",
+        "kind": "array",
+        "units": "mult"
+      },
+      {
+        "name": "fuelTempSharedMode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "fuelTempSharedTemps",
+        "kind": "array",
+        "units": "C"
+      },
+      {
+        "name": "fuelTempSharedVolts",
+        "kind": "array",
+        "units": "V"
+      },
+      {
+        "name": "fuelTemperatureCritical",
+        "kind": "scalar",
+        "units": "C"
+      },
+      {
+        "name": "fuelTemperatureHysteresis",
+        "kind": "scalar",
+        "units": "C"
+      },
+      {
+        "name": "fuelTemperatureProtectionEnabled",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "fuelTemperatureTimeoutMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "gdiRailPressureHysteresis",
+        "kind": "scalar",
+        "units": "kPa"
+      },
+      {
+        "name": "gdiRailPressureMaximum",
+        "kind": "scalar",
+        "units": "kPa"
+      },
+      {
+        "name": "gdiRailPressureMinimum",
+        "kind": "scalar",
+        "units": "kPa"
+      },
+      {
+        "name": "gdiRailPressureTimeoutMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "gdiRailProtectionEnabled",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "iatSharedMode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "iatSharedTemps",
+        "kind": "array",
+        "units": "C"
+      },
+      {
+        "name": "iatSharedVolts",
+        "kind": "array",
+        "units": "V"
+      },
+      {
+        "name": "iatTemperatureCritical",
+        "kind": "scalar",
+        "units": "C"
+      },
+      {
+        "name": "iatTemperatureHysteresis",
+        "kind": "scalar",
+        "units": "C"
+      },
+      {
+        "name": "iatTemperatureProtectionEnabled",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "iatTemperatureTimeoutMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "ignitionTimingLimitEnabled",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "knockSpectrumFixedSize",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "ltft_ltftSlowdownFactor",
+        "kind": "scalar",
+        "units": "x"
+      },
+      {
+        "name": "ltft_minCltForLearning",
+        "kind": "scalar",
+        "units": "C"
+      },
+      {
+        "name": "ltft_trimsBank1",
+        "kind": "array",
+        "units": ""
+      },
+      {
+        "name": "ltft_trimsBank2",
+        "kind": "array",
+        "units": ""
+      },
+      {
+        "name": "maxDwellMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "maxInstantRetardStepDeg",
+        "kind": "scalar",
+        "units": "deg"
+      },
+      {
+        "name": "maxTorqueRateNmPerSec",
+        "kind": "scalar",
+        "units": "Nm/s"
+      },
+      {
+        "name": "odometer_totalDistanceKm",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "odometer_totalFuelConsumedL",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "odometer_tripDistanceZeroKm",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "odometer_tripFuelZeroL",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "oilTempSharedMode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "oilTempSharedTemps",
+        "kind": "array",
+        "units": "C"
+      },
+      {
+        "name": "oilTempSharedVolts",
+        "kind": "array",
+        "units": "V"
+      },
+      {
+        "name": "oilTemperatureCritical",
+        "kind": "scalar",
+        "units": "C"
+      },
+      {
+        "name": "oilTemperatureHysteresis",
+        "kind": "scalar",
+        "units": "C"
+      },
+      {
+        "name": "oilTemperatureProtectionEnabled",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "oilTemperatureTimeoutMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "pfiFuelPressureMaximum",
+        "kind": "scalar",
+        "units": "kPa"
+      },
+      {
+        "name": "pfiFuelPressureMinimum",
+        "kind": "scalar",
+        "units": "kPa"
+      },
+      {
+        "name": "pfiFuelPressureProtectionEnabled",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "pfiFuelPressureTimeoutMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "protectionConfigVersion",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "smoothingClutchGuardEnabled",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "smoothingClutchMinTps",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "smoothingClutchWindowMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "stft_maxAdd",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "stft_maxRemove",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "stft_stftLoadBins",
+        "kind": "array",
+        "units": "load"
+      },
+      {
+        "name": "stft_stftRpmBins",
+        "kind": "array",
+        "units": "RPM"
+      },
+      {
+        "name": "stft_tauBase",
+        "kind": "scalar",
+        "units": "sec"
+      },
+      {
+        "name": "tcClutchSettleTimeMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "tcCutRampRatePctPerSec",
+        "kind": "scalar",
+        "units": "%/s"
+      },
+      {
+        "name": "tcEnabled",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "tcFilterTimeConstantMs",
+        "kind": "scalar",
+        "units": "ms"
+      },
+      {
+        "name": "tcIgnitionRetardBins",
+        "kind": "array",
+        "units": "%"
+      },
+      {
+        "name": "tcIgnitionRetardCurve",
+        "kind": "array",
+        "units": "deg"
+      },
+      {
+        "name": "tcMinMap",
+        "kind": "scalar",
+        "units": "kPa"
+      },
+      {
+        "name": "tcMinTps",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "tcMode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "tcRetardRampRateDegPerSec",
+        "kind": "scalar",
+        "units": "deg/s"
+      },
+      {
+        "name": "tcSparkCutBins",
+        "kind": "array",
+        "units": "%"
+      },
+      {
+        "name": "tcSparkCutCurve",
+        "kind": "array",
+        "units": "%"
+      },
+      {
+        "name": "torqueAddEnabled",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "torqueSmoothingDeadbandNm",
+        "kind": "scalar",
+        "units": "Nm"
+      },
+      {
+        "name": "torqueSmoothingEnabled",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "torqueSmoothingTauSec",
+        "kind": "scalar",
+        "units": "s"
+      },
+      {
+        "name": "torqueSparkEfficiencyBins",
+        "kind": "array",
+        "units": "deg"
+      },
+      {
+        "name": "torqueSparkEfficiencyCurve",
+        "kind": "array",
+        "units": "ratio"
+      },
+      {
+        "name": "tpsAccelLookbackMax",
+        "kind": "scalar",
+        "units": "sec"
+      },
+      {
+        "name": "tpsDecelLookbackMax",
+        "kind": "scalar",
+        "units": "sec"
+      },
+      {
+        "name": "valetModeRpmLimit",
+        "kind": "scalar",
+        "units": "RPM"
+      },
+      {
+        "name": "vfs_persistedEthanol",
+        "kind": "scalar",
+        "units": ""
+      }
+    ],
+    "removed": [
+      {
+        "name": "canWbo1_enableRemap",
+        "kind": "bits"
+      },
+      {
+        "name": "canWbo1_reHwidx",
+        "kind": "bits"
+      },
+      {
+        "name": "canWbo1_reId",
+        "kind": "bits"
+      },
+      {
+        "name": "canWbo2_enableRemap",
+        "kind": "bits"
+      },
+      {
+        "name": "canWbo2_reHwidx",
+        "kind": "bits"
+      },
+      {
+        "name": "canWbo2_reId",
+        "kind": "bits"
+      },
+      {
+        "name": "dfcoRetardDeg",
+        "kind": "scalar"
+      },
+      {
+        "name": "dfcoRetardRampInTime",
+        "kind": "scalar"
+      },
+      {
+        "name": "ltft_table_bank1",
+        "kind": "array"
+      },
+      {
+        "name": "ltft_table_bank2",
+        "kind": "array"
+      },
+      {
+        "name": "ltft_timeConstant1",
+        "kind": "scalar"
+      },
+      {
+        "name": "ltft_timeConstant2",
+        "kind": "scalar"
+      },
+      {
+        "name": "ltft_timeConstant3",
+        "kind": "scalar"
+      },
+      {
+        "name": "ltft_timeConstant4",
+        "kind": "scalar"
+      },
+      {
+        "name": "noFuelTrimAfterAccelTime",
+        "kind": "scalar"
+      },
+      {
+        "name": "noFuelTrimAfterDfcoTime",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_cellCfgs1_maxAdd",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_cellCfgs1_maxRemove",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_cellCfgs1_timeConstant",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_cellCfgs2_maxAdd",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_cellCfgs2_maxRemove",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_cellCfgs2_timeConstant",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_cellCfgs3_maxAdd",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_cellCfgs3_maxRemove",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_cellCfgs3_timeConstant",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_cellCfgs4_maxAdd",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_cellCfgs4_maxRemove",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_cellCfgs4_timeConstant",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_maxAfr",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_maxIdleRegionRpm",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_maxOverrunLoad",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_minAfr",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_minClt",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_minPowerLoad",
+        "kind": "scalar"
+      },
+      {
+        "name": "stft_startupDelay",
+        "kind": "scalar"
+      },
+      {
+        "name": "tractionControlEtbDrop",
+        "kind": "array"
+      },
+      {
+        "name": "tractionControlIgnitionSkip",
+        "kind": "array"
+      },
+      {
+        "name": "tractionControlSlipBins",
+        "kind": "array"
+      },
+      {
+        "name": "tractionControlSpeedBins",
+        "kind": "array"
+      },
+      {
+        "name": "tractionControlTimingDrop",
+        "kind": "array"
+      },
+      {
+        "name": "unusedFancy23",
+        "kind": "bits"
+      },
+      {
+        "name": "unusedFancy24",
+        "kind": "bits"
+      },
+      {
+        "name": "unusedFancy25",
+        "kind": "bits"
+      },
+      {
+        "name": "unusedFancy3",
+        "kind": "bits"
+      },
+      {
+        "name": "unused_fan1ThermalProtectionDuty",
+        "kind": "scalar"
+      },
+      {
+        "name": "unused_fan2ThermalProtectionDuty",
+        "kind": "scalar"
+      },
+      {
+        "name": "unused_fan2ThermalProtectionTemp",
+        "kind": "scalar"
+      },
+      {
+        "name": "useAuxSpeedForSlipRatio",
+        "kind": "bits"
+      },
+      {
+        "name": "useHardSkipInTraction",
+        "kind": "bits"
+      }
+    ],
+    "rescaled": [
+      {
+        "name": "ALSTimingRetardTable",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "deg",
+          "min": -60,
+          "max": 0
+        },
+        "to": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "deg",
+          "min": -90,
+          "max": 0
+        }
+      },
+      {
+        "name": "boostClosedLoopBlends1_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "boostClosedLoopBlends2_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "boostOpenLoopBlends1_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "boostOpenLoopBlends2_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "ignBlends1_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "ignBlends2_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "ignBlends3_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "ignBlends4_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "targetAfrBlends1_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "targetAfrBlends2_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "tpsAccelLookback",
+        "from": {
+          "scale": 0.05,
+          "offset": 0,
+          "units": "sec",
+          "min": 0,
+          "max": 5
+        },
+        "to": {
+          "scale": 0.01,
+          "offset": 0,
+          "units": "sec",
+          "min": 0,
+          "max": 1
+        }
+      },
+      {
+        "name": "tpsDecelLookback",
+        "from": {
+          "scale": 0.05,
+          "offset": 0,
+          "units": "sec",
+          "min": 0,
+          "max": 5
+        },
+        "to": {
+          "scale": 0.01,
+          "offset": 0,
+          "units": "sec",
+          "min": 0,
+          "max": 1
+        }
+      },
+      {
+        "name": "veBlends1_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "veBlends2_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "veBlends3_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      },
+      {
+        "name": "veBlends4_table",
+        "from": {
+          "scale": 0.1,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        },
+        "to": {
+          "scale": 0.02,
+          "offset": 0,
+          "units": "",
+          "min": -100,
+          "max": 100
+        }
+      }
+    ],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": true
+  }
+}

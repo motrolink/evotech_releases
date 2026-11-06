@@ -1,0 +1,392 @@
+{
+  "schema": 1,
+  "release_id": "evotech4/2026.11.05_3816673681",
+  "board": "evotech4",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2026.11.05.evotech4.3816673681",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2026-11-05T13:12:12.979843+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "22448ee6664e35e1b55ef7c6294b8c26b66200a361c143daacdca08fa95cb93f",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech4/2026.11.04_536923032",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": false,
+    "page_size": {
+      "from": 29844,
+      "to": 29844
+    },
+    "added": [
+      {
+        "name": "unusedTpsTimingCorrPad",
+        "kind": "array",
+        "units": ""
+      }
+    ],
+    "removed": [
+      {
+        "name": "airPredMapNoiseKpa",
+        "kind": "scalar"
+      },
+      {
+        "name": "filmFuelTauExpCold",
+        "kind": "scalar"
+      },
+      {
+        "name": "filmFuelTauExpHot",
+        "kind": "scalar"
+      },
+      {
+        "name": "filmGtau0",
+        "kind": "scalar"
+      },
+      {
+        "name": "filmGtau1",
+        "kind": "scalar"
+      },
+      {
+        "name": "filmGtau2",
+        "kind": "scalar"
+      },
+      {
+        "name": "filmGtau3",
+        "kind": "scalar"
+      },
+      {
+        "name": "filmGtau4",
+        "kind": "scalar"
+      },
+      {
+        "name": "filmGx0",
+        "kind": "scalar"
+      },
+      {
+        "name": "filmGx1",
+        "kind": "scalar"
+      },
+      {
+        "name": "filmGx2",
+        "kind": "scalar"
+      },
+      {
+        "name": "filmGx3",
+        "kind": "scalar"
+      },
+      {
+        "name": "filmGx4",
+        "kind": "scalar"
+      },
+      {
+        "name": "filmLearnKtau0",
+        "kind": "scalar"
+      },
+      {
+        "name": "filmLearnKtau1",
+        "kind": "scalar"
+      },
+      {
+        "name": "filmLearnKtau2",
+        "kind": "scalar"
+      },
+      {
+        "name": "filmLearnKx0",
+        "kind": "scalar"
+      },
+      {
+        "name": "filmLearnKx1",
+        "kind": "scalar"
+      },
+      {
+        "name": "filmLearnKx2",
+        "kind": "scalar"
+      },
+      {
+        "name": "filmProbeDelayMs",
+        "kind": "scalar"
+      },
+      {
+        "name": "filmTauRefS",
+        "kind": "scalar"
+      },
+      {
+        "name": "filmTempKtau",
+        "kind": "scalar"
+      },
+      {
+        "name": "filmTempKx",
+        "kind": "scalar"
+      },
+      {
+        "name": "filmXClosed",
+        "kind": "scalar"
+      },
+      {
+        "name": "filmXOpen",
+        "kind": "scalar"
+      },
+      {
+        "name": "regimeTpsRateFull",
+        "kind": "scalar"
+      },
+      {
+        "name": "regimeTpsRateMin",
+        "kind": "scalar"
+      },
+      {
+        "name": "regimeWeightMax",
+        "kind": "scalar"
+      },
+      {
+        "name": "transientAeResidual",
+        "kind": "bits"
+      },
+      {
+        "name": "transientKtau",
+        "kind": "scalar"
+      },
+      {
+        "name": "transientKx",
+        "kind": "scalar"
+      },
+      {
+        "name": "transientLearnFilm",
+        "kind": "bits"
+      },
+      {
+        "name": "transientLearnRegime",
+        "kind": "bits"
+      },
+      {
+        "name": "transientModelMagic",
+        "kind": "scalar"
+      },
+      {
+        "name": "transientModelMode",
+        "kind": "bits"
+      },
+      {
+        "name": "unusedTransientPad",
+        "kind": "array"
+      },
+      {
+        "name": "valveIvcDeg",
+        "kind": "scalar"
+      },
+      {
+        "name": "valveIvoDeg",
+        "kind": "scalar"
+      }
+    ],
+    "rescaled": [
+      {
+        "name": "launchTpsThreshold",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "",
+          "min": 0,
+          "max": 20000
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "%",
+          "min": 0,
+          "max": 100
+        }
+      },
+      {
+        "name": "torqueReductionArmingApp",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "",
+          "min": 0,
+          "max": 20000
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "%",
+          "min": 0,
+          "max": 100
+        }
+      },
+      {
+        "name": "torqueReductionTimeTable",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ms",
+          "min": 1,
+          "max": 2000
+        },
+        "to": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ms",
+          "min": 0,
+          "max": 2000
+        }
+      },
+      {
+        "name": "tps1SecondaryMax",
+        "from": {
+          "scale": 0.0048828125,
+          "offset": 0,
+          "units": "V",
+          "min": 0,
+          "max": 5
+        },
+        "to": {
+          "scale": 0.005,
+          "offset": 0,
+          "units": "V",
+          "min": 0,
+          "max": 5
+        }
+      },
+      {
+        "name": "tps1SecondaryMin",
+        "from": {
+          "scale": 0.0048828125,
+          "offset": 0,
+          "units": "V",
+          "min": 0,
+          "max": 5
+        },
+        "to": {
+          "scale": 0.005,
+          "offset": 0,
+          "units": "V",
+          "min": 0,
+          "max": 5
+        }
+      },
+      {
+        "name": "tps2Max",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ADC",
+          "min": 0,
+          "max": 1023
+        },
+        "to": {
+          "scale": 0.005,
+          "offset": 0,
+          "units": "V",
+          "min": 0,
+          "max": 5
+        }
+      },
+      {
+        "name": "tps2Min",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ADC",
+          "min": 0,
+          "max": 1023
+        },
+        "to": {
+          "scale": 0.005,
+          "offset": 0,
+          "units": "V",
+          "min": 0,
+          "max": 5
+        }
+      },
+      {
+        "name": "tps2SecondaryMax",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ADC",
+          "min": 0,
+          "max": 1000
+        },
+        "to": {
+          "scale": 0.005,
+          "offset": 0,
+          "units": "V",
+          "min": 0,
+          "max": 5
+        }
+      },
+      {
+        "name": "tps2SecondaryMin",
+        "from": {
+          "scale": 1,
+          "offset": 0,
+          "units": "ADC",
+          "min": 0,
+          "max": 1000
+        },
+        "to": {
+          "scale": 0.005,
+          "offset": 0,
+          "units": "V",
+          "min": 0,
+          "max": 5
+        }
+      },
+      {
+        "name": "tpsMax",
+        "from": {
+          "scale": 0.0048828125,
+          "offset": 0,
+          "units": "V",
+          "min": 0,
+          "max": 5
+        },
+        "to": {
+          "scale": 0.005,
+          "offset": 0,
+          "units": "V",
+          "min": 0,
+          "max": 5
+        }
+      },
+      {
+        "name": "tpsMin",
+        "from": {
+          "scale": 0.0048828125,
+          "offset": 0,
+          "units": "V",
+          "min": 0,
+          "max": 5
+        },
+        "to": {
+          "scale": 0.005,
+          "offset": 0,
+          "units": "V",
+          "min": 0,
+          "max": 5
+        }
+      }
+    ],
+    "retyped": [
+      {
+        "name": "tps2SecondaryMax",
+        "from": "U16",
+        "to": "S16"
+      },
+      {
+        "name": "tps2SecondaryMin",
+        "from": "U16",
+        "to": "S16"
+      }
+    ],
+    "reshaped": [],
+    "output_channels_moved": true
+  }
+}

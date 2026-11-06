@@ -1,0 +1,100 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2026.06.25_2817833233",
+  "board": "evotech12",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2026.06.25.evotech12.2817833233",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2026-06-25T14:17:09.982617+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "de5c6a0f57748e1e8a3aab403cca87d1ceb907c077103d53f2cd473fdd3a6164",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2026.06.21_1343137793",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": true,
+    "page_size": {
+      "from": 27796,
+      "to": 27852
+    },
+    "added": [
+      {
+        "name": "coldStartAuxAeDuty",
+        "kind": "scalar",
+        "units": "%"
+      },
+      {
+        "name": "coldStartAuxAeEnable",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "coldStartAuxAeHoldTime",
+        "kind": "scalar",
+        "units": "sec"
+      },
+      {
+        "name": "coldStartAuxCrankingCltBins",
+        "kind": "array",
+        "units": "C"
+      },
+      {
+        "name": "coldStartAuxCrankingDuty",
+        "kind": "array",
+        "units": "%"
+      },
+      {
+        "name": "coldStartAuxEnable",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "coldStartAuxMaxClt",
+        "kind": "scalar",
+        "units": "C"
+      },
+      {
+        "name": "coldStartAuxPin",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "coldStartAuxPinMode",
+        "kind": "bits",
+        "units": ""
+      },
+      {
+        "name": "coldStartAuxPrimingCltBins",
+        "kind": "array",
+        "units": "C"
+      },
+      {
+        "name": "coldStartAuxPrimingDuration",
+        "kind": "array",
+        "units": "sec"
+      },
+      {
+        "name": "coldStartAuxPrimingRepeatDelay",
+        "kind": "scalar",
+        "units": "sec"
+      },
+      {
+        "name": "coldStartAuxPwmFrequency",
+        "kind": "scalar",
+        "units": "Hz"
+      }
+    ],
+    "removed": [],
+    "rescaled": [],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": true
+  }
+}

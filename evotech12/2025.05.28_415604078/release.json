@@ -1,0 +1,75 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2025.05.28_415604078",
+  "board": "evotech12",
+  "channel": "prod",
+  "full_signature": "rusEFI motrolink_release.2025.05.28.evotech12.415604078",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2025-10-23T17:40:28.528255+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "dff41ff67eca3b02a26a2ed14e06f7b4d2d9802e4fc64f4039b85e10ca9bd11f",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2025.05.28_922981654",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": true,
+    "page_size": {
+      "from": 22204,
+      "to": 21724
+    },
+    "added": [],
+    "removed": [],
+    "rescaled": [
+      {
+        "name": "wwBetaCorrection",
+        "from": {
+          "scale": 0.01,
+          "offset": 0,
+          "units": "Beta correction multiplier",
+          "min": 0.5,
+          "max": 2
+        },
+        "to": {
+          "scale": 0.01,
+          "offset": 0,
+          "units": "Beta correction multiplier",
+          "min": 0,
+          "max": 2.5
+        }
+      },
+      {
+        "name": "wwTauCorrection",
+        "from": {
+          "scale": 0.01,
+          "offset": 0,
+          "units": "Tau correction multiplier",
+          "min": 0.5,
+          "max": 2
+        },
+        "to": {
+          "scale": 0.01,
+          "offset": 0,
+          "units": "Tau correction multiplier",
+          "min": 0,
+          "max": 2.5
+        }
+      }
+    ],
+    "retyped": [],
+    "reshaped": [
+      {
+        "name": "ltitTable",
+        "from": "[16x16]",
+        "to": "[16]"
+      }
+    ],
+    "output_channels_moved": false
+  }
+}

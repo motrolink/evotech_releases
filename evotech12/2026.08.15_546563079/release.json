@@ -1,0 +1,103 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2026.08.15_546563079",
+  "board": "evotech12",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2026.08.15.evotech12.546563079",
+  "build_id": "",
+  "git_commit": "",
+  "dirty": false,
+  "built_at": "2026-08-15T16:53:42.995941+00:00",
+  "flash_data_version": null,
+  "bin_sha256": "a51da88f141fb0b51655249e41ffc84aaef3f991b77ecb4620f6162114c565af",
+  "notes_kind": "auto",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2026.08.15_575097789",
+    "flash_data_version": null
+  },
+  "entries": [],
+  "map_diff": {
+    "config_reset": true,
+    "page_size": {
+      "from": 28056,
+      "to": 28580
+    },
+    "added": [
+      {
+        "name": "ltft_trimsBank1",
+        "kind": "array",
+        "units": ""
+      },
+      {
+        "name": "ltft_trimsBank2",
+        "kind": "array",
+        "units": ""
+      },
+      {
+        "name": "odometer_totalDistanceKm",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "odometer_totalFuelConsumedL",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "odometer_tripDistanceZeroKm",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "odometer_tripFuelZeroL",
+        "kind": "scalar",
+        "units": ""
+      },
+      {
+        "name": "vfs_persistedEthanol",
+        "kind": "scalar",
+        "units": ""
+      }
+    ],
+    "removed": [
+      {
+        "name": "canWbo1_enableRemap",
+        "kind": "bits"
+      },
+      {
+        "name": "canWbo1_reHwidx",
+        "kind": "bits"
+      },
+      {
+        "name": "canWbo1_reId",
+        "kind": "bits"
+      },
+      {
+        "name": "canWbo2_enableRemap",
+        "kind": "bits"
+      },
+      {
+        "name": "canWbo2_reHwidx",
+        "kind": "bits"
+      },
+      {
+        "name": "canWbo2_reId",
+        "kind": "bits"
+      },
+      {
+        "name": "ltft_table_bank1",
+        "kind": "array"
+      },
+      {
+        "name": "ltft_table_bank2",
+        "kind": "array"
+      }
+    ],
+    "rescaled": [],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": true
+  }
+}
