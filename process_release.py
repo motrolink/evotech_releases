@@ -2,11 +2,18 @@
 """
 Script para processar releases do MotroLink.
 Detecta novas pastas com arquivos .ini, extrai metadados e reorganiza na estrutura hardware/signature.
+
+Pastas novas (com build.json vindo do deploy.py da firmware) usam o nome
+<YYYY.MM.DD>_<hash>_<build_id> e o manifest schema 2 (release_id, build_id, git_commit,
+flash_data_version, bin_path, bin_sha256, has_notes, notes_kind, notes_path, title).
+Sem build.json vale o comportamento legado (<YYYY.MM.DD>_<hash>, 8 campos).
+Ver docs/design/release-notes-e-pagina-de-update.md na firmware (contratos 8.3 e 8.4).
 """
 
 import os
 import re
 import json
+import hashlib
 import shutil
 from datetime import datetime, timezone
 from pathlib import Path
@@ -17,19 +24,26 @@ class ReleaseProcessor:
     """Processa releases e gerencia o manifest."""
 
     MANIFEST_FILE = "manifest.json"
-    EXCLUDED_DIRS = {".git", ".github", ".claude"}
+    MANIFEST_SCHEMA = 2
+    EXCLUDED_DIRS = {".git", ".github", ".claude", "tools", "tests", "__pycache__", ".pytest_cache"}
+    # notas escritas por pessoas (ou reconstruidas): o Manager mostra como "notas";
+    # `auto` e so a parte calculada (diff do INI), sem notas detalhadas.
+    HUMAN_NOTES_KINDS = {"release", "preview", "backfill"}
+    FOLDER_RE = re.compile(r'^\d{4}\.\d{2}\.\d{2}_\d+(_[0-9a-f]{8})?$')
+    BUILD_ID_RE = re.compile(r'^[0-9a-f]{8}$')
 
     def __init__(self, root_dir: str = "."):
         self.root_dir = Path(root_dir).resolve()
         self.manifest_path = self.root_dir / self.MANIFEST_FILE
         self.manifest = self._load_manifest()
+        self.conflicts: List[str] = []
 
     def _load_manifest(self) -> Dict:
         """Carrega o manifest.json existente ou cria um novo."""
         if self.manifest_path.exists():
             with open(self.manifest_path, 'r', encoding='utf-8') as f:
                 return json.load(f)
-        return {"releases": []}
+        return {"schema": self.MANIFEST_SCHEMA, "releases": []}
 
     def _save_manifest(self):
         """Salva o manifest.json ordenado por timestamp."""
@@ -38,6 +52,11 @@ class ReleaseProcessor:
             key=lambda x: x["timestamp"],
             reverse=True
         )
+
+        # schema sempre primeiro; entradas legadas continuam validas sem os campos novos
+        out = {"schema": self.MANIFEST_SCHEMA}
+        out.update({k: v for k, v in self.manifest.items() if k != "schema"})
+        self.manifest = out
 
         with open(self.manifest_path, 'w', encoding='utf-8') as f:
             json.dump(self.manifest, f, indent=2, ensure_ascii=False)
@@ -158,9 +177,7 @@ class ReleaseProcessor:
             return False
 
         # Verifica se pelo menos uma subpasta segue o formato YYYY.MM.DD_signature
-        import re
-        date_sig_pattern = re.compile(r'^\d{4}\.\d{2}\.\d{2}_\d+$')
-        return any(date_sig_pattern.match(d.name) for d in subdirs)
+        return any(self.FOLDER_RE.match(d.name) for d in subdirs)
 
     def _get_candidate_directories(self) -> List[Path]:
         """Retorna lista de diretórios candidatos a serem processados."""
@@ -182,14 +199,57 @@ class ReleaseProcessor:
 
         return candidates
 
-    def _release_exists(self, hardware: str, date: str, signature: str) -> bool:
+    def _same_release(self, r: Dict, hardware: str, date: str, signature: str, build_id: Optional[str]) -> bool:
+        """Mesma release: placa, data, hash e, quando ha, o build_id.
+
+        Builds com build_id diferente no mesmo dia e com o mesmo hash sao releases
+        distintas (o hash so cobre o layout da config). Uma entrada legada (sem
+        build_id) casa com um upload sem build.json."""
+        return (r["hardware"] == hardware and r.get("date") == date and r["signature"] == signature
+                and r.get("build_id") == build_id)
+
+    def _release_exists(self, hardware: str, date: str, signature: str, build_id: Optional[str] = None) -> bool:
         """Verifica se o release já existe no manifest."""
-        return any(
-            r["hardware"] == hardware and
-            r.get("date") == date and
-            r["signature"] == signature
-            for r in self.manifest["releases"]
-        )
+        return any(self._same_release(r, hardware, date, signature, build_id)
+                   for r in self.manifest["releases"])
+
+    @staticmethod
+    def _read_json(path: Path) -> Optional[Dict]:
+        try:
+            with open(path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            return data if isinstance(data, dict) else None
+        except (OSError, ValueError):
+            return None
+
+    def _load_build_info(self, source_dir: Path) -> Optional[Dict]:
+        """build.json do deploy (ou None = release legada). So vale com build_id valido."""
+        found = list(source_dir.rglob("build.json"))
+        if not found:
+            return None
+        info = self._read_json(found[0])
+        if not info:
+            print(f"[!] build.json ilegivel em {source_dir.name}, tratando como release legada")
+            return None
+        build_id = str(info.get("build_id") or str(info.get("git_commit", ""))[:8]).lower()
+        if not self.BUILD_ID_RE.match(build_id):
+            print(f"[!] build_id invalido em build.json ({build_id!r}), tratando como release legada")
+            return None
+        info["build_id"] = build_id
+        return info
+
+    @staticmethod
+    def _sha256(path: Path) -> str:
+        h = hashlib.sha256()
+        with open(path, 'rb') as f:
+            for chunk in iter(lambda: f.read(1 << 20), b''):
+                h.update(chunk)
+        return h.hexdigest()
+
+    def _existing_build_commit(self, dest_dir: Path) -> Optional[str]:
+        """git_commit da release ja presente na pasta de destino (se identificavel)."""
+        info = self._read_json(dest_dir / "build.json")
+        return str(info.get("git_commit")) if info and info.get("git_commit") else None
 
     def _is_translation_file(self, filename: str) -> bool:
         """Verifica se o arquivo é um arquivo de tradução."""
@@ -214,8 +274,8 @@ class ReleaseProcessor:
         if self._is_translation_file(item.name):
             return True
 
-        # Mantém changelog
-        if filename in ('changelog.md', 'changelog.txt'):
+        # Mantém changelog e as notas/metadados de build gerados pelo deploy
+        if filename in ('changelog.md', 'changelog.txt', 'release.json', 'build.json'):
             return True
 
         return False
@@ -263,16 +323,42 @@ class ReleaseProcessor:
         print(f"[OK] Data: {date}")
         print(f"[OK] Assinatura: {signature}")
 
-        # 5. Verifica se release já existe (será atualizado)
-        updating = self._release_exists(hardware, date, signature)
+        # 5. build.json (deploy novo) define o build_id e a pasta; sem ele, legado
+        build_info = self._load_build_info(source_dir)
+        build_id = build_info["build_id"] if build_info else None
+        folder = f"{date}_{signature}_{build_id}" if build_id else f"{date}_{signature}"
+        if build_id:
+            print(f"[OK] build_id: {build_id}")
+
+        updating = self._release_exists(hardware, date, signature, build_id)
         if updating:
-            print(f"[!] Release ja existe: {hardware}/{date}_{signature}")
+            print(f"[!] Release ja existe: {hardware}/{folder}")
             print(f"  Atualizando arquivos...")
 
-        # 6. Cria estrutura de destino
-        dest_dir = self.root_dir / hardware / f"{date}_{signature}"
+        # 6. Cria estrutura de destino (nunca sobrescreve uma build diferente em silencio)
+        dest_dir = self.root_dir / hardware / folder
 
         if dest_dir.exists():
+            existing_commit = self._existing_build_commit(dest_dir)
+            incoming_commit = str(build_info.get("git_commit")) if build_info and build_info.get("git_commit") else None
+            existing_entry = next((r for r in self.manifest["releases"]
+                                   if self._same_release(r, hardware, date, signature, build_id)), None)
+            existing_build = existing_commit or (existing_entry or {}).get("git_commit") \
+                or (existing_entry or {}).get("build_id")
+            conflict = False
+            if existing_build and not incoming_commit:
+                conflict = True   # upload legado sobre uma build identificada
+            elif existing_build and incoming_commit and not (
+                    existing_build == incoming_commit or incoming_commit.startswith(str(existing_build))):
+                conflict = True   # mesma pasta, outro commit
+            if conflict:
+                msg = (f"{hardware}/{folder} ja existe com outra build ({existing_build}); "
+                       f"upload ({incoming_commit or 'sem build.json'}) NAO sobrescreve. "
+                       f"Pasta de origem mantida: {source_dir.name}")
+                print(f"[X] {msg}")
+                print(f"::error::{msg}")
+                self.conflicts.append(msg)
+                return False
             print(f"[!] Diretorio destino ja existe: {dest_dir.relative_to(self.root_dir)}")
             print(f"  Removendo diretorio existente...")
             shutil.rmtree(dest_dir)
@@ -308,7 +394,7 @@ class ReleaseProcessor:
         if updating:
             self.manifest["releases"] = [
                 r for r in self.manifest["releases"]
-                if not (r["hardware"] == hardware and r.get("date") == date and r["signature"] == signature)
+                if not self._same_release(r, hardware, date, signature, build_id)
             ]
 
         # Caminho relativo do .ini a partir da raiz
@@ -329,6 +415,9 @@ class ReleaseProcessor:
             translation_relative_path = (dest_dir / translation_file_moved).relative_to(self.root_dir)
             release_entry["translation_path"] = str(translation_relative_path).replace("\\", "/")
 
+        if build_info:
+            release_entry.update(self._schema2_fields(hardware, folder, dest_dir, build_info))
+
         self.manifest["releases"].append(release_entry)
 
         action = "atualizado" if updating else "processado"
@@ -337,8 +426,43 @@ class ReleaseProcessor:
         print(f"  Caminho INI: {release_entry['ini_path']}")
         if translation_file_moved:
             print(f"  Caminho Traducao: {release_entry['translation_path']}")
+        if "release_id" in release_entry:
+            print(f"  release_id: {release_entry['release_id']} (notas: {release_entry.get('notes_kind', 'nenhuma')})")
 
         return True
+
+    def _schema2_fields(self, hardware: str, folder: str, dest_dir: Path, build_info: Dict) -> Dict:
+        """Campos opcionais do manifest schema 2 (contrato 8.4)."""
+        def rel(p: Path) -> str:
+            return str(p.relative_to(self.root_dir)).replace("\\", "/")
+
+        fields: Dict = {
+            "release_id": f"{hardware}/{folder}",
+            "build_id": build_info["build_id"],
+            "git_commit": str(build_info.get("git_commit") or ""),
+            "flash_data_version": build_info.get("flash_data_version"),
+        }
+        bin_file = dest_dir / "rusefi.bin"
+        if bin_file.exists():
+            fields["bin_path"] = rel(bin_file)
+            actual = self._sha256(bin_file)
+            declared = build_info.get("bin_sha256")
+            if declared and declared != actual:
+                print(f"[!] bin_sha256 do build.json ({declared[:12]}...) difere do rusefi.bin ({actual[:12]}...); usando o do arquivo")
+            fields["bin_sha256"] = actual
+        elif build_info.get("bin_sha256"):
+            fields["bin_sha256"] = build_info["bin_sha256"]
+        notes = self._read_json(dest_dir / "release.json")
+        if notes:
+            if notes.get("release_id") and notes["release_id"] != fields["release_id"]:
+                print(f"[!] release.json declara release_id {notes['release_id']} mas a pasta e {fields['release_id']}")
+            fields["has_notes"] = notes.get("notes_kind") in self.HUMAN_NOTES_KINDS
+            fields["notes_kind"] = notes.get("notes_kind")
+            fields["notes_path"] = rel(dest_dir / "release.json")
+            fields["title"] = notes.get("title") or ""
+        else:
+            fields["has_notes"] = False
+        return fields
 
     def process_all(self):
         """Processa todos os diretórios candidatos."""
@@ -365,6 +489,11 @@ class ReleaseProcessor:
             print(f"{'='*60}")
         else:
             print("\nNenhum release foi processado.")
+
+        if self.conflicts:
+            print(f"\n[X] {len(self.conflicts)} release(s) NAO processado(s) por conflito de build:")
+            for c in self.conflicts:
+                print(f"  - {c}")
 
 
 def main():
