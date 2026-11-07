@@ -2,6 +2,28 @@
   "schema": 2,
   "releases": [
     {
+      "timestamp": "2026-11-07T23:35:08.286496+00:00",
+      "signature": "182136741",
+      "hardware": "evotech12",
+      "date": "2026.11.07",
+      "environment": "dev",
+      "ini_path": "evotech12/2026.11.07_182136741_1d94d48b/evotech_evotech12.ini",
+      "full_signature": "rusEFI motrolink_dev.2026.11.07.evotech12.182136741",
+      "translation_path": "evotech12/2026.11.07_182136741_1d94d48b/ini_strings_pt-BR.json",
+      "script_api_path": "evotech12/2026.11.07_182136741_1d94d48b/script_api_evotech12.json",
+      "wizard_path": "evotech12/2026.11.07_182136741_1d94d48b/setup_wizard_evotech12.json",
+      "release_id": "evotech12/2026.11.07_182136741_1d94d48b",
+      "build_id": "1d94d48b",
+      "git_commit": "1d94d48bcd58fe95bcf3ba92d0c19aaa6b648ab3",
+      "flash_data_version": 261027,
+      "bin_path": "evotech12/2026.11.07_182136741_1d94d48b/rusefi.bin",
+      "bin_sha256": "db0d748b258392511881c508d46e7d25f524b0436dab18b43ff78334d90fd17f",
+      "has_notes": true,
+      "notes_kind": "preview",
+      "notes_path": "evotech12/2026.11.07_182136741_1d94d48b/release.json",
+      "title": ""
+    },
+    {
       "timestamp": "2026-11-07T14:00:46.933851+00:00",
       "signature": "3672898469",
       "hardware": "evotech12",
