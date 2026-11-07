@@ -1,0 +1,894 @@
+{
+  "schema": 1,
+  "release_id": "evotech12/2026.11.07_3672898469_06bfe681",
+  "board": "evotech12",
+  "channel": "dev",
+  "full_signature": "rusEFI motrolink_dev.2026.11.07.evotech12.3672898469",
+  "build_id": "06bfe681",
+  "git_commit": "06bfe681507ccd625131dc9b9a95d316c566b63c",
+  "dirty": true,
+  "built_at": "2026-11-07T09:04:25Z",
+  "flash_data_version": 261027,
+  "bin_sha256": "2fceb2d2d2d1be48e25cee804f0ecfbf94130fcab88a010c4fe1a9d1abc53ab6",
+  "notes_kind": "preview",
+  "title": "",
+  "summary": "",
+  "base": {
+    "release_id": "evotech12/2026.11.06_1095591036_24af00b6",
+    "flash_data_version": 261027
+  },
+  "entries": [
+    {
+      "id": "ae-filme-compartilhamento",
+      "tipo": "novo",
+      "publico": "usuario",
+      "titulo": "Acoplamento entre o enriquecimento de aceleração e o filme de parede",
+      "descricao": "Novos campos: parcela do enriquecimento que passa pelo filme (1,0 = como antes: o filme também amplifica o AE em\n1/(1-beta); 0,0 = o AE entra depois do filme), teto do enriquecimento de aceleração (0 = sem teto) e \"Escalar a\ndesaceleração pelas curvas de CLT e rotação\". Eles reaproveitam os bytes de duas curvas 1D do filme que a ECU\nnunca lia. Um mapa salvo é convertido no carregamento (parcela 1,0, sem teto, desaceleração ainda escalada), então\no comportamento se mantém; um mapa novo começa com a desaceleração sem escala.",
+      "mapa": {
+        "impacto": "convertido",
+        "campos": [
+          "wwaeAeFilmShare",
+          "tpsAccelMaxEnrich",
+          "tpsDecelUsesCltRpmMult",
+          "aeCouplingMigrated"
+        ],
+        "acao": "O assistente do Manager que escrevia os campos antigos dessa curva precisa ser atualizado."
+      },
+      "issue": 36
+    },
+    {
+      "id": "corte-na-troca-telemetria",
+      "tipo": "novo",
+      "publico": "preparador",
+      "titulo": "Telemetria do corte na troca",
+      "descricao": "Canais novos: estado da velocidade, regra de velocidade inativa, porta de velocidade, % de corte de faísca, avanço usado\ndurante o corte e o valor X atual de cada tabela, e o % de corte de faísca da largada. Os canais de telemetria mudam de\nposição nesta versão: use o INI que acompanha a firmware.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      },
+      "issue": 37
+    },
+    {
+      "id": "evonet-alertas-1-2",
+      "tipo": "novo",
+      "publico": "usuario",
+      "titulo": "evoNet 1.2: alertas de proteção, borboleta, sensores e falhas da ECU nos displays",
+      "descricao": "O evoNet 1.2 envia proteções do motor, falhas da borboleta, de sensores e da ECU para displays compatíveis, com um alerta principal por severidade, medições ao vivo válidas e motivos separados de corte de combustível e de ignição. Os limites das proteções continuam configurados na ECU.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "geometria-do-motor-tela-unica",
+      "tipo": "novo",
+      "publico": "usuario",
+      "titulo": "Tela Engine Geometry (menu Setup)",
+      "descricao": "Único lugar para número de cilindros, cilindrada, diâmetro, ordem de ignição, estratégia de combustível, eficiência\ntérmica, taxa de compressão e volumes de admissão e de escape até o sensor de lambda, agrupados em Dimensões do motor,\nCiclo e combustão e Volumes (o diâmetro agora é editável sem detonação por software), com avisos de plausibilidade\n(curso 50 a 130 mm, diâmetro/curso 0,7 a 1,3) e um indicador de dados válidos. A geometria é sempre considerada\nconfirmada: não há mais o bit \"Geometry confirmed\" nem mostrador de curso derivado. Esses campos saíram de Informações do\nveículo, que agora só tem a identificação. Canais novos: engineStrokeMm, engineGeometryInvalid, engineStrokeImplausible e\nengineBoreStrokeImplausible. Um mapa salvo com o bit antigo carrega com ele desmarcado; combustível e ignição não mudam.",
+      "mapa": {
+        "impacto": "convertido",
+        "campos": [],
+        "acao": "Procure os campos de geometria na nova tela Engine Geometry."
+      },
+      "issue": 34
+    },
+    {
+      "id": "issue-41-calibracao-pedal-borboleta",
+      "tipo": "novo",
+      "publico": "usuario",
+      "titulo": "Calibração do pedal e da borboleta a cabo por botões",
+      "descricao": "Botões para calibrar o pedal solto e pisado e a borboleta fechada e totalmente aberta de uma borboleta a cabo,\nmais um status da calibração (procedimento, passo, progresso, resultado e contador de eventos) no TunerStudio\ne no Manager e um botão para abortar. A ECU recusa qualquer comando de calibração fora das condições (motor\nligado, ignição ligada, sensor ausente ou fora da faixa, fechado e aberto muito próximos, outro procedimento\nem andamento, controle do motor da ETB pausado) e diz o motivo, em vez de falhar em silêncio.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      },
+      "issue": 41
+    },
+    {
+      "id": "limite-teto-de-dwell-dev",
+      "tipo": "novo",
+      "publico": "preparador",
+      "titulo": "Teto opcional de dwell da bobina (builds de desenvolvimento)",
+      "descricao": "Um teto opcional de dwell cobre o dwell corrigido, a partida e o multispark, com prazo de saída independente e indicação de ajuste pendente. Ainda precisa de qualificação em bancada.",
+      "mapa": {
+        "impacto": "campos_novos",
+        "campos": [
+          "maxDwellMs"
+        ],
+        "acao": ""
+      }
+    },
+    {
+      "id": "marcha-lenta-pwm-senoidal",
+      "tipo": "novo",
+      "publico": "preparador",
+      "titulo": "PWM senoidal da solenoide de marcha lenta (somente builds de desenvolvimento)",
+      "descricao": "A válvula de marcha lenta pode ser acionada por uma senoide na Frequência da solenoide de marcha lenta (20 a 1000 Hz),\nsobre um PWM de hardware fixo de 20 kHz e com amplitude configurável. O duty médio continua igual à posição de marcha\nlenta comandada, então a calibração não muda; o sinal quadrado é mantido se o pino não tiver timer livre ou a\nfrequência estiver fora da faixa (veja idle_pwm_info). Desligado por padrão. O efeito elétrico na válvula ainda não foi\nvalidado em bancada.",
+      "mapa": {
+        "impacto": "campos_novos",
+        "campos": [
+          "idleSolenoidSineEnable",
+          "idleSolenoidSineAmplitude"
+        ],
+        "acao": ""
+      }
+    },
+    {
+      "id": "obd2-pid-0x1f-tempo-desde-a-partida",
+      "tipo": "novo",
+      "publico": "usuario",
+      "titulo": "OBD-II: PID 0x1F (tempo desde a partida)",
+      "descricao": "O responder OBD-II responde ao PID 0x1F, informando 0 com o motor parado e os segundos decorridos com o motor funcionando. Displays como a WideLink, que usam esse PID na detecção de motor ligado para desligar sozinhos, passam a ter um terceiro sinal além de rotação e carga.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "osciloscopio-de-sinais",
+      "tipo": "novo",
+      "publico": "preparador",
+      "titulo": "Osciloscópio de sinais com resolução de 1 us e até 8 canais",
+      "descricao": "O Manager grava bordas digitais com resolução de 1 us e escolhe até 8 canais: gatilhos de virabrequim e comando, qualquer pino digital livre, bobinas e injetores por cilindro, PMS e sincronismo. As entradas de comando são gravadas pela primeira vez, o que torna possível diagnosticar a fase.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "protecoes-historico-e-telas",
+      "tipo": "novo",
+      "publico": "usuario",
+      "titulo": "Histórico das proteções e telas agrupadas por sistema",
+      "descricao": "A visão geral das proteções guarda as oito últimas transições registradas no journal da ECU, com navegação, estado de\ngravação e exclusão do histórico. As telas são agrupadas por sistema e distinguem pedidos de proteção de restrições\nfinais da ECU, com leituras numéricas ao vivo e causas e condições de liberação explícitas. Os campos de habilitação de\nproteção (água, ar de admissão, óleo e combustível, EGT, bateria, PFI e GDI) mostram opções booleanas em vez de 0/1,\nsem alterar os offsets da calibração. As configurações das proteções de duty do injetor passaram para a página do\nduty.",
+      "mapa": {
+        "impacto": "campos_novos",
+        "campos": [
+          "epHistoryWords",
+          "cltTemperatureProtectionEnabled",
+          "iatTemperatureProtectionEnabled",
+          "oilTemperatureProtectionEnabled",
+          "fuelTemperatureProtectionEnabled",
+          "egtProtectionEnabled",
+          "batteryProtectionEnabled",
+          "pfiFuelPressureProtectionEnabled",
+          "gdiRailProtectionEnabled"
+        ],
+        "acao": ""
+      }
+    },
+    {
+      "id": "protecoes-politicas-dev",
+      "tipo": "novo",
+      "publico": "preparador",
+      "titulo": "Proteções unificadas com políticas de aviso e crítico (builds de desenvolvimento)",
+      "descricao": "Proteções unificadas oferecem políticas separadas de aviso e crítico, tratamento de falha de sensor, rearme retido e limites de rotação só de combustível para óleo, lambda, boost, duty do injetor, pressão de combustível, temperaturas, EGT e bateria, com controles traduzidos e telemetria de incidentes.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "robustez-limite-final-de-avanco",
+      "tipo": "novo",
+      "publico": "usuario",
+      "titulo": "Limite final opcional do avanço de ignição",
+      "descricao": "Um limite final opcional do avanço de ignição, desligado por padrão para que mapas antigos mantenham o retardo atual.",
+      "mapa": {
+        "impacto": "campos_novos",
+        "campos": [
+          "ignitionTimingLimitEnabled"
+        ],
+        "acao": ""
+      }
+    },
+    {
+      "id": "sensores-temperatura-modo-compartilhado",
+      "tipo": "novo",
+      "publico": "usuario",
+      "titulo": "Sensores de temperatura com modo compartilhado",
+      "descricao": "CLT, IAT, Aux Temp 1 e 2, óleo, combustível, ambiente e descarga do compressor ganham o \"Modo do sensor\". Independente é o\ncomportamento anterior. Compartilhado serve a um sensor ligado a outra ECU: você informa uma curva tensão x temperatura de\naté 8 pontos e a conversão não para mais em 4,9 V. A maior tensão que a entrada lê continua definida pelo divisor da\nplaca. Use uma entrada Analog Volt no modo compartilhado.",
+      "mapa": {
+        "impacto": "campos_novos",
+        "campos": [
+          "cltSharedMode",
+          "iatSharedMode",
+          "auxTemp1SharedMode",
+          "auxTemp2SharedMode",
+          "oilTempSharedMode",
+          "fuelTempSharedMode",
+          "ambientTempSharedMode",
+          "compressorDischargeTempSharedMode"
+        ],
+        "acao": ""
+      }
+    },
+    {
+      "id": "stft-diagnosticos",
+      "tipo": "novo",
+      "publico": "preparador",
+      "titulo": "STFT: diagnósticos de constante de tempo, atraso e pausa",
+      "descricao": "Novos mostradores: constante de tempo efetiva, o que a limita (base, transporte do escape, sensor, ciclo ou vazão\ndesconhecida), atraso modelado, tempo de pausa restante, idade e taxa de atualização do lambda e os termos P e de\nmemória.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      },
+      "issue": 14
+    },
+    {
+      "id": "stft-pi-programado-e-smith",
+      "tipo": "novo",
+      "publico": "preparador",
+      "titulo": "STFT com PI programado e Smith+PI (somente builds de desenvolvimento)",
+      "descricao": "Controladores opcionais \"PI programado\" e \"preditor de Smith\" no diálogo da STFT. Desligados por padrão; o integrador\natual não muda e builds estáveis o mantêm. Os laços novos corrigem um erro de lambda em cerca de um segundo em\ncruzeiro, ignoram a constante de tempo base, aprendem cada erro na célula da grade onde ele começou e mantêm os limites\nde +-25% e as pausas de DFCO, aceleração e corte. O atraso modelado não tem mais piso de 0,2 s (a robustez vem de uma\nconstante de tempo mínima de 0,9 s) e a temperatura do gás de escape segue carga e rotação (420 K em marcha lenta até\n1000 K em carga plena), o que alonga o atraso modelado em marcha lenta. Ainda não confirmado em log de veículo.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      },
+      "issue": 14
+    },
+    {
+      "id": "ae-curvas-rpm-clt-continuas",
+      "tipo": "melhoria",
+      "publico": "usuario",
+      "titulo": "Curvas de rotação e CLT do enriquecimento multiplicadas de forma contínua",
+      "descricao": "As curvas de rotação e de CLT do enriquecimento de aceleração são multiplicadas de forma contínua (um produto\npequeno não salta mais para 1,0) e, em mapas novos, escalam só a parte de aceleração: o empobrecimento de\ndesaceleração é o valor da tabela (antes um motor frio dobrava).",
+      "mapa": {
+        "impacto": "revisar",
+        "campos": [
+          "tpsDecelUsesCltRpmMult"
+        ],
+        "acao": "Confira o empobrecimento de desaceleração com o motor frio."
+      },
+      "issue": 36
+    },
+    {
+      "id": "ae-lookback-zero-e-trava-de-pico",
+      "tipo": "melhoria",
+      "publico": "usuario",
+      "titulo": "Enriquecimento de aceleração: lookback 0 desliga cada lado e pico travado por transiente",
+      "descricao": "Um lookback igual a 0 desliga o lado correspondente do enriquecimento de aceleração (aceleração ou desaceleração). O\npico do enriquecimento fica travado por transiente, as médias móveis e o histórico são preparados depois de um reset e\no filme de parede evapora quando o modelo é desligado. Os menus de Accel Enrichment e Wall Wetting foram reorganizados.",
+      "mapa": {
+        "impacto": "revisar",
+        "campos": [],
+        "acao": "Confira os lookbacks de aceleração e desaceleração: 0 agora desliga aquele lado."
+      }
+    },
+    {
+      "id": "ae-projecao-do-tps",
+      "tipo": "melhoria",
+      "publico": "usuario",
+      "titulo": "Enriquecimento por TPS projeta a posição da borboleta pela taxa real",
+      "descricao": "A consulta inicial da tabela e o tempo de decaimento acompanham a velocidade do pedal: o enriquecimento projeta a\nposição final da borboleta a partir da taxa real do tip-in (antes o piso de 7,5% quase sempre vencia).",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      },
+      "issue": 35
+    },
+    {
+      "id": "ae-tabela-tps-limites-por-modo",
+      "tipo": "melhoria",
+      "publico": "usuario",
+      "titulo": "Tabela TPS/TPS limitada por modo e com unidade na tela",
+      "descricao": "A tabela de enriquecimento TPS/TPS é limitada por modo em tempo de execução: pulso fixo aceita até 50 ms por ciclo e\nmodo proporcional até uma fração de 2,0 do combustível base (+200%). No modo proporcional a tabela é fração, não\nmilissegundos: a tabela de fábrica (em ms) usada como fração somaria +1000% ou mais. O diálogo mostra a unidade do\nmodo ativo e um aviso quando uma célula passa do limite; uma tabela salva nunca é reescrita. A dica da tabela informa a\norientação (x = TPS antes, y = TPS depois) e que a metade de desaceleração sempre empobrece; a tabela de fábrica\ntem zeros ali, então não há empobrecimento na desaceleração até preenchê-la.",
+      "mapa": {
+        "impacto": "revisar",
+        "campos": [
+          "tpsTpsAccelTable"
+        ],
+        "acao": "Confira a tabela TPS/TPS no modo escolhido: no modo proporcional os valores são fração do combustível base."
+      },
+      "issue": 35
+    },
+    {
+      "id": "ae-taxa-tps-em-percentual-real",
+      "tipo": "melhoria",
+      "publico": "usuario",
+      "titulo": "Enriquecimento por TPS: taxa em % por segundo reais",
+      "descricao": "A taxa do TPS passa a ser em porcentagem por segundo reais (antes lia 10 vezes menos que o rótulo). O limiar\nde taxa e o eixo da curva de taxa de um mapa salvo são convertidos uma vez no carregamento (x10), mantendo a\ntaxa real de disparo e a posição na curva. De fábrica o limiar é 50 %/s (era 5) e o eixo vai de -1000 a 6000\n(era -100 a 600).",
+      "mapa": {
+        "impacto": "convertido",
+        "campos": [
+          "tpsAccelEnrichmentThreshold",
+          "tpsAccelRateBins",
+          "tpsAccelMinRate"
+        ],
+        "acao": "Um arquivo de calibração (.msq) salvo com firmware antiga deve ser convertido à mão: limiar x10 e eixo da taxa x10."
+      },
+      "issue": 35
+    },
+    {
+      "id": "evonet-canais-pedidos-dentro-do-limite",
+      "tipo": "melhoria",
+      "publico": "usuario",
+      "titulo": "evoNet: a ECU transmite os canais pedidos dentro dos limites negociados",
+      "descricao": "Os canais pedidos pelo display agora são transmitidos respeitando os limites negociados, e os canais de estado do cruise e de economia e trip são publicados como canais evoNet.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "filme-beta-sem-suavizacao",
+      "tipo": "melhoria",
+      "publico": "usuario",
+      "titulo": "Filme de parede: beta sem suavização e limite por ciclo do motor",
+      "descricao": "Foi removida a \"suavização\" que misturava o beta com o alfa quando beta > alfa (degrau de 10% sem estado, com\nsalto em beta = alfa). O filme discreto é estável para qualquer beta até o teto de 0,70. O limite de variação\nagora é 5% por ciclo do motor (antes 5% a cada 5 ms, 10 por segundo, quase nunca limitava), vale igual nos modelos\nbásico e avançado e recomeça do valor atual depois da partida ou quando o modelo estava desligado. O beta do\nmodelo básico também é limitado a 0,70 e reportado assim.",
+      "mapa": {
+        "impacto": "revisar",
+        "campos": [],
+        "acao": "Revise o enriquecimento de aceleração e o filme de parede em tip-in e tip-out."
+      },
+      "issue": 36
+    },
+    {
+      "id": "filme-eixos-pela-carga",
+      "tipo": "melhoria",
+      "publico": "usuario",
+      "titulo": "Tabelas tau e beta do filme usam a carga de combustível como eixo",
+      "descricao": "As tabelas de tau e beta do filme de parede usam a carga de combustível como eixo das linhas (kPa em speed density,\nTPS % em alpha-N, enchimento do cilindro % em MAF), como o cursor da tabela já mostrava, e não precisam mais de sensor\nMAP. Carros alpha-N e MAF sem MAP agora aplicam as colunas de rotação (antes a tabela era ignorada): preencha com 1,0\npara manter o comportamento antigo.",
+      "mapa": {
+        "impacto": "revisar",
+        "campos": [
+          "wwCorrectionMapBins"
+        ],
+        "acao": "Revise mapas alpha-N ou MAF calibrados contra o MAP: o eixo deixou de ser o MAP."
+      },
+      "issue": 34
+    },
+    {
+      "id": "filme-eixos-reais-editaveis",
+      "tipo": "melhoria",
+      "publico": "usuario",
+      "titulo": "Tabelas do filme mostram e editam os eixos que a ECU realmente usa",
+      "descricao": "Os eixos mostrados antes não tinham efeito. Um mapa que editou os eixos antigos de MAP e rotação é migrado no\ncarregamento (os eixos editados passam a ser os usados), então o combustível transiente desse mapa muda; mapas de\nfábrica não mudam. O Burn é recusado quando esses eixos não são crescentes. As curvas 1D \"Tempo de evaporação x MAP\" e\n\"Fração de impacto x MAP\", que nunca foram lidas, saíram do tuner.",
+      "mapa": {
+        "impacto": "convertido",
+        "campos": [
+          "wwTauMapValues",
+          "wwBetaMapValues"
+        ],
+        "acao": "Revise o combustível transiente de um mapa que tenha editado os eixos antigos do filme."
+      },
+      "issue": 34
+    },
+    {
+      "id": "firmware-build-id",
+      "tipo": "melhoria",
+      "publico": "preparador",
+      "titulo": "Novos canais firmwareBuildId e configLayoutVersion para identificar o build exato",
+      "descricao": "A ECU passa a publicar, no fim dos canais de saída, o identificador do commit do build\n(firmwareBuildId, 8 primeiros dígitos hexadecimais) e a versão do layout da configuração\n(configLayoutVersion). Com isso o Manager identifica o build instalado mesmo quando a\nassinatura é igual e confere o layout real da memória. Nenhum canal existente muda de\nposição e a assinatura mantém o formato.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "injetor-duty-recuperacao-configuravel",
+      "tipo": "melhoria",
+      "publico": "usuario",
+      "titulo": "Recuperação do duty do injetor configurável",
+      "descricao": "O percentual de recuperação do duty do injetor é configurável (padrão 20%, sem exigência de pedal ou TPS) e a visão geral\nlista as regras de proteção ativas. O duty do injetor mostra \"aguardando\" com o motor parado e \"cálculo indisponível\"\nquando o cálculo em funcionamento é inválido, em vez de citar um sensor de duty que não existe.",
+      "mapa": {
+        "impacto": "revisar",
+        "campos": [
+          "epDutyRecoveryThreshold"
+        ],
+        "acao": "Revise o percentual de recuperação do duty do injetor ao atualizar."
+      }
+    },
+    {
+      "id": "issue-37-largada-x-corte-na-troca",
+      "tipo": "melhoria",
+      "publico": "usuario",
+      "titulo": "Largada e corte na troca não atuam juntos",
+      "descricao": "Com os dois ligados e a velocidade conhecida, a largada (launch) atua só abaixo da \"velocidade máxima de largada\" (0 vale\n30 km/h) e o corte na troca só acima dela mais uma faixa fixa de 5 km/h, com histerese. Com o mesmo botão ou embreagem nos\ndois, a velocidade decide quando há sensor funcionando; sem ele (ou com falha) vale a divisão por rotação, que agora também\ncobre embreagem compartilhada. Um carro parado com sensor de velocidade por pulsos conta como parado. Largada ou corte na\ntroca sozinhos se comportam como antes. A regra de velocidade está sempre ligada, sem ajuste.",
+      "mapa": {
+        "impacto": "revisar",
+        "campos": [
+          "launchTpsThreshold"
+        ],
+        "acao": "Confira o campo de pedal da largada: agora é 'PPS/TPS mínimo para largar' em % (de 0 a 100) e não mais um limite máximo."
+      },
+      "issue": 37
+    },
+    {
+      "id": "issue-39-menu-unico-corte-na-troca",
+      "tipo": "melhoria",
+      "publico": "usuario",
+      "titulo": "Corte na troca em um só menu, com painel de status",
+      "descricao": "Menu único \"Desempenho > Corte na Troca (Flat Shift)\" com o gatilho, as condições, a duração, as três tabelas e um painel\nde status que mostra qual condição bloqueia o corte. Os campos \"Limitar duração do corte\" e o modo do botão voltam a ser\neditáveis, as tabelas ficam sempre visíveis e mostram a célula ativa, e o campo de pedal se chama PPS/TPS. A tabela de\nponto de ignição do corte é um avanço absoluto (substitui a tabela principal), como o rótulo e a ajuda agora dizem.",
+      "mapa": {
+        "impacto": "revisar",
+        "campos": [
+          "torqueReductionArmingApp",
+          "torqueReductionTimeTable"
+        ],
+        "acao": "Confira o pedal de armar (% de 0 a 100) e as tabelas de duração do corte na nova tela."
+      },
+      "issue": 39
+    },
+    {
+      "id": "knock-espectro-dbv",
+      "tipo": "melhoria",
+      "publico": "preparador",
+      "titulo": "Espectro de detonação calibrado em dBV e FFT do tamanho da janela capturada",
+      "descricao": "As amplitudes do espectro são dBV calibrados (-100 a +27,5 dBV em passos de 0,5 dB), em vez do valor 0-255 não calibrado\nque saturava depois de cerca de 12 dB. Mostradores ou logs que leem esses canais precisam ser reinterpretados. A FFT\nse dimensiona pela janela realmente capturada: acima de cerca de 3200 rpm informa menos faixas e mais largas, em vez de\numa curva mais fina do que os dados sustentam. Use \"Tamanho fixo da FFT\" para um eixo estável ao comparar capturas. A\n\"Sensibilidade do espectro de detonação\" não afeta mais o espectro reportado, e o espectro informa quantas faixas são\nválidas, a resolução real em Hz e quantas janelas a ECU precisou pular.",
+      "mapa": {
+        "impacto": "campos_novos",
+        "campos": [
+          "knockSpectrumFixedSize"
+        ],
+        "acao": ""
+      }
+    },
+    {
+      "id": "layout-config-261027",
+      "tipo": "melhoria",
+      "publico": "usuario",
+      "titulo": "A configuração da ECU é apagada na primeira partida (layout 261027)",
+      "descricao": "Quatro mudanças de layout da configuração desde a versão estável de 07/09/2026 (proteções unificadas,\nhistórico de proteções, curvas de sensores de temperatura compartilhados e PWM senoidal da marcha lenta)\nlevam a configuração da ECU de 260821 para 261027. Ao partir pela primeira vez com esta versão, a ECU\ndescarta o mapa salvo e volta ao padrão de fábrica. É preciso usar o INI desta mesma versão.",
+      "mapa": {
+        "impacto": "reset",
+        "campos": [],
+        "acao": "Exporte o mapa (.msq) antes de atualizar. Na primeira partida com esta versão a ECU apaga a configuração salva; depois, importe o mapa e revise os itens marcados como revisar."
+      }
+    },
+    {
+      "id": "maf-modelo-enchimento-coletor",
+      "tipo": "melhoria",
+      "publico": "usuario",
+      "titulo": "MAF: modelo de enchimento do coletor, sempre ativo",
+      "descricao": "O ar do cilindro passa a ser a vazão do MAF atrasada por um filtro de 1ª ordem, com constante de tempo\n120 x volume / (VE de referência x cilindrada x rotação). O ar modelado alimenta o combustível, a carga e os eixos\ndas tabelas de VE, AFR e ignição, e a vazão de escape da STFT; em regime nada muda e, em tip-in e tip-out, o pico de\ncarga do MAF deixa de ser tratado como ar do cilindro. Padrão de 2,0 L em Sensores > MAF > MAF Sensor\n(\"Effective manifold volume\", 0 a 10 L); 0 L reproduz exatamente o comportamento anterior. Canais novos no log:\nmafCylFlowEstimate, mafManifoldTauMs, mafManifoldState, cylinderAirmassRaw e fuelingLoadRaw.",
+      "mapa": {
+        "impacto": "campos_novos",
+        "campos": [
+          "mafManifoldVolumeL",
+          "mafManifoldTauScale",
+          "mafManifoldTauMaxMs",
+          "mafManifoldEtaV",
+          "mafManifoldLeadMs"
+        ],
+        "acao": "Enriquecimento de aceleração e filme de parede calibrados com o MAF bruto podem precisar de ajuste."
+      },
+      "issue": 23
+    },
+    {
+      "id": "marca-evotech-nas-telas",
+      "tipo": "melhoria",
+      "publico": "usuario",
+      "titulo": "A marca evoTech aparece no lugar de rusEFI nas telas do usuário",
+      "descricao": "Textos voltados ao usuário passam a apresentar evoTech em vez de rusEFI. A assinatura do INI ('rusEFI <branch>.<data>.<placa>.<hash>') não muda de formato.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "protecoes-supervisor-unico",
+      "tipo": "melhoria",
+      "publico": "usuario",
+      "titulo": "Proteções do motor com um supervisor único",
+      "descricao": "Óleo, lambda, boost e duty do injetor (e depois pressão de combustível, temperaturas, EGT e bateria) usam um único\nsupervisor de proteções, com políticas separadas de aviso e crítico, tratamento de falha de sensor, rearme retido e\nlimites de rotação só de combustível; o seletor legado saiu. As proteções se recuperam sozinhas quando as condições de\nrecuperação são atendidas, sem reconhecimento do Manager; a recuperação do óleo na partida e do prazo da bobina exige\nmotor parado estável. Extensões avançadas continuam só em builds de desenvolvimento.",
+      "mapa": {
+        "impacto": "revisar",
+        "campos": [
+          "protectionConfigVersion",
+          "epOilLow_mode",
+          "epLambda_mode",
+          "epBoost_mode",
+          "epDuty_mode"
+        ],
+        "acao": "Revise os limites e a recuperação de todas as proteções ao atualizar."
+      }
+    },
+    {
+      "id": "sensores-temperatura-pullup-fixo",
+      "tipo": "melhoria",
+      "publico": "usuario",
+      "titulo": "Sensores em entrada Analog Temp sempre usam o pull-up de 2700 ohm da placa",
+      "descricao": "Sensores de temperatura em entrada Analog Temp, no modo independente, sempre usam o pull-up de 2700 ohm da placa e o campo do resistor deixou de aparecer. Sensores em entrada Analog Volt mantêm o valor configurado.",
+      "mapa": {
+        "impacto": "revisar",
+        "campos": [],
+        "acao": "Confira os sensores de temperatura em entradas Analog Temp: o pull-up é sempre o da placa."
+      }
+    },
+    {
+      "id": "stft-filtro-proprio-de-realimentacao",
+      "tipo": "melhoria",
+      "publico": "usuario",
+      "titulo": "STFT com filtro de realimentação próprio, independente do lambda suavizado",
+      "descricao": "A STFT usa um filtro de realimentação próprio, baseado em tempo, independente da suavização do lambda mostrado. O\norçamento de resposta inclui um ciclo do motor e o filtro de controle.",
+      "mapa": {
+        "impacto": "revisar",
+        "campos": [],
+        "acao": "Revise a resposta do frio ao quente nas calibrações com a STFT ligada."
+      }
+    },
+    {
+      "id": "tracao-aceleracao-assinada",
+      "tipo": "melhoria",
+      "publico": "usuario",
+      "titulo": "Controle de tração padrão usa aceleração de rotação com sinal e sincronização limitada",
+      "descricao": "O modelo padrão usa a aceleração de rotação com sinal e uma sincronização automática limitada na troca de marcha, evitando reter a demanda em rebotes de rotação.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "ae-decaimento-exponencial",
+      "tipo": "correcao",
+      "publico": "usuario",
+      "titulo": "Enriquecimento e empobrecimento decaem de forma exponencial na cauda inteira",
+      "descricao": "O enriquecimento e o empobrecimento de aceleração do TPS decaem de forma exponencial por toda a cauda, em vez de subir\na um platô artificial de 81,8% depois de duas constantes de tempo. O filme de parede também usa um exponencial válido\ncom constantes de evaporação pequenas, e o combustível do DFCO decai de forma monotônica até o piso, sem voltar a\nsubir no meio do corte.",
+      "mapa": {
+        "impacto": "revisar",
+        "campos": [],
+        "acao": "Revise a calibração transiente (aceleração, filme e DFCO) depois de atualizar."
+      },
+      "issue": 35
+    },
+    {
+      "id": "burn-perdido-apos-mudar-tamanho-config",
+      "tipo": "correcao",
+      "publico": "usuario",
+      "titulo": "Burn perdido depois de atualização que muda o tamanho da configuração",
+      "descricao": "O Burn se perdia em silêncio depois de uma atualização que mudava o tamanho da configuração: toda partida reiniciava o mapa com 'version mismatch' e nada persistia. Agora o Burn reconstrói a flash com o motor parado. Depois de instalar esta versão, faça um Burn com o motor parado; o mapa anterior à atualização anterior não pode ser recuperado.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "corte-na-troca-limpa-estado",
+      "tipo": "correcao",
+      "publico": "usuario",
+      "titulo": "Desligar o corte na troca limpa o estado na hora",
+      "descricao": "Ao desligar o corte na troca, os indicadores e a camada de prioridade da suavização de torque deixam de manter o último valor.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "cruise-resume-apos-freio-cancel",
+      "tipo": "correcao",
+      "publico": "usuario",
+      "titulo": "Cruise control: RESUME volta a funcionar depois do freio ou de um CANCEL",
+      "descricao": "O RESUME agora funciona depois que a suspensão por freio ou embreagem termina e depois de um CANCEL (só era aceito com o pedal ainda pressionado). A velocidade alvo salva é restaurada se o veículo estiver acima da velocidade mínima de retomada.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "ecu-virgem-sem-erro-de-crc",
+      "tipo": "correcao",
+      "publico": "usuario",
+      "titulo": "ECU virgem não acusa mais 'Flash consolidation produced a CRC mismatch'",
+      "descricao": "Uma ECU virgem (ou com configuração salva incompatível) deixa de gerar o erro logo após o boot: a flash só é consolidada depois que tem uma configuração válida, após o primeiro Burn.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "embreagem-guarda-unidades-coerentes",
+      "tipo": "correcao",
+      "publico": "usuario",
+      "titulo": "Guarda de embreagem compara rotação do motor com a do cardã nas mesmas unidades",
+      "descricao": "A discordância de relação da proteção de embreagem passa a comparar a rotação do motor com a rotação da transmissão em unidades coerentes.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "etb-autotune-nao-fica-armado",
+      "tipo": "correcao",
+      "publico": "usuario",
+      "titulo": "Autotune do PID da ETB não fica mais armado",
+      "descricao": "O autotune se encerra sozinho após 30 segundos, quando o motor gira ou quando a ignição desliga, e o botão\nParar fica habilitado enquanto ele está ativo (antes só funcionava com uma oscilação em andamento). Uma\ncalibração automática com pouco curso da borboleta não gera mais erro crítico: informa \"curso pequeno\" e\ndeixa a ECU funcionando. A calibração automática também recusa rodar com o controle do motor da ETB pausado.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "evonet-canais-cruise-trip-validos",
+      "tipo": "correcao",
+      "publico": "usuario",
+      "titulo": "evoNet: canais de cruise e economia/trip passam a ser publicados como válidos",
+      "descricao": "Os canais evoNet de cruise (estado, alvo, esforço, motivo de desligamento) e de trip e economia (distância, combustível,\neconomia instantânea e média) nunca eram publicados como válidos: a tabela do datalogger ignorava as saídas dos módulos\nde live data, e o display via \"aguardando\" para sempre. Agora transmitem normalmente.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "evonet-falhas-da-etb-obsoletas",
+      "tipo": "correcao",
+      "publico": "usuario",
+      "titulo": "evoNet não relata mais falhas obsoletas do controlador da ETB",
+      "descricao": "Depois que a saída é desabilitada ou atribuída a outra função, o evoNet deixa de informar falhas antigas da ETB; falhas retidas reais continuam visíveis. A pilha de transmissão CAN também foi aumentada para impedir reinícios da ECU causados por alertas evoNet.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "issue-42-tps-limites-em-volts",
+      "tipo": "correcao",
+      "publico": "usuario",
+      "titulo": "Limites do TPS em volts com a escala real e ETB 2 corrigida",
+      "descricao": "Os limites de calibração do TPS aparecem em volts com a escala real (0,005 V por contagem, 200 contagens por\nvolt) nas duas borboletas. Antes o TPS 1 lia 2,4% a menos (cerca de 97% com a borboleta toda aberta depois de\ncalibrar pelo TunerStudio) e os limites da ETB 2 eram gravados como números crus, e calibrar a ETB 2 pelo botão\ngerava valores que faziam a partida seguinte falhar com \"cal values are too close together\".",
+      "mapa": {
+        "impacto": "revisar",
+        "campos": [
+          "tpsMin",
+          "tpsMax",
+          "tps1SecondaryMin",
+          "tps1SecondaryMax",
+          "tps2Min",
+          "tps2Max",
+          "tps2SecondaryMin",
+          "tps2SecondaryMax"
+        ],
+        "acao": "Recalibre o TPS 1 e a ETB 2 depois de atualizar."
+      },
+      "issue": 42
+    },
+    {
+      "id": "knock-espectro-sem-amostras-nao-capturadas",
+      "tipo": "correcao",
+      "publico": "preparador",
+      "titulo": "Espectro de detonação não analisa mais amostras que nunca foram capturadas",
+      "descricao": "Acima de cerca de 1600 rpm a análise completava a janela com sobras da captura anterior, possivelmente de outro cilindro e sensor, e gerava um espectro misturando duas janelas. Uma calibração com o espectrograma ligado também não impede mais a ECU de partir em placas sem o recurso: a opção é desligada com um aviso.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "ltft-nao-aprende-com-stft-travada",
+      "tipo": "correcao",
+      "publico": "usuario",
+      "titulo": "LTFT não aprende uma correção travada da STFT",
+      "descricao": "O LTFT deixa de aprender uma correção da STFT mantida enquanto o banco está pausado por disponibilidade do lambda, DFCO, aceleração ou corte recente. Valores de lambda inválidos não entram mais no aprendizado da STFT.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "marcha-lenta-frequencia-sem-reiniciar",
+      "tipo": "correcao",
+      "publico": "usuario",
+      "titulo": "Frequência da solenoide de marcha lenta vale sem reiniciar",
+      "descricao": "Mudanças na frequência da solenoide de marcha lenta valem sem reiniciar a ECU e preservam o duty comandado.\nReconfigurar saídas de válvula para o PWM antigo com segurança e ajustes externos de PWM por GPIO não consomem outro\ncanal para o mesmo pino.",
+      "mapa": {
+        "impacto": "revisar",
+        "campos": [
+          "idle_solenoidFrequency"
+        ],
+        "acao": "A frequência agora vai de 1 a 3000 Hz (0 deixou de ser aceito): confira o valor."
+      }
+    },
+    {
+      "id": "osciloscopio-correcoes",
+      "tipo": "correcao",
+      "publico": "preparador",
+      "titulo": "Osciloscópio preserva bordas reais e reporta falha de alocação",
+      "descricao": "O osciloscópio preserva bordas reais de virabrequim e comando e as saídas de ignição individuais, reinicia com segurança o conjunto de buffers e informa falhas de alocação da captura em vez de confirmar uma captura inativa.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "robustez-etb-adc-spi-reentrada",
+      "tipo": "correcao",
+      "publico": "usuario",
+      "titulo": "Robustez da ETB, do ADC rápido e dos chips SPI inteligentes",
+      "descricao": "A trava de falha da ETB é liberada por um novo ciclo de ignição e o limitador de rotação sempre volta; os contadores de\nerro intermitente do sensor da ETB decaem em vez de acumular durante todo o ciclo de ignição; o ADC rápido é reiniciado\ndepois de um erro de DMA ou overrun; chips SPI inteligentes contam falhas consecutivas, publicam smartChipState e se\nreinicializam; o callback rápido não é reentrado pelo tratador do gatilho; e há proteções contra temperatura de carga zero,\nângulo de dwell com o motor parado, aplicação da configuração na janela de boot e contador de quedas do EXTI, entre outros achados da análise de robustez.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "sensor-temperatura-calibracao-imperfeita",
+      "tipo": "correcao",
+      "publico": "usuario",
+      "titulo": "Calibração de sensor de temperatura imperfeita não derruba mais a ECU",
+      "descricao": "Uma calibração que não é um ajuste perfeito (por exemplo um sensor compartilhado com outra ECU) deixa de desligar a ECU com erro crítico. O sensor é marcado como mal configurado com um aviso, a última calibração válida é mantida enquanto você edita os pontos e o motor continua funcionando. A curva de CLT padrão também não gera mais o aviso 'curve fit is poor' em toda partida.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "stft-atraso-transporte-sem-map",
+      "tipo": "correcao",
+      "publico": "usuario",
+      "titulo": "STFT: atraso de transporte do escape não depende mais do MAP",
+      "descricao": "Num carro alpha-N sem MAP o modelo informava vazão desconhecida o tempo todo, o que prendia o atraso em 2 s e a\nconstante de tempo da correção perto de 4,7 s, qualquer que fosse a constante base (e deixava o Smith com atraso\nerrado). A vazão agora vem da massa de ar do cilindro que a estratégia de combustível já calcula (alpha-N, speed\ndensity e MAF). \"Vazão inválida\" só aparece enquanto essa massa de ar não está disponível. Ainda não confirmado em log\nde veículo.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      },
+      "issue": 14
+    },
+    {
+      "id": "stft-estado-completo-no-tuner",
+      "tipo": "correcao",
+      "publico": "preparador",
+      "titulo": "Estado da STFT no tuner não é mais truncado",
+      "descricao": "O estado da STFT mostrado no tuner era truncado nas pausas de aceleração (8) e de corte de combustível (9); o campo agora tem 4 bits.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "stft-pausa-durante-aceleracao",
+      "tipo": "correcao",
+      "publico": "usuario",
+      "titulo": "STFT pausado durante todo o enriquecimento de aceleração",
+      "descricao": "A correção em malha fechada (STFT) fica pausada durante toda a aceleração ou desaceleração, incluindo a cauda\nexponencial, mais o tempo configurado depois (antes contava do início do transiente e podia voltar com o enriquecimento\nainda ativo). Tempo igual a 0 continua desligando a pausa. O sensor de flex virtual também ignora o aprendizado durante\num enriquecimento de aceleração ou desaceleração, em qualquer modo.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "tracao-limpa-estado-e-recupera",
+      "tipo": "correcao",
+      "publico": "usuario",
+      "titulo": "Controle de tração limpa o retardo e o corte residuais",
+      "descricao": "O controle de tração limpa o retardo de ignição e o corte de faísca residuais ao desligar, com a embreagem aberta e com\ncallback ou rotação inválidos, mantém o filtro de rotação atualizado nas portas de pedal e MAP, rejeita curvas inválidas,\nrecupera o controle padrão depois de trocas de marcha e evita um corte falso em trocas sem embreagem com acelerador\nantecipado.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "traducoes-ptbr-ignicao-largada",
+      "tipo": "correcao",
+      "publico": "usuario",
+      "titulo": "Traduções pt-BR de avanço máximo/mínimo, largada e embreagem",
+      "descricao": "\"Maximum/Minimum timing advance\" (Ajustes de ignição) traduzido; o \"TPS Threshold\" da largada agora é \"PPS/TPS mínimo\npara largar\" (estava traduzido como máximo); rótulos da entrada de embreagem por extenso; \"deg BTDC\" aparece como\n\"graus APMS\".",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "cruise-suspende-sem-velocidade",
+      "tipo": "seguranca",
+      "publico": "usuario",
+      "titulo": "Cruise control suspende ao perder o sensor de velocidade",
+      "descricao": "Com o sensor de velocidade do veículo perdido, o cruise control suspende em vez de regular contra uma velocidade congelada.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "robustez-comandos-externos-rejeitados",
+      "tipo": "seguranca",
+      "publico": "usuario",
+      "titulo": "Comandos, pacotes e scripts externos inválidos são rejeitados sem parar o motor",
+      "descricao": "Comandos, pacotes e scripts vindos de fora (TunerStudio, CAN, Lua) que antes podiam provocar um erro fatal e parar o\nmotor agora são rejeitados. Requisições de página do TunerStudio menores que o cabeçalho e escritas em bloco cuja\ncontagem excede o pacote também. A rota CAN sem autenticação que executava comandos arbitrários do TunerStudio foi\nremovida. As escritas em bloco do TunerStudio preservam o odômetro, os trims aprendidos, o etanol estimado e o histórico de\nproteções.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "robustez-configuracao-invalida-rejeitada",
+      "tipo": "seguranca",
+      "publico": "usuario",
+      "titulo": "Configuração inválida é rejeitada no Burn em vez de gerar erro fatal ou pulso infinito",
+      "descricao": "Todos os eixos de tabela são validados na partida e no Burn, e um eixo ou limite inválido rejeita a configuração em vez de\ngerar erro fatal. Configurações com divisores zero, ordem de ignição ou sincronismo GDI inválidos são recusadas pelo Burn.\nVazão zero ou lambda alvo zero não geram mais pulso de injeção infinito. Uma regra de proteção malformada só corta\ncombustível depois de 500 ms, então uma edição ao vivo não vira corte.",
+      "mapa": {
+        "impacto": "nenhum",
+        "campos": [],
+        "acao": ""
+      }
+    },
+    {
+      "id": "filme-e-ae-removido-timing-tps-tps",
+      "tipo": "removido",
+      "publico": "usuario",
+      "titulo": "Correção de avanço pela tabela TPS/TPS removida",
+      "descricao": "A tabela de correção de ignição TPS/TPS (habilitação, eixos de origem e destino e tabela) foi removida junto com a reorganização dos menus de enriquecimento de aceleração e filme de parede; o layout foi preservado em campos reservados.",
+      "mapa": {
+        "impacto": "revisar",
+        "campos": [
+          "tpsTpsTimingCorrectionEnable",
+          "tpsTpsTimingCorrFromRpmBins",
+          "tpsTpsTimingCorrToRpmBins",
+          "tpsTpsTimingCorrectionTable"
+        ],
+        "acao": "Se você usava a correção de avanço pelo TPS/TPS, recalibre o avanço de aceleração pelas tabelas de ignição."
+      }
+    },
+    {
+      "id": "logger-alta-velocidade-novo-protocolo",
+      "tipo": "removido",
+      "publico": "preparador",
+      "titulo": "Protocolo do logger de alta velocidade substituído",
+      "descricao": "O protocolo novo do logger de alta velocidade substituiu o formato antigo composto/tooth logger. O TunerStudio e outras ferramentas que leem o formato antigo deixam de recebê-lo.",
+      "mapa": {
+        "impacto": "revisar",
+        "campos": [],
+        "acao": "Atualize ferramentas que liam o logger de dentes antigo."
+      }
+    },
+    {
+      "id": "stft-somente-pi-com-smith",
+      "tipo": "removido",
+      "publico": "usuario",
+      "titulo": "STFT: controlador normal/legado e passo fixo removidos",
+      "descricao": "A STFT sempre usa PI, com a compensação de atraso de Smith ligada por padrão e desligável de forma independente. Mapas\nexistentes adotam PI + Smith sem ligar a correção em malha fechada que estiver desligada globalmente. A constante de\ntempo de referência passa a aparecer só nas configurações de aprendizado do LTFT.",
+      "mapa": {
+        "impacto": "revisar",
+        "campos": [
+          "stftIgnoreErrorMagnitude",
+          "disableStftSmithPredictor"
+        ],
+        "acao": "Revise a resposta da STFT (do frio ao quente) e o uso do preditor de Smith; o modo normal/legado saiu."
+      }
+    }
+  ],
+  "map_diff": {
+    "config_reset": false,
+    "page_size": {
+      "from": 29844,
+      "to": 29844
+    },
+    "added": [],
+    "removed": [],
+    "rescaled": [],
+    "retyped": [],
+    "reshaped": [],
+    "output_channels_moved": false
+  }
+}
