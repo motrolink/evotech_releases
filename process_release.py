@@ -255,6 +255,9 @@ class ReleaseProcessor:
         """Verifica se o arquivo é um arquivo de tradução."""
         return filename.startswith("ini_strings_") and filename.endswith(".json")
 
+    def _is_script_api_file(self, filename: str) -> bool:
+        return filename.startswith("script_api_") and filename.endswith(".json")
+
     def _should_keep_file(self, item: Path) -> bool:
         """Verifica se o arquivo deve ser mantido no release."""
         if not item.is_file():
@@ -276,6 +279,10 @@ class ReleaseProcessor:
 
         # Mantém changelog e as notas/metadados de build gerados pelo deploy
         if filename in ('changelog.md', 'changelog.txt', 'release.json', 'build.json'):
+            return True
+
+        # Referência da API de scripts Lua da build (script_api_<placa>.json)
+        if self._is_script_api_file(item.name):
             return True
 
         return False
@@ -370,6 +377,7 @@ class ReleaseProcessor:
 
         files_moved = 0
         translation_file_moved = None
+        script_api_file_moved = None
 
         for item in source_dir.iterdir():
             if self._should_keep_file(item):
@@ -381,6 +389,8 @@ class ReleaseProcessor:
                 # Rastreia arquivo de tradução movido
                 if self._is_translation_file(item.name):
                     translation_file_moved = item.name
+                if self._is_script_api_file(item.name):
+                    script_api_file_moved = item.name
             elif item.is_file():
                 print(f"  [X] Ignorado: {item.name}")
 
@@ -414,6 +424,10 @@ class ReleaseProcessor:
         if translation_file_moved:
             translation_relative_path = (dest_dir / translation_file_moved).relative_to(self.root_dir)
             release_entry["translation_path"] = str(translation_relative_path).replace("\\", "/")
+
+        if script_api_file_moved:
+            script_api_relative_path = (dest_dir / script_api_file_moved).relative_to(self.root_dir)
+            release_entry["script_api_path"] = str(script_api_relative_path).replace("\\", "/")
 
         if build_info:
             release_entry.update(self._schema2_fields(hardware, folder, dest_dir, build_info))

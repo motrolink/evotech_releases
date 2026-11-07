@@ -10,13 +10,15 @@ mão: o `deploy.py` da firmware gera e `process_release.py` organiza (também ro
 - Antigas: `<placa>/<YYYY.MM.DD>_<hash>/`, mantidas como estão. O Manager usa `ini_path`, não
   depende do formato da pasta.
 - Arquivos: `rusefi.bin`, `evotech_<placa>.ini`, `ini_strings_*.json`, `CHANGELOG.md`,
-  `release.json` (notas e `map_diff`) e `build.json` (metadados do build).
+  `release.json` (notas e `map_diff`), `build.json` (metadados do build) e
+  `script_api_<placa>.json` (referência das funções, canais e configurações Lua da build).
 
 ## manifest.json (schema 2)
 
 Topo `{"schema": 2, "releases": [...]}`. Cada entrada tem os 8 campos originais
 (`timestamp, signature, hardware, date, environment, ini_path, full_signature` e
-`translation_path` quando há) mais, opcionais: `release_id, build_id, git_commit,
+`translation_path` quando há) mais, opcionais: `script_api_path` (quando a build traz o
+`script_api_<placa>.json`), `release_id, build_id, git_commit,
 flash_data_version, bin_path, bin_sha256, has_notes, notes_kind, notes_path, title`.
 Entrada sem esses campos é uma release legada. `notes_kind`: `release` (prod com
 fragmentos), `preview` (dev com fragmentos), `auto` (só o diff calculado), `backfill`

@@ -171,3 +171,18 @@ def test_invalid_build_id_falls_back_to_legacy(tmp_path):
     (d / "build.json").write_text(json.dumps({"git_commit": "zz", "build_id": "zz"}))
     run(tmp_path)
     assert (tmp_path / "evotech12" / "2026.11.20_1095591036").is_dir()
+
+
+def test_script_api_json_is_kept_and_listed_in_manifest(tmp_path):
+    make_upload(tmp_path, extra_files={"script_api_evotech12.json": '{"schema": 1}'})
+    run(tmp_path)
+    folder = tmp_path / "evotech12" / f"2026.11.20_1095591036_{COMMIT_A[:8]}"
+    assert (folder / "script_api_evotech12.json").read_text() == '{"schema": 1}'
+    e = manifest(tmp_path)["releases"][0]
+    assert e["script_api_path"] == f"evotech12/2026.11.20_1095591036_{COMMIT_A[:8]}/script_api_evotech12.json"
+
+
+def test_release_without_script_api_has_no_script_api_path(tmp_path):
+    make_upload(tmp_path)
+    run(tmp_path)
+    assert "script_api_path" not in manifest(tmp_path)["releases"][0]
