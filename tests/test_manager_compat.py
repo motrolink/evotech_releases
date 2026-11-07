@@ -13,7 +13,7 @@ from pathlib import Path
 
 import pytest
 
-from test_process_release import COMMIT_A, make_upload, run
+from test_process_release import COMMIT_A, make_upload, run, wizard_json
 
 ROOT = Path(__file__).resolve().parents[1]
 MANAGER_REPO = Path(os.environ.get("MOTROLINK_MANAGER_REPO", Path.home() / "MotroLink/workspace/motrolink_manager"))
@@ -89,10 +89,11 @@ def test_old_manager_lists_and_resolves_new_style_folder(old_backend, tmp_path):
     make_upload(tmp_path, with_build=False, notes_kind=None, date="2026.09.07", sig="2751015660",
                 branch="motrolink_prod", name="legacy_up")
     run(tmp_path)
-    make_upload(tmp_path, commit=COMMIT_A)
+    make_upload(tmp_path, commit=COMMIT_A, extra_files={"setup_wizard_evotech12.json": wizard_json()})
     run(tmp_path)
     m = json.loads((tmp_path / "manifest.json").read_text())
     assert m["schema"] == 2 and len(m["releases"]) == 2
+    assert sum("wizard_path" in r for r in m["releases"]) == 1      # chave opcional nova: o Manager antigo a ignora
     res = drive(py, backend, tmp_path, "evotech12", "prod", 2)
     new_ini = f"evotech12/2026.11.20_1095591036_{COMMIT_A[:8]}/evotech_evotech12.ini"
     assert res["count"] == 2

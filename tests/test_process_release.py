@@ -186,3 +186,47 @@ def test_release_without_script_api_has_no_script_api_path(tmp_path):
     make_upload(tmp_path)
     run(tmp_path)
     assert "script_api_path" not in manifest(tmp_path)["releases"][0]
+
+
+# ------------------------------------------------------------------ setup_wizard_<placa>.json (wizard_path)
+def wizard_json(sig_text="rusEFI motrolink_prod.2026.11.20.evotech12.1095591036"):
+    return json.dumps({"schema": 1, "board": "evotech12", "signature": sig_text, "steps": []})
+
+
+def test_wizard_json_is_kept_and_wizard_path_recorded(tmp_path):
+    make_upload(tmp_path, extra_files={"setup_wizard_evotech12.json": wizard_json()})
+    run(tmp_path)
+    folder = tmp_path / "evotech12" / f"2026.11.20_1095591036_{COMMIT_A[:8]}"
+    assert (folder / "setup_wizard_evotech12.json").exists()
+    e = manifest(tmp_path)["releases"][0]
+    assert e["wizard_path"] == f"evotech12/2026.11.20_1095591036_{COMMIT_A[:8]}/setup_wizard_evotech12.json"
+    assert manifest(tmp_path)["schema"] == 2      # chave opcional nova: sem mudar a versao do schema
+
+
+def test_wizard_json_with_other_signature_is_not_published(tmp_path, capsys):
+    make_upload(tmp_path, extra_files={"setup_wizard_evotech12.json": wizard_json("rusEFI motrolink_prod.2026.11.01.evotech12.1095591036")})
+    run(tmp_path)
+    folder = tmp_path / "evotech12" / f"2026.11.20_1095591036_{COMMIT_A[:8]}"
+    assert not (folder / "setup_wizard_evotech12.json").exists()
+    e = manifest(tmp_path)["releases"][0]
+    assert "wizard_path" not in e and "ini_path" in e          # o resto da release segue intacto
+    assert "[!]" in capsys.readouterr().out
+
+
+def test_wizard_json_that_is_not_json_is_not_published(tmp_path):
+    make_upload(tmp_path, extra_files={"setup_wizard_evotech12.json": "{nao e json"})
+    run(tmp_path)
+    e = manifest(tmp_path)["releases"][0]
+    assert "wizard_path" not in e
+
+
+def test_upload_without_wizard_json_has_no_wizard_path(tmp_path):
+    make_upload(tmp_path)
+    run(tmp_path)
+    assert "wizard_path" not in manifest(tmp_path)["releases"][0]
+
+
+def test_wizard_json_of_another_board_is_not_picked(tmp_path):
+    make_upload(tmp_path, extra_files={"setup_wizard_evotech8.json": wizard_json()})
+    run(tmp_path)
+    assert "wizard_path" not in manifest(tmp_path)["releases"][0]
