@@ -255,6 +255,17 @@ class ReleaseProcessor:
         """Verifica se o arquivo é um arquivo de tradução."""
         return filename.startswith("ini_strings_") and filename.endswith(".json")
 
+    def _is_wizard_file(self, filename: str, hardware: Optional[str] = None) -> bool:
+        """setup_wizard_<placa>.json (assistente de primeiro acerto da build)."""
+        if hardware is not None:
+            return filename == f"setup_wizard_{hardware}.json"
+        return filename.startswith("setup_wizard_") and filename.endswith(".json")
+
+    def _wizard_matches_ini(self, item: Path, full_signature: str) -> bool:
+        """O JSON so e publicado se a assinatura dele for a do INI da mesma pasta."""
+        data = self._read_json(item)
+        return isinstance(data, dict) and data.get("signature") == full_signature
+
     def _should_keep_file(self, item: Path) -> bool:
         """Verifica se o arquivo deve ser mantido no release."""
         if not item.is_file():
@@ -272,6 +283,10 @@ class ReleaseProcessor:
 
         # Mantém arquivos de tradução (ini_strings_*.json)
         if self._is_translation_file(item.name):
+            return True
+
+        # Assistente de primeiro acerto da build (a coerência com o INI é conferida no laço de cópia)
+        if self._is_wizard_file(item.name):
             return True
 
         # Mantém changelog e as notas/metadados de build gerados pelo deploy
@@ -370,8 +385,13 @@ class ReleaseProcessor:
 
         files_moved = 0
         translation_file_moved = None
+        wizard_file_moved = None
 
         for item in source_dir.iterdir():
+            if self._is_wizard_file(item.name) and not (
+                    self._is_wizard_file(item.name, hardware) and self._wizard_matches_ini(item, full_signature)):
+                print(f"  [!] Ignorado: {item.name} (nao e o setup_wizard_{hardware}.json ou a assinatura difere do INI)")
+                continue
             if self._should_keep_file(item):
                 dest_item = dest_dir / item.name
                 shutil.move(str(item), str(dest_item))
@@ -381,6 +401,8 @@ class ReleaseProcessor:
                 # Rastreia arquivo de tradução movido
                 if self._is_translation_file(item.name):
                     translation_file_moved = item.name
+                if self._is_wizard_file(item.name):
+                    wizard_file_moved = item.name
             elif item.is_file():
                 print(f"  [X] Ignorado: {item.name}")
 
@@ -415,6 +437,10 @@ class ReleaseProcessor:
             translation_relative_path = (dest_dir / translation_file_moved).relative_to(self.root_dir)
             release_entry["translation_path"] = str(translation_relative_path).replace("\\", "/")
 
+        if wizard_file_moved:
+            wizard_relative_path = (dest_dir / wizard_file_moved).relative_to(self.root_dir)
+            release_entry["wizard_path"] = str(wizard_relative_path).replace("\\", "/")
+
         if build_info:
             release_entry.update(self._schema2_fields(hardware, folder, dest_dir, build_info))
 
@@ -426,6 +452,8 @@ class ReleaseProcessor:
         print(f"  Caminho INI: {release_entry['ini_path']}")
         if translation_file_moved:
             print(f"  Caminho Traducao: {release_entry['translation_path']}")
+        if wizard_file_moved:
+            print(f"  Caminho Assistente: {release_entry['wizard_path']}")
         if "release_id" in release_entry:
             print(f"  release_id: {release_entry['release_id']} (notas: {release_entry.get('notes_kind', 'nenhuma')})")
 
