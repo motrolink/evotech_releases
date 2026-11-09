@@ -2,6 +2,28 @@
   "schema": 2,
   "releases": [
     {
+      "timestamp": "2026-11-09T18:16:14.268560+00:00",
+      "signature": "3660526224",
+      "hardware": "evotech4",
+      "date": "2026.11.09",
+      "environment": "dev",
+      "ini_path": "evotech4/2026.11.09_3660526224_59ea10f5/evotech_evotech4.ini",
+      "full_signature": "rusEFI feat/filtragem-trigger-fase-dev.2026.11.09.evotech4.3660526224",
+      "translation_path": "evotech4/2026.11.09_3660526224_59ea10f5/ini_strings_pt-BR.json",
+      "script_api_path": "evotech4/2026.11.09_3660526224_59ea10f5/script_api_evotech4.json",
+      "wizard_path": "evotech4/2026.11.09_3660526224_59ea10f5/setup_wizard_evotech4.json",
+      "release_id": "evotech4/2026.11.09_3660526224_59ea10f5",
+      "build_id": "59ea10f5",
+      "git_commit": "59ea10f55a560afc1b6788d8031c446babad58fb",
+      "flash_data_version": 261027,
+      "bin_path": "evotech4/2026.11.09_3660526224_59ea10f5/rusefi.bin",
+      "bin_sha256": "154aaa3d0c1604365a81cf3b16e2cf346f8cc1eaed2394d5f6afe360a60f339c",
+      "has_notes": true,
+      "notes_kind": "preview",
+      "notes_path": "evotech4/2026.11.09_3660526224_59ea10f5/release.json",
+      "title": ""
+    },
+    {
       "timestamp": "2026-11-09T09:04:29.872198+00:00",
       "signature": "182136741",
       "hardware": "evotech12",
