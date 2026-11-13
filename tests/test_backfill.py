@@ -1,5 +1,6 @@
 """Testes do tools/backfill_notes.py e do ini_diff vendorizado."""
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -147,9 +148,12 @@ def test_curated_file_is_valid_for_the_contract():
 
 
 def test_vendored_ini_diff_matches_firmware():
-    fw = Path.home() / "MotroLink/worktrees/evotech-release-notes/tools/release_notes/ini_diff.py"
-    alt = ROOT.parent / "evotech-firmware/tools/release_notes/ini_diff.py"
-    src = next((p for p in (fw, alt) if p.exists()), None)
+    # Contrato `ini-diff` (motrolink_gestao): a firmware ao lado vem primeiro, para a verificação de uma
+    # demanda comparar com o worktree da própria demanda; EVOTECH_FIRMWARE aponta outra árvore se preciso.
+    candidatos = [ROOT.parent / "evotech-firmware/tools/release_notes/ini_diff.py"]
+    if os.environ.get("EVOTECH_FIRMWARE"):
+        candidatos.insert(0, Path(os.environ["EVOTECH_FIRMWARE"]) / "tools/release_notes/ini_diff.py")
+    src = next((p for p in candidatos if p.exists()), None)
     if src is None:
         pytest.skip("repo da firmware nao encontrado ao lado")
     vendored = (ROOT / "tools" / "ini_diff.py").read_text().split("\n", 5)[5]
