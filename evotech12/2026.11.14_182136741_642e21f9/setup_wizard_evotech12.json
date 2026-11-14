@@ -1,0 +1,6049 @@
+{
+  "board": "evotech12",
+  "generated_from": {
+    "ini_sha256": "0bf93529dfb0ea0d973f1f199934af60fe71fa6f623952184cc21b160546f1ff",
+    "yaml_sha256": "f4e8a134a530b8403666f6d63ce270b8e4921e748c9f9e05b75debccef11ea96"
+  },
+  "installation": {
+    "connectors": [
+      {
+        "color": "#2D2D2D",
+        "id": "35_black",
+        "label": "s:conn.35_black",
+        "pin_count": 35
+      },
+      {
+        "color": "#1A1A1A",
+        "id": "23_black",
+        "label": "s:conn.23_black",
+        "pin_count": 23
+      },
+      {
+        "color": "#E0E0E0",
+        "id": "35_white",
+        "label": "s:conn.35_white",
+        "pin_count": 35
+      }
+    ],
+    "model": "EvoTech 12",
+    "pins": [
+      {
+        "connector": "35_black",
+        "description": "s:inst.35_black.1",
+        "field": "injectionPins4",
+        "kind": "low_side",
+        "pin": 1,
+        "pin_id": "outputs:8",
+        "role": "injector:4",
+        "signal": "LS4"
+      },
+      {
+        "connector": "35_black",
+        "description": "s:inst.35_black.2",
+        "field": "injectionPins3",
+        "kind": "low_side",
+        "pin": 2,
+        "pin_id": "outputs:7",
+        "role": "injector:3",
+        "signal": "LS3"
+      },
+      {
+        "connector": "35_black",
+        "description": "s:inst.35_black.3",
+        "field": "injectionPins2",
+        "kind": "low_side",
+        "pin": 3,
+        "pin_id": "outputs:6",
+        "role": "injector:2",
+        "signal": "LS2"
+      },
+      {
+        "connector": "35_black",
+        "description": "s:inst.35_black.4",
+        "field": "injectionPins1",
+        "kind": "low_side",
+        "pin": 4,
+        "pin_id": "outputs:5",
+        "role": "injector:1",
+        "signal": "LS1"
+      },
+      {
+        "connector": "35_black",
+        "description": "s:inst.35_black.5",
+        "field": "injectionPins8",
+        "kind": "low_side",
+        "pin": 5,
+        "pin_id": "outputs:12",
+        "role": "injector:8",
+        "signal": "LS8"
+      },
+      {
+        "connector": "35_black",
+        "description": "s:inst.35_black.6",
+        "field": "injectionPins7",
+        "kind": "low_side",
+        "pin": 6,
+        "pin_id": "outputs:11",
+        "role": "injector:7",
+        "signal": "LS7"
+      },
+      {
+        "connector": "35_black",
+        "description": "s:inst.35_black.7",
+        "field": "injectionPins6",
+        "kind": "low_side",
+        "pin": 7,
+        "pin_id": "outputs:10",
+        "role": "injector:6",
+        "signal": "LS6"
+      },
+      {
+        "connector": "35_black",
+        "description": "s:inst.35_black.8",
+        "field": "injectionPins5",
+        "kind": "low_side",
+        "pin": 8,
+        "pin_id": "outputs:9",
+        "role": "injector:5",
+        "signal": "LS5"
+      },
+      {
+        "connector": "35_black",
+        "description": "s:inst.35_black.9",
+        "kind": "power_5v",
+        "pin": 9,
+        "signal": "5V_SENSOR_1"
+      },
+      {
+        "connector": "35_black",
+        "description": "s:inst.35_black.10",
+        "kind": "ground",
+        "pin": 10,
+        "signal": "GND"
+      },
+      {
+        "connector": "35_black",
+        "description": "s:inst.35_black.11",
+        "kind": "power_12v",
+        "pin": 11,
+        "signal": "12V_RAW"
+      },
+      {
+        "connector": "35_black",
+        "description": "s:inst.35_black.12",
+        "field": "triggerInputPins1",
+        "kind": "vr_sensor",
+        "pin": 12,
+        "role": "trigger",
+        "signal": "VR1-"
+      },
+      {
+        "connector": "35_black",
+        "description": "s:inst.35_black.13",
+        "kind": "analog_voltage",
+        "pin": 13,
+        "pin_id": "inputs:6",
+        "signal": "AV6"
+      },
+      {
+        "connector": "35_black",
+        "description": "s:inst.35_black.14",
+        "kind": "analog_voltage",
+        "pin": 14,
+        "pin_id": "inputs:5",
+        "signal": "AV5"
+      },
+      {
+        "connector": "35_black",
+        "description": "s:inst.35_black.15",
+        "kind": "analog_voltage",
+        "pin": 15,
+        "pin_id": "inputs:7",
+        "signal": "AV7"
+      },
+      {
+        "connector": "35_black",
+        "description": "s:inst.35_black.16",
+        "kind": "analog_voltage",
+        "pin": 16,
+        "pin_id": "inputs:8",
+        "signal": "AV8"
+      },
+      {
+        "connector": "35_black",
+        "description": "s:inst.35_black.17",
+        "kind": "can_bus",
+        "pin": 17,
+        "signal": "CAN+"
+      },
+      {
+        "connector": "35_black",
+        "description": "s:inst.35_black.18",
+        "kind": "can_bus",
+        "pin": 18,
+        "signal": "CAN-"
+      },
+      {
+        "connector": "35_black",
+        "description": "s:inst.35_black.19",
+        "field": "iat_adcChannel",
+        "kind": "analog_temp",
+        "pin": 19,
+        "pin_id": "inputs:12",
+        "role": "iat",
+        "signal": "AT1"
+      },
+      {
+        "connector": "35_black",
+        "description": "s:inst.35_black.20",
+        "field": "clt_adcChannel",
+        "kind": "analog_temp",
+        "pin": 20,
+        "pin_id": "inputs:13",
+        "role": "clt",
+        "signal": "AT2"
+      },
+      {
+        "connector": "35_black",
+        "description": "s:inst.35_black.21",
+        "kind": "ground",
+        "pin": 21,
+        "signal": "GND"
+      },
+      {
+        "connector": "35_black",
+        "description": "s:inst.35_black.22",
+        "kind": "ground",
+        "pin": 22,
+        "signal": "GND"
+      },
+      {
+        "connector": "35_black",
+        "description": "s:inst.35_black.23",
+        "field": "triggerInputPins1",
+        "kind": "vr_sensor",
+        "pin": 23,
+        "pin_id": "inputs:VR 1",
+        "role": "trigger",
+        "signal": "VR1+"
+      },
+      {
+        "connector": "35_black",
+        "description": "s:inst.35_black.24",
+        "field": "map_sensor_hwChannel",
+        "kind": "analog_voltage",
+        "pin": 24,
+        "pin_id": "inputs:1",
+        "role": "map",
+        "signal": "AV1"
+      },
+      {
+        "connector": "35_black",
+        "description": "s:inst.35_black.25",
+        "field": "tps1_1AdcChannel",
+        "kind": "analog_voltage",
+        "pin": 25,
+        "pin_id": "inputs:2",
+        "role": "tps:1",
+        "signal": "AV2"
+      },
+      {
+        "connector": "35_black",
+        "description": "s:inst.35_black.26",
+        "kind": "analog_voltage",
+        "pin": 26,
+        "pin_id": "inputs:3",
+        "signal": "AV3"
+      },
+      {
+        "connector": "35_black",
+        "description": "s:inst.35_black.27",
+        "kind": "analog_voltage",
+        "pin": 27,
+        "pin_id": "inputs:4",
+        "signal": "AV4"
+      },
+      {
+        "connector": "35_black",
+        "description": "s:inst.35_black.28",
+        "field": "triggerInputPins1",
+        "kind": "digital",
+        "pin": 28,
+        "pin_id": "inputs:16",
+        "role": "trigger",
+        "signal": "DIGITAL_1"
+      },
+      {
+        "connector": "35_black",
+        "description": "s:inst.35_black.29",
+        "field": "camInputs1",
+        "kind": "digital",
+        "pin": 29,
+        "pin_id": "inputs:17",
+        "role": "cam",
+        "signal": "DIGITAL_2"
+      },
+      {
+        "connector": "35_black",
+        "description": "s:inst.35_black.30",
+        "kind": "digital",
+        "pin": 30,
+        "pin_id": "inputs:18",
+        "signal": "DIGITAL_3"
+      },
+      {
+        "connector": "35_black",
+        "description": "s:inst.35_black.31",
+        "kind": "ground",
+        "pin": 31,
+        "signal": "GND"
+      },
+      {
+        "connector": "35_black",
+        "description": "s:inst.35_black.32",
+        "field": "ignitionPins4",
+        "kind": "ignition",
+        "pin": 32,
+        "pin_id": "outputs:24",
+        "role": "coil:4",
+        "signal": "IGN4"
+      },
+      {
+        "connector": "35_black",
+        "description": "s:inst.35_black.33",
+        "field": "ignitionPins3",
+        "kind": "ignition",
+        "pin": 33,
+        "pin_id": "outputs:23",
+        "role": "coil:3",
+        "signal": "IGN3"
+      },
+      {
+        "connector": "35_black",
+        "description": "s:inst.35_black.34",
+        "field": "ignitionPins2",
+        "kind": "ignition",
+        "pin": 34,
+        "pin_id": "outputs:22",
+        "role": "coil:2",
+        "signal": "IGN2"
+      },
+      {
+        "connector": "35_black",
+        "description": "s:inst.35_black.35",
+        "field": "ignitionPins1",
+        "kind": "ignition",
+        "pin": 35,
+        "pin_id": "outputs:21",
+        "role": "coil:1",
+        "signal": "IGN1"
+      },
+      {
+        "connector": "23_black",
+        "description": "s:inst.23_black.1",
+        "field": "mainRelayPin",
+        "kind": "high_side",
+        "pin": 1,
+        "pin_id": "outputs:2",
+        "role": "relay:main",
+        "signal": "HS2"
+      },
+      {
+        "connector": "23_black",
+        "description": "s:inst.23_black.2",
+        "field": "fuelPumpPin",
+        "kind": "high_side",
+        "pin": 2,
+        "pin_id": "outputs:1",
+        "role": "relay:fuel_pump",
+        "signal": "HS1"
+      },
+      {
+        "connector": "23_black",
+        "description": "s:inst.23_black.3",
+        "field": "injectionPins12",
+        "kind": "low_side",
+        "pin": 3,
+        "pin_id": "outputs:16",
+        "role": "injector:12",
+        "signal": "LS12"
+      },
+      {
+        "connector": "23_black",
+        "description": "s:inst.23_black.4",
+        "field": "injectionPins11",
+        "kind": "low_side",
+        "pin": 4,
+        "pin_id": "outputs:15",
+        "role": "injector:11",
+        "signal": "LS11"
+      },
+      {
+        "connector": "23_black",
+        "description": "s:inst.23_black.5",
+        "field": "injectionPins10",
+        "kind": "low_side",
+        "pin": 5,
+        "pin_id": "outputs:14",
+        "role": "injector:10",
+        "signal": "LS10"
+      },
+      {
+        "connector": "23_black",
+        "description": "s:inst.23_black.6",
+        "field": "injectionPins9",
+        "kind": "low_side",
+        "pin": 6,
+        "pin_id": "outputs:13",
+        "role": "injector:9",
+        "signal": "LS9"
+      },
+      {
+        "connector": "23_black",
+        "description": "s:inst.23_black.7",
+        "kind": "etb",
+        "pin": 7,
+        "signal": "ETB1-"
+      },
+      {
+        "connector": "23_black",
+        "description": "s:inst.23_black.8",
+        "kind": "etb",
+        "pin": 8,
+        "pin_id": "outputs:33",
+        "signal": "ETB1+"
+      },
+      {
+        "connector": "23_black",
+        "description": "s:inst.23_black.9",
+        "field": "ignitionPins6",
+        "kind": "ignition",
+        "pin": 9,
+        "pin_id": "outputs:26",
+        "role": "coil:6",
+        "signal": "IGN6"
+      },
+      {
+        "connector": "23_black",
+        "description": "s:inst.23_black.10",
+        "field": "ignitionPins8",
+        "kind": "ignition",
+        "pin": 10,
+        "pin_id": "outputs:28",
+        "role": "coil:8",
+        "signal": "IGN8"
+      },
+      {
+        "connector": "23_black",
+        "description": "s:inst.23_black.11",
+        "kind": "digital",
+        "pin": 11,
+        "pin_id": "inputs:19",
+        "signal": "DIGITAL_4"
+      },
+      {
+        "connector": "23_black",
+        "description": "s:inst.23_black.12",
+        "kind": "digital",
+        "pin": 12,
+        "pin_id": "inputs:20",
+        "signal": "DIGITAL_5"
+      },
+      {
+        "connector": "23_black",
+        "description": "s:inst.23_black.13",
+        "kind": "digital",
+        "pin": 13,
+        "pin_id": "inputs:21",
+        "signal": "DIGITAL_6"
+      },
+      {
+        "connector": "23_black",
+        "description": "s:inst.23_black.14",
+        "kind": "power_12v",
+        "pin": 14,
+        "signal": "+12V_MR"
+      },
+      {
+        "connector": "23_black",
+        "description": "s:inst.23_black.15",
+        "kind": "etb",
+        "pin": 15,
+        "signal": "ETB2-"
+      },
+      {
+        "connector": "23_black",
+        "description": "s:inst.23_black.16",
+        "field": "ignitionPins5",
+        "kind": "ignition",
+        "pin": 16,
+        "pin_id": "outputs:25",
+        "role": "coil:5",
+        "signal": "IGN5"
+      },
+      {
+        "connector": "23_black",
+        "description": "s:inst.23_black.17",
+        "field": "ignitionPins7",
+        "kind": "ignition",
+        "pin": 17,
+        "pin_id": "outputs:27",
+        "role": "coil:7",
+        "signal": "IGN7"
+      },
+      {
+        "connector": "23_black",
+        "description": "s:inst.23_black.18",
+        "kind": "analog_temp",
+        "pin": 18,
+        "pin_id": "inputs:14",
+        "signal": "AT3"
+      },
+      {
+        "connector": "23_black",
+        "description": "s:inst.23_black.19",
+        "kind": "knock",
+        "pin": 19,
+        "signal": "KNOCK_1"
+      },
+      {
+        "connector": "23_black",
+        "description": "s:inst.23_black.20",
+        "kind": "can_bus",
+        "pin": 20,
+        "signal": "CAN2+"
+      },
+      {
+        "connector": "23_black",
+        "description": "s:inst.23_black.21",
+        "kind": "can_bus",
+        "pin": 21,
+        "signal": "CAN2-"
+      },
+      {
+        "connector": "23_black",
+        "description": "s:inst.23_black.22",
+        "kind": "ground",
+        "pin": 22,
+        "signal": "GND"
+      },
+      {
+        "connector": "23_black",
+        "description": "s:inst.23_black.23",
+        "kind": "etb",
+        "pin": 23,
+        "pin_id": "outputs:34",
+        "signal": "ETB2+"
+      },
+      {
+        "connector": "35_white",
+        "description": "s:inst.35_white.1",
+        "kind": "usb",
+        "pin": 1,
+        "signal": "5V_USB"
+      },
+      {
+        "connector": "35_white",
+        "description": "s:inst.35_white.2",
+        "field": "triggerInputPins2",
+        "kind": "vr_sensor",
+        "pin": 2,
+        "role": "trigger",
+        "signal": "VR2-"
+      },
+      {
+        "connector": "35_white",
+        "description": "s:inst.35_white.3",
+        "field": "triggerInputPins2",
+        "kind": "vr_sensor",
+        "pin": 3,
+        "pin_id": "inputs:VR 2",
+        "role": "trigger",
+        "signal": "VR2+"
+      },
+      {
+        "connector": "35_white",
+        "description": "s:inst.35_white.4",
+        "kind": "ground",
+        "pin": 4,
+        "signal": "GND"
+      },
+      {
+        "connector": "35_white",
+        "description": "s:inst.35_white.5",
+        "kind": "ground",
+        "pin": 5,
+        "signal": "GND"
+      },
+      {
+        "connector": "35_white",
+        "description": "s:inst.35_white.6",
+        "kind": "low_side",
+        "pin": 6,
+        "pin_id": "outputs:20",
+        "signal": "LS16"
+      },
+      {
+        "connector": "35_white",
+        "description": "s:inst.35_white.7",
+        "kind": "low_side",
+        "pin": 7,
+        "pin_id": "outputs:19",
+        "signal": "LS15"
+      },
+      {
+        "connector": "35_white",
+        "description": "s:inst.35_white.8",
+        "kind": "low_side",
+        "pin": 8,
+        "pin_id": "outputs:18",
+        "signal": "LS14"
+      },
+      {
+        "connector": "35_white",
+        "description": "s:inst.35_white.9",
+        "kind": "low_side",
+        "pin": 9,
+        "pin_id": "outputs:17",
+        "signal": "LS13"
+      },
+      {
+        "connector": "35_white",
+        "description": "s:inst.35_white.10",
+        "kind": "ground",
+        "pin": 10,
+        "signal": "GND"
+      },
+      {
+        "connector": "35_white",
+        "description": "s:inst.35_white.11",
+        "kind": "ground",
+        "pin": 11,
+        "signal": "GND"
+      },
+      {
+        "connector": "35_white",
+        "description": "s:inst.35_white.12",
+        "kind": "power_5v",
+        "pin": 12,
+        "signal": "5V_SENSOR_2"
+      },
+      {
+        "connector": "35_white",
+        "description": "s:inst.35_white.13",
+        "kind": "usb",
+        "pin": 13,
+        "signal": "USB_D+"
+      },
+      {
+        "connector": "35_white",
+        "description": "s:inst.35_white.14",
+        "kind": "ground",
+        "pin": 14,
+        "signal": "GND"
+      },
+      {
+        "connector": "35_white",
+        "description": "s:inst.35_white.15",
+        "kind": "reserved",
+        "pin": 15,
+        "signal": "NC"
+      },
+      {
+        "connector": "35_white",
+        "description": "s:inst.35_white.16",
+        "kind": "reserved",
+        "pin": 16,
+        "signal": "NC"
+      },
+      {
+        "connector": "35_white",
+        "description": "s:inst.35_white.17",
+        "kind": "reserved",
+        "pin": 17,
+        "signal": "NC"
+      },
+      {
+        "connector": "35_white",
+        "description": "s:inst.35_white.18",
+        "kind": "reserved",
+        "pin": 18,
+        "signal": "NC"
+      },
+      {
+        "connector": "35_white",
+        "description": "s:inst.35_white.19",
+        "kind": "reserved",
+        "pin": 19,
+        "signal": "NC"
+      },
+      {
+        "connector": "35_white",
+        "description": "s:inst.35_white.20",
+        "kind": "power_12v",
+        "pin": 20,
+        "signal": "12V_MR"
+      },
+      {
+        "connector": "35_white",
+        "description": "s:inst.35_white.21",
+        "kind": "ground",
+        "pin": 21,
+        "signal": "GND"
+      },
+      {
+        "connector": "35_white",
+        "description": "s:inst.35_white.22",
+        "field": "fanPin",
+        "kind": "high_side",
+        "pin": 22,
+        "pin_id": "outputs:4",
+        "role": "relay:fan",
+        "signal": "HS4"
+      },
+      {
+        "connector": "35_white",
+        "description": "s:inst.35_white.23",
+        "field": "fanPin",
+        "kind": "high_side",
+        "pin": 23,
+        "pin_id": "outputs:3",
+        "role": "relay:fan",
+        "signal": "HS3"
+      },
+      {
+        "connector": "35_white",
+        "description": "s:inst.35_white.24",
+        "kind": "usb",
+        "pin": 24,
+        "signal": "USB_D-"
+      },
+      {
+        "connector": "35_white",
+        "description": "s:inst.35_white.25",
+        "field": "ignitionPins9",
+        "kind": "ignition",
+        "pin": 25,
+        "pin_id": "outputs:29",
+        "role": "coil:9",
+        "signal": "IGN9"
+      },
+      {
+        "connector": "35_white",
+        "description": "s:inst.35_white.26",
+        "field": "ignitionPins10",
+        "kind": "ignition",
+        "pin": 26,
+        "pin_id": "outputs:30",
+        "role": "coil:10",
+        "signal": "IGN10"
+      },
+      {
+        "connector": "35_white",
+        "description": "s:inst.35_white.27",
+        "field": "ignitionPins11",
+        "kind": "ignition",
+        "pin": 27,
+        "pin_id": "outputs:31",
+        "role": "coil:11",
+        "signal": "IGN11"
+      },
+      {
+        "connector": "35_white",
+        "description": "s:inst.35_white.28",
+        "field": "ignitionPins12",
+        "kind": "ignition",
+        "pin": 28,
+        "pin_id": "outputs:32",
+        "role": "coil:12",
+        "signal": "IGN12"
+      },
+      {
+        "connector": "35_white",
+        "description": "s:inst.35_white.29",
+        "kind": "analog_temp",
+        "pin": 29,
+        "pin_id": "inputs:15",
+        "signal": "AT4"
+      },
+      {
+        "connector": "35_white",
+        "description": "s:inst.35_white.30",
+        "kind": "ground",
+        "pin": 30,
+        "signal": "GND"
+      },
+      {
+        "connector": "35_white",
+        "description": "s:inst.35_white.31",
+        "kind": "ground",
+        "pin": 31,
+        "signal": "GND"
+      },
+      {
+        "connector": "35_white",
+        "description": "s:inst.35_white.32",
+        "kind": "knock",
+        "pin": 32,
+        "signal": "KNOCK_2"
+      },
+      {
+        "connector": "35_white",
+        "description": "s:inst.35_white.33",
+        "kind": "analog_voltage",
+        "pin": 33,
+        "pin_id": "inputs:9",
+        "signal": "AV9"
+      },
+      {
+        "connector": "35_white",
+        "description": "s:inst.35_white.34",
+        "kind": "analog_voltage",
+        "pin": 34,
+        "pin_id": "inputs:10",
+        "signal": "AV10"
+      },
+      {
+        "connector": "35_white",
+        "description": "s:inst.35_white.35",
+        "kind": "analog_voltage",
+        "pin": 35,
+        "pin_id": "inputs:11",
+        "signal": "AV11"
+      }
+    ],
+    "schema": 1
+  },
+  "pin_roles": {
+    "battery": {
+      "available": 1,
+      "candidates": [
+        {
+          "id": "inputs:22",
+          "level": "recommended"
+        }
+      ],
+      "classes": [
+        "analog_inputs"
+      ],
+      "lists": [
+        "adc_channel_e_list"
+      ],
+      "shareable_with": [],
+      "types": [
+        "12v"
+      ],
+      "types_allowed_with_warning": [],
+      "types_recommended": [
+        "12v"
+      ]
+    },
+    "cam": {
+      "available": 8,
+      "candidates": [
+        {
+          "id": "inputs:16",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:17",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:18",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:19",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:20",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:21",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:VR 1",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:VR 2",
+          "level": "recommended"
+        }
+      ],
+      "classes": [
+        "event_inputs"
+      ],
+      "lists": [
+        "brain_input_pin_e_list"
+      ],
+      "shareable_with": [],
+      "types": [
+        "vr",
+        "din"
+      ],
+      "types_allowed_with_warning": [],
+      "types_recommended": [
+        "vr",
+        "din"
+      ],
+      "warning": "s:pinrole.trigger.type"
+    },
+    "clt": {
+      "available": 4,
+      "candidates": [
+        {
+          "id": "inputs:1",
+          "level": "warning"
+        },
+        {
+          "id": "inputs:2",
+          "level": "warning"
+        },
+        {
+          "id": "inputs:3",
+          "level": "warning"
+        },
+        {
+          "id": "inputs:4",
+          "level": "warning"
+        },
+        {
+          "id": "inputs:5",
+          "level": "warning"
+        },
+        {
+          "id": "inputs:6",
+          "level": "warning"
+        },
+        {
+          "id": "inputs:7",
+          "level": "warning"
+        },
+        {
+          "id": "inputs:8",
+          "level": "warning"
+        },
+        {
+          "id": "inputs:9",
+          "level": "warning"
+        },
+        {
+          "id": "inputs:10",
+          "level": "warning"
+        },
+        {
+          "id": "inputs:11",
+          "level": "warning"
+        },
+        {
+          "id": "inputs:12",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:13",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:14",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:15",
+          "level": "recommended"
+        }
+      ],
+      "classes": [
+        "analog_inputs"
+      ],
+      "lists": [
+        "adc_channel_e_list"
+      ],
+      "shareable_with": [],
+      "types": [
+        "at",
+        "av"
+      ],
+      "types_allowed_with_warning": [
+        "av"
+      ],
+      "types_recommended": [
+        "at"
+      ],
+      "warning": "s:pinrole.thermistor.av"
+    },
+    "coil": {
+      "available": 12,
+      "candidates": [
+        {
+          "id": "outputs:21",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:22",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:23",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:24",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:25",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:26",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:27",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:28",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:29",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:30",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:31",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:32",
+          "level": "recommended"
+        }
+      ],
+      "classes": [
+        "outputs"
+      ],
+      "lists": [
+        "output_pin_e_list"
+      ],
+      "shareable_with": [],
+      "types": [
+        "high_logic"
+      ],
+      "types_allowed_with_warning": [],
+      "types_recommended": [
+        "high_logic"
+      ]
+    },
+    "iat": {
+      "available": 4,
+      "candidates": [
+        {
+          "id": "inputs:1",
+          "level": "warning"
+        },
+        {
+          "id": "inputs:2",
+          "level": "warning"
+        },
+        {
+          "id": "inputs:3",
+          "level": "warning"
+        },
+        {
+          "id": "inputs:4",
+          "level": "warning"
+        },
+        {
+          "id": "inputs:5",
+          "level": "warning"
+        },
+        {
+          "id": "inputs:6",
+          "level": "warning"
+        },
+        {
+          "id": "inputs:7",
+          "level": "warning"
+        },
+        {
+          "id": "inputs:8",
+          "level": "warning"
+        },
+        {
+          "id": "inputs:9",
+          "level": "warning"
+        },
+        {
+          "id": "inputs:10",
+          "level": "warning"
+        },
+        {
+          "id": "inputs:11",
+          "level": "warning"
+        },
+        {
+          "id": "inputs:12",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:13",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:14",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:15",
+          "level": "recommended"
+        }
+      ],
+      "classes": [
+        "analog_inputs"
+      ],
+      "lists": [
+        "adc_channel_e_list"
+      ],
+      "shareable_with": [],
+      "types": [
+        "at",
+        "av"
+      ],
+      "types_allowed_with_warning": [
+        "av"
+      ],
+      "types_recommended": [
+        "at"
+      ],
+      "warning": "s:pinrole.thermistor.av"
+    },
+    "injector": {
+      "available": 16,
+      "candidates": [
+        {
+          "id": "outputs:5",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:6",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:7",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:8",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:9",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:10",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:11",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:12",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:13",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:14",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:15",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:16",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:17",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:18",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:19",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:20",
+          "level": "recommended"
+        }
+      ],
+      "classes": [
+        "outputs"
+      ],
+      "lists": [
+        "output_pin_e_list"
+      ],
+      "shareable_with": [],
+      "types": [
+        "ls"
+      ],
+      "types_allowed_with_warning": [],
+      "types_recommended": [
+        "ls"
+      ]
+    },
+    "lambda": {
+      "available": 11,
+      "candidates": [
+        {
+          "id": "inputs:1",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:2",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:3",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:4",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:5",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:6",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:7",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:8",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:9",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:10",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:11",
+          "level": "recommended"
+        }
+      ],
+      "classes": [
+        "analog_inputs"
+      ],
+      "lists": [
+        "adc_channel_e_list"
+      ],
+      "shareable_with": [],
+      "types": [
+        "av"
+      ],
+      "types_allowed_with_warning": [],
+      "types_recommended": [
+        "av"
+      ]
+    },
+    "map": {
+      "available": 11,
+      "candidates": [
+        {
+          "id": "inputs:1",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:2",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:3",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:4",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:5",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:6",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:7",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:8",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:9",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:10",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:11",
+          "level": "recommended"
+        }
+      ],
+      "classes": [
+        "analog_inputs"
+      ],
+      "lists": [
+        "adc_channel_e_list"
+      ],
+      "shareable_with": [],
+      "types": [
+        "av"
+      ],
+      "types_allowed_with_warning": [],
+      "types_recommended": [
+        "av"
+      ]
+    },
+    "output": {
+      "available": 16,
+      "candidates": [
+        {
+          "id": "outputs:1",
+          "level": "warning"
+        },
+        {
+          "id": "outputs:2",
+          "level": "warning"
+        },
+        {
+          "id": "outputs:3",
+          "level": "warning"
+        },
+        {
+          "id": "outputs:4",
+          "level": "warning"
+        },
+        {
+          "id": "outputs:5",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:6",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:7",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:8",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:9",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:10",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:11",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:12",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:13",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:14",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:15",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:16",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:17",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:18",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:19",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:20",
+          "level": "recommended"
+        }
+      ],
+      "classes": [
+        "outputs"
+      ],
+      "lists": [
+        "output_pin_e_list"
+      ],
+      "shareable_with": [],
+      "types": [
+        "ls",
+        "hs"
+      ],
+      "types_allowed_with_warning": [
+        "hs"
+      ],
+      "types_recommended": [
+        "ls"
+      ],
+      "warning": "s:pinrole.output.hs"
+    },
+    "pedal": {
+      "available": 11,
+      "candidates": [
+        {
+          "id": "inputs:1",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:2",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:3",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:4",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:5",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:6",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:7",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:8",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:9",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:10",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:11",
+          "level": "recommended"
+        }
+      ],
+      "classes": [
+        "analog_inputs"
+      ],
+      "lists": [
+        "adc_channel_e_list"
+      ],
+      "shareable_with": [],
+      "types": [
+        "av"
+      ],
+      "types_allowed_with_warning": [],
+      "types_recommended": [
+        "av"
+      ]
+    },
+    "relay": {
+      "available": 20,
+      "candidates": [
+        {
+          "id": "outputs:1",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:2",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:3",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:4",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:5",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:6",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:7",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:8",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:9",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:10",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:11",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:12",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:13",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:14",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:15",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:16",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:17",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:18",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:19",
+          "level": "recommended"
+        },
+        {
+          "id": "outputs:20",
+          "level": "recommended"
+        }
+      ],
+      "classes": [
+        "outputs"
+      ],
+      "lists": [
+        "output_pin_e_list"
+      ],
+      "shareable_with": [],
+      "types": [
+        "ls",
+        "hs"
+      ],
+      "types_allowed_with_warning": [],
+      "types_recommended": [
+        "ls",
+        "hs"
+      ]
+    },
+    "switch": {
+      "available": 21,
+      "candidates": [
+        {
+          "id": "inputs:1",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:2",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:3",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:4",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:5",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:6",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:7",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:8",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:9",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:10",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:11",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:12",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:13",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:14",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:15",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:16",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:17",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:18",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:19",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:20",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:21",
+          "level": "recommended"
+        }
+      ],
+      "classes": [
+        "switch_inputs"
+      ],
+      "lists": [
+        "switch_input_pin_e_list"
+      ],
+      "shareable_with": [],
+      "types": [
+        "din",
+        "av",
+        "at"
+      ],
+      "types_allowed_with_warning": [],
+      "types_recommended": [
+        "din",
+        "av",
+        "at"
+      ]
+    },
+    "tps": {
+      "available": 11,
+      "candidates": [
+        {
+          "id": "inputs:1",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:2",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:3",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:4",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:5",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:6",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:7",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:8",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:9",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:10",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:11",
+          "level": "recommended"
+        }
+      ],
+      "classes": [
+        "analog_inputs"
+      ],
+      "lists": [
+        "adc_channel_e_list"
+      ],
+      "shareable_with": [],
+      "types": [
+        "av"
+      ],
+      "types_allowed_with_warning": [],
+      "types_recommended": [
+        "av"
+      ]
+    },
+    "trigger": {
+      "available": 8,
+      "candidates": [
+        {
+          "id": "inputs:16",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:17",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:18",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:19",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:20",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:21",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:VR 1",
+          "level": "recommended"
+        },
+        {
+          "id": "inputs:VR 2",
+          "level": "recommended"
+        }
+      ],
+      "classes": [
+        "event_inputs"
+      ],
+      "lists": [
+        "brain_input_pin_e_list"
+      ],
+      "shareable_with": [],
+      "types": [
+        "vr",
+        "din"
+      ],
+      "types_allowed_with_warning": [],
+      "types_recommended": [
+        "vr",
+        "din"
+      ],
+      "warning": "s:pinrole.trigger.type"
+    }
+  },
+  "pins": [
+    {
+      "class": [
+        "switch_inputs",
+        "analog_inputs"
+      ],
+      "connector": "inputs",
+      "connector_pin": 1,
+      "function": "Analog Voltage Input #1 MAP",
+      "id": "inputs:1",
+      "mcu": "C0",
+      "options": {
+        "adc_channel_e_list": 11,
+        "switch_input_pin_e_list": 34
+      },
+      "recommended_for": [
+        "map"
+      ],
+      "ts_name": "Analog Volt 1",
+      "type": "av"
+    },
+    {
+      "class": [
+        "switch_inputs",
+        "analog_inputs"
+      ],
+      "connector": "inputs",
+      "connector_pin": 2,
+      "function": "Analog Voltage Input #2 TPS",
+      "id": "inputs:2",
+      "mcu": "C1",
+      "options": {
+        "adc_channel_e_list": 12,
+        "switch_input_pin_e_list": 35
+      },
+      "recommended_for": [
+        "tps:1"
+      ],
+      "ts_name": "Analog Volt 2",
+      "type": "av"
+    },
+    {
+      "class": [
+        "switch_inputs",
+        "analog_inputs"
+      ],
+      "connector": "inputs",
+      "connector_pin": 3,
+      "function": "Analog Voltage Input #3 TPS2",
+      "id": "inputs:3",
+      "mcu": "C2",
+      "options": {
+        "adc_channel_e_list": 13,
+        "switch_input_pin_e_list": 36
+      },
+      "recommended_for": [
+        "tps:2"
+      ],
+      "ts_name": "Analog Volt 3",
+      "type": "av"
+    },
+    {
+      "class": [
+        "switch_inputs",
+        "analog_inputs"
+      ],
+      "connector": "inputs",
+      "connector_pin": 4,
+      "function": "Analog Voltage Input #4",
+      "id": "inputs:4",
+      "mcu": "C3",
+      "options": {
+        "adc_channel_e_list": 14,
+        "switch_input_pin_e_list": 37
+      },
+      "recommended_for": [],
+      "ts_name": "Analog Volt 4",
+      "type": "av"
+    },
+    {
+      "class": [
+        "switch_inputs",
+        "analog_inputs"
+      ],
+      "connector": "inputs",
+      "connector_pin": 5,
+      "function": "Analog Voltage Input #5",
+      "id": "inputs:5",
+      "mcu": "A0",
+      "options": {
+        "adc_channel_e_list": 1,
+        "switch_input_pin_e_list": 2
+      },
+      "recommended_for": [],
+      "ts_name": "Analog Volt 5",
+      "type": "av"
+    },
+    {
+      "class": [
+        "switch_inputs",
+        "analog_inputs"
+      ],
+      "connector": "inputs",
+      "connector_pin": 6,
+      "function": "Analog Voltage Input #6",
+      "id": "inputs:6",
+      "mcu": "A1",
+      "options": {
+        "adc_channel_e_list": 2,
+        "switch_input_pin_e_list": 3
+      },
+      "recommended_for": [],
+      "ts_name": "Analog Volt 6",
+      "type": "av"
+    },
+    {
+      "class": [
+        "switch_inputs",
+        "analog_inputs"
+      ],
+      "connector": "inputs",
+      "connector_pin": 7,
+      "function": "Analog Voltage Input #7",
+      "id": "inputs:7",
+      "mcu": "A2",
+      "options": {
+        "adc_channel_e_list": 3,
+        "switch_input_pin_e_list": 4
+      },
+      "recommended_for": [],
+      "ts_name": "Analog Volt 7",
+      "type": "av"
+    },
+    {
+      "class": [
+        "switch_inputs",
+        "analog_inputs"
+      ],
+      "connector": "inputs",
+      "connector_pin": 8,
+      "function": "Analog Voltage Input #8",
+      "id": "inputs:8",
+      "mcu": "A3",
+      "options": {
+        "adc_channel_e_list": 4,
+        "switch_input_pin_e_list": 5
+      },
+      "recommended_for": [],
+      "ts_name": "Analog Volt 8",
+      "type": "av"
+    },
+    {
+      "class": [
+        "switch_inputs",
+        "analog_inputs"
+      ],
+      "connector": "inputs",
+      "connector_pin": 9,
+      "function": "Analog Voltage Input #9 (PPS)",
+      "id": "inputs:9",
+      "mcu": "A4",
+      "options": {
+        "adc_channel_e_list": 5,
+        "switch_input_pin_e_list": 6
+      },
+      "recommended_for": [
+        "pedal:1"
+      ],
+      "ts_name": "Analog Volt 9",
+      "type": "av"
+    },
+    {
+      "class": [
+        "switch_inputs",
+        "analog_inputs"
+      ],
+      "connector": "inputs",
+      "connector_pin": 10,
+      "function": "Analog Voltage Input #10",
+      "id": "inputs:10",
+      "mcu": "A5",
+      "options": {
+        "adc_channel_e_list": 6,
+        "switch_input_pin_e_list": 7
+      },
+      "recommended_for": [],
+      "ts_name": "Analog Volt 10",
+      "type": "av"
+    },
+    {
+      "class": [
+        "switch_inputs",
+        "analog_inputs"
+      ],
+      "connector": "inputs",
+      "connector_pin": 11,
+      "function": "Analog Voltage Input #11",
+      "id": "inputs:11",
+      "mcu": "A6",
+      "options": {
+        "adc_channel_e_list": 7,
+        "switch_input_pin_e_list": 8
+      },
+      "recommended_for": [],
+      "ts_name": "Analog Volt 11",
+      "type": "av"
+    },
+    {
+      "class": [
+        "switch_inputs",
+        "analog_inputs"
+      ],
+      "connector": "inputs",
+      "connector_pin": 12,
+      "function": "Analog Thermistor Input #1",
+      "id": "inputs:12",
+      "mcu": "C4",
+      "options": {
+        "adc_channel_e_list": 15,
+        "switch_input_pin_e_list": 38
+      },
+      "recommended_for": [],
+      "ts_name": "Analog Temp 1",
+      "type": "at"
+    },
+    {
+      "class": [
+        "switch_inputs",
+        "analog_inputs"
+      ],
+      "connector": "inputs",
+      "connector_pin": 13,
+      "function": "Intake air temperature IAT",
+      "id": "inputs:13",
+      "mcu": "C5",
+      "options": {
+        "adc_channel_e_list": 16,
+        "switch_input_pin_e_list": 39
+      },
+      "recommended_for": [
+        "iat"
+      ],
+      "ts_name": "Analog Temp 2",
+      "type": "at"
+    },
+    {
+      "class": [
+        "switch_inputs",
+        "analog_inputs"
+      ],
+      "connector": "inputs",
+      "connector_pin": 14,
+      "function": "Analog Thermistor Input #3 (CLT)",
+      "id": "inputs:14",
+      "mcu": "B0",
+      "options": {
+        "adc_channel_e_list": 9,
+        "switch_input_pin_e_list": 18
+      },
+      "recommended_for": [
+        "clt"
+      ],
+      "ts_name": "Analog Temp 3",
+      "type": "at"
+    },
+    {
+      "class": [
+        "switch_inputs",
+        "analog_inputs"
+      ],
+      "connector": "inputs",
+      "connector_pin": 15,
+      "function": "Analog Thermistor Input #4",
+      "id": "inputs:15",
+      "mcu": "B1",
+      "options": {
+        "adc_channel_e_list": 10,
+        "switch_input_pin_e_list": 19
+      },
+      "recommended_for": [],
+      "ts_name": "Analog Temp 4",
+      "type": "at"
+    },
+    {
+      "class": [
+        "event_inputs",
+        "switch_inputs"
+      ],
+      "connector": "inputs",
+      "connector_pin": 16,
+      "function": "Digital trigger/switch input",
+      "id": "inputs:16",
+      "mcu": "C6",
+      "options": {
+        "brain_input_pin_e_list": 40,
+        "switch_input_pin_e_list": 40
+      },
+      "recommended_for": [],
+      "ts_name": "Digital 1",
+      "type": "din"
+    },
+    {
+      "class": [
+        "event_inputs",
+        "switch_inputs"
+      ],
+      "connector": "inputs",
+      "connector_pin": 17,
+      "function": "Digital trigger/switch input for instance Hall type CAM",
+      "id": "inputs:17",
+      "mcu": "E11",
+      "options": {
+        "brain_input_pin_e_list": 77,
+        "switch_input_pin_e_list": 77
+      },
+      "recommended_for": [
+        "cam"
+      ],
+      "ts_name": "Digital 2",
+      "type": "din"
+    },
+    {
+      "class": [
+        "event_inputs",
+        "switch_inputs"
+      ],
+      "connector": "inputs",
+      "connector_pin": 18,
+      "function": "Digital trigger/switch input for instance VSS",
+      "id": "inputs:18",
+      "mcu": "E12",
+      "options": {
+        "brain_input_pin_e_list": 78,
+        "switch_input_pin_e_list": 78
+      },
+      "recommended_for": [
+        "switch:vss"
+      ],
+      "ts_name": "Digital 3",
+      "type": "din"
+    },
+    {
+      "class": [
+        "event_inputs",
+        "switch_inputs"
+      ],
+      "connector": "inputs",
+      "connector_pin": 19,
+      "function": "Digital trigger/switch input for instance Start Button",
+      "id": "inputs:19",
+      "mcu": "E14",
+      "options": {
+        "brain_input_pin_e_list": 80,
+        "switch_input_pin_e_list": 80
+      },
+      "recommended_for": [
+        "switch:start"
+      ],
+      "ts_name": "Digital 4",
+      "type": "din"
+    },
+    {
+      "class": [
+        "event_inputs",
+        "switch_inputs"
+      ],
+      "connector": "inputs",
+      "connector_pin": 20,
+      "function": "Digital trigger/switch input",
+      "id": "inputs:20",
+      "mcu": "E13",
+      "options": {
+        "brain_input_pin_e_list": 79,
+        "switch_input_pin_e_list": 79
+      },
+      "recommended_for": [],
+      "ts_name": "Digital 5",
+      "type": "din"
+    },
+    {
+      "class": [
+        "event_inputs",
+        "switch_inputs"
+      ],
+      "connector": "inputs",
+      "connector_pin": 21,
+      "function": "Digital trigger/switch input",
+      "id": "inputs:21",
+      "mcu": "E15",
+      "options": {
+        "brain_input_pin_e_list": 81,
+        "switch_input_pin_e_list": 81
+      },
+      "recommended_for": [],
+      "ts_name": "Digital 6",
+      "type": "din"
+    },
+    {
+      "class": [
+        "event_inputs"
+      ],
+      "connector": "inputs",
+      "id": "inputs:VR 1",
+      "mcu": "E7",
+      "options": {
+        "brain_input_pin_e_list": 73
+      },
+      "recommended_for": [],
+      "ts_name": "VR 1",
+      "type": "vr"
+    },
+    {
+      "class": [
+        "event_inputs"
+      ],
+      "connector": "inputs",
+      "id": "inputs:VR 2",
+      "mcu": "E8",
+      "options": {
+        "brain_input_pin_e_list": 74
+      },
+      "recommended_for": [],
+      "ts_name": "VR 2",
+      "type": "vr"
+    },
+    {
+      "class": [
+        "analog_inputs"
+      ],
+      "connector": "inputs",
+      "connector_pin": 22,
+      "function": "Ignition power / ECU power source",
+      "id": "inputs:22",
+      "options": {
+        "adc_channel_e_list": 8
+      },
+      "recommended_for": [
+        "battery"
+      ],
+      "ts_name": "Battery Sense",
+      "type": "12v"
+    },
+    {
+      "class": [
+        "outputs"
+      ],
+      "connector": "outputs",
+      "connector_pin": 1,
+      "function": "output",
+      "id": "outputs:1",
+      "mcu": "A9",
+      "options": {
+        "output_pin_e_list": 11
+      },
+      "recommended_for": [],
+      "ts_name": "Highside 1",
+      "type": "hs"
+    },
+    {
+      "class": [
+        "outputs"
+      ],
+      "connector": "outputs",
+      "connector_pin": 2,
+      "function": "output",
+      "id": "outputs:2",
+      "mcu": "A8",
+      "options": {
+        "output_pin_e_list": 10
+      },
+      "recommended_for": [],
+      "ts_name": "Highside 2",
+      "type": "hs"
+    },
+    {
+      "class": [
+        "outputs"
+      ],
+      "connector": "outputs",
+      "connector_pin": 3,
+      "function": "output",
+      "id": "outputs:3",
+      "mcu": "D15",
+      "options": {
+        "output_pin_e_list": 65
+      },
+      "recommended_for": [],
+      "ts_name": "Highside 3",
+      "type": "hs"
+    },
+    {
+      "class": [
+        "outputs"
+      ],
+      "connector": "outputs",
+      "connector_pin": 4,
+      "function": "output",
+      "id": "outputs:4",
+      "mcu": "D14",
+      "options": {
+        "output_pin_e_list": 64
+      },
+      "recommended_for": [],
+      "ts_name": "Highside 4",
+      "type": "hs"
+    },
+    {
+      "class": [
+        "outputs"
+      ],
+      "connector": "outputs",
+      "connector_pin": 5,
+      "function": "Injector #1",
+      "id": "outputs:5",
+      "mcu": "D7",
+      "options": {
+        "output_pin_e_list": 57
+      },
+      "recommended_for": [
+        "injector:1"
+      ],
+      "ts_name": "Lowside 1",
+      "type": "ls"
+    },
+    {
+      "class": [
+        "outputs"
+      ],
+      "connector": "outputs",
+      "connector_pin": 6,
+      "function": "Injector #2",
+      "id": "outputs:6",
+      "mcu": "G9",
+      "options": {
+        "output_pin_e_list": 107
+      },
+      "recommended_for": [
+        "injector:2"
+      ],
+      "ts_name": "Lowside 2",
+      "type": "ls"
+    },
+    {
+      "class": [
+        "outputs"
+      ],
+      "connector": "outputs",
+      "connector_pin": 7,
+      "function": "Injector #3",
+      "id": "outputs:7",
+      "mcu": "G10",
+      "options": {
+        "output_pin_e_list": 108
+      },
+      "recommended_for": [
+        "injector:3"
+      ],
+      "ts_name": "Lowside 3",
+      "type": "ls"
+    },
+    {
+      "class": [
+        "outputs"
+      ],
+      "connector": "outputs",
+      "connector_pin": 8,
+      "function": "Injector #4",
+      "id": "outputs:8",
+      "mcu": "G11",
+      "options": {
+        "output_pin_e_list": 109
+      },
+      "recommended_for": [
+        "injector:4"
+      ],
+      "ts_name": "Lowside 4",
+      "type": "ls"
+    },
+    {
+      "class": [
+        "outputs"
+      ],
+      "connector": "outputs",
+      "connector_pin": 9,
+      "function": "Injector #5",
+      "id": "outputs:9",
+      "mcu": "G12",
+      "options": {
+        "output_pin_e_list": 110
+      },
+      "recommended_for": [
+        "injector:5"
+      ],
+      "ts_name": "Lowside 5",
+      "type": "ls"
+    },
+    {
+      "class": [
+        "outputs"
+      ],
+      "connector": "outputs",
+      "connector_pin": 10,
+      "function": "Injector #6",
+      "id": "outputs:10",
+      "mcu": "G13",
+      "options": {
+        "output_pin_e_list": 111
+      },
+      "recommended_for": [
+        "injector:6"
+      ],
+      "ts_name": "Lowside 6",
+      "type": "ls"
+    },
+    {
+      "class": [
+        "outputs"
+      ],
+      "connector": "outputs",
+      "connector_pin": 11,
+      "function": "Injector #7",
+      "id": "outputs:11",
+      "mcu": "G14",
+      "options": {
+        "output_pin_e_list": 112
+      },
+      "recommended_for": [
+        "injector:7"
+      ],
+      "ts_name": "Lowside 7",
+      "type": "ls"
+    },
+    {
+      "class": [
+        "outputs"
+      ],
+      "connector": "outputs",
+      "connector_pin": 12,
+      "function": "Injector #8",
+      "id": "outputs:12",
+      "mcu": "B4",
+      "options": {
+        "output_pin_e_list": 22
+      },
+      "recommended_for": [
+        "injector:8"
+      ],
+      "ts_name": "Lowside 8",
+      "type": "ls"
+    },
+    {
+      "class": [
+        "outputs"
+      ],
+      "connector": "outputs",
+      "connector_pin": 13,
+      "function": "Injector #9",
+      "id": "outputs:13",
+      "mcu": "B5",
+      "options": {
+        "output_pin_e_list": 23
+      },
+      "recommended_for": [
+        "injector:9"
+      ],
+      "ts_name": "Lowside 9",
+      "type": "ls"
+    },
+    {
+      "class": [
+        "outputs"
+      ],
+      "connector": "outputs",
+      "connector_pin": 14,
+      "function": "Injector #10 or Fuel Pump relay",
+      "id": "outputs:14",
+      "mcu": "B6",
+      "options": {
+        "output_pin_e_list": 24
+      },
+      "recommended_for": [
+        "injector:10",
+        "relay:fuel_pump"
+      ],
+      "ts_name": "Lowside 10",
+      "type": "ls"
+    },
+    {
+      "class": [
+        "outputs"
+      ],
+      "connector": "outputs",
+      "connector_pin": 15,
+      "function": "Injector #11 or radiator fan relay",
+      "id": "outputs:15",
+      "mcu": "B7",
+      "options": {
+        "output_pin_e_list": 25
+      },
+      "recommended_for": [
+        "injector:11",
+        "relay:fan"
+      ],
+      "ts_name": "Lowside 11",
+      "type": "ls"
+    },
+    {
+      "class": [
+        "outputs"
+      ],
+      "connector": "outputs",
+      "connector_pin": 16,
+      "function": "Injector #12 or Main relay",
+      "id": "outputs:16",
+      "mcu": "B8",
+      "options": {
+        "output_pin_e_list": 26
+      },
+      "recommended_for": [
+        "injector:12",
+        "relay:main"
+      ],
+      "ts_name": "Lowside 12",
+      "type": "ls"
+    },
+    {
+      "class": [
+        "outputs"
+      ],
+      "connector": "outputs",
+      "connector_pin": 17,
+      "id": "outputs:17",
+      "mcu": "B9",
+      "options": {
+        "output_pin_e_list": 27
+      },
+      "recommended_for": [],
+      "ts_name": "Lowside 13",
+      "type": "ls"
+    },
+    {
+      "class": [
+        "outputs"
+      ],
+      "connector": "outputs",
+      "connector_pin": 18,
+      "function": "Lowside output",
+      "id": "outputs:18",
+      "mcu": "E0",
+      "options": {
+        "output_pin_e_list": 66
+      },
+      "recommended_for": [],
+      "ts_name": "Lowside 14 or starter",
+      "type": "ls"
+    },
+    {
+      "class": [
+        "outputs"
+      ],
+      "connector": "outputs",
+      "connector_pin": 19,
+      "id": "outputs:19",
+      "mcu": "E1",
+      "options": {
+        "output_pin_e_list": 67
+      },
+      "recommended_for": [],
+      "ts_name": "Lowside 15",
+      "type": "ls"
+    },
+    {
+      "class": [
+        "outputs"
+      ],
+      "connector": "outputs",
+      "connector_pin": 20,
+      "id": "outputs:20",
+      "mcu": "E2",
+      "options": {
+        "output_pin_e_list": 68
+      },
+      "recommended_for": [],
+      "ts_name": "Lowside 16",
+      "type": "ls"
+    },
+    {
+      "class": [
+        "outputs"
+      ],
+      "connector": "outputs",
+      "connector_pin": 21,
+      "function": "Ignition cylinder 1",
+      "id": "outputs:21",
+      "mcu": "D4",
+      "options": {
+        "output_pin_e_list": 54
+      },
+      "recommended_for": [
+        "coil:1"
+      ],
+      "ts_name": "Ign 1",
+      "type": "high_logic"
+    },
+    {
+      "class": [
+        "outputs"
+      ],
+      "connector": "outputs",
+      "connector_pin": 22,
+      "function": "Ignition cylinder 2",
+      "id": "outputs:22",
+      "mcu": "D3",
+      "options": {
+        "output_pin_e_list": 53
+      },
+      "recommended_for": [
+        "coil:2"
+      ],
+      "ts_name": "Ign 2",
+      "type": "high_logic"
+    },
+    {
+      "class": [
+        "outputs"
+      ],
+      "connector": "outputs",
+      "connector_pin": 23,
+      "function": "Ignition cylinder 3",
+      "id": "outputs:23",
+      "mcu": "C9",
+      "options": {
+        "output_pin_e_list": 43
+      },
+      "recommended_for": [
+        "coil:3"
+      ],
+      "ts_name": "Ign 3",
+      "type": "high_logic"
+    },
+    {
+      "class": [
+        "outputs"
+      ],
+      "connector": "outputs",
+      "connector_pin": 24,
+      "function": "Ignition cylinder 4",
+      "id": "outputs:24",
+      "mcu": "C8",
+      "options": {
+        "output_pin_e_list": 42
+      },
+      "recommended_for": [
+        "coil:4"
+      ],
+      "ts_name": "Ign 4",
+      "type": "high_logic"
+    },
+    {
+      "class": [
+        "outputs"
+      ],
+      "connector": "outputs",
+      "connector_pin": 25,
+      "function": "Ignition cylinder 5",
+      "id": "outputs:25",
+      "mcu": "C7",
+      "options": {
+        "output_pin_e_list": 41
+      },
+      "recommended_for": [
+        "coil:5"
+      ],
+      "ts_name": "Ign 5",
+      "type": "high_logic"
+    },
+    {
+      "class": [
+        "outputs"
+      ],
+      "connector": "outputs",
+      "connector_pin": 26,
+      "function": "Ignition cylinder 6",
+      "id": "outputs:26",
+      "mcu": "G8",
+      "options": {
+        "output_pin_e_list": 106
+      },
+      "recommended_for": [
+        "coil:6"
+      ],
+      "ts_name": "Ign 6",
+      "type": "high_logic"
+    },
+    {
+      "class": [
+        "outputs"
+      ],
+      "connector": "outputs",
+      "connector_pin": 27,
+      "function": "Ignition cylinder 7",
+      "id": "outputs:27",
+      "mcu": "G7",
+      "options": {
+        "output_pin_e_list": 105
+      },
+      "recommended_for": [
+        "coil:7"
+      ],
+      "ts_name": "Ign 7",
+      "type": "high_logic"
+    },
+    {
+      "class": [
+        "outputs"
+      ],
+      "connector": "outputs",
+      "connector_pin": 28,
+      "function": "Ignition cylinder 8",
+      "id": "outputs:28",
+      "mcu": "G6",
+      "options": {
+        "output_pin_e_list": 104
+      },
+      "recommended_for": [
+        "coil:8"
+      ],
+      "ts_name": "Ign 8",
+      "type": "high_logic"
+    },
+    {
+      "class": [
+        "outputs"
+      ],
+      "connector": "outputs",
+      "connector_pin": 29,
+      "function": "Ignition cylinder 9",
+      "id": "outputs:29",
+      "mcu": "G5",
+      "options": {
+        "output_pin_e_list": 103
+      },
+      "recommended_for": [
+        "coil:9"
+      ],
+      "ts_name": "Ign 9",
+      "type": "high_logic"
+    },
+    {
+      "class": [
+        "outputs"
+      ],
+      "connector": "outputs",
+      "connector_pin": 30,
+      "function": "Ignition cylinder 10",
+      "id": "outputs:30",
+      "mcu": "G4",
+      "options": {
+        "output_pin_e_list": 102
+      },
+      "recommended_for": [
+        "coil:10"
+      ],
+      "ts_name": "Ign 10",
+      "type": "high_logic"
+    },
+    {
+      "class": [
+        "outputs"
+      ],
+      "connector": "outputs",
+      "connector_pin": 31,
+      "function": "Ignition cylinder 11",
+      "id": "outputs:31",
+      "mcu": "G3",
+      "options": {
+        "output_pin_e_list": 101
+      },
+      "recommended_for": [
+        "coil:11"
+      ],
+      "ts_name": "Ign 11",
+      "type": "high_logic"
+    },
+    {
+      "class": [
+        "outputs"
+      ],
+      "connector": "outputs",
+      "connector_pin": 32,
+      "function": "Ignition cylinder 12",
+      "id": "outputs:32",
+      "mcu": "G2",
+      "options": {
+        "output_pin_e_list": 100
+      },
+      "recommended_for": [
+        "coil:12"
+      ],
+      "ts_name": "Ign 12",
+      "type": "high_logic"
+    },
+    {
+      "class": [
+        "outputs"
+      ],
+      "connector": "outputs",
+      "connector_pin": 33,
+      "function": "H-bridge 1 output (ETB1+)",
+      "id": "outputs:33",
+      "options": {
+        "output_pin_e_list": 361
+      },
+      "recommended_for": [],
+      "ts_name": "ETB1+",
+      "type": "hs"
+    },
+    {
+      "class": [
+        "outputs"
+      ],
+      "connector": "outputs",
+      "connector_pin": 34,
+      "function": "H-bridge 2 output (ETB2+)",
+      "id": "outputs:34",
+      "options": {
+        "output_pin_e_list": 362
+      },
+      "recommended_for": [],
+      "ts_name": "ETB2+",
+      "type": "hs"
+    }
+  ],
+  "presets": {
+    "coils": {
+      "items": [
+        {
+          "has_ignitor": true,
+          "id": "bosch_p65t_0221604024",
+          "info": {
+            "corrente_primaria_a": {
+              "unit": "A",
+              "value": 6.0
+            },
+            "dwell_ms_por_tensao": {
+              "unit": "[V, ms] a 6,0 A",
+              "value": [
+                [
+                  8,
+                  6.8
+                ],
+                [
+                  10,
+                  4.25
+                ],
+                [
+                  12,
+                  3.12
+                ],
+                [
+                  14,
+                  2.45
+                ],
+                [
+                  16,
+                  2.03
+                ],
+                [
+                  16.5,
+                  1.95
+                ],
+                [
+                  18,
+                  1.73
+                ],
+                [
+                  20,
+                  1.51
+                ]
+              ]
+            },
+            "dwell_nominal_ms": {
+              "unit": "ms",
+              "value": 2.45
+            },
+            "rpm_maximo": {
+              "unit": "rpm",
+              "value": 8000
+            }
+          },
+          "name": "Bosch P65-T (0 221 604 024), ignitor integrado",
+          "review_later": true,
+          "values": {
+            "dwellVoltageCorrValues": [
+              2.78,
+              1.74,
+              1.28,
+              1.0,
+              0.82,
+              0.8,
+              0.7,
+              0.62
+            ],
+            "dwellVoltageCorrVoltBins": [
+              8,
+              10,
+              12,
+              14,
+              16,
+              16.5,
+              18,
+              20
+            ],
+            "ignitionDwellForCrankingMs": 4.25,
+            "sparkDwellRpmBins": [
+              500,
+              1000,
+              2000,
+              3000,
+              4000,
+              5000,
+              6000,
+              8000
+            ],
+            "sparkDwellValues": [
+              2.45,
+              2.45,
+              2.45,
+              2.45,
+              2.45,
+              2.45,
+              2.45,
+              2.45
+            ]
+          }
+        },
+        {
+          "has_ignitor": true,
+          "id": "bosch_p65twg_f02uv02429",
+          "info": {
+            "corrente_primaria_a": {
+              "unit": "A",
+              "value": 6.0
+            },
+            "dwell_ms_por_tensao": {
+              "unit": "[V, ms] a 6,0 A",
+              "value": [
+                [
+                  8,
+                  6.8
+                ],
+                [
+                  10,
+                  4.25
+                ],
+                [
+                  12,
+                  3.12
+                ],
+                [
+                  14,
+                  2.45
+                ],
+                [
+                  16,
+                  2.03
+                ],
+                [
+                  16.5,
+                  1.95
+                ],
+                [
+                  18,
+                  1.73
+                ],
+                [
+                  20,
+                  1.51
+                ]
+              ]
+            },
+            "dwell_nominal_ms": {
+              "unit": "ms",
+              "value": 2.45
+            },
+            "rpm_maximo": {
+              "unit": "rpm",
+              "value": 8000
+            }
+          },
+          "name": "Bosch P65-TWG (F02U.V02.429-01), ignitor integrado",
+          "review_later": true,
+          "values": {
+            "dwellVoltageCorrValues": [
+              2.78,
+              1.74,
+              1.28,
+              1.0,
+              0.82,
+              0.8,
+              0.7,
+              0.62
+            ],
+            "dwellVoltageCorrVoltBins": [
+              8,
+              10,
+              12,
+              14,
+              16,
+              16.5,
+              18,
+              20
+            ],
+            "ignitionDwellForCrankingMs": 4.25,
+            "sparkDwellRpmBins": [
+              500,
+              1000,
+              2000,
+              3000,
+              4000,
+              5000,
+              6000,
+              8000
+            ],
+            "sparkDwellValues": [
+              2.45,
+              2.45,
+              2.45,
+              2.45,
+              2.45,
+              2.45,
+              2.45,
+              2.45
+            ]
+          }
+        }
+      ]
+    },
+    "injectors": {
+      "items": [
+        {
+          "id": "bosch_ev14_0280158110",
+          "info": {
+            "impedancia_ohm": {
+              "unit": "Ω",
+              "value": 12
+            },
+            "pressao_de_vazao_bar": {
+              "unit": "bar",
+              "value": 3
+            },
+            "vazao_g_min": {
+              "unit": "g/min",
+              "value": 116
+            }
+          },
+          "name": "Bosch 0 280 158 110 (EV14 compacto, 170 cc/min)",
+          "review_later": true,
+          "values": {
+            "fuelReferencePressure": 300,
+            "injectorFlowAsMassFlow": 0,
+            "injector_flow": 170
+          }
+        },
+        {
+          "id": "bosch_ev14_0280158200",
+          "info": {
+            "impedancia_ohm": {
+              "unit": "Ω",
+              "value": 12
+            },
+            "pressao_de_vazao_bar": {
+              "unit": "bar",
+              "value": 3
+            },
+            "vazao_g_min": {
+              "unit": "g/min",
+              "value": 116
+            }
+          },
+          "name": "Bosch 0 280 158 200 (EV14, 170 cc/min)",
+          "review_later": true,
+          "values": {
+            "fuelReferencePressure": 300,
+            "injectorFlowAsMassFlow": 0,
+            "injector_flow": 170
+          }
+        },
+        {
+          "id": "bosch_ev14_0280158107",
+          "info": {
+            "impedancia_ohm": {
+              "unit": "Ω",
+              "value": 12
+            },
+            "pressao_de_vazao_bar": {
+              "unit": "bar",
+              "value": 3
+            },
+            "vazao_g_min": {
+              "unit": "g/min",
+              "value": 150
+            }
+          },
+          "name": "Bosch 0 280 158 107 (EV14, 219 cc/min)",
+          "review_later": true,
+          "values": {
+            "fuelReferencePressure": 300,
+            "injectorFlowAsMassFlow": 0,
+            "injector_flow": 219
+          }
+        },
+        {
+          "id": "bosch_ev14_0280158013",
+          "info": {
+            "impedancia_ohm": {
+              "unit": "Ω",
+              "value": 12
+            },
+            "pressao_de_vazao_bar": {
+              "unit": "bar",
+              "value": 3
+            },
+            "vazao_g_min": {
+              "unit": "g/min",
+              "value": 150
+            }
+          },
+          "name": "Bosch 0 280 158 013 (EV14, 219 cc/min)",
+          "review_later": true,
+          "values": {
+            "fuelReferencePressure": 300,
+            "injectorFlowAsMassFlow": 0,
+            "injector_flow": 219
+          }
+        },
+        {
+          "id": "bosch_ev14_0280158038",
+          "info": {
+            "impedancia_ohm": {
+              "unit": "Ω",
+              "value": 12
+            },
+            "pressao_de_vazao_bar": {
+              "unit": "bar",
+              "value": 3
+            },
+            "vazao_g_min": {
+              "unit": "g/min",
+              "value": 237
+            }
+          },
+          "name": "Bosch 0 280 158 038 (EV14, 347 cc/min)",
+          "review_later": true,
+          "values": {
+            "fuelReferencePressure": 300,
+            "injectorFlowAsMassFlow": 0,
+            "injector_flow": 347
+          }
+        },
+        {
+          "id": "bosch_ev14_0280158116",
+          "info": {
+            "impedancia_ohm": {
+              "unit": "Ω",
+              "value": 12
+            },
+            "pressao_de_vazao_bar": {
+              "unit": "bar",
+              "value": 3
+            },
+            "vazao_g_min": {
+              "unit": "g/min",
+              "value": 237
+            }
+          },
+          "name": "Bosch 0 280 158 116 (EV14, 347 cc/min)",
+          "review_later": true,
+          "values": {
+            "fuelReferencePressure": 300,
+            "injectorFlowAsMassFlow": 0,
+            "injector_flow": 347
+          }
+        },
+        {
+          "id": "bosch_ev14_0280158123",
+          "info": {
+            "impedancia_ohm": {
+              "unit": "Ω",
+              "value": 12
+            },
+            "pressao_de_vazao_bar": {
+              "unit": "bar",
+              "value": 3
+            },
+            "vazao_g_min": {
+              "unit": "g/min",
+              "value": 429
+            }
+          },
+          "name": "Bosch 0 280 158 123 (EV14, 627 cc/min)",
+          "review_later": true,
+          "values": {
+            "fuelReferencePressure": 300,
+            "injectorFlowAsMassFlow": 0,
+            "injector_flow": 627
+          }
+        },
+        {
+          "id": "bosch_ev14_0280158040",
+          "info": {
+            "impedancia_ohm": {
+              "unit": "Ω",
+              "value": 12
+            },
+            "pressao_de_vazao_bar": {
+              "unit": "bar",
+              "value": 3
+            },
+            "vazao_g_min": {
+              "unit": "g/min",
+              "value": 670
+            }
+          },
+          "name": "Bosch 0 280 158 040 (EV14, 980 cc/min)",
+          "review_later": true,
+          "values": {
+            "fuelReferencePressure": 300,
+            "injectorFlowAsMassFlow": 0,
+            "injector_flow": 980
+          }
+        }
+      ]
+    },
+    "map": {
+      "items": [
+        {
+          "id": "nxp_mpx4250a",
+          "info": {
+            "curve": {
+              "unit": "V, kPa",
+              "value": {
+                "kpa1": 20.0,
+                "kpa2": 250.0,
+                "v1": 0.204,
+                "v2": 4.896
+              }
+            }
+          },
+          "name": "NXP MPX4250A (20 a 250 kPa)",
+          "review_later": false,
+          "values": {
+            "map_sensor_type": 9
+          }
+        },
+        {
+          "id": "bosch_2_5_bar",
+          "info": {
+            "curve": {
+              "unit": "V, kPa",
+              "value": {
+                "kpa1": 20.0,
+                "kpa2": 250.0,
+                "v1": 0.4,
+                "v2": 4.65
+              }
+            }
+          },
+          "name": "Bosch 2,5 bar (TMAP com IAT, 4 pinos)",
+          "review_later": true,
+          "values": {
+            "map_sensor_type": 10
+          }
+        },
+        {
+          "id": "gm_3_bar",
+          "info": {
+            "curve": {
+              "unit": "V, kPa",
+              "value": {
+                "kpa1": 40.0,
+                "kpa2": 304.0,
+                "v1": 0.631,
+                "v2": 4.914
+              }
+            }
+          },
+          "name": "GM 3 bar (16040749)",
+          "review_later": false,
+          "values": {
+            "map_sensor_type": 6
+          }
+        },
+        {
+          "id": "gm_2_bar",
+          "info": {
+            "curve": {
+              "unit": "V, kPa",
+              "value": {
+                "kpa1": 8.8,
+                "kpa2": 208.0,
+                "v1": 0.0,
+                "v2": 5.0
+              }
+            }
+          },
+          "name": "GM 2 bar",
+          "review_later": true,
+          "values": {
+            "map_sensor_type": 12
+          }
+        },
+        {
+          "id": "gm_1_bar",
+          "info": {
+            "curve": {
+              "unit": "V, kPa",
+              "value": {
+                "kpa1": 10.0,
+                "kpa2": 105.0,
+                "v1": 0.0,
+                "v2": 5.0
+              }
+            }
+          },
+          "name": "GM 1 bar",
+          "review_later": true,
+          "values": {
+            "map_sensor_type": 13
+          }
+        },
+        {
+          "id": "linear_manual",
+          "name": "Linear manual (Custom)",
+          "review_later": true,
+          "values": {
+            "map_sensor_type": 0
+          }
+        }
+      ]
+    },
+    "temperature": {
+      "items": [
+        {
+          "id": "bosch_ntc_m12_2k5",
+          "info": {
+            "faixa_de_uso_c": {
+              "value": "-40 a 130 °C"
+            },
+            "nominal": {
+              "value": "2,5 kΩ ±5 % a 20 °C"
+            },
+            "precisao": {
+              "value": "±1,4 °C a 25 °C; ±3,4 °C a 100 °C"
+            }
+          },
+          "name": "Bosch NTC M12, 2,5 kΩ a 20 °C (0 280 130 026 e 039)",
+          "review_later": false,
+          "values": {
+            "clt_resistance_1": 5896,
+            "clt_resistance_2": 834,
+            "clt_resistance_3": 187,
+            "clt_tempC_1": 0,
+            "clt_tempC_2": 50,
+            "clt_tempC_3": 100,
+            "iat_resistance_1": 5896,
+            "iat_resistance_2": 834,
+            "iat_resistance_3": 187,
+            "iat_tempC_1": 0,
+            "iat_tempC_2": 50,
+            "iat_tempC_3": 100
+          }
+        },
+        {
+          "id": "gm_12146312_clt",
+          "info": {
+            "faixa_de_uso_c": {
+              "value": "-40 a 135 °C"
+            },
+            "tolerancia": {
+              "value": "R ±7,38 % a 20 °C; ±1,6 °C; ±3,45 % a 100 °C (±1,2 °C)"
+            }
+          },
+          "name": "GM 12146312, sensor de água (CLT)",
+          "review_later": false,
+          "values": {
+            "clt_resistance_1": 28939,
+            "clt_resistance_2": 1483,
+            "clt_resistance_3": 102.2,
+            "clt_tempC_1": -20,
+            "clt_tempC_2": 40,
+            "clt_tempC_3": 120,
+            "iat_resistance_1": 28939,
+            "iat_resistance_2": 1483,
+            "iat_resistance_3": 102.2,
+            "iat_tempC_1": -20,
+            "iat_tempC_2": 40,
+            "iat_tempC_3": 120
+          }
+        },
+        {
+          "id": "bosch_ntc_m8hs_10k",
+          "info": {
+            "faixa_de_uso_c": {
+              "value": "-55 a 300 °C"
+            },
+            "nominal": {
+              "value": "10 kΩ ±1 % a 25 °C"
+            }
+          },
+          "name": "Bosch NTC M8-HS, 10 kΩ a 25 °C (F02U.V00.509-01)",
+          "review_later": false,
+          "values": {
+            "clt_resistance_1": 27936,
+            "clt_resistance_2": 4103,
+            "clt_resistance_3": 946.6,
+            "clt_tempC_1": 0,
+            "clt_tempC_2": 50,
+            "clt_tempC_3": 100,
+            "iat_resistance_1": 27936,
+            "iat_resistance_2": 4103,
+            "iat_resistance_3": 946.6,
+            "iat_tempC_1": 0,
+            "iat_tempC_2": 50,
+            "iat_tempC_3": 100
+          }
+        }
+      ]
+    },
+    "triggers": {
+      "items": [
+        {
+          "id": "wheel_60_2",
+          "name": "60-2 (60 dentes, 2 faltando)",
+          "review_later": false,
+          "values": {
+            "trigger_type": 8
+          }
+        },
+        {
+          "id": "wheel_36_1",
+          "name": "36-1 (36 dentes, 1 faltando)",
+          "review_later": false,
+          "values": {
+            "trigger_type": 9
+          }
+        },
+        {
+          "id": "wheel_36_2",
+          "name": "36-2 (36 dentes, 2 faltando)",
+          "review_later": false,
+          "values": {
+            "trigger_type": 48
+          }
+        },
+        {
+          "id": "wheel_36_2_2_2",
+          "name": "36-2-2-2",
+          "review_later": false,
+          "values": {
+            "trigger_type": 23
+          }
+        },
+        {
+          "id": "honda_k_12_1",
+          "name": "Honda K, virabrequim 12+1",
+          "review_later": true,
+          "values": {
+            "trigger_type": 46
+          }
+        },
+        {
+          "id": "honda_k_4_1",
+          "name": "Honda K, comando 4+1",
+          "review_later": true,
+          "values": {
+            "trigger_type": 67
+          }
+        }
+      ]
+    },
+    "wideband": {
+      "items": [
+        {
+          "id": "aem_x_series_can",
+          "name": "AEM X-Series por CAN (ID1, padrão)",
+          "review_later": false,
+          "values": {
+            "afr_hwChannel": 0,
+            "canReadEnabled": 1,
+            "canWbo1_aemId": 0,
+            "canWbo1_type": 0,
+            "canWriteEnabled": 1,
+            "enableAemXSeries": 1
+          }
+        },
+        {
+          "id": "aem_x_series_analog",
+          "name": "AEM X-Series analógica (0 a 5 V)",
+          "review_later": true,
+          "values": {
+            "afr_type": 6,
+            "afr_v1": 0.5,
+            "afr_v2": 4.5,
+            "afr_value1": 8.5,
+            "afr_value2": 18,
+            "canWbo1_type": 1,
+            "enableAemXSeries": 0
+          }
+        }
+      ]
+    }
+  },
+  "requires_power_cycle": [
+    "afr_hwChannel",
+    "canReadEnabled",
+    "canWriteEnabled",
+    "enableAemXSeries",
+    "etbFunctions1"
+  ],
+  "schema": 1,
+  "signature": "rusEFI motrolink_dev.2026.11.14.evotech12.182136741",
+  "steps": [
+    {
+      "checks": [],
+      "id": "inicio",
+      "intro": "s:inicio.i",
+      "questions": [
+        {
+          "id": "fluxo",
+          "label": "s:fluxo.r",
+          "options": [
+            {
+              "description": "s:fluxo.zero.d",
+              "id": "do_zero",
+              "title": "s:fluxo.zero.t"
+            },
+            {
+              "description": "s:fluxo.base.d",
+              "id": "mapa_base",
+              "title": "s:fluxo.base.t"
+            },
+            {
+              "description": "s:fluxo.rev.d",
+              "id": "revisar_ecu",
+              "title": "s:fluxo.rev.t"
+            }
+          ],
+          "widget": "flow"
+        }
+      ],
+      "title": "s:inicio.t"
+    },
+    {
+      "checks": [],
+      "id": "veiculo",
+      "intro": "s:veiculo.i",
+      "questions": [
+        {
+          "field": "vehicleName",
+          "id": "vehicle_name",
+          "label": "s:vehicle_name.r",
+          "why": "s:vehicle_name.p",
+          "widget": "text"
+        },
+        {
+          "field": "engineMake",
+          "id": "engine_make",
+          "label": "s:engine_make.r",
+          "why": "s:engine_make.p",
+          "widget": "text"
+        },
+        {
+          "field": "engineCode",
+          "id": "engine_code",
+          "label": "s:engine_code.r",
+          "why": "s:engine_code.p",
+          "widget": "text"
+        }
+      ],
+      "title": "s:veiculo.t"
+    },
+    {
+      "checks": [],
+      "id": "motor",
+      "intro": "s:motor.i",
+      "questions": [
+        {
+          "default": 4,
+          "field": "cylindersCount",
+          "how": "s:cylinders.c",
+          "id": "cylinders",
+          "label": "s:cylinders.r",
+          "unsure": {
+            "type": "default"
+          },
+          "why": "s:cylinders.p",
+          "widget": "number"
+        },
+        {
+          "default": 2.0,
+          "field": "displacement",
+          "how": "s:displacement.c",
+          "id": "displacement",
+          "label": "s:displacement.r",
+          "unit": "L",
+          "unsure": {
+            "type": "default"
+          },
+          "why": "s:displacement.p",
+          "widget": "number"
+        },
+        {
+          "default": 10.0,
+          "field": "compressionRatio",
+          "how": "s:compression.c",
+          "id": "compression",
+          "label": "s:compression.r",
+          "unsure": {
+            "type": "default"
+          },
+          "why": "s:compression.p",
+          "widget": "number"
+        },
+        {
+          "default": 0,
+          "field": "twoStroke",
+          "id": "stroke",
+          "label": "s:stroke.r",
+          "unsure": {
+            "type": "default"
+          },
+          "why": "s:stroke.p",
+          "widget": "choice"
+        },
+        {
+          "default": 1,
+          "field": "firingOrder",
+          "how": "s:firing_order.c",
+          "id": "firing_order",
+          "label": "s:firing_order.r",
+          "why": "s:firing_order.p",
+          "widget": "choice"
+        }
+      ],
+      "title": "s:motor.t"
+    },
+    {
+      "checks": [],
+      "id": "combustivel",
+      "intro": "s:combustivel.i",
+      "questions": [
+        {
+          "default": 0,
+          "field": "fuelAlgorithm",
+          "how": "s:algorithm.c",
+          "id": "algorithm",
+          "label": "s:algorithm.r",
+          "unsure": {
+            "type": "default"
+          },
+          "why": "s:algorithm.p",
+          "widget": "choice"
+        },
+        {
+          "default": 0,
+          "field": "isForcedInduction",
+          "id": "forced_induction",
+          "label": "s:forced_induction.r",
+          "unsure": {
+            "type": "default"
+          },
+          "why": "s:forced_induction.p",
+          "widget": "bool"
+        },
+        {
+          "default": 14.7,
+          "field": "stoichRatioPrimary",
+          "how": "s:stoich.c",
+          "id": "stoich",
+          "label": "s:stoich.r",
+          "unit": ":1",
+          "unsure": {
+            "type": "default"
+          },
+          "why": "s:stoich.p",
+          "widget": "number"
+        },
+        {
+          "default": 0.72,
+          "field": "fuelDensity",
+          "id": "fuel_density",
+          "label": "s:fuel_density.r",
+          "unit": "g/cc",
+          "unsure": {
+            "type": "default"
+          },
+          "why": "s:fuel_density.p",
+          "widget": "number"
+        }
+      ],
+      "title": "s:combustivel.t"
+    },
+    {
+      "checks": [],
+      "id": "controle",
+      "intro": "s:controle.i",
+      "questions": [
+        {
+          "default": 1,
+          "field": "isInjectionEnabled",
+          "id": "injection_enabled",
+          "label": "s:injection_enabled.r",
+          "unsure": {
+            "type": "default"
+          },
+          "why": "s:injection_enabled.p",
+          "widget": "bool"
+        },
+        {
+          "default": 1,
+          "field": "isIgnitionEnabled",
+          "id": "ignition_enabled",
+          "label": "s:ignition_enabled.r",
+          "unsure": {
+            "type": "default"
+          },
+          "why": "s:ignition_enabled.p",
+          "widget": "bool"
+        },
+        {
+          "default": 6000,
+          "field": "rpmHardLimit",
+          "how": "s:rpm_limit.c",
+          "id": "rpm_limit",
+          "label": "s:rpm_limit.r",
+          "unit": "rpm",
+          "unsure": {
+            "type": "default"
+          },
+          "valid": [
+            {
+              "expr": "{ rpmHardLimit > 6000 }",
+              "msg": "s:rpm_limit.m",
+              "severity": "warning"
+            }
+          ],
+          "why": "s:rpm_limit.p",
+          "widget": "number"
+        },
+        {
+          "default": 0,
+          "field": "timingMode",
+          "how": "s:timing_mode.c",
+          "id": "timing_mode",
+          "label": "s:timing_mode.r",
+          "unsure": {
+            "type": "default"
+          },
+          "why": "s:timing_mode.p",
+          "widget": "choice"
+        },
+        {
+          "default": 10,
+          "field": "fixedModeTiming",
+          "how": "s:fixed_timing.c",
+          "id": "fixed_timing",
+          "label": "s:fixed_timing.r",
+          "unit": "°",
+          "unsure": {
+            "type": "default"
+          },
+          "when": "{ timingMode == 1 }",
+          "why": "s:fixed_timing.p",
+          "widget": "number"
+        }
+      ],
+      "title": "s:controle.t"
+    },
+    {
+      "checks": [],
+      "id": "roda_fonica",
+      "intro": "s:roda_fonica.i",
+      "questions": [
+        {
+          "catalog": "triggers",
+          "how": "s:trigger_preset.c",
+          "id": "trigger_preset",
+          "label": "s:trigger_preset.r",
+          "why": "s:trigger_preset.p",
+          "widget": "preset"
+        },
+        {
+          "default": 9,
+          "field": "trigger_type",
+          "how": "s:trigger_type.c",
+          "id": "trigger_type",
+          "label": "s:trigger_type.r",
+          "why": "s:trigger_type.p",
+          "widget": "choice"
+        },
+        {
+          "default": 0,
+          "field": "triggerInputPins1",
+          "how": "s:trigger_pin.c",
+          "id": "trigger_pin",
+          "label": "s:trigger_pin.r",
+          "role": "trigger",
+          "why": "s:trigger_pin.p",
+          "widget": "pin"
+        },
+        {
+          "default": 60,
+          "field": "trigger_customTotalToothCount",
+          "how": "s:trigger_teeth.c",
+          "id": "trigger_teeth",
+          "label": "s:trigger_teeth.r",
+          "when": "{ trigger_type == 0 }",
+          "why": "s:trigger_teeth.p",
+          "widget": "number"
+        },
+        {
+          "default": 2,
+          "field": "trigger_customSkippedToothCount",
+          "how": "s:trigger_skipped.c",
+          "id": "trigger_skipped",
+          "label": "s:trigger_skipped.r",
+          "when": "{ trigger_type == 0 }",
+          "why": "s:trigger_skipped.p",
+          "widget": "number"
+        }
+      ],
+      "title": "s:roda_fonica.t"
+    },
+    {
+      "checks": [
+        {
+          "bench": true,
+          "channels": [
+            "RPMValue",
+            "totalTriggerErrorCounter",
+            "isTriggerError"
+          ],
+          "expect": "{ isTriggerError == 0 }",
+          "id": "live_sync",
+          "kind": "live",
+          "stable_ms": 2000,
+          "text": "s:live_sync.t",
+          "timeout_s": 30
+        }
+      ],
+      "id": "roda_fonica_fase",
+      "intro": "s:roda_fonica_fase.i",
+      "questions": [
+        {
+          "default": 0,
+          "field": "triggerInputPins2",
+          "how": "s:trigger_pin2.c",
+          "id": "trigger_pin2",
+          "label": "s:trigger_pin2.r",
+          "role": "trigger",
+          "why": "s:trigger_pin2.p",
+          "widget": "pin"
+        },
+        {
+          "default": 0,
+          "field": "vvtMode1",
+          "how": "s:cam_mode.c",
+          "id": "cam_mode",
+          "label": "s:cam_mode.r",
+          "unsure": {
+            "type": "default"
+          },
+          "valid": [
+            {
+              "expr": "{ injectionMode != 0 && vvtMode1 == 0 }",
+              "msg": "s:cam_mode.m",
+              "severity": "warning"
+            }
+          ],
+          "why": "s:cam_mode.p",
+          "widget": "choice"
+        },
+        {
+          "default": 0,
+          "field": "camInputs1",
+          "how": "s:cam_pin.c",
+          "id": "cam_pin",
+          "label": "s:cam_pin.r",
+          "role": "cam",
+          "when": "{ vvtMode1 != 0 }",
+          "why": "s:cam_pin.p",
+          "widget": "pin"
+        },
+        {
+          "default": 0,
+          "field": "vvtOffsets1",
+          "how": "s:cam_offset.c",
+          "id": "cam_offset",
+          "label": "s:cam_offset.r",
+          "unit": "°",
+          "when": "{ vvtMode1 != 0 }",
+          "why": "s:cam_offset.p",
+          "widget": "number"
+        },
+        {
+          "default": 0,
+          "field": "globalTriggerAngleOffset",
+          "how": "s:trigger_angle.c",
+          "id": "trigger_angle",
+          "label": "s:trigger_angle.r",
+          "unit": "°",
+          "valid": [
+            {
+              "expr": "{ globalTriggerAngleOffset > 60 || globalTriggerAngleOffset < -60 }",
+              "msg": "s:trigger_angle.m",
+              "severity": "warning"
+            }
+          ],
+          "why": "s:trigger_angle.p",
+          "widget": "number"
+        }
+      ],
+      "title": "s:roda_fonica_fase.t"
+    },
+    {
+      "checks": [],
+      "id": "injecao",
+      "intro": "s:injecao.i",
+      "questions": [
+        {
+          "default": 0,
+          "field": "injectionMode",
+          "how": "s:injection_mode.c",
+          "id": "injection_mode",
+          "label": "s:injection_mode.r",
+          "unsure": {
+            "type": "default"
+          },
+          "why": "s:injection_mode.p",
+          "widget": "choice"
+        },
+        {
+          "default": 0,
+          "field": "crankingInjectionMode",
+          "id": "cranking_injection_mode",
+          "label": "s:cranking_injection_mode.r",
+          "unsure": {
+            "type": "default"
+          },
+          "why": "s:cranking_injection_mode.p",
+          "widget": "choice"
+        },
+        {
+          "default": 0,
+          "field": "injectionPinMode",
+          "how": "s:injector_pin_mode.c",
+          "id": "injector_pin_mode",
+          "label": "s:injector_pin_mode.r",
+          "unsure": {
+            "type": "default"
+          },
+          "why": "s:injector_pin_mode.p",
+          "widget": "choice"
+        },
+        {
+          "catalog": "injectors",
+          "how": "s:injector_preset.c",
+          "id": "injector_preset",
+          "label": "s:injector_preset.r",
+          "why": "s:injector_preset.p",
+          "widget": "preset"
+        },
+        {
+          "default": 411,
+          "field": "injector_flow",
+          "how": "s:injector_flow.c",
+          "id": "injector_flow",
+          "label": "s:injector_flow.r",
+          "unit": "cc/min",
+          "valid": [
+            {
+              "expr": "{ injector_flow == 0 }",
+              "msg": "s:injector_flow.m0",
+              "severity": "error"
+            },
+            {
+              "expr": "{ injector_flow < 100 }",
+              "msg": "s:injector_flow.m1",
+              "severity": "warning"
+            }
+          ],
+          "why": "s:injector_flow.p",
+          "widget": "number"
+        }
+      ],
+      "title": "s:injecao.t"
+    },
+    {
+      "checks": [],
+      "id": "injecao_pinos",
+      "intro": "s:injecao_pinos.i",
+      "questions": [
+        {
+          "count": "cylindersCount",
+          "default": 0,
+          "field": "injectionPins",
+          "how": "s:injector_pins.c",
+          "id": "injector_pins",
+          "label": "s:injector_pins.r",
+          "role": "injector",
+          "why": "s:injector_pins.p",
+          "widget": "pin_per_cylinder"
+        },
+        {
+          "default": 350,
+          "field": "fuelReferencePressure",
+          "how": "s:fuel_pressure.c",
+          "id": "fuel_pressure",
+          "label": "s:fuel_pressure.r",
+          "unit": "kPa",
+          "unsure": {
+            "type": "default"
+          },
+          "why": "s:fuel_pressure.p",
+          "widget": "number"
+        },
+        {
+          "how": "s:dead_time.c",
+          "id": "dead_time",
+          "label": "s:dead_time.r",
+          "table": "injectorsDeadTime",
+          "table_axes": {
+            "x": {
+              "channel": "VBatt",
+              "count": 8,
+              "field": "injector_battLagCorrBattBins",
+              "label": "Battery",
+              "unit": "volts"
+            },
+            "y": {
+              "channel": "pressureCorrectionReference",
+              "count": 2,
+              "field": "injector_battLagCorrPressBins",
+              "label": "Pressure",
+              "unit": "kPa"
+            },
+            "z": {
+              "columns": 8,
+              "field": "injector_battLagCorrTable",
+              "order": "row-major, one row per Y",
+              "rows": 2,
+              "unit": "ms"
+            }
+          },
+          "why": "s:dead_time.p",
+          "widget": "table"
+        }
+      ],
+      "title": "s:injecao_pinos.t"
+    },
+    {
+      "checks": [],
+      "id": "ignicao",
+      "intro": "s:ignicao.i",
+      "questions": [
+        {
+          "default": 2,
+          "field": "ignitionMode",
+          "how": "s:ignition_mode.c",
+          "id": "ignition_mode",
+          "label": "s:ignition_mode.r",
+          "unsure": {
+            "type": "default"
+          },
+          "why": "s:ignition_mode.p",
+          "widget": "choice"
+        },
+        {
+          "default": 0,
+          "field": "ignitionPinMode",
+          "how": "s:ignition_pin_mode.c",
+          "id": "ignition_pin_mode",
+          "label": "s:ignition_pin_mode.r",
+          "unsure": {
+            "type": "default"
+          },
+          "why": "s:ignition_pin_mode.p",
+          "widget": "choice"
+        },
+        {
+          "catalog": "coils",
+          "how": "s:coil_preset.c",
+          "id": "coil_preset",
+          "label": "s:coil_preset.r",
+          "why": "s:coil_preset.p",
+          "widget": "preset"
+        },
+        {
+          "default": 6.0,
+          "field": "ignitionDwellForCrankingMs",
+          "how": "s:cranking_dwell.c",
+          "id": "cranking_dwell",
+          "label": "s:cranking_dwell.r",
+          "unit": "ms",
+          "unsure": {
+            "type": "default"
+          },
+          "why": "s:cranking_dwell.p",
+          "widget": "number"
+        },
+        {
+          "curve": "dwellCorrection",
+          "how": "s:dwell_curve.c",
+          "id": "dwell_curve",
+          "label": "s:dwell_curve.r",
+          "why": "s:dwell_curve.p",
+          "widget": "curve"
+        }
+      ],
+      "title": "s:ignicao.t"
+    },
+    {
+      "checks": [],
+      "id": "ignicao_pinos",
+      "intro": "s:ignicao_pinos.i",
+      "questions": [
+        {
+          "count": "{ ignitionMode == 0 ? 1 : (ignitionMode == 2 ? cylindersCount / 2 : (ignitionMode == 3 ? 2 : cylindersCount)) }",
+          "default": 0,
+          "field": "ignitionPins",
+          "how": "s:ignition_pins.c",
+          "id": "ignition_pins",
+          "label": "s:ignition_pins.r",
+          "role": "coil",
+          "why": "s:ignition_pins.p",
+          "widget": "pin_per_cylinder"
+        }
+      ],
+      "title": "s:ignicao_pinos.t"
+    },
+    {
+      "checks": [
+        {
+          "bench": true,
+          "channels": [
+            "TPSValue",
+            "rawTps1Primary"
+          ],
+          "expect": "{ TPSValue >= 0 && TPSValue <= 100 }",
+          "id": "live_tps",
+          "kind": "live",
+          "text": "s:live_tps.t",
+          "timeout_s": 60,
+          "when": "{ uses_etb != 1 }"
+        }
+      ],
+      "id": "sensor_tps",
+      "intro": "s:sensor_tps.i",
+      "questions": [
+        {
+          "default": 0,
+          "how": "s:tps_etb.c",
+          "id": "tps_etb",
+          "label": "s:tps_etb.r",
+          "var": "uses_etb",
+          "why": "s:tps_etb.p",
+          "widget": "yes_no"
+        },
+        {
+          "default": 0,
+          "field": "tps1_1AdcChannel",
+          "how": "s:tps_pin.c",
+          "id": "tps_pin",
+          "label": "s:tps_pin.r",
+          "role": "tps",
+          "when": "{ uses_etb != 1 }",
+          "why": "s:tps_pin.p",
+          "widget": "pin"
+        },
+        {
+          "capture": {
+            "apply_to": "tpsMin",
+            "channel": "rawTps1Primary",
+            "label": "s:tps_capture.closed"
+          },
+          "default": 0,
+          "field": "tpsMin",
+          "how": "s:tps_min.c",
+          "id": "tps_min",
+          "label": "s:tps_min.r",
+          "unit": "V",
+          "valid": [
+            {
+              "expr": "{ tpsMin >= tpsMax }",
+              "msg": "s:tps_min.m",
+              "severity": "error"
+            }
+          ],
+          "when": "{ uses_etb != 1 }",
+          "why": "s:tps_min.p",
+          "widget": "number"
+        },
+        {
+          "capture": {
+            "apply_to": "tpsMax",
+            "channel": "rawTps1Primary",
+            "label": "s:tps_capture.open"
+          },
+          "default": 4.88,
+          "field": "tpsMax",
+          "how": "s:tps_max.c",
+          "id": "tps_max",
+          "label": "s:tps_max.r",
+          "unit": "V",
+          "when": "{ uses_etb != 1 }",
+          "why": "s:tps_max.p",
+          "widget": "number"
+        }
+      ],
+      "title": "s:sensor_tps.t"
+    },
+    {
+      "checks": [],
+      "id": "borboleta_eletronica",
+      "intro": "s:borboleta_eletronica.i",
+      "questions": [
+        {
+          "default": 1,
+          "field": "etbFunctions1",
+          "how": "s:etb_function.c",
+          "id": "etb_function",
+          "label": "s:etb_function.r",
+          "why": "s:etb_function.p",
+          "widget": "choice"
+        },
+        {
+          "default": 5,
+          "field": "etbIdleThrottleRange",
+          "how": "s:etb_idle_range.c",
+          "id": "etb_idle_range",
+          "label": "s:etb_idle_range.r",
+          "unit": "%",
+          "unsure": {
+            "type": "default"
+          },
+          "why": "s:etb_idle_range.p",
+          "widget": "number"
+        },
+        {
+          "id": "tps_etb_note",
+          "label": "s:tps_etb_note.r",
+          "widget": "note"
+        }
+      ],
+      "title": "s:borboleta_eletronica.t",
+      "when": "{ uses_etb == 1 }"
+    },
+    {
+      "checks": [
+        {
+          "bench": true,
+          "channels": [
+            "MapPressure"
+          ],
+          "expect": "{ MapPressure > 60 && MapPressure < 115 }",
+          "id": "live_map",
+          "kind": "live",
+          "stable_ms": 2000,
+          "text": "s:live_map.t",
+          "timeout_s": 20,
+          "when": "{ RPMValue == 0 }"
+        }
+      ],
+      "id": "sensor_map",
+      "intro": "s:sensor_map.i",
+      "questions": [
+        {
+          "default": 0,
+          "field": "map_sensor_hwChannel",
+          "how": "s:map_pin.c",
+          "id": "map_pin",
+          "label": "s:map_pin.r",
+          "role": "map",
+          "why": "s:map_pin.p",
+          "widget": "pin"
+        },
+        {
+          "catalog": "map",
+          "how": "s:map_preset.c",
+          "id": "map_preset",
+          "label": "s:map_preset.r",
+          "why": "s:map_preset.p",
+          "widget": "preset"
+        },
+        {
+          "default": 2,
+          "field": "map_sensor_type",
+          "how": "s:map_type.c",
+          "id": "map_type",
+          "label": "s:map_type.r",
+          "why": "s:map_type.p",
+          "widget": "choice"
+        },
+        {
+          "columns": [
+            {
+              "label": "s:map_scale.col_v",
+              "unit": "V"
+            },
+            {
+              "label": "s:map_scale.col_p",
+              "unit": "kPa"
+            }
+          ],
+          "fields": [
+            "mapLowValueVoltage",
+            "map_sensor_lowValue",
+            "mapHighValueVoltage",
+            "map_sensor_highValue"
+          ],
+          "how": "s:map_scale.c",
+          "id": "map_scale",
+          "label": "s:map_scale.r",
+          "rows": [
+            {
+              "fields": [
+                "mapLowValueVoltage",
+                "map_sensor_lowValue"
+              ],
+              "label": "s:map_scale.row_low"
+            },
+            {
+              "fields": [
+                "mapHighValueVoltage",
+                "map_sensor_highValue"
+              ],
+              "label": "s:map_scale.row_high"
+            }
+          ],
+          "valid": [
+            {
+              "expr": "{ map_sensor_type == 0 && map_sensor_lowValue == 0 && map_sensor_highValue == 0 }",
+              "msg": "s:map_scale.m",
+              "severity": "error"
+            }
+          ],
+          "when": "{ map_sensor_type == 0 }",
+          "why": "s:map_scale.p",
+          "widget": "grid"
+        }
+      ],
+      "title": "s:sensor_map.t"
+    },
+    {
+      "checks": [
+        {
+          "bench": true,
+          "channels": [
+            "coolantTemperature",
+            "rawClt"
+          ],
+          "expect": "{ coolantTemperature > -30 && coolantTemperature < 130 }",
+          "id": "live_clt",
+          "kind": "live",
+          "stable_ms": 2000,
+          "text": "s:live_clt.t",
+          "timeout_s": 20
+        }
+      ],
+      "id": "sensor_clt",
+      "intro": "s:sensor_clt.i",
+      "questions": [
+        {
+          "default": 0,
+          "field": "clt_adcChannel",
+          "how": "s:clt_pin.c",
+          "id": "clt_pin",
+          "label": "s:clt_pin.r",
+          "role": "clt",
+          "why": "s:clt_pin.p",
+          "widget": "pin"
+        },
+        {
+          "default": 0,
+          "field": "cltSharedMode",
+          "how": "s:clt_shared_mode.c",
+          "id": "clt_shared_mode",
+          "label": "s:clt_shared_mode.r",
+          "why": "s:clt_shared_mode.p",
+          "widget": "choice"
+        },
+        {
+          "catalog": "temperature",
+          "how": "s:clt_preset.c",
+          "id": "clt_preset",
+          "label": "s:clt_preset.r",
+          "when": "{ cltSharedMode == 0 }",
+          "why": "s:clt_preset.p",
+          "widget": "preset"
+        },
+        {
+          "columns": [
+            {
+              "label": "s:temp_grid.col_t",
+              "unit": "°C"
+            },
+            {
+              "label": "s:temp_grid.col_r",
+              "unit": "Ω"
+            }
+          ],
+          "extra": [
+            {
+              "field": "clt_bias_resistor",
+              "label": "s:temp_grid.pullup"
+            }
+          ],
+          "fields": [
+            "clt_tempC_1",
+            "clt_resistance_1",
+            "clt_tempC_2",
+            "clt_resistance_2",
+            "clt_tempC_3",
+            "clt_resistance_3",
+            "clt_bias_resistor"
+          ],
+          "how": "s:clt_points.c",
+          "id": "clt_points",
+          "label": "s:clt_points.r",
+          "rows": [
+            {
+              "fields": [
+                "clt_tempC_1",
+                "clt_resistance_1"
+              ],
+              "label": "s:temp_grid.row_1"
+            },
+            {
+              "fields": [
+                "clt_tempC_2",
+                "clt_resistance_2"
+              ],
+              "label": "s:temp_grid.row_2"
+            },
+            {
+              "fields": [
+                "clt_tempC_3",
+                "clt_resistance_3"
+              ],
+              "label": "s:temp_grid.row_3"
+            }
+          ],
+          "valid": [
+            {
+              "expr": "{ clt_resistance_1 <= clt_resistance_2 }",
+              "msg": "s:clt_points.m",
+              "severity": "warning"
+            }
+          ],
+          "when": "{ cltSharedMode == 0 }",
+          "why": "s:clt_points.p",
+          "widget": "grid"
+        },
+        {
+          "curve": "cltSharedCurve",
+          "fields": [
+            "cltSharedVolts",
+            "cltSharedTemps"
+          ],
+          "how": "s:clt_shared.c",
+          "id": "clt_shared",
+          "label": "s:clt_shared.r",
+          "valid": [
+            {
+              "fields": [
+                "cltSharedMode",
+                "cltSharedVolts",
+                "cltSharedTemps"
+              ],
+              "msg": "s:clt_shared.m",
+              "rule": "curva_termistor",
+              "severity": "warning"
+            }
+          ],
+          "when": "{ cltSharedMode == 1 }",
+          "why": "s:clt_shared.p",
+          "widget": "curve"
+        }
+      ],
+      "title": "s:sensor_clt.t"
+    },
+    {
+      "checks": [
+        {
+          "bench": true,
+          "channels": [
+            "intakeTemperature",
+            "rawIat"
+          ],
+          "expect": "{ intakeTemperature > -30 && intakeTemperature < 130 }",
+          "id": "live_iat",
+          "kind": "live",
+          "stable_ms": 2000,
+          "text": "s:live_iat.t",
+          "timeout_s": 20
+        }
+      ],
+      "id": "sensor_iat",
+      "intro": "s:sensor_iat.i",
+      "questions": [
+        {
+          "default": 0,
+          "field": "iat_adcChannel",
+          "how": "s:iat_pin.c",
+          "id": "iat_pin",
+          "label": "s:iat_pin.r",
+          "role": "iat",
+          "why": "s:iat_pin.p",
+          "widget": "pin"
+        },
+        {
+          "default": 0,
+          "field": "iatSharedMode",
+          "how": "s:iat_shared_mode.c",
+          "id": "iat_shared_mode",
+          "label": "s:iat_shared_mode.r",
+          "why": "s:iat_shared_mode.p",
+          "widget": "choice"
+        },
+        {
+          "catalog": "temperature",
+          "how": "s:iat_preset.c",
+          "id": "iat_preset",
+          "label": "s:iat_preset.r",
+          "when": "{ iatSharedMode == 0 }",
+          "why": "s:iat_preset.p",
+          "widget": "preset"
+        },
+        {
+          "columns": [
+            {
+              "label": "s:temp_grid.col_t",
+              "unit": "°C"
+            },
+            {
+              "label": "s:temp_grid.col_r",
+              "unit": "Ω"
+            }
+          ],
+          "extra": [
+            {
+              "field": "iat_bias_resistor",
+              "label": "s:temp_grid.pullup"
+            }
+          ],
+          "fields": [
+            "iat_tempC_1",
+            "iat_resistance_1",
+            "iat_tempC_2",
+            "iat_resistance_2",
+            "iat_tempC_3",
+            "iat_resistance_3",
+            "iat_bias_resistor"
+          ],
+          "how": "s:iat_points.c",
+          "id": "iat_points",
+          "label": "s:iat_points.r",
+          "rows": [
+            {
+              "fields": [
+                "iat_tempC_1",
+                "iat_resistance_1"
+              ],
+              "label": "s:temp_grid.row_1"
+            },
+            {
+              "fields": [
+                "iat_tempC_2",
+                "iat_resistance_2"
+              ],
+              "label": "s:temp_grid.row_2"
+            },
+            {
+              "fields": [
+                "iat_tempC_3",
+                "iat_resistance_3"
+              ],
+              "label": "s:temp_grid.row_3"
+            }
+          ],
+          "valid": [
+            {
+              "expr": "{ iat_resistance_1 <= iat_resistance_2 }",
+              "msg": "s:iat_points.m",
+              "severity": "warning"
+            }
+          ],
+          "when": "{ iatSharedMode == 0 }",
+          "why": "s:iat_points.p",
+          "widget": "grid"
+        },
+        {
+          "curve": "iatSharedCurve",
+          "fields": [
+            "iatSharedVolts",
+            "iatSharedTemps"
+          ],
+          "how": "s:iat_shared.c",
+          "id": "iat_shared",
+          "label": "s:iat_shared.r",
+          "valid": [
+            {
+              "fields": [
+                "iatSharedMode",
+                "iatSharedVolts",
+                "iatSharedTemps"
+              ],
+              "msg": "s:iat_shared.m",
+              "rule": "curva_termistor",
+              "severity": "warning"
+            }
+          ],
+          "when": "{ iatSharedMode == 1 }",
+          "why": "s:iat_shared.p",
+          "widget": "curve"
+        }
+      ],
+      "title": "s:sensor_iat.t"
+    },
+    {
+      "checks": [
+        {
+          "bench": true,
+          "channels": [
+            "lambdaValue",
+            "wb1isValid",
+            "wb1faultCode"
+          ],
+          "expect": "{ wb1isValid == 1 }",
+          "id": "live_wideband_can",
+          "kind": "live",
+          "stable_ms": 2000,
+          "text": "s:live_wideband_can.t",
+          "timeout_s": 30,
+          "when": "{ enableAemXSeries == 1 }"
+        },
+        {
+          "bench": true,
+          "channels": [
+            "lambdaValue",
+            "AFRValue"
+          ],
+          "expect": "{ lambdaValue > 0.5 && lambdaValue < 2 }",
+          "id": "live_wideband_analog",
+          "kind": "live",
+          "stable_ms": 2000,
+          "text": "s:live_wideband_analog.t",
+          "timeout_s": 30,
+          "when": "{ enableAemXSeries == 0 && afr_hwChannel != 0 }"
+        }
+      ],
+      "id": "sensor_wideband",
+      "intro": "s:sensor_wideband.i",
+      "questions": [
+        {
+          "catalog": "wideband",
+          "default_preset": "aem_x_series_can",
+          "how": "s:wb_preset.c",
+          "id": "wb_preset",
+          "label": "s:wb_preset.r",
+          "why": "s:wb_preset.p",
+          "widget": "preset"
+        },
+        {
+          "default": 0,
+          "field": "enableAemXSeries",
+          "how": "s:wb_via_can.c",
+          "id": "wb_via_can",
+          "label": "s:wb_via_can.r",
+          "valid": [
+            {
+              "expr": "{ enableAemXSeries == 1 && (canReadEnabled == 0 || canWriteEnabled == 0) }",
+              "msg": "s:wb_via_can.m0",
+              "severity": "error"
+            },
+            {
+              "expr": "{ enableAemXSeries == 1 && afr_hwChannel != 0 }",
+              "msg": "s:wb_via_can.m1",
+              "severity": "error"
+            }
+          ],
+          "why": "s:wb_via_can.p",
+          "widget": "bool"
+        },
+        {
+          "default": 0,
+          "field": "afr_hwChannel",
+          "how": "s:wb_pin.c",
+          "id": "wb_pin",
+          "label": "s:wb_pin.r",
+          "role": "lambda",
+          "valid": [
+            {
+              "expr": "{ enableAemXSeries == 0 && afr_hwChannel == 0 }",
+              "msg": "s:wb_pin.m",
+              "severity": "warning"
+            }
+          ],
+          "when": "{ enableAemXSeries == 0 }",
+          "why": "s:wb_pin.p",
+          "widget": "pin"
+        },
+        {
+          "default": 6,
+          "field": "afr_type",
+          "how": "s:wb_type.c",
+          "id": "wb_type",
+          "label": "s:wb_type.r",
+          "when": "{ enableAemXSeries == 0 }",
+          "why": "s:wb_type.p",
+          "widget": "choice"
+        }
+      ],
+      "title": "s:sensor_wideband.t"
+    },
+    {
+      "checks": [],
+      "id": "sensor_wideband_can",
+      "intro": "s:sensor_wideband_can.i",
+      "questions": [
+        {
+          "default": 0,
+          "field": "canWbo1_aemId",
+          "how": "s:wb_can_id.c",
+          "id": "wb_can_id",
+          "label": "s:wb_can_id.r",
+          "unsure": {
+            "type": "default"
+          },
+          "why": "s:wb_can_id.p",
+          "widget": "choice"
+        },
+        {
+          "default": 0,
+          "field": "widebandOnSecondBus",
+          "how": "s:wb_bus.c",
+          "id": "wb_bus",
+          "label": "s:wb_bus.r",
+          "unsure": {
+            "type": "default"
+          },
+          "why": "s:wb_bus.p",
+          "widget": "choice"
+        }
+      ],
+      "title": "s:sensor_wideband_can.t",
+      "when": "{ enableAemXSeries == 1 }"
+    },
+    {
+      "checks": [
+        {
+          "bench": true,
+          "channels": [
+            "RPMValue",
+            "totalTriggerErrorCounter"
+          ],
+          "expect": "{ RPMValue > 0 }",
+          "id": "live_cranking",
+          "kind": "live",
+          "stable_ms": 1000,
+          "text": "s:live_cranking.t",
+          "timeout_s": 30
+        }
+      ],
+      "id": "partida",
+      "intro": "s:partida.i",
+      "questions": [
+        {
+          "default": 450,
+          "field": "cranking_rpm",
+          "how": "s:cranking_rpm.c",
+          "id": "cranking_rpm",
+          "label": "s:cranking_rpm.r",
+          "unit": "rpm",
+          "unsure": {
+            "type": "default"
+          },
+          "valid": [
+            {
+              "expr": "{ cranking_rpm > 800 }",
+              "msg": "s:cranking_rpm.m",
+              "severity": "warning"
+            }
+          ],
+          "why": "s:cranking_rpm.p",
+          "widget": "number"
+        },
+        {
+          "default": 5,
+          "field": "startCrankingDuration",
+          "how": "s:cranking_duration.c",
+          "id": "cranking_duration",
+          "label": "s:cranking_duration.r",
+          "unit": "s",
+          "unsure": {
+            "type": "default"
+          },
+          "why": "s:cranking_duration.p",
+          "widget": "number"
+        },
+        {
+          "default": 8,
+          "field": "crankingTimingAngle",
+          "how": "s:cranking_angle.c",
+          "id": "cranking_angle",
+          "label": "s:cranking_angle.r",
+          "unit": "°",
+          "unsure": {
+            "type": "default"
+          },
+          "why": "s:cranking_angle.p",
+          "widget": "number"
+        },
+        {
+          "default": 0,
+          "field": "useRunningMathForCranking",
+          "how": "s:cranking_math.c",
+          "id": "cranking_math",
+          "label": "s:cranking_math.r",
+          "unsure": {
+            "type": "default"
+          },
+          "why": "s:cranking_math.p",
+          "widget": "choice"
+        },
+        {
+          "default": 1,
+          "field": "isCylinderCleanupEnabled",
+          "id": "cylinder_cleanup",
+          "label": "s:cylinder_cleanup.r",
+          "unsure": {
+            "type": "default"
+          },
+          "why": "s:cylinder_cleanup.p",
+          "widget": "bool"
+        }
+      ],
+      "title": "s:partida.t"
+    },
+    {
+      "checks": [],
+      "id": "partida_combustivel",
+      "intro": "s:partida_combustivel.i",
+      "questions": [
+        {
+          "curve": "primingPulse",
+          "how": "s:priming_curve.c",
+          "id": "priming_curve",
+          "label": "s:priming_curve.r",
+          "why": "s:priming_curve.p",
+          "widget": "curve"
+        },
+        {
+          "curve": "crankingCltCurve",
+          "how": "s:cranking_clt_curve.c",
+          "id": "cranking_clt_curve",
+          "label": "s:cranking_clt_curve.r",
+          "why": "s:cranking_clt_curve.p",
+          "widget": "curve"
+        },
+        {
+          "how": "s:cranking_base_fuel.c",
+          "id": "cranking_base_fuel",
+          "label": "s:cranking_base_fuel.r",
+          "table": "crankingCycleFuelMultTbl",
+          "table_axes": {
+            "x": {
+              "channel": "revolutionCounterSinceStart",
+              "count": 8,
+              "field": "crankingCycleBins",
+              "label": "Engine Cycles",
+              "unit": "counter"
+            },
+            "y": {
+              "channel": "coolantTemperature",
+              "count": 4,
+              "field": "crankingCycleFuelCltBins",
+              "label": "Coolant Temp",
+              "unit": "C"
+            },
+            "z": {
+              "columns": 8,
+              "field": "crankingCycleBaseFuel",
+              "order": "row-major, one row per Y",
+              "rows": 4,
+              "unit": "mg"
+            }
+          },
+          "when": "{ useRunningMathForCranking == 0 }",
+          "why": "s:cranking_base_fuel.p",
+          "widget": "table"
+        }
+      ],
+      "title": "s:partida_combustivel.t"
+    },
+    {
+      "checks": [],
+      "id": "assistentes",
+      "intro": "s:assistentes.i",
+      "questions": [
+        {
+          "assistant": "ve",
+          "field": "veTable",
+          "id": "assist_ve",
+          "label": "s:assist_ve.r",
+          "table": "veTableTbl",
+          "why": "s:assist_ve.p",
+          "widget": "assistant"
+        },
+        {
+          "assistant": "ignition",
+          "field": "ignitionTable",
+          "id": "assist_ign",
+          "label": "s:assist_ign.r",
+          "table": "ignitionTableTbl",
+          "why": "s:assist_ign.p",
+          "widget": "assistant"
+        },
+        {
+          "assistant": "tps_accel",
+          "field": "tpsTpsAccelTable",
+          "id": "assist_ae",
+          "label": "s:assist_ae.r",
+          "table": "tpsTpsAccelTbl",
+          "why": "s:assist_ae.p",
+          "widget": "assistant"
+        }
+      ],
+      "title": "s:assistentes.t"
+    },
+    {
+      "checks": [],
+      "id": "atuadores_bomba",
+      "intro": "s:atuadores_bomba.i",
+      "questions": [
+        {
+          "default": 0,
+          "field": "mainRelayPin",
+          "how": "s:main_relay_pin.c",
+          "id": "main_relay_pin",
+          "label": "s:main_relay_pin.r",
+          "role": "relay",
+          "why": "s:main_relay_pin.p",
+          "widget": "pin"
+        },
+        {
+          "default": 0,
+          "field": "mainRelayPinMode",
+          "id": "main_relay_mode",
+          "label": "s:main_relay_mode.r",
+          "unsure": {
+            "type": "default"
+          },
+          "why": "s:main_relay_mode.p",
+          "widget": "choice"
+        },
+        {
+          "default": 0,
+          "field": "fuelPumpPin",
+          "how": "s:fuel_pump_pin.c",
+          "id": "fuel_pump_pin",
+          "label": "s:fuel_pump_pin.r",
+          "role": "relay",
+          "valid": [
+            {
+              "expr": "{ fuelPumpPin == 0 }",
+              "msg": "s:fuel_pump_pin.m",
+              "severity": "error"
+            }
+          ],
+          "why": "s:fuel_pump_pin.p",
+          "widget": "pin"
+        },
+        {
+          "default": 0,
+          "field": "fuelPumpPinMode",
+          "id": "fuel_pump_mode",
+          "label": "s:fuel_pump_mode.r",
+          "unsure": {
+            "type": "default"
+          },
+          "why": "s:fuel_pump_mode.p",
+          "widget": "choice"
+        },
+        {
+          "default": 4,
+          "field": "startUpFuelPumpDuration",
+          "how": "s:fuel_pump_prime.c",
+          "id": "fuel_pump_prime",
+          "label": "s:fuel_pump_prime.r",
+          "unit": "s",
+          "unsure": {
+            "type": "default"
+          },
+          "why": "s:fuel_pump_prime.p",
+          "widget": "number"
+        }
+      ],
+      "title": "s:atuadores_bomba.t"
+    },
+    {
+      "checks": [],
+      "id": "atuadores_ventoinha1",
+      "intro": "s:atuadores_ventoinha1.i",
+      "questions": [
+        {
+          "default": 0,
+          "field": "fanPin",
+          "how": "s:fan_pin.c",
+          "id": "fan_pin",
+          "label": "s:fan_pin.r",
+          "role": "relay",
+          "why": "s:fan_pin.p",
+          "widget": "pin"
+        },
+        {
+          "default": 95,
+          "field": "fanOnTemperature",
+          "how": "s:fan_on.c",
+          "id": "fan_on",
+          "label": "s:fan_on.r",
+          "unit": "°C",
+          "unsure": {
+            "type": "default"
+          },
+          "why": "s:fan_on.p",
+          "widget": "number"
+        },
+        {
+          "default": 88,
+          "field": "fanOffTemperature",
+          "how": "s:fan_off.c",
+          "id": "fan_off",
+          "label": "s:fan_off.r",
+          "unit": "°C",
+          "unsure": {
+            "type": "default"
+          },
+          "why": "s:fan_off.p",
+          "widget": "number"
+        }
+      ],
+      "title": "s:atuadores_ventoinha1.t"
+    },
+    {
+      "checks": [],
+      "id": "atuadores_ventoinha2",
+      "intro": "s:atuadores_ventoinha2.i",
+      "questions": [
+        {
+          "default": 0,
+          "field": "fan2Pin",
+          "how": "s:fan2_pin.c",
+          "id": "fan2_pin",
+          "label": "s:fan2_pin.r",
+          "role": "relay",
+          "why": "s:fan2_pin.p",
+          "widget": "pin"
+        },
+        {
+          "default": 0,
+          "field": "fan2PinMode",
+          "id": "fan2_mode",
+          "label": "s:fan2_mode.r",
+          "unsure": {
+            "type": "default"
+          },
+          "why": "s:fan2_mode.p",
+          "widget": "choice"
+        },
+        {
+          "default": 100,
+          "field": "fan2OnTemperature",
+          "id": "fan2_on",
+          "label": "s:fan2_on.r",
+          "unit": "°C",
+          "unsure": {
+            "type": "default"
+          },
+          "why": "s:fan2_on.p",
+          "widget": "number"
+        },
+        {
+          "default": 93,
+          "field": "fan2OffTemperature",
+          "id": "fan2_off",
+          "label": "s:fan2_off.r",
+          "unit": "°C",
+          "unsure": {
+            "type": "default"
+          },
+          "why": "s:fan2_off.p",
+          "widget": "number"
+        }
+      ],
+      "title": "s:atuadores_ventoinha2.t"
+    },
+    {
+      "checks": [],
+      "id": "marcha_lenta",
+      "intro": "s:marcha_lenta.i",
+      "questions": [
+        {
+          "default": 0,
+          "field": "useStepperIdle",
+          "how": "s:idle_stepper.c",
+          "id": "idle_stepper",
+          "label": "s:idle_stepper.r",
+          "unsure": {
+            "type": "default"
+          },
+          "why": "s:idle_stepper.p",
+          "widget": "bool"
+        },
+        {
+          "default": 0,
+          "field": "isDoubleSolenoidIdle",
+          "how": "s:idle_double.c",
+          "id": "idle_double",
+          "label": "s:idle_double.r",
+          "unsure": {
+            "type": "default"
+          },
+          "when": "{ useStepperIdle != 1 }",
+          "why": "s:idle_double.p",
+          "widget": "bool"
+        },
+        {
+          "default": 0,
+          "field": "idle_solenoidPin",
+          "how": "s:idle_pin.c",
+          "id": "idle_pin",
+          "label": "s:idle_pin.r",
+          "role": "output",
+          "when": "{ useStepperIdle != 1 }",
+          "why": "s:idle_pin.p",
+          "widget": "pin"
+        },
+        {
+          "default": 0,
+          "field": "secondSolenoidPin",
+          "how": "s:idle_pin2.c",
+          "id": "idle_pin2",
+          "label": "s:idle_pin2.r",
+          "role": "output",
+          "when": "{ useStepperIdle != 1 && isDoubleSolenoidIdle == 1 }",
+          "why": "s:idle_pin2.p",
+          "widget": "pin"
+        },
+        {
+          "id": "idle_note",
+          "label": "s:idle_note.r",
+          "when": "{ useStepperIdle == 1 }",
+          "widget": "note"
+        }
+      ],
+      "title": "s:marcha_lenta.t"
+    },
+    {
+      "checks": [],
+      "id": "atuadores_extras",
+      "intro": "s:atuadores_extras.i",
+      "questions": [
+        {
+          "default": 0,
+          "field": "acRelayPin",
+          "how": "s:ac_relay_pin.c",
+          "id": "ac_relay_pin",
+          "label": "s:ac_relay_pin.r",
+          "role": "relay",
+          "why": "s:ac_relay_pin.p",
+          "widget": "pin"
+        },
+        {
+          "default": 0,
+          "field": "acSwitch",
+          "how": "s:ac_switch_pin.c",
+          "id": "ac_switch_pin",
+          "label": "s:ac_switch_pin.r",
+          "role": "switch",
+          "why": "s:ac_switch_pin.p",
+          "widget": "pin"
+        },
+        {
+          "default": 0,
+          "field": "tachOutputPin",
+          "how": "s:tach_pin.c",
+          "id": "tach_pin",
+          "label": "s:tach_pin.r",
+          "role": "output",
+          "why": "s:tach_pin.p",
+          "widget": "pin"
+        }
+      ],
+      "title": "s:atuadores_extras.t"
+    },
+    {
+      "checks": [],
+      "id": "comunicacao",
+      "intro": "s:comunicacao.i",
+      "questions": [
+        {
+          "default": 6,
+          "field": "canBaudRate",
+          "how": "s:can_baud.c",
+          "id": "can_baud",
+          "label": "s:can_baud.r",
+          "unsure": {
+            "type": "default"
+          },
+          "why": "s:can_baud.p",
+          "widget": "choice"
+        },
+        {
+          "default": 0,
+          "field": "canReadEnabled",
+          "how": "s:can_read.c",
+          "id": "can_read",
+          "label": "s:can_read.r",
+          "why": "s:can_read.p",
+          "widget": "bool"
+        },
+        {
+          "default": 0,
+          "field": "canWriteEnabled",
+          "how": "s:can_write.c",
+          "id": "can_write",
+          "label": "s:can_write.r",
+          "why": "s:can_write.p",
+          "widget": "bool"
+        }
+      ],
+      "title": "s:comunicacao.t"
+    },
+    {
+      "checks": [],
+      "id": "revisao",
+      "intro": "s:revisao.i",
+      "questions": [
+        {
+          "id": "review",
+          "label": "s:review.r",
+          "widget": "review"
+        }
+      ],
+      "title": "s:revisao.t"
+    },
+    {
+      "checks": [
+        {
+          "bench": true,
+          "bench_params": {
+            "benchTestCount": 25,
+            "benchTestOffTime": 200,
+            "benchTestOnTime": 8
+          },
+          "cancel_command": "cmd_test_cancel",
+          "command": "cmd_test_inj%n",
+          "count": "cylindersCount",
+          "duration_ms": 5200,
+          "id": "test_injectors",
+          "kind": "output_test",
+          "pin_field": "injectionPins%n",
+          "requires": "{ RPMValue == 0 }",
+          "text": "s:test_injectors.t",
+          "timeout_s": 15,
+          "total_ms": 5200,
+          "warning": "s:test_injectors.a"
+        }
+      ],
+      "id": "teste_injetores",
+      "intro": "s:teste_injetores.i",
+      "questions": [],
+      "title": "s:teste_injetores.t"
+    },
+    {
+      "checks": [
+        {
+          "bench": true,
+          "bench_params": {
+            "benchTestCount": 20,
+            "benchTestOffTime": 250,
+            "benchTestOnTime": 4
+          },
+          "cancel_command": "cmd_test_cancel",
+          "command": "cmd_test_spk%n",
+          "count": "cylindersCount",
+          "duration_ms": 5080,
+          "id": "test_coils",
+          "kind": "output_test",
+          "pin_field": "ignitionPins%n",
+          "requires": "{ RPMValue == 0 }",
+          "text": "s:test_coils.t",
+          "timeout_s": 15,
+          "total_ms": 5080,
+          "warning": "s:test_coils.a"
+        }
+      ],
+      "id": "teste_bobinas",
+      "intro": "s:teste_bobinas.i",
+      "questions": [],
+      "title": "s:teste_bobinas.t"
+    },
+    {
+      "checks": [
+        {
+          "bench": true,
+          "cancel_command": "cmd_test_cancel",
+          "command": "cmd_test_main_relay",
+          "duration_ms": 1000,
+          "id": "test_main_relay",
+          "kind": "output_test",
+          "pin_field": "mainRelayPin",
+          "requires": "{ RPMValue == 0 }",
+          "text": "s:test_main_relay.t",
+          "timeout_s": 6,
+          "total_ms": 1000
+        },
+        {
+          "bench": true,
+          "cancel_command": "cmd_test_cancel",
+          "command": "cmd_test_fuel_pump",
+          "duration_ms": 3000,
+          "id": "test_fuel_pump",
+          "kind": "output_test",
+          "pin_field": "fuelPumpPin",
+          "requires": "{ RPMValue == 0 }",
+          "text": "s:test_fuel_pump.t",
+          "timeout_s": 8,
+          "total_ms": 3000
+        },
+        {
+          "bench": true,
+          "cancel_command": "cmd_test_cancel",
+          "command": "cmd_test_fan_1",
+          "duration_ms": 2000,
+          "id": "test_fan1",
+          "kind": "output_test",
+          "pin_field": "fanPin",
+          "requires": "{ RPMValue == 0 }",
+          "text": "s:test_fan1.t",
+          "timeout_s": 6,
+          "total_ms": 2000
+        },
+        {
+          "bench": true,
+          "cancel_command": "cmd_test_cancel",
+          "command": "cmd_test_fan_2",
+          "duration_ms": 3000,
+          "id": "test_fan2",
+          "kind": "output_test",
+          "pin_field": "fan2Pin",
+          "requires": "{ RPMValue == 0 }",
+          "text": "s:test_fan2.t",
+          "timeout_s": 8,
+          "total_ms": 3000
+        }
+      ],
+      "id": "teste_reles",
+      "intro": "s:teste_reles.i",
+      "questions": [],
+      "title": "s:teste_reles.t"
+    },
+    {
+      "checks": [
+        {
+          "bench": false,
+          "id": "chk_fuel_leaks",
+          "kind": "manual",
+          "text": "s:chk_fuel_leaks.t"
+        },
+        {
+          "bench": false,
+          "id": "chk_battery",
+          "kind": "manual",
+          "text": "s:chk_battery.t"
+        },
+        {
+          "bench": true,
+          "channels": [
+            "totalTriggerErrorCounter",
+            "isTriggerError"
+          ],
+          "expect": "{ isTriggerError == 0 }",
+          "id": "chk_sync",
+          "kind": "live",
+          "stable_ms": 3000,
+          "text": "s:chk_sync.t",
+          "timeout_s": 30
+        },
+        {
+          "bench": false,
+          "id": "chk_first_start",
+          "kind": "manual",
+          "text": "s:chk_first_start.t"
+        }
+      ],
+      "final": true,
+      "id": "checklist",
+      "intro": "s:checklist.i",
+      "questions": [],
+      "title": "s:checklist.t"
+    }
+  ],
+  "strings": {
+    "en": {
+      "conn.23_black": "23-way Black",
+      "conn.35_black": "35-way Black",
+      "conn.35_white": "35-way White",
+      "inst.23_black.1": "High-Side 2 — Main relay",
+      "inst.23_black.10": "Ignition cylinder 8",
+      "inst.23_black.11": "Digital 4",
+      "inst.23_black.12": "Digital 5",
+      "inst.23_black.13": "Digital 6",
+      "inst.23_black.14": "12V main relay",
+      "inst.23_black.15": "Electronic throttle 2 — negative",
+      "inst.23_black.16": "Ignition cylinder 5",
+      "inst.23_black.17": "Ignition cylinder 7",
+      "inst.23_black.18": "Temperature 3",
+      "inst.23_black.19": "Knock sensor 1",
+      "inst.23_black.2": "High-Side 1 — Fuel pump",
+      "inst.23_black.20": "CAN2 bus high",
+      "inst.23_black.21": "CAN2 bus low",
+      "inst.23_black.22": "Ground",
+      "inst.23_black.23": "Electronic throttle 2 — positive",
+      "inst.23_black.3": "Low-Side 12 — Injector 12",
+      "inst.23_black.4": "Low-Side 11 — Injector 11",
+      "inst.23_black.5": "Low-Side 10 — Injector 10",
+      "inst.23_black.6": "Low-Side 9 — Injector 9",
+      "inst.23_black.7": "Electronic throttle 1 — negative",
+      "inst.23_black.8": "Electronic throttle 1 — positive",
+      "inst.23_black.9": "Ignition cylinder 6",
+      "inst.35_black.1": "Low-Side 4 — Injector 4",
+      "inst.35_black.10": "Ground",
+      "inst.35_black.11": "12V battery input",
+      "inst.35_black.12": "VR1 sensor negative",
+      "inst.35_black.13": "Analog voltage 6",
+      "inst.35_black.14": "Analog voltage 5",
+      "inst.35_black.15": "Analog voltage 7",
+      "inst.35_black.16": "Analog voltage 8",
+      "inst.35_black.17": "CAN bus high",
+      "inst.35_black.18": "CAN bus low",
+      "inst.35_black.19": "Temperature 1 — IAT",
+      "inst.35_black.2": "Low-Side 3 — Injector 3",
+      "inst.35_black.20": "Temperature 2 — CLT",
+      "inst.35_black.21": "Ground",
+      "inst.35_black.22": "Ground",
+      "inst.35_black.23": "VR1 inductive sensor — positive",
+      "inst.35_black.24": "Analog voltage 1 — MAP",
+      "inst.35_black.25": "Analog voltage 2 — TPS",
+      "inst.35_black.26": "Analog voltage 3",
+      "inst.35_black.27": "Analog voltage 4",
+      "inst.35_black.28": "Digital 1 — Hall engine speed",
+      "inst.35_black.29": "Digital 2 — Hall cam phase",
+      "inst.35_black.3": "Low-Side 2 — Injector 2",
+      "inst.35_black.30": "Digital 3 — Hall VSS",
+      "inst.35_black.31": "Ground",
+      "inst.35_black.32": "Ignition cylinder 4",
+      "inst.35_black.33": "Ignition cylinder 3",
+      "inst.35_black.34": "Ignition cylinder 2",
+      "inst.35_black.35": "Ignition cylinder 1",
+      "inst.35_black.4": "Low-Side 1 — Injector 1",
+      "inst.35_black.5": "Low-Side 8 — Injector 8",
+      "inst.35_black.6": "Low-Side 7 — Injector 7",
+      "inst.35_black.7": "Low-Side 6 — Injector 6",
+      "inst.35_black.8": "Low-Side 5 — Injector 5",
+      "inst.35_black.9": "Regulated 5V output — bank 1 sensors",
+      "inst.35_white.1": "5V USB",
+      "inst.35_white.10": "Ground",
+      "inst.35_white.11": "Ground",
+      "inst.35_white.12": "Regulated 5V output — bank 2 sensors",
+      "inst.35_white.13": "USB data positive",
+      "inst.35_white.14": "Ground",
+      "inst.35_white.15": "Reserved",
+      "inst.35_white.16": "Reserved",
+      "inst.35_white.17": "Reserved",
+      "inst.35_white.18": "Reserved",
+      "inst.35_white.19": "Reserved",
+      "inst.35_white.2": "VR2 sensor negative",
+      "inst.35_white.20": "12V main relay",
+      "inst.35_white.21": "Ground",
+      "inst.35_white.22": "High-Side 4",
+      "inst.35_white.23": "High-Side 3",
+      "inst.35_white.24": "USB data negative",
+      "inst.35_white.25": "Ignition cylinder 9",
+      "inst.35_white.26": "Ignition cylinder 10",
+      "inst.35_white.27": "Ignition cylinder 11",
+      "inst.35_white.28": "Ignition cylinder 12",
+      "inst.35_white.29": "Temperature 4",
+      "inst.35_white.3": "VR2 inductive sensor — positive",
+      "inst.35_white.30": "Ground",
+      "inst.35_white.31": "Ground",
+      "inst.35_white.32": "Knock sensor 2",
+      "inst.35_white.33": "Analog voltage 9",
+      "inst.35_white.34": "Analog voltage 10",
+      "inst.35_white.35": "Analog voltage 11",
+      "inst.35_white.4": "Ground",
+      "inst.35_white.5": "Ground",
+      "inst.35_white.6": "Low-Side 16",
+      "inst.35_white.7": "Low-Side 15",
+      "inst.35_white.8": "Low-Side 14",
+      "inst.35_white.9": "Low-Side 13"
+    },
+    "pt-BR": {
+      "ac_relay_pin.c": "Veja no diagrama elétrico qual saída da ECU comanda o relé do compressor.",
+      "ac_relay_pin.p": "A ECU liga o compressor por esse pino e pode aliviar a carga do motor.",
+      "ac_relay_pin.r": "Pino do relé do ar-condicionado",
+      "ac_switch_pin.c": "Veja no diagrama elétrico onde chega o sinal da chave do ar-condicionado.",
+      "ac_switch_pin.p": "A ECU lê o pedido do ar-condicionado por essa entrada e sobe a marcha lenta.",
+      "ac_switch_pin.r": "Entrada da chave do ar-condicionado",
+      "algorithm.c": "Se o motor tem sensor MAP, use Speed Density. Em dúvida, deixe o padrão.",
+      "algorithm.p": "Densidade de velocidade (MAP) funciona na maioria dos motores. Alpha-N usa só a borboleta e exige mais ajuste.",
+      "algorithm.r": "Como a ECU calcula o ar",
+      "assist_ae.p": "Ajusta o combustível extra quando você pisa de repente no acelerador.",
+      "assist_ae.r": "Assistente de enriquecimento na aceleração",
+      "assist_ign.p": "Monta uma tabela de avanço conservadora para a primeira regulagem.",
+      "assist_ign.r": "Assistente da tabela de ignição",
+      "assist_ve.p": "Monta a tabela de eficiência volumétrica a partir de um motor semelhante.",
+      "assist_ve.r": "Assistente da tabela de combustível (VE)",
+      "assistentes.i": "Estes assistentes ajudam a preencher as tabelas de combustível, ignição e aceleração depois que o motor já funciona. Você pode pular e voltar depois.",
+      "assistentes.t": "Assistentes de calibração",
+      "atuadores_bomba.i": "O relé principal alimenta a ECU e os atuadores. A bomba precisa ligar ao ligar a ignição, senão o motor não pega.",
+      "atuadores_bomba.t": "Relé principal e bomba de combustível",
+      "atuadores_extras.i": "Saídas opcionais. Deixe vazio o que o seu carro não tem.",
+      "atuadores_extras.t": "Ar-condicionado e conta-giros",
+      "atuadores_ventoinha1.i": "A ECU liga a ventoinha quando o motor esquenta e desliga quando esfria.",
+      "atuadores_ventoinha1.t": "Ventoinha 1",
+      "atuadores_ventoinha2.i": "Uma segunda ventoinha pode entrar em temperatura mais alta. Pule se o carro só tem uma.",
+      "atuadores_ventoinha2.t": "Ventoinha 2",
+      "borboleta_eletronica.i": "Escolha a função do motor da borboleta e a faixa de abertura na marcha lenta. O PID e a calibração fina continuam na configuração global.",
+      "borboleta_eletronica.t": "Borboleta eletrônica",
+      "cam_mode.c": "Veja se o cabeçote tem sensor no comando de válvulas ou no distribuidor e qual é o padrão dele.",
+      "cam_mode.m": "Injeção sequencial sem sensor de fase: a ECU não sabe qual volta do ciclo é. Use injeção simultânea ou em grupos, ou configure a fase.",
+      "cam_mode.p": "Com a fase a ECU sabe qual cilindro está em compressão. Sem ela só dá para usar injeção simultânea ou em grupos.",
+      "cam_mode.r": "Sensor de fase (comando)",
+      "cam_offset.c": "Ajuste com o motor funcionando e uma lâmpada estroboscópica, ou siga o procedimento do seu motor.",
+      "cam_offset.p": "Alinha o sinal de fase com o ciclo do motor. Valor errado atrasa ou adianta a injeção sequencial.",
+      "cam_offset.r": "Ângulo da fase",
+      "cam_pin.c": "Veja no conector da ECU o pino indicado para o sensor de fase.",
+      "cam_pin.p": "É o pino onde o sensor de fase está ligado.",
+      "cam_pin.r": "Entrada do sensor de fase",
+      "can_baud.c": "A WideLink e os displays da evoTech usam 500 kbps.",
+      "can_baud.p": "Todos os dispositivos da rede precisam usar a mesma velocidade.",
+      "can_baud.r": "Velocidade da rede CAN",
+      "can_read.c": "Ligue se você usa a WideLink ou outro módulo que envia dados à ECU.",
+      "can_read.p": "Permite que a ECU receba dados de outros dispositivos, como a lambda da WideLink.",
+      "can_read.r": "Ler dados da rede CAN",
+      "can_write.c": "Ligue se você usa display ou outro módulo que recebe dados da ECU.",
+      "can_write.p": "Permite que a ECU envie dados a displays e outros dispositivos.",
+      "can_write.r": "Enviar dados pela rede CAN",
+      "checklist.i": "Marque cada item depois de conferir. Eles evitam os problemas mais comuns na primeira partida.",
+      "checklist.t": "Antes da primeira partida",
+      "chk_battery.t": "A bateria está carregada e os terminais firmes.",
+      "chk_first_start.t": "Há um extintor por perto e o carro está em ponto morto, com o freio de mão puxado.",
+      "chk_fuel_leaks.t": "Não há vazamento de combustível nas mangueiras e nos injetores.",
+      "chk_sync.t": "O sincronismo da roda fônica está sem erros ao girar o motor.",
+      "clt_pin.c": "Veja o fio do sensor da água no chicote e o pino correspondente no conector.",
+      "clt_pin.p": "É o pino analógico de temperatura onde o sensor chega.",
+      "clt_pin.r": "Entrada da temperatura do motor",
+      "clt_points.c": "Meça a resistência do sensor em três temperaturas, por exemplo a frio, morno e quente, e digite cada par. A resistência do pull-up é do resistor da placa.",
+      "clt_points.m": "A resistência do primeiro ponto deve ser maior que a do segundo. Confira a ordem dos pontos.",
+      "clt_points.p": "A ECU deduz a temperatura a partir da resistência nos três pontos. Pontos errados dão leitura errada.",
+      "clt_points.r": "Curva do sensor de 3 pontos",
+      "clt_preset.c": "Escolha o sensor do carro. Se não souber, meça a resistência a frio e a quente.",
+      "clt_preset.p": "O modelo traz a curva de resistência do sensor, sem você precisar medir.",
+      "clt_preset.r": "Escolher pelo sensor",
+      "clt_shared.c": "Informe a tensão que chega ao pino e a temperatura em cada ponto, em ordem crescente de tensão.",
+      "clt_shared.m": "A curva compartilhada está inválida. Confira tensões e temperaturas em ordem crescente.",
+      "clt_shared.p": "Quando o mesmo sensor serve a ECU e outro aparelho, a curva compartilhada mantém os dois de acordo.",
+      "clt_shared.r": "Curva compartilhada",
+      "clt_shared_mode.c": "Deixe Independente se o sensor é só da ECU, que é o caso mais comum. Escolha Compartilhado só se outro aparelho lê o mesmo sensor.",
+      "clt_shared_mode.p": "Se o mesmo sensor também alimenta o painel ou outra ECU, a leitura passa a ser pela tensão do pino e não pela resistência.",
+      "clt_shared_mode.r": "Sensor compartilhado com outro aparelho",
+      "coil_preset.c": "Procure o código impresso na bobina.",
+      "coil_preset.p": "O modelo traz o dwell certo para a bobina e se ela tem módulo interno.",
+      "coil_preset.r": "Escolher pela bobina",
+      "combustivel.i": "A ECU calcula a quantidade de combustível pelo ar aspirado. Aqui você diz como o ar é medido e qual combustível é usado.",
+      "combustivel.t": "Combustível e aspiração",
+      "compression.c": "Consulte o manual do motor. Se não souber, deixe o padrão e ajuste depois.",
+      "compression.p": "Usada nas correções de partida e de combustível. Um valor muito errado desloca o mapa.",
+      "compression.r": "Taxa de compressão",
+      "comunicacao.i": "A rede CAN liga a ECU a dispositivos como a WideLink e os displays. Velocidade errada deixa a rede muda.",
+      "comunicacao.t": "Comunicação CAN",
+      "conn.23_black": "23 vias Preto",
+      "conn.35_black": "35 vias Preto",
+      "conn.35_white": "35 vias Branco",
+      "controle.i": "Antes de ligar o motor, confirme que a ECU está liberada para comandar injeção e ignição e defina o limite de giro.",
+      "controle.t": "Liberação de injeção e ignição",
+      "cranking_angle.c": "Entre 5 e 10 graus costuma ser seguro.",
+      "cranking_angle.p": "Um avanço baixo na partida evita o retorno do motor de partida.",
+      "cranking_angle.r": "Avanço na partida",
+      "cranking_base_fuel.c": "Comece com os valores padrão da tabela e ajuste pela partida a frio.",
+      "cranking_base_fuel.p": "Com combustível fixo, essa tabela define a dose de cada ciclo na partida.",
+      "cranking_base_fuel.r": "Combustível base de partida",
+      "cranking_clt_curve.c": "Comece com o padrão e ajuste conforme a partida a frio e a quente.",
+      "cranking_clt_curve.p": "Quanto mais frio o motor, mais combustível na partida, porque parte dele condensa nas paredes.",
+      "cranking_clt_curve.r": "Correção pela temperatura",
+      "cranking_duration.c": "Cinco segundos servem para a maioria dos motores.",
+      "cranking_duration.p": "Depois desse tempo, ou ao passar do giro de partida, a ECU volta ao funcionamento normal.",
+      "cranking_duration.r": "Duração da partida",
+      "cranking_dwell.c": "Siga a folha de dados da bobina. Seis milissegundos é um valor seguro para a maioria.",
+      "cranking_dwell.p": "É o tempo em que a bobina carrega antes de cada faísca na partida. Pouco dá faísca fraca; muito aquece a bobina.",
+      "cranking_dwell.r": "Dwell na partida",
+      "cranking_injection_mode.p": "Na partida a ECU ainda não conhece a fase. Simultâneo costuma pegar melhor.",
+      "cranking_injection_mode.r": "Modo de injeção na partida",
+      "cranking_math.c": "Para a primeira partida, use Fixo.",
+      "cranking_math.p": "Fixo usa uma tabela própria de partida. Mapa usa a mesma conta do funcionamento normal.",
+      "cranking_math.r": "Combustível na partida",
+      "cranking_rpm.c": "Meça o giro do motor de partida no painel. Costuma ficar entre 150 e 300 rpm; o padrão é uma margem segura.",
+      "cranking_rpm.m": "Giro de partida acima de 800 rpm é incomum. Confirme o valor.",
+      "cranking_rpm.p": "Abaixo desse giro a ECU entende que o motor ainda está sendo girado pelo motor de partida.",
+      "cranking_rpm.r": "Giro considerado partida",
+      "cylinder_cleanup.p": "Com o pedal no fundo na partida, a ECU corta a injeção para desafogar um motor encharcado.",
+      "cylinder_cleanup.r": "Limpeza de cilindro",
+      "cylinders.c": "Conte as velas ou os injetores do motor.",
+      "cylinders.p": "A ECU divide combustível e faísca por cilindro. Valor errado dá injeção e ignição fora de ordem.",
+      "cylinders.r": "Número de cilindros",
+      "dead_time.c": "A folha de dados do injetor traz o tempo morto por tensão. Na dúvida, use a tabela do modelo escolhido.",
+      "dead_time.p": "É o atraso do injetor para abrir. Com bateria fraca ele é maior, e sem a correção a mistura fica pobre.",
+      "dead_time.r": "Tempo morto do injetor",
+      "displacement.c": "Está no manual ou no cabeçote. Um 1.8 tem 1,8 litros.",
+      "displacement.p": "Com a cilindrada a ECU estima o ar que entra em cada ciclo e calcula o combustível.",
+      "displacement.r": "Cilindrada total",
+      "dwell_curve.c": "Use a curva do modelo de bobina escolhido ou a da folha de dados.",
+      "dwell_curve.p": "Com bateria fraca a bobina carrega mais devagar, então precisa de mais tempo.",
+      "dwell_curve.r": "Dwell conforme a bateria",
+      "engine_code.p": "O código gravado no bloco identifica a família do motor, por exemplo AP 1.8 ou EA111.",
+      "engine_code.r": "Código do motor",
+      "engine_make.p": "Ajuda a achar o mapa certo quando você guarda vários carros.",
+      "engine_make.r": "Marca do motor",
+      "etb_function.c": "Em borboleta eletrônica comum de uma só borboleta, escolha Throttle 1.",
+      "etb_function.p": "Grava na ECU como o motor da borboleta eletrônica é usado. O normal é Throttle 1.",
+      "etb_function.r": "Qual a função do motor da borboleta?",
+      "etb_idle_range.c": "Deixe o valor padrão. Aumente só se a marcha lenta não segurar a rotação mesmo com a borboleta no limite.",
+      "etb_idle_range.p": "Na marcha lenta controlada pela borboleta eletrônica, é a abertura máxima que a ECU pode usar para segurar a rotação.",
+      "etb_idle_range.r": "Faixa de abertura da borboleta na marcha lenta",
+      "fan2_mode.p": "Define o sentido do sinal que comanda o relé. O padrão serve para a maioria dos relés.",
+      "fan2_mode.r": "Tipo de saída da ventoinha 2",
+      "fan2_off.p": "Precisa ser menor que a temperatura de ligar, para não ficar ligando e desligando.",
+      "fan2_off.r": "Desliga a ventoinha 2 em",
+      "fan2_on.p": "Temperatura em que a segunda ventoinha entra, normalmente acima da primeira.",
+      "fan2_on.r": "Liga a ventoinha 2 em",
+      "fan2_pin.c": "Veja no diagrama elétrico qual saída da ECU comanda o relé da segunda ventoinha.",
+      "fan2_pin.p": "A ECU comanda o relé da segunda ventoinha por esse pino. Deixe vazio se não tiver.",
+      "fan2_pin.r": "Pino do relé da ventoinha 2",
+      "fan_off.c": "Sete a dez graus abaixo da temperatura de ligar costuma servir.",
+      "fan_off.p": "Precisa ser menor que a temperatura de ligar, para a ventoinha não ficar ligando e desligando.",
+      "fan_off.r": "Desliga a ventoinha em",
+      "fan_on.c": "Deixe uns 5 a 10 graus abaixo da temperatura da válvula termostática.",
+      "fan_on.p": "Temperatura em que a ventoinha começa a girar. Muito alta arrisca esquentar demais o motor.",
+      "fan_on.r": "Liga a ventoinha em",
+      "fan_pin.c": "Veja no diagrama elétrico qual saída da ECU comanda o relé da ventoinha.",
+      "fan_pin.p": "A ECU comanda o relé da ventoinha por esse pino. Deixe vazio se não tiver ventoinha comandada pela ECU.",
+      "fan_pin.r": "Pino do relé da ventoinha",
+      "firing_order.c": "Está no manual do motor ou na tampa de válvulas. Um quatro cilindros comum usa 1-3-4-2.",
+      "firing_order.p": "A ECU aciona injetores e bobinas nessa sequência. Ordem trocada faz o motor falhar ou não pegar.",
+      "firing_order.r": "Ordem de ignição",
+      "fixed_timing.c": "Dez graus antes do ponto morto superior é um valor conservador para a maioria dos motores.",
+      "fixed_timing.p": "É o ângulo usado enquanto o avanço está em modo fixo. Um valor seguro evita batida na primeira partida.",
+      "fixed_timing.r": "Avanço fixo",
+      "fluxo.base.d": "Parte de um mapa parecido com o seu motor e o assistente só confere e ajusta o que for diferente.",
+      "fluxo.base.t": "A partir de um mapa base",
+      "fluxo.r": "Ponto de partida",
+      "fluxo.rev.d": "Lê o mapa que já está na ECU e mostra o que está incompleto ou suspeito, sem refazer tudo.",
+      "fluxo.rev.t": "Revisar o mapa da ECU",
+      "fluxo.zero.d": "Começa de um mapa limpo e você informa tudo sobre o motor e as ligações.",
+      "fluxo.zero.t": "Do zero",
+      "forced_induction.p": "Com pressão positiva no coletor a ECU precisa de limites e correções diferentes.",
+      "forced_induction.r": "Motor turbo ou compressor",
+      "fuel_density.p": "Converte a massa de combustível em volume, que é o que o injetor entrega.",
+      "fuel_density.r": "Densidade do combustível",
+      "fuel_pressure.c": "É a pressão do regulador, medida com manômetro. Veja o manual do regulador.",
+      "fuel_pressure.p": "A vazão do injetor muda com a pressão. A ECU corrige a partir deste valor de referência.",
+      "fuel_pressure.r": "Pressão de combustível",
+      "fuel_pump_mode.p": "Define o sentido do sinal que comanda o relé da bomba. O padrão serve para a maioria dos relés.",
+      "fuel_pump_mode.r": "Tipo de saída da bomba",
+      "fuel_pump_pin.c": "Veja no diagrama elétrico qual saída da ECU comanda o relé da bomba.",
+      "fuel_pump_pin.m": "Sem pino para a bomba de combustível a ECU não consegue ligá-la. Escolha o pino do relé da bomba.",
+      "fuel_pump_pin.p": "A ECU comanda a bomba por esse pino. Sem ele a bomba não liga e o motor não pega.",
+      "fuel_pump_pin.r": "Pino da bomba de combustível",
+      "fuel_pump_prime.c": "Três a cinco segundos bastam para a maioria dos carros.",
+      "fuel_pump_prime.p": "Ao ligar a ignição a bomba trabalha por esse tempo para encher a linha antes da partida.",
+      "fuel_pump_prime.r": "Tempo de pressurização da bomba",
+      "iat_pin.c": "Veja o fio do sensor de ar no chicote e o pino correspondente no conector.",
+      "iat_pin.p": "É o pino analógico de temperatura onde o sensor chega.",
+      "iat_pin.r": "Entrada da temperatura do ar",
+      "iat_points.c": "Meça a resistência do sensor em três temperaturas e digite cada par. A resistência do pull-up é do resistor da placa.",
+      "iat_points.m": "A resistência do primeiro ponto deve ser maior que a do segundo. Confira a ordem dos pontos.",
+      "iat_points.p": "A ECU deduz a temperatura a partir da resistência nos três pontos. Pontos errados dão leitura errada.",
+      "iat_points.r": "Curva do sensor de 3 pontos",
+      "iat_preset.c": "Escolha o sensor do carro. Se não souber, meça a resistência a frio e a quente.",
+      "iat_preset.p": "O modelo traz a curva de resistência do sensor, sem você precisar medir.",
+      "iat_preset.r": "Escolher pelo sensor",
+      "iat_shared.c": "Informe a tensão que chega ao pino e a temperatura em cada ponto, em ordem crescente de tensão.",
+      "iat_shared.m": "A curva compartilhada está inválida. Confira tensões e temperaturas em ordem crescente.",
+      "iat_shared.p": "Quando o mesmo sensor serve a ECU e outro aparelho, a curva compartilhada mantém os dois de acordo.",
+      "iat_shared.r": "Curva compartilhada",
+      "iat_shared_mode.c": "Deixe Independente se o sensor é só da ECU, que é o caso mais comum. Escolha Compartilhado só se outro aparelho lê o mesmo sensor.",
+      "iat_shared_mode.p": "Se o mesmo sensor também alimenta o painel ou outra ECU, a leitura passa a ser pela tensão do pino e não pela resistência.",
+      "iat_shared_mode.r": "Sensor compartilhado com outro aparelho",
+      "idle_double.c": "Conte os fios de comando da válvula: dois fios de comando indicam válvula dupla. A simples tem um único fio de comando mais o positivo.",
+      "idle_double.p": "A válvula dupla usa dois pinos de saída, um para abrir e outro para fechar. A simples usa só um.",
+      "idle_double.r": "A válvula solenoide é dupla (abre e fecha por pinos separados)?",
+      "idle_note.r": "Os pinos do motor de passo são ajustados depois, na configuração global da ECU. Por isso este passo não pede os pinos do atuador.",
+      "idle_pin.c": "Veja no diagrama elétrico qual saída da ECU comanda a válvula de marcha lenta.",
+      "idle_pin.p": "Se o carro usa válvula solenoide de marcha lenta, a ECU a comanda por esse pino.",
+      "idle_pin.r": "Pino do atuador de marcha lenta",
+      "idle_pin2.c": "Veja no diagrama elétrico a outra saída da ECU que comanda a válvula de marcha lenta.",
+      "idle_pin2.p": "A válvula dupla é comandada por dois pinos; este é o segundo.",
+      "idle_pin2.r": "Pino do segundo solenoide da marcha lenta",
+      "idle_stepper.c": "Motor de passo tem quatro fios e move a válvula em passos. Válvula solenoide tem dois fios e abre e fecha. Em dúvida, responda não.",
+      "idle_stepper.p": "O motor de passo tem pinos próprios, ajustados na configuração global. Com válvula solenoide a ECU usa um ou dois pinos de saída, pedidos aqui.",
+      "idle_stepper.r": "O atuador da marcha lenta é um motor de passo?",
+      "ignicao.i": "Defina o tipo de bobina e o tempo de carga (dwell) que ela precisa.",
+      "ignicao.t": "Ignição",
+      "ignicao_pinos.i": "Ligue cada bobina ao pino de ignição certo da ECU. A lista mostra só os pinos que o tipo de bobina usa: bobina única usa um pino, centelha perdida usa metade dos cilindros (dois pinos em um quatro cilindros) e bobina individual usa um por cilindro.",
+      "ignicao_pinos.t": "Pinos das bobinas",
+      "ignition_enabled.p": "Desligada, a ECU não dá faísca. Útil para testes sem risco de o motor pegar.",
+      "ignition_enabled.r": "Ignição ligada",
+      "ignition_mode.c": "Conte as bobinas e os fios de comando: uma bobina só com distribuidor é bobina única; metade do número de cilindros é centelha perdida; uma por cilindro é individual.",
+      "ignition_mode.p": "Bobina única (distribuidor) usa só um pino de saída da ECU. Centelha perdida usa um pino para cada par de cilindros, ou seja, dois pinos em um quatro cilindros. Individual usa um pino por cilindro. O modo errado deixa cilindros sem faísca.",
+      "ignition_mode.r": "Modo de ignição",
+      "ignition_pin_mode.c": "Deixe o padrão, a não ser que o manual da bobina ou do módulo indique outro.",
+      "ignition_pin_mode.p": "Define o sentido do sinal de comando da bobina. O padrão serve para a maioria dos módulos de ignição.",
+      "ignition_pin_mode.r": "Tipo de saída da bobina",
+      "ignition_pins.c": "Siga o chicote: o fio de comando da primeira bobina vai no pino indicado como Ignição 1 no conector. Em centelha perdida cada bobina serve a dois cilindros e usa um pino só.",
+      "ignition_pins.p": "Cada saída de comando precisa de um pino próprio, e só as que o tipo de bobina usa são pedidas. Pino repetido gera erro na ECU e pino errado deixa o cilindro sem faísca.",
+      "ignition_pins.r": "Pino de cada bobina",
+      "inicio.i": "O assistente leva você pelos ajustes que a ECU precisa para dar a primeira partida. Nada é gravado na ECU antes da revisão final.",
+      "inicio.t": "Como você quer começar?",
+      "injecao.i": "Escolha como os injetores são acionados e quanto cada um entrega.",
+      "injecao.t": "Injeção",
+      "injecao_pinos.i": "Ligue cada injetor ao pino certo da ECU e confira o tempo morto, que depende da tensão da bateria.",
+      "injecao_pinos.t": "Pinos dos injetores e tempo morto",
+      "injection_enabled.p": "Desligada, a ECU não aciona os injetores. Útil para girar o motor sem combustível.",
+      "injection_enabled.r": "Injeção ligada",
+      "injection_mode.c": "Para a primeira partida, simultâneo é o mais simples. Passe a sequencial quando a fase estiver funcionando.",
+      "injection_mode.p": "Sequencial injeta cada cilindro na hora certa e exige sensor de fase. Simultâneo e em grupos funcionam só com a roda fônica.",
+      "injection_mode.r": "Modo de injeção",
+      "injector_flow.c": "Veja a etiqueta do injetor ou a folha de dados. A vazão vale para a pressão de combustível informada abaixo.",
+      "injector_flow.m0": "Vazão zero: a ECU não consegue calcular o tempo de injeção. Informe a vazão do injetor.",
+      "injector_flow.m1": "Vazão abaixo de 100 cc/min é incomum. Confirme o valor e a unidade.",
+      "injector_flow.p": "É o que a ECU usa para converter massa de combustível em tempo de injeção. Valor errado deixa a mistura rica ou pobre demais.",
+      "injector_flow.r": "Vazão do injetor",
+      "injector_pin_mode.c": "Deixe o padrão, a não ser que o manual da placa indique outro.",
+      "injector_pin_mode.p": "Define se a ECU liga o injetor puxando para o terra ou de outro jeito. O padrão serve para a evoTech.",
+      "injector_pin_mode.r": "Tipo de saída do injetor",
+      "injector_pins.c": "Siga o chicote: o injetor do cilindro 1 vai no pino indicado como Injetor 1 no conector.",
+      "injector_pins.p": "Cada cilindro precisa de um pino de saída próprio, de potência. Pino repetido ou de outro tipo gera erro na ECU.",
+      "injector_pins.r": "Pino de cada injetor",
+      "injector_preset.c": "A vazão está gravada no injetor ou na nota de compra.",
+      "injector_preset.p": "O modelo traz a vazão e o tempo morto de um injetor conhecido, o que evita chute.",
+      "injector_preset.r": "Escolher pelo injetor",
+      "inst.23_black.1": "High-Side 2 — Relé principal",
+      "inst.23_black.10": "Ignição cilindro 8",
+      "inst.23_black.11": "Digital 4",
+      "inst.23_black.12": "Digital 5",
+      "inst.23_black.13": "Digital 6",
+      "inst.23_black.14": "12V relé principal",
+      "inst.23_black.15": "Borboleta eletrônica 2 — negativo",
+      "inst.23_black.16": "Ignição cilindro 5",
+      "inst.23_black.17": "Ignição cilindro 7",
+      "inst.23_black.18": "Temperatura 3",
+      "inst.23_black.19": "Sensor de detonação 1",
+      "inst.23_black.2": "High-Side 1 — Bomba de combustível",
+      "inst.23_black.20": "CAN2 Bus High",
+      "inst.23_black.21": "CAN2 Bus Low",
+      "inst.23_black.22": "Terra",
+      "inst.23_black.23": "Borboleta eletrônica 2 — positivo",
+      "inst.23_black.3": "Low-Side 12 — Injetor 12",
+      "inst.23_black.4": "Low-Side 11 — Injetor 11",
+      "inst.23_black.5": "Low-Side 10 — Injetor 10",
+      "inst.23_black.6": "Low-Side 9 — Injetor 9",
+      "inst.23_black.7": "Borboleta eletrônica 1 — negativo",
+      "inst.23_black.8": "Borboleta eletrônica 1 — positivo",
+      "inst.23_black.9": "Ignição cilindro 6",
+      "inst.35_black.1": "Low-Side 4 — Injetor 4",
+      "inst.35_black.10": "Terra",
+      "inst.35_black.11": "Entrada 12V bateria",
+      "inst.35_black.12": "Sensor VR1 negativo",
+      "inst.35_black.13": "Analógica tensão 6",
+      "inst.35_black.14": "Analógica tensão 5",
+      "inst.35_black.15": "Analógica tensão 7",
+      "inst.35_black.16": "Analógica tensão 8",
+      "inst.35_black.17": "CAN Bus High",
+      "inst.35_black.18": "CAN Bus Low",
+      "inst.35_black.19": "Temperatura 1 — IAT",
+      "inst.35_black.2": "Low-Side 3 — Injetor 3",
+      "inst.35_black.20": "Temperatura 2 — CLT",
+      "inst.35_black.21": "Terra",
+      "inst.35_black.22": "Terra",
+      "inst.35_black.23": "Sensor indutivo VR1 — positivo",
+      "inst.35_black.24": "Analógica tensão 1 — MAP",
+      "inst.35_black.25": "Analógica tensão 2 — TPS",
+      "inst.35_black.26": "Analógica tensão 3",
+      "inst.35_black.27": "Analógica tensão 4",
+      "inst.35_black.28": "Digital 1 — Hall Rotação",
+      "inst.35_black.29": "Digital 2 — Hall Fase",
+      "inst.35_black.3": "Low-Side 2 — Injetor 2",
+      "inst.35_black.30": "Digital 3 — Hall VSS",
+      "inst.35_black.31": "Terra",
+      "inst.35_black.32": "Ignição cilindro 4",
+      "inst.35_black.33": "Ignição cilindro 3",
+      "inst.35_black.34": "Ignição cilindro 2",
+      "inst.35_black.35": "Ignição cilindro 1",
+      "inst.35_black.4": "Low-Side 1 — Injetor 1",
+      "inst.35_black.5": "Low-Side 8 — Injetor 8",
+      "inst.35_black.6": "Low-Side 7 — Injetor 7",
+      "inst.35_black.7": "Low-Side 6 — Injetor 6",
+      "inst.35_black.8": "Low-Side 5 — Injetor 5",
+      "inst.35_black.9": "Saída 5V regulada — sensores banco 1",
+      "inst.35_white.1": "5V USB",
+      "inst.35_white.10": "Terra",
+      "inst.35_white.11": "Terra",
+      "inst.35_white.12": "Saída 5V regulada — sensores banco 2",
+      "inst.35_white.13": "USB Data positivo",
+      "inst.35_white.14": "Terra",
+      "inst.35_white.15": "Reservado",
+      "inst.35_white.16": "Reservado",
+      "inst.35_white.17": "Reservado",
+      "inst.35_white.18": "Reservado",
+      "inst.35_white.19": "Reservado",
+      "inst.35_white.2": "Sensor VR2 negativo",
+      "inst.35_white.20": "12V relé principal",
+      "inst.35_white.21": "Terra",
+      "inst.35_white.22": "High-Side 4",
+      "inst.35_white.23": "High-Side 3",
+      "inst.35_white.24": "USB Data negativo",
+      "inst.35_white.25": "Ignição cilindro 9",
+      "inst.35_white.26": "Ignição cilindro 10",
+      "inst.35_white.27": "Ignição cilindro 11",
+      "inst.35_white.28": "Ignição cilindro 12",
+      "inst.35_white.29": "Temperatura 4",
+      "inst.35_white.3": "Sensor indutivo VR2 — positivo",
+      "inst.35_white.30": "Terra",
+      "inst.35_white.31": "Terra",
+      "inst.35_white.32": "Sensor de detonação 2",
+      "inst.35_white.33": "Analógica tensão 9",
+      "inst.35_white.34": "Analógica tensão 10",
+      "inst.35_white.35": "Analógica tensão 11",
+      "inst.35_white.4": "Terra",
+      "inst.35_white.5": "Terra",
+      "inst.35_white.6": "Low-Side 16",
+      "inst.35_white.7": "Low-Side 15",
+      "inst.35_white.8": "Low-Side 14",
+      "inst.35_white.9": "Low-Side 13",
+      "live_clt.t": "A temperatura deve ser plausível para o motor, perto da ambiente a frio e subindo com o funcionamento.",
+      "live_cranking.t": "Gire o motor de partida e confira se o giro aparece e o contador de erros de sincronismo não sobe.",
+      "live_iat.t": "A temperatura do ar deve ser plausível, perto da ambiente com o motor frio.",
+      "live_map.t": "Com o motor parado, a pressão lida deve ficar perto da pressão ambiente, entre 90 e 105 kPa ao nível do mar.",
+      "live_sync.t": "Gire o motor de partida. O giro deve aparecer e o contador de erros de sincronismo não deve subir.",
+      "live_tps.t": "Pise devagar no acelerador. A leitura deve ir de 0 a 100 por cento, de forma suave e sem saltos.",
+      "live_wideband_analog.t": "Com a sonda ligada e aquecida, a lambda deve aparecer entre 0,5 e 2. Ao ar livre a sonda lê pobre, perto do limite alto.",
+      "live_wideband_can.t": "Com a sonda ligada e aquecida, a ECU deve receber a lambda pelo CAN sem falha. Espere o aquecimento terminar.",
+      "main_relay_mode.p": "Define o sentido do sinal que comanda o relé. O padrão serve para a maioria dos relés.",
+      "main_relay_mode.r": "Tipo de saída do relé principal",
+      "main_relay_pin.c": "Veja no diagrama elétrico qual saída da ECU comanda o relé principal.",
+      "main_relay_pin.p": "A ECU liga e desliga o relé principal por esse pino. Deixe vazio se o relé é ligado direto na chave.",
+      "main_relay_pin.r": "Pino do relé principal",
+      "map_pin.c": "Veja o fio de sinal do sensor e o pino correspondente no conector.",
+      "map_pin.p": "É o pino analógico onde o sinal do MAP chega.",
+      "map_pin.r": "Entrada do MAP",
+      "map_preset.c": "O código do sensor está impresso no corpo dele.",
+      "map_preset.p": "O modelo já traz a conversão de tensão em pressão de um sensor conhecido.",
+      "map_preset.r": "Escolher pelo sensor",
+      "map_scale.c": "Está na folha de dados do sensor: a tensão e a pressão no extremo baixo e no extremo alto. Um sensor de 2,5 bar lê até 250 kPa, normalmente de 0,5 V a 4,5 V.",
+      "map_scale.col_p": "Pressão",
+      "map_scale.col_v": "Tensão",
+      "map_scale.m": "Sensor Custom com as duas pressões zeradas: a conversão fica indefinida. Informe as pressões do sensor.",
+      "map_scale.p": "Um sensor Custom converte tensão em pressão em linha reta entre dois pontos. Com a escala errada a pressão lida sai errada e a mistura sai fora.",
+      "map_scale.r": "Escala do sensor (Custom)",
+      "map_scale.row_high": "Extremo alto",
+      "map_scale.row_low": "Extremo baixo",
+      "map_type.c": "Se o seu não está na lista, escolha Custom e preencha a escala que aparece logo abaixo.",
+      "map_type.p": "Cada sensor converte tensão em pressão de um jeito. O tipo errado dá pressão errada e a mistura sai fora.",
+      "map_type.r": "Tipo de sensor MAP",
+      "marcha_lenta.i": "A válvula de marcha lenta mantém o giro com o pé fora do acelerador. Este passo só cobre a válvula solenoide simples.",
+      "marcha_lenta.t": "Marcha lenta",
+      "motor.i": "Cilindros, cilindrada e ciclo definem quanta mistura o motor aspira e a ordem em que cada cilindro trabalha.",
+      "motor.t": "O motor",
+      "partida.i": "Na partida o motor gira devagar e frio. A ECU usa valores próprios até o motor pegar.",
+      "partida.t": "Partida",
+      "partida_combustivel.i": "Motor frio precisa de mais combustível para pegar. Ajuste o pulso inicial e a correção pela temperatura.",
+      "partida_combustivel.t": "Combustível na partida",
+      "pinrole.output.hs": "Saída de alto lado: confirme que a carga é ligada ao terra e não ao positivo.",
+      "pinrole.thermistor.av": "Entrada de tensão não tem o resistor de pull-up da placa: use pull-up externo e o resistor de polarização do sensor passa a valer.",
+      "pinrole.trigger.type": "VR é para sensor indutivo e entrada digital é para sensor Hall: o tipo errado não lê o sinal.",
+      "priming_curve.c": "Comece com a curva padrão e ajuste se o motor demorar a pegar a frio.",
+      "priming_curve.p": "É um pulso extra ao ligar a ignição, que molha o coletor e ajuda a pegar a frio.",
+      "priming_curve.r": "Pulso inicial de combustível",
+      "review.r": "Resumo das mudanças",
+      "revisao.i": "Confira tudo o que vai mudar. Só depois de confirmar, os valores são gravados na ECU.",
+      "revisao.t": "Revisão e gravação",
+      "roda_fonica.i": "A roda fônica diz à ECU a posição do motor. Sem ela configurada certo, não há injeção nem faísca no momento correto.",
+      "roda_fonica.t": "Roda fônica",
+      "roda_fonica_fase.i": "O sensor de fase diz em qual das duas voltas do ciclo o motor está, necessário para injeção sequencial. O ângulo de referência alinha a roda com o ponto morto superior.",
+      "roda_fonica_fase.t": "Sensor de fase e ponto de referência",
+      "rpm_limit.c": "Fique abaixo do que o motor e o comando de válvulas aguentam. Motores originais costumam ficar em 6000 rpm ou menos.",
+      "rpm_limit.m": "Limite de giro acima de 6000 rpm. Pode seguir, mas confirme que o motor, o comando de válvulas e as molas suportam esse regime.",
+      "rpm_limit.p": "A ECU corta combustível e faísca acima desse giro para proteger o motor.",
+      "rpm_limit.r": "Limite de giro",
+      "sensor_clt.i": "A temperatura da água corrige combustível, ignição e ventoinha. O sensor é um termistor, cuja resistência cai com o calor.",
+      "sensor_clt.t": "Temperatura do motor (CLT)",
+      "sensor_iat.i": "O ar quente é menos denso, então a ECU corrige o combustível. O sensor é um termistor como o da água.",
+      "sensor_iat.t": "Temperatura do ar (IAT)",
+      "sensor_map.i": "O MAP mede a pressão no coletor e dá o quanto de ar o motor aspira. É o principal sensor para calcular combustível.",
+      "sensor_map.t": "Sensor de pressão do coletor (MAP)",
+      "sensor_tps.i": "O TPS informa o quanto você pisa no acelerador. A ECU usa isso para enriquecer em aceleração e para o cut-off.",
+      "sensor_tps.t": "Sensor de posição da borboleta (TPS)",
+      "sensor_wideband.i": "A wideband mede a mistura de verdade e é a base do ajuste e das correções automáticas. O padrão da evoTech é a AEM X-Series ligada pela rede CAN, que é também o caso da sonda da WideLink.",
+      "sensor_wideband.t": "Sonda de oxigênio wideband",
+      "sensor_wideband_can.i": "A AEM X-Series manda a lambda pelo CAN em um endereço fixo. Confira o endereço e em qual rede CAN da ECU a sonda está.",
+      "sensor_wideband_can.t": "Sonda wideband pelo CAN",
+      "stoich.c": "Gasolina brasileira E27 fica perto de 13,2 a 14,1; etanol puro fica perto de 9,0. Em dúvida, siga o combustível que vai abastecer.",
+      "stoich.p": "É a mistura ideal de queima completa. A ECU usa esse valor para converter a lambda em combustível.",
+      "stoich.r": "Relação ar/combustível estequiométrica",
+      "stroke.p": "Quatro tempos dão uma injeção a cada duas voltas. A ECU precisa saber, senão injeta o dobro.",
+      "stroke.r": "Ciclo do motor",
+      "tach_pin.c": "Veja no diagrama elétrico qual saída da ECU vai para o conta-giros.",
+      "tach_pin.p": "A ECU envia o sinal de giro ao painel por esse pino.",
+      "tach_pin.r": "Pino do conta-giros",
+      "temp_grid.col_r": "Resistência",
+      "temp_grid.col_t": "Temperatura",
+      "temp_grid.pullup": "Resistência do pull-up da placa",
+      "temp_grid.row_1": "Ponto 1",
+      "temp_grid.row_2": "Ponto 2",
+      "temp_grid.row_3": "Ponto 3",
+      "test_coils.a": "A bobina vai dar faísca. Mantenha a vela aterrada no motor e longe de combustível e de vapores.",
+      "test_coils.t": "Disparar a bobina",
+      "test_fan1.t": "Ligar a ventoinha 1",
+      "test_fan2.t": "Ligar a ventoinha 2",
+      "test_fuel_pump.t": "Ligar a bomba de combustível",
+      "test_injectors.a": "O injetor vai borrifar combustível. Faça com o coletor aberto em um recipiente seguro ou com a vela fora, sem fagulhas por perto.",
+      "test_injectors.t": "Pulsar o injetor",
+      "test_main_relay.t": "Ligar o relé principal",
+      "teste_bobinas.i": "Dá uma faísca em cada bobina. Só funciona com o motor parado e com os valores já gravados na ECU.",
+      "teste_bobinas.t": "Teste das bobinas",
+      "teste_injetores.i": "Pulsa cada injetor para você ouvir o estalo. Só funciona com o motor parado e com os valores já gravados na ECU.",
+      "teste_injetores.t": "Teste dos injetores",
+      "teste_reles.i": "Liga cada relé por um instante. Só funciona com o motor parado e com os valores já gravados na ECU.",
+      "teste_reles.t": "Teste dos relés",
+      "timing_mode.c": "Use Fixo só para calibrar o ponto na primeira partida e volte para Dinâmico depois.",
+      "timing_mode.p": "Dinâmico segue a tabela de ignição. Fixo trava o avanço em um valor, usado para conferir o ponto com lâmpada estroboscópica.",
+      "timing_mode.r": "Avanço de ignição",
+      "tps_capture.closed": "Capturar tensão fechada",
+      "tps_capture.open": "Capturar tensão aberta",
+      "tps_etb.c": "Se o acelerador não tem cabo e o corpo de borboleta tem um motor elétrico, é ETB. Em dúvida, confira o manual do carro.",
+      "tps_etb.p": "Com borboleta eletrônica o TPS e o motor da borboleta são ajustados juntos, na configuração global. Aqui só se calibra o TPS de um acelerador comum, com cabo.",
+      "tps_etb.r": "A borboleta é eletrônica (ETB)?",
+      "tps_etb_note.r": "Com borboleta eletrônica este passo não pede o pino nem as tensões do TPS. A calibração do motor e do PID da borboleta continua na configuração global da ECU.",
+      "tps_max.c": "Com a ignição ligada e o pedal no fundo, use o botão de calibração ou leia a tensão no painel.",
+      "tps_max.p": "É o fim do curso do TPS. Define o 100 por cento.",
+      "tps_max.r": "Tensão com a borboleta aberta",
+      "tps_min.c": "Com a ignição ligada e a borboleta fechada, use o botão de calibração ou leia a tensão no painel.",
+      "tps_min.m": "A tensão fechada precisa ser menor que a tensão aberta. Refaça a calibração do TPS.",
+      "tps_min.p": "É o ponto zero do TPS. Sem ele a ECU lê aceleração mesmo com o pé fora.",
+      "tps_min.r": "Tensão com a borboleta fechada",
+      "tps_pin.c": "Veja o fio de sinal do TPS no chicote e o pino correspondente no conector da ECU.",
+      "tps_pin.p": "É o pino analógico onde o sinal do TPS chega.",
+      "tps_pin.r": "Entrada do TPS",
+      "trigger_angle.c": "Com a lâmpada estroboscópica e o avanço em modo fixo, mude o ângulo até o ponto lido na polia bater com o valor definido.",
+      "trigger_angle.m": "Ângulo de referência muito grande, maior que 60 graus em qualquer sentido. Confira o valor com a lâmpada estroboscópica.",
+      "trigger_angle.p": "Diz à ECU onde está o ponto morto superior em relação à falha da roda. É o ajuste que mais afeta o ponto de ignição.",
+      "trigger_angle.r": "Ângulo de referência da roda",
+      "trigger_pin.c": "Veja no conector da ECU o pino do sensor de rotação e escolha o mesmo nome na lista.",
+      "trigger_pin.p": "É o pino onde o sensor da roda está ligado. Só entradas próprias para sinal de rotação funcionam.",
+      "trigger_pin.r": "Entrada do sensor de rotação",
+      "trigger_pin2.c": "Confira o manual da roda. Rodas de um sensor só usam a primeira entrada.",
+      "trigger_pin2.p": "Algumas rodas usam dois sensores. Deixe vazio se a sua usa só um.",
+      "trigger_pin2.r": "Segunda entrada da roda",
+      "trigger_preset.c": "Procure o seu carro na lista. Se não aparecer, escolha o tipo da roda abaixo.",
+      "trigger_preset.p": "Um modelo pronto preenche o tipo de roda e os dentes de uma vez, evitando erro de digitação.",
+      "trigger_preset.r": "Escolher pelo carro",
+      "trigger_skipped.c": "Conte quantos dentes seguidos foram removidos. Em 60-2 são dois.",
+      "trigger_skipped.p": "A falha da roda é a referência que a ECU usa para saber em que ponto da volta está.",
+      "trigger_skipped.r": "Dentes faltando",
+      "trigger_teeth.c": "Conte as posições possíveis, contando os espaços onde faltam dentes.",
+      "trigger_teeth.p": "Inclui os dentes que faltam. Uma roda 60-2 tem 60 posições no total.",
+      "trigger_teeth.r": "Total de dentes (roda personalizada)",
+      "trigger_type.c": "Conte os dentes e os espaços da roda no volante ou na polia. 36-1 tem 36 posições com um dente faltando; 60-2 tem 60 posições com dois faltando.",
+      "trigger_type.p": "Cada roda tem um padrão de dentes. A ECU só consegue sincronizar se o padrão informado for o da roda real.",
+      "trigger_type.r": "Tipo de roda fônica",
+      "vehicle_name.p": "Aparece no Manager e nos registros, para você não confundir um mapa com outro.",
+      "vehicle_name.r": "Nome do veículo",
+      "veiculo.i": "Estes nomes só ajudam a reconhecer o mapa depois. Não mudam o funcionamento do motor.",
+      "veiculo.t": "Identificação do veículo",
+      "wb_bus.c": "Veja em qual conector CAN da ECU a sonda está ligada. Na dúvida, deixe a CAN1.",
+      "wb_bus.p": "A ECU tem duas redes CAN. A sonda precisa estar na rede escolhida aqui.",
+      "wb_bus.r": "Rede CAN da sonda",
+      "wb_can_id.c": "A primeira sonda AEM X-Series usa o ID1, endereço 0x180. Só mude se houver mais de uma sonda ou se a sua foi configurada com outro endereço.",
+      "wb_can_id.p": "A ECU só aceita os pacotes que chegam com o endereço escolhido. Endereço errado deixa a sonda muda.",
+      "wb_can_id.r": "Endereço CAN da sonda",
+      "wb_pin.c": "Veja no manual da sonda o fio de saída analógica e o pino correspondente no conector da ECU.",
+      "wb_pin.m": "Sem pino a ECU não tem como ler a lambda. Escolha o pino da sonda ou use a sonda pelo CAN.",
+      "wb_pin.p": "É o pino analógico onde chega a tensão de saída da sonda.",
+      "wb_pin.r": "Entrada analógica da sonda",
+      "wb_preset.c": "Com a WideLink ou com a AEM X-Series na rede CAN, fique com AEM X-Series por CAN. Escolha a opção analógica só se a sonda AEM está ligada a um pino analógico da ECU.",
+      "wb_preset.p": "O modelo já liga a leitura pelo CAN ou pela entrada analógica e preenche a escala certa da sonda AEM, sem você digitar números.",
+      "wb_preset.r": "Escolher a sonda",
+      "wb_type.c": "Para a AEM X-Series, escolha AEM. Se a sonda for de outro fabricante, escolha o tipo dele.",
+      "wb_type.p": "Cada fabricante converte tensão em mistura de um jeito. O tipo errado dá a lambda errada.",
+      "wb_type.r": "Tipo de sonda analógica",
+      "wb_via_can.c": "Se a sonda tem só fio de saída analógica para a ECU, deixe desligado. Se ela fala CAN com a ECU, como a AEM X-Series e a WideLink, ligue.",
+      "wb_via_can.m0": "Para ler a sonda pelo CAN, ligue a leitura e o envio de dados na comunicação CAN. Sem isso a ECU recusa a configuração.",
+      "wb_via_can.m1": "A sonda está pelo CAN, mas ainda há um pino analógico escolhido para a lambda. Escolha NONE no pino analógico: a ECU recusa os dois ao mesmo tempo.",
+      "wb_via_can.p": "Ligado, a ECU lê a lambda pelos pacotes CAN da sonda. Desligado, ela lê a tensão de saída da sonda em um pino analógico.",
+      "wb_via_can.r": "Sonda ligada pela rede CAN"
+    }
+  }
+}
