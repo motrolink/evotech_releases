@@ -2,6 +2,28 @@
   "schema": 2,
   "releases": [
     {
+      "timestamp": "2026-11-21T20:22:36.050011+00:00",
+      "signature": "2999655129",
+      "hardware": "evotech12",
+      "date": "2026.11.21",
+      "environment": "dev",
+      "ini_path": "evotech12/2026.11.21_2999655129_4f9abf79/evotech_evotech12.ini",
+      "full_signature": "rusEFI motrolink_dev.2026.11.21.evotech12.2999655129",
+      "translation_path": "evotech12/2026.11.21_2999655129_4f9abf79/ini_strings_pt-BR.json",
+      "script_api_path": "evotech12/2026.11.21_2999655129_4f9abf79/script_api_evotech12.json",
+      "wizard_path": "evotech12/2026.11.21_2999655129_4f9abf79/setup_wizard_evotech12.json",
+      "release_id": "evotech12/2026.11.21_2999655129_4f9abf79",
+      "build_id": "4f9abf79",
+      "git_commit": "4f9abf799c8b3570c2d1d4afd5e5e20adec165bd",
+      "flash_data_version": 261111,
+      "bin_path": "evotech12/2026.11.21_2999655129_4f9abf79/rusefi.bin",
+      "bin_sha256": "5d0ade7db028c0c3941b4f4bb10d67264492a112e7a43a7448d328c1f754c55e",
+      "has_notes": true,
+      "notes_kind": "preview",
+      "notes_path": "evotech12/2026.11.21_2999655129_4f9abf79/release.json",
+      "title": "Proteções unificadas, aceleração e STFT reformuladas e ECU mais robusta"
+    },
+    {
       "timestamp": "2026-11-21T09:04:12.720023+00:00",
       "signature": "3327774634",
       "hardware": "evotech12",
